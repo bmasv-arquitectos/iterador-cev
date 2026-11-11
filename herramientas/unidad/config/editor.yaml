@@ -1,0 +1,601 @@
+# ---------------------------------------------------------------------------
+# Editor de planta de la unidad (herramientas/app_unidad). Comportamiento,
+# textos y colores del DIBUJO. La apariencia de la interfaz (fuentes, colores
+# de botones y cajas, tamanos) esta en herramientas/app_unidad/estilo.css.
+# Este archivo y estilo.css se leen de nuevo al recargar la pagina (F5).
+# ---------------------------------------------------------------------------
+version: 22
+titulo: "Iterador CEV"   # pestana del navegador
+host: 127.0.0.1
+puerto: 8082
+abrir_navegador: true
+debounce_ms: 500
+deshacer_max: 200
+herramienta_inicial: seleccionar
+vista_inicial: 3d      # planta | 3d
+
+interfaz:
+  titulo_corto: "Iterador CEV"  # rotulo a la izquierda de la barra superior
+  tooltip_ms: 500              # milisegundos con el cursor encima antes de mostrar el texto de un boton
+  # titulos de las cajas. Izquierda: edificio y componente. Derecha (panel de
+  # resultados, se muestra u oculta con su boton): resultados y detalle.
+  cajas: {edificio: Unidad, componente: Envolvente, resultados: Resultados, detalle: Detalles modelo}
+  cajas_abiertas: [edificio, componente]   # las demas parten cerradas
+  plegar_unidad_al_elegir: true # al elegir algo se cierra Unidad y se abre Componente
+  resultados_visible: true      # el panel de la derecha parte visible
+  # un clic en el vacio del 3D deja de elegir (como Esc). Un clic que arrastra (orbitar)
+  # no cuenta: se ignora si el raton se movio mas de clic_tolerancia_px.
+  deseleccionar_al_clic_vacio: true
+  clic_tolerancia_px: 4
+  nivel: "Nivel"
+
+# Texto de ayuda de los botones que no son herramientas (icono: iconos/<clave>.png o .svg)
+botones:
+  deshacer: "Deshacer (Ctrl+Z)"
+  rehacer: "Rehacer (Ctrl+Y)"
+  abrir: "Cargar"
+  guardar: "Guardar la unidad (.json)"
+  vaciar: "Eliminar todo y empezar desde cero"
+  nivel_mas: "Agregar un nivel (copia el de arriba, sin ventanas ni tabiques)"
+  nivel_menos: "Quitar el nivel activo"
+  planta: "Planta"
+  alzado: "Alzado del muro elegido"
+  contexto: "Contexto: volúmenes del entorno (FAR)"
+  "3d": "Vista 3D"
+  lineas: "3D en líneas ocultas"
+  solido: "3D sólido"
+  techos: "Mostrar u ocultar los techos (para ver y elegir el interior: pisos y tabiques)"
+  # en la vista Contexto prende o apaga el dibujo del FAR (parte con la fachada de arriba; un
+  # clic en una fachada cambia la orientacion); en las otras vistas, con un muro elegido, lleva
+  # a la vista Contexto con el FAR de ese muro
+  far: "Mostrar FAR (en la vista Contexto, un clic en una fachada cambia la orientación)"
+  encuadrar: "Encuadrar"
+  zoom_mas: "Acercar"
+  zoom_menos: "Alejar"
+  resultados: "Resultados (mostrar u ocultar)"
+
+# Opciones del boton Cargar, en orden. accion: inicial (la caja de inicial:) o json
+# (elegir un archivo); archivo: un .json de herramientas/unidad/modelos/ (la opcion
+# aparece desactivada mientras el archivo no exista).
+cargar:
+  recinto: {texto: "Recinto", accion: inicial}
+  departamento: {texto: "Departamento referencia", archivo: departamento_referencia.json}
+  casa: {texto: "Casa referencia", archivo: casa_referencia.json}
+  json: {texto: "Cargar .json", accion: json}
+
+# Protecciones solares de una ventana (al elegir una ventana).
+protecciones:
+  titulo: "Protecciones solares"
+  seleccionar: "Agregar protección"
+  etiquetas:
+    alero: "Alero (FAV1)"
+    aleta_izq: "Lateral izquierdo (FAV2)"
+    aleta_der: "Lateral derecho (FAV2)"
+    celosia: "Celosía (FAV3)"
+  orientacion: {horizontal: Horizontal, vertical: Vertical}
+  campos:
+    alero_l: "L · saliente [m]"
+    alero_d: "D · sobre la ventana [m]"
+    aleta_p: "P · saliente [m]"
+    aleta_s: "S · separación [m]"
+    celosia_e: "E [m]"
+    celosia_t: "T [m]"
+    angulo_horizontal: "β [°]"
+    angulo_vertical: "α [°]"
+    p04: "Aislación del encuentro (P04)"
+  defecto:             # valores al activar cada una
+    alero: {alero_l: 0.6, alero_d: 0.0}
+    aleta_izq: {aleta_izq_p: 0.4, aleta_izq_s: 0.0}
+    aleta_der: {aleta_der_p: 0.4, aleta_der_s: 0.0}
+    celosia: {celosia_e: 0.05, celosia_t: 0.10, celosia_beta: 0.0, celosia_orientacion: horizontal}
+
+# Soluciones constructivas (caja Envolvente). Cada elemento usa la solucion GENERAL de su
+# grupo (la de partida; se configura con un clic en el titulo del grupo) o una propia:
+# muros, techos y pisos "Cumple norma" (solucion de la zona, recinto/config/envolvente.yaml)
+# o "Personalizado"; vidrios y puertas "Listado" o "Personalizado". Cambiar la general no
+# toca los elementos con solucion propia. Los campos de lo personalizado salen de
+# recinto/config/personalizado.yaml; los tipos de puerta y los valores de partida de las
+# generales, de config/cev.yaml; los vidrios y sus tipos, de recinto/datos/vidrios.yaml.
+componentes:
+  # modos de cada elemento; en la general se muestran sin "general"
+  modos_solucion: {general: General, norma: "Cumple norma", personalizado: Personalizado}
+  modos_lista: {general: General, listado: Listado, personalizado: Personalizado}
+  muro: "Solución constructiva"
+  muro_usar: "Muro personalizado"
+  nuevo_muro: "+ Nuevo muro personalizado"
+  muro_compartido: "Lo usan {n} muro(s): los cambios se aplican a todos."
+  techo: "Solución del techo"
+  piso: "Solución del piso"
+  vidrio: "Vidrio"
+  vidrio_grupo: "Tipo de vidrio"
+  vidrio_lista: "Vidrio (U · FS)"
+  puerta: "Tipo de puerta"
+  puerta_lista: "Puerta (U efectivo de la ficha)"
+  composicion: "Composición"
+  u: "U [W/m²K]"
+  # techo o piso elegido
+  condicion: "Condición"
+  condicion_compartida: "La condición es la misma para todas las partes de este tipo; la solución es propia de esta."
+  titulos:
+    piso: "Piso del nivel {nivel}"
+    techo: "Techo del nivel {nivel}"
+    piso_expuesto: "Piso en voladizo · nivel {nivel}"
+    techo_expuesto: "Techo sin nivel encima · nivel {nivel}"
+  # solucion general de cada grupo (clic en el titulo del grupo)
+  general:
+    usa: "Usa la solución general: {desc}"
+    norma: "Cumple norma"
+    personalizado: "Personalizado"
+    sobrescribir: "Sobrescribir todos"
+    particulares: "{n} con solución propia: «Sobrescribir todos» los vuelve a la general (Ctrl+Z deshace)."
+    sin_particulares: "Todos usan la solución general."
+    sin_pisos: "No hay pisos contra terreno ni ventilados (todos son adiabáticos)."
+    condiciones: {terreno: "Contra terreno", ventilado: "Ventilado"}
+    ayuda:
+      muro: "Solución de los muros exteriores que están en «General»."
+      ventana: "Vidrio de las ventanas que están en «General»."
+      puerta: "Tipo de las puertas que están en «General»."
+      techo: "Solución de los techos exteriores que están en «General»."
+      piso: "Solución de los pisos que están en «General», según su condición."
+  # arbol de componentes, en grupos separados por una linea. Clic en el titulo de un
+  # grupo: su solucion general. Clic en un elemento: su configuracion; otro clic la cierra.
+  # La velocidad del despliegue y la altura de las filas estan en estilo.css (--arbol-...).
+  lista:
+    titulo: ""
+    grupos: {muro: Muros, ventana: Ventanas, puerta: Puertas, techo: Techos, piso: Pisos, obstruccion: Obstrucciones,
+             contexto: Contexto}
+    nivel: "Nivel {nivel}"
+    vanos: "{v} V · {p} P"      # ventanas y puertas de un muro
+    ventana: "{muro}-V{n}"
+    puerta: "{muro}-P{n}"
+    norma: "norma"               # muro con solucion propia que cumple la norma
+    propio: "propio"             # ventana, puerta, techo o piso con solucion propia
+    vacio: "No hay."
+    # al elegir algo, la caja se desplaza hasta su fila solo si quedo fuera de la parte
+    # de arriba (zona: fraccion del alto de la caja); espera_ms: espera antes de moverse
+    # (deja ver el despliegue). false: no se desplaza nunca.
+    desplazar: {espera_ms: 380, zona: 0.4, margen_px: 8}
+
+# Obstrucciones dibujadas (herramientas obstaculo_h, obstaculo_v y balcon; app_unidad/obstaculos_ui.py).
+# Textos de su fila y su detalle en la caja Envolvente; cualquier clave de obstaculos_ui.TX
+# se puede cambiar aqui. El criterio de calculo esta en config/cev.yaml (obstrucciones:).
+obstaculos:
+  tipos: {horizontal: "Horizontal {n}", vertical: "Vertical {n}", balcon: "Balcón {n}"}
+
+# Vista Contexto (boton junto a Planta, Alzado y 3D): volumenes del entorno para el FAR
+# dibujado (app_unidad/contexto_ui.py y unidad/vista_contexto.py). La unidad aparece solo
+# como referencia (aca no se edita). Los volumenes son ortogonales a los ejes de la planta
+# (sin diagonales). El cursor mide, por eje, la distancia a la cara de la unidad
+# perpendicular mas cercana; el primer punto se ajusta a cotas redondas desde esas caras.
+# Colores en el 3D: modelo3d.clases.contexto y modelo3d.lineas.clases.contexto.
+# Lo que entra a la ficha (tabla FAR por orientacion) esta en la caja Detalles modelo.
+vista_contexto:
+  snap_m: 0.5              # ajuste de cotas, medidas y arrastres (Shift: libre)
+  cotas_desde: exterior    # exterior (cara interior + modelo3d.espesor_muro) | interior
+  altura_defecto: 9.0      # [m] altura de un volumen nuevo (se cambia en su detalle)
+  unidad: {relleno: "#f6f4ef", color: "#6b7280", grosor: 2, interior: "#c4c9cf", trazo_otro_nivel: "6 4",
+           rotulos: true}  # rotulos: nombre y orientacion de las caras del nivel 1 ("L1 N")
+  volumen: {relleno: "#94a3b8", opacidad: 0.3, color: "#64748b", grosor: 1.5}
+  # cotas: linea, marcas en los extremos y prolongacion de la cara (extension, segmentada)
+  cota: {color: "#2563eb", grosor: 1, extension: "#93c5fd", trazo: "4 3", marca_px: 5, decimales: 2}
+  asa: {lado_px: 8, relleno: "#ffffff"}   # esquinas y lados del volumen elegido (con Mover)
+  # Mostrar FAR (con un muro exterior elegido): muros del punto (muro_grosor), punto de
+  # referencia, semicirculo y sus 5 divisiones (trazo), y cada obstruccion como el obstaculo
+  # equivalente de la ficha (cuerda D a la distancia B y el sector que tapa, con relleno y
+  # opacidad); las omitidas (descarte, mas de 8) en el color omitida. Radio del semicirculo:
+  # margen x el vertice de contexto mas lejano, como minimo radio_min_m.
+  far: {color: "#0d9488", relleno: "#14b8a6", opacidad: 0.18, grosor: 1.5, trazo: "5 4", muro_grosor: 6,
+        omitida: "#9ca3af", radio_min_m: 12, margen: 1.1, segmentos: 64}
+  textos:
+    etiqueta: "{nombre} · {h} m"
+    cota_separacion: "{d} m · {cara} {rumbo}"
+    cota_desfase: "{d} m · plano {cara} {rumbo}"
+    rectangulo: "{ancho} × {fondo} m"
+    tramo: "{largo} m"
+    cara: "{lado} {rumbo}"
+    far_rotulo: "FAR {o} · z = {z} m"
+    far_division: "{k}"
+    far_tramo: "{volumen} · A {a} · B {b} · D {d}"
+    # detalle del volumen elegido (caja Envolvente)
+    titulo: "Volumen de contexto"
+    nombre: "Nombre"
+    h: "Altura sobre el terreno [m]"
+    medidas: "Planta"
+    ubicacion: "Ubicación desde la unidad"
+    separacion: "Separación de {cara} ({rumbo}) [m]"
+    desfase: "Desfase del plano {cara} ({rumbo}) [m]"
+    ayuda_ubicacion: "Separación: distancia libre entre la cara exterior de la unidad y el volumen. Desfase: cuánto sobresale el volumen del plano de esa cara (negativo: queda por dentro). Cambia el número para mover el volumen."
+    sin_unidad: "Dibuja la unidad para ubicar el volumen desde ella."
+    editar: "Editar en la vista Contexto"
+    eliminar: "Eliminar volumen"
+    # tabla FAR (caja Detalles modelo)
+    far_titulo: "Obstrucciones remotas (FAR)"
+    far_punto: "{o} · punto a {z} m sobre el terreno"
+    far_sin: "Ningún volumen obstruye esta orientación."
+    far_columnas: ["Div.", "Volumen", "A", "B", "D"]
+    far_omitida: "{volumen} (división {division}) no entra: {motivo}"
+    far_elige_muro: "Elige un muro exterior para ver su FAR."
+
+# Caja Detalles modelo (panel derecho): una tabla por grupo. Columna: [campo, titulo] para
+# texto o [campo, titulo, decimales] para numeros. Campos: herramientas/unidad/resumen.py.
+# Despues, si hay volumenes de contexto, la tabla FAR (vista_contexto.textos).
+envolvente:
+  textos:
+    norma: "Norma"
+    sin_dato: "—"
+    destinos: {techo: Techo, piso: Piso}
+    condiciones: {exterior: Ext., adiabatico: Adiab., terreno: Terreno, ventilado: Ventil.}
+  # Botones de la caja: CSV (las tablas, para Excel) y Ficha 01 (la ficha 01 oficial .xlsm
+  # llenada con la unidad, sin Excel: unidad/ficha01.py). La ficha solo se descarga: no queda
+  # copia en el computador ni en el servidor. El reporte PDF esta en Resultados (reporte:).
+  exportar:
+    csv: "CSV"
+    archivo: "envolvente"          # envolvente.csv
+    titulo: "Envolvente · Iterador CEV"
+    nota: "Datos de iteración: no válidos para entrega."
+    ficha01: "Ficha 01 (.xlsm)"
+    ficha01_ayuda: "Descarga la ficha 01 oficial (PBTD v2.2) llenada con esta unidad, la misma que usa el cálculo. Al abrirla en Excel, habilita el contenido: recalcula todo. Los paquetes de la sección 1.2 se eligen en Excel."
+    ficha01_generando: "Generando la ficha 01 oficial…"
+    ficha01_listo: "Ficha 01 descargada. Ábrela en Excel y habilita el contenido para que recalcule."
+  tablas:
+    muros:
+      titulo: "Muros"
+      columnas: [[id, Muro], [az, Az.], [cond, Cond.], [solucion, Solución], [u, U, 2], [neta, "Neta m²", 2],
+                 [p01, P01, 2], [p02, P02, 2], [p03, P03, 2], [p04, P04, 2]]
+    horizontales:
+      titulo: "Techos y pisos"
+      columnas: [[id, Elemento], [cond, Cond.], [solucion, Solución], [u, U, 2], [area, "Área m²", 2],
+                 [perimetro, "Perím. m", 2]]
+    ventanas:
+      titulo: "Ventanas"
+      columnas: [[id, Ventana], [az, Az.], [ancho, Ancho, 2], [alto, Alto, 2], [area, "Área m²", 2],
+                 [vidrio, Vidrio], [u, U, 2], [fs, FS, 2], [protecciones, Protecciones]]
+    puertas:
+      titulo: "Puertas"
+      columnas: [[id, Puerta], [az, Az.], [ancho, Ancho, 2], [alto, Alto, 2], [area, "Área m²", 2],
+                 [tipo, Tipo], [u, U, 2]]
+
+# Reporte PDF (boton en Resultados, junto a las descargas), A4 horizontal. Pagina 1:
+# modelo 3D, plantas y etiqueta; pagina 2 en adelante: el detalle de la envolvente. La
+# advertencia va en el pie de todas las paginas. Logica: herramientas/unidad/reporte.py.
+reporte:
+  boton: "Reporte (PDF)"
+  archivo: "reporte_cev"          # reporte_cev.pdf
+  titulo: "Reporte de iteración CEV"
+  advertencia: "Simulación de iteración con un motor no oficial. No es una calificación energética oficial: la calificación la emite un evaluador acreditado con las planillas oficiales del MINVU."
+  resultado: "Calificación {letra} · ahorro {ahorro} % · {motor}"
+  sin_calculo: "Sin calcular, o la unidad cambió después del último cálculo."
+  pagina: "Página {n} de {total}"
+  titulos: {modelo: "Modelo 3D", plantas: "Planta nivel {nivel}", etiqueta: "Calificación (iteración)",
+            envolvente: "Detalle de la envolvente"}
+  # navegador: captura de la vista 3D tal como se ve (si la vista 3D esta abierta; si no, la
+  # axonometria). servidor: siempre la axonometria (vista inicial, sin depender del navegador).
+  vista_3d: navegador
+  deseleccionar: true             # quita la seleccion (naranja) antes de la captura
+  ocultar_grilla: true            # la captura sale sin la grilla del suelo
+  # cada imagen se recorta al dibujo: se quita el fondo de los bordes (lo que se parece al
+  # color de la esquina, con esa tolerancia 0..255) y se deja un margen (fraccion del lado mayor)
+  recortar: {activo: true, tolerancia: 14, margen: 0.03}
+  margen_pt: 32
+  ancho_etiqueta_pt: 230
+  proporcion_3d: 0.62             # alto del modelo 3D respecto del de las plantas
+  escala_imagen: 2                # resolucion de plantas y axonometria
+  colores: {texto: "#2b3440", suave: "#7b8692", linea: "#d6dce2", advertencia: "#b42318",
+            fondo_advertencia: "#fdf1f0"}
+  planta:                         # mismas claves que planta: (abajo); cambios solo para el reporte
+    ancho_px: 900                 # el alto sale de la proporcion de la unidad
+    margen_px: 70                 # deja lugar a los rotulos de los muros y al norte
+    cambios:
+      grilla: {color: "#ffffff", color_mayor: "#ffffff"}
+      vertice: {etiquetas: false, radio: 3}
+      texto: {halo: "none", tamano: 15}
+      norte: {x_px: -40, y_px: 40}
+  axonometria:                    # vista 3D sin navegador (herramientas/unidad/axonometria.py)
+    ancho_px: 1400
+    ajustar: true                 # el alto sigue la proporcion del dibujo
+    margen_px: 30
+    render: solido                # colores de modelo3d.clases (solido) o modelo3d.lineas.clases
+    techos: true
+    luz: [-0.4, -0.7, 1.0]
+    ambiente: 0.6                 # brillo minimo de las caras en sombra (0..1)
+    fondo: "#ffffff"
+    borde: null                   # color de las aristas; null = sin aristas
+
+# Calculo (panel Resultados, a la derecha). modulo: la "calculadora" (ver
+# herramientas/unidad/calculo_cev.py); otra herramienta puede entregar las mismas
+# funciones y reutilizar el editor.
+# salida: cada calculo deja una carpeta numerada (unidad, resumen, csv, etiqueta y lo
+# propio de cada motor).
+calculo:
+  modulo: herramientas.unidad.calculo_cev
+  salida: salidas/iterador_unidad
+  sondeo_s: 0.25       # cada cuanto se actualiza la barra de progreso
+  etiqueta_vacia: true # muestra la escala sin letra antes del primer calculo
+  # Motores que se ofrecen, en orden (el primero es el de partida). hibrido y oficial
+  # necesitan Windows con Excel: si no hay, no aparecen.
+  motores:
+    python: "Motor Python · solo iteración"
+    hibrido: "Motor híbrido (Python + Excel) · solo iteración"
+    oficial: "Motor oficial (Excel PBTD)"
+  workers: 4           # procesos Excel en paralelo del motor oficial (limite: la RAM)
+  verificar_ficha: true  # revisa la ficha 01 (#N/A) antes de calcular (hibrido y oficial)
+  # Cambios a app_cev/config/etiqueta.yaml solo para este editor (mismas claves).
+  etiqueta:
+    disposicion: vertical
+    fuente: "Avenir Next, Segoe UI, Arial, sans-serif"
+    escala: {ancho_inicial: 150, incremento: 10}
+    png: {escala: 4}   # la etiqueta vertical es angosta: 4 = unos 1100 px de ancho
+  textos:
+    calcular: "Calcular"
+    cancelar: "Cancelar"
+    motor: "Motor de cálculo"
+    descargar: "Resultados (.zip)"
+    descargar_imagen: "Etiqueta (.png)"
+    sin_modelo: "Corrige el dibujo antes de calcular."
+    sin_resultado: "Sin calcular todavía."
+    desactualizado: "La unidad cambió después del cálculo: vuelve a calcular."
+    error: "No se pudo calcular"
+    cancelado: "Cálculo cancelado"
+    far: "Obstrucciones remotas (FAR): {detalle}"   # filas por orientacion (solo con contexto)
+
+inicial:               # unidad con la que abre el editor (tambien Cargar > Recinto)
+  comuna: Santiago
+  largo: 8.0           # lado 1 (frente, eje x)
+  ancho: 6.0
+  altura: 2.6
+  azimut_y: 0          # azimut del eje +y: el frente mira al norte
+  condiciones: [exterior, adiabatico, adiabatico, adiabatico]   # frente, derecha, atras, izquierda
+  dormitorios: 2
+  piso: adiabatico
+  techo: adiabatico
+  tipo_vivienda: departamento
+  # vanos del nivel 1: lado (0 = frente), x desde el inicio del muro (extremo izquierdo visto
+  # desde el interior), z desde el piso (la puerta parte del piso), ancho y alto [m]
+  vanos:
+    - {tipo: ventana, lado: 0, x: 1, z: 0.1, ancho: 6.0, alto: 2.2}
+
+snap:                  # ajuste al dibujar y mover en planta (Shift lo apaga)
+  angulo: 10           # [grados]
+  largo_m: 0.10        # [m] largos al dibujar, desplazamientos de muros, cortes y vertices nuevos
+
+# texto: nombre (aparece tras tooltip_ms); cursor: valor CSS (default = flecha, move, crosshair = cruz)
+herramientas:
+  seleccionar:
+    texto: Seleccionar
+    cursor: default
+    ayuda: "Clic en un muro, vértice, corte, tabique u obstrucción: muestra sus propiedades. En el 3D también techos, pisos, ventanas, puertas, tabiques (con los techos ocultos) y volúmenes de contexto. Clic en el vacío o Esc: no elige nada."
+  mover:
+    texto: Mover
+    cursor: move
+    ayuda: "Arrastra un vértice, un muro (en paralelo), un corte naranjo, un tabique (sus extremos, con el tabique elegido) o una obstrucción. Ctrl + clic en un muro crea un vértice. En el alzado, arrastra ventanas y puertas. En Contexto, un volumen, sus lados o sus esquinas."
+  dibujar:
+    texto: Dibujar muro
+    cursor: crosshair
+    ayuda: "Clic: agrega un punto (10°, 10 cm). Clic en el primer punto (el grande): cierra el perímetro. Se puede dejar abierto y seguir después."
+  tabique:
+    texto: Dibujar tabique
+    cursor: crosshair
+    ayuda: "Dos clics. Los extremos se pegan a los muros cercanos."
+  obstaculo_h:
+    texto: Obstrucción horizontal
+    cursor: crosshair
+    ayuda: "Balcón, cornisa o alero (FAV1). Dos clics en esquinas opuestas; el primero se pega al muro. Queda sobre el nivel donde se dibuja: su cara inferior a la altura libre (se cambia en su detalle). Esc cancela."
+  obstaculo_v:
+    texto: Obstrucción vertical
+    cursor: crosshair
+    ayuda: "Muro saliente o aleta (FAV2). Dos clics: desde el muro hacia afuera (10°, 10 cm). Afecta a las ventanas del mismo plano de fachada, aunque el muro esté cortado. Esc cancela."
+  balcon:
+    texto: Balcón
+    cursor: crosshair
+    ayuda: "Losa de balcón en el piso del nivel: solo suma su puente térmico P04, no hace sombra. Clic en cada esquina: se pega a los vértices de la unidad (anillo) y al muro bajo el cursor (cuadrado); si no, 10° y 10 cm. El anillo en el primer punto avisa que el clic cierra; doble clic también cierra. Sirve para balcones en L. Esc cancela."
+  ctx_rect:
+    texto: Volumen rectangular
+    cursor: crosshair
+    ayuda: "Dos clics en esquinas opuestas. El cursor mide la distancia a las caras exteriores de la unidad; el primer punto queda a cotas redondas (0,5 m) y el ancho y el fondo también. Shift: libre. Esc cancela."
+  ctx_poli:
+    texto: Volumen poligonal
+    cursor: crosshair
+    ayuda: "Clic en cada esquina, solo en horizontal o vertical. Clic en el primer punto (el grande) o doble clic: cierra (si falta una esquina, se agrega). Shift: libre. Esc cancela."
+  ventana:
+    texto: Dibujar ventana
+    cursor: crosshair
+    ayuda: "En el alzado: dos clics en esquinas opuestas (cada 5 cm). Esc cancela."
+  puerta:
+    texto: Dibujar puerta
+    cursor: crosshair
+    ayuda: "En el alzado: dos clics en esquinas opuestas; la puerta siempre parte del piso. Esc cancela."
+  cortar:
+    texto: Cortar muro
+    cursor: crosshair
+    ayuda: "Clic en un muro lo parte en dos tramos (para mezclar exterior y adiabático en un lado)."
+  borrar:
+    texto: Borrar
+    cursor: pointer
+    ayuda: "Clic en un vértice, corte, tabique, obstrucción, ventana, puerta o punto de un perímetro abierto lo quita. Clic en un muro lo elimina y deja el perímetro abierto. En Contexto, quita un volumen."
+
+# Herramientas visibles segun lo elegido (en_contexto: en la vista Contexto)
+contexto:
+  sin_muro: [seleccionar, mover, dibujar, tabique, obstaculo_h, obstaculo_v, balcon, cortar, borrar]
+  con_muro: [seleccionar, mover, ventana, puerta, cortar, borrar]
+  en_contexto: [seleccionar, mover, ctx_rect, ctx_poli, borrar]
+
+etiquetas:
+  tipo_vivienda: {departamento: Departamento, casa_aislada: Casa aislada, casa_pareada: Casa pareada o continua}
+  piso: {adiabatico: "Adiabático (otra unidad abajo)", terreno: Contra terreno, ventilado: Ventilado}
+  techo: {adiabatico: "Adiabático (otra unidad arriba)", exterior: "Exterior (cubierta)"}
+  piso_expuesto: {ventilado: Ventilado, adiabatico: Adiabático}
+  techo_expuesto: {exterior: Exterior, adiabatico: Adiabático}
+  condicion: {exterior: Exterior, adiabatico: Adiabático}   # el toggle del muro
+
+textos:
+  sin_seleccion: "Nada elegido. Con Seleccionar, haz clic en un muro, vértice, corte o tabique (en el 3D, también en techos, pisos, ventanas y puertas)."
+  resumen: "Resumen"
+  proximamente: "próximamente"
+  con_problemas: "Corrige los problemas del dibujo para ver áreas y puentes."
+  sin_modelo: "Dibuja y cierra un perímetro para ver áreas y puentes."
+  vacio: "La unidad está vacía: dibuja el perímetro del nivel 1 con Dibujar muro."
+  abierto: "Nivel {nivel}: el perímetro está abierto. Ciérralo con un clic en su primer punto (Dibujar muro) o con «Cerrar perímetro»."
+  abierto_al_borrar: "Muro eliminado: el perímetro quedó abierto (se pierden los tabiques y las condiciones de los muros del nivel). Dibuja para cerrarlo."
+  como_cerrar: "Con Dibujar muro sigues desde el último punto; un clic en el primero (el grande) lo cierra."
+  nivel_abajo: "Dibuja primero el nivel de abajo."
+  elige_muro: "Elige primero un muro (herramienta Seleccionar)."
+  solo_exterior: "Solo los muros exteriores llevan ventanas y puertas."
+  alzado_sin_seleccion: "Dibuja con «Dibujar ventana» o «Dibujar puerta». Con Seleccionar eliges una ventana o una puerta; con Mover la arrastras."
+  confirmar_vaciar: "¿Eliminar todos los niveles y empezar desde cero? Se mantienen comuna, altura y demás datos. Se puede deshacer con Ctrl+Z."
+  ayuda_planta: "Rueda: zoom · Botón de la rueda: desplazar · Shift: sin ajuste · Esc · Supr · Ctrl+Z / Ctrl+Y"
+  ayuda_alzado: "Alzado visto desde el exterior · Rueda: zoom · Botón de la rueda: desplazar · Esc: volver"
+  ayuda_contexto: "Contexto: la unidad es solo referencia; las cotas se miden desde sus caras exteriores · Rueda: zoom · Botón de la rueda: desplazar · Shift: sin ajuste · Esc · Supr"
+  ayuda_3d: "Izq.: orbitar · Botón de la rueda (o der.): desplazar · Rueda: zoom · Clic en un muro, techo, piso, ventana, puerta, tabique o volumen de contexto: elegirlo (Supr lo borra) · Clic en el vacío: no elegir nada"
+  npt: "NPT [m]"
+  npt_ayuda: "Nivel de piso terminado del nivel 1 sobre el terreno natural (un departamento en un piso alto: su altura sobre el suelo). Los volúmenes de contexto parten del terreno."
+
+lienzo:
+  ancho_px: 1400       # tamano inicial; despues se ajusta a la ventana del navegador
+  alto_px: 800
+  margen_px: 80
+  centro_px: [170, 20] # corre el dibujo encuadrado para que no quede bajo las cajas y la barra
+  extension_min_m: 10
+  zoom: 1.25           # botones + y -
+  zoom_rueda: 1.15     # cada paso de la rueda
+  rueda_throttle_s: 0.03
+  escala_min: 5        # [px/m] lo mas lejos
+  escala_max: 2000     # [px/m] lo mas cerca
+
+captura:
+  radio_px: 10         # distancia para tomar un vertice, corte, muro, tabique o vano
+  cierre_px: 14        # distancia al primer punto para cerrar el perimetro (y el balcon)
+  alinear_px: 10       # alinea con otros puntos al dibujar y al mover vertices
+  balcon_px: 16        # dibujando un balcon: distancia para pegarse a un vertice o a un muro
+
+planta:
+  fondo: "#ffffff"
+  grilla: {paso_m: 1.0, mayor_cada: 5, max_lineas: 150, color: "#f3f4f6", color_mayor: "#dde1e5", grosor: 1}
+  piso: {relleno: "#f6f4ef"}
+  otro_nivel: {color: "#a3a3a3", grosor: 1.5, trazo: "6 4"}
+  muro:
+    exterior: {color: "#2b3440", grosor: 6}
+    adiabatico: {color: "#9ca3af", grosor: 6, trazo: "10 5"}
+  ventana: {color: "#38bdf8", grosor: 8}     # celeste
+  puerta: {color: "#16a34a", grosor: 8}      # verde
+  tabique: {color: "#6b7280", grosor: 3}
+  # obstrucciones dibujadas: horizontal = rectangulo (relleno con opacidad, borde y una
+  # diagonal); vertical = linea de grosor_vertical
+  obstaculo: {color: "#57534e", relleno: "#d6d3d1", opacidad: 0.55, grosor: 1.5, grosor_vertical: 5}
+  # balcon (solo P04): su poligono verde con borde segmentado (trazo)
+  balcon: {color: "#15803d", relleno: "#bbf7d0", opacidad: 0.6, grosor: 1.5, trazo: "5 3"}
+  # marca del snap al dibujar un balcon: anillo en un vertice o en el punto de cierre,
+  # cuadrado en un muro
+  snap: {color: "#16a34a", radio: 9, grosor: 2}
+  vertice: {radio: 5, relleno: "#ffffff", borde: "#2b3440", etiquetas: true, color_etiqueta: "#7b8692", dx: 8, dy: 10}
+  corte: {radio: 4, relleno: "#f59e0b"}
+  seleccion: {color: "#f97316"}
+  borrador: {color: "#2563eb", grosor: 2, trazo: "6 4", factor_primero: 1.8}
+  texto: {fuente: "Avenir Next, Segoe UI, Arial, sans-serif", tamano: 12, color: "#2b3440", halo: "#ffffff", separacion_px: 16}
+  norte: {color: "#2b3440", largo_px: 34, x_px: -40, y_px: 90}   # x o y negativos: desde la derecha o abajo
+
+alzado:
+  rotulo: ""
+  desde: exterior      # exterior | interior
+  snap_m: 0.05         # ajuste de las esquinas de los vanos y al moverlos (Shift: 1 cm)
+  # vidrio de las ventanas nuevas: general (sigue al vidrio general) o un codigo de
+  # recinto/datos/vidrios.yaml (la ventana nace con vidrio propio)
+  vidrio_defecto: general
+  margen_px: 90
+  extension_min_m: 3
+  suelo_extra_m: 0.6
+  muro:
+    exterior: {relleno: "#fafaf9", borde: "#2b3440", grosor: 2}
+    adiabatico: {relleno: "#fbe4e8", borde: "#9ca3af", grosor: 2}
+  suelo: {color: "#6b7280", grosor: 2}
+  ventana: {relleno: "#bae6fd", opacidad: 0.7, borde: "#0ea5e9", grosor: 2}   # celeste
+  puerta: {relleno: "#bbf7d0", opacidad: 0.7, borde: "#16a34a", grosor: 2}    # verde
+  proteccion: {relleno: "#d6d3d1", opacidad: 0.8, borde: "#57534e", grosor: 1, espesor_m: 0.05, max_lamas: 60}
+  # obstrucciones dibujadas que se apoyan en el plano del muro, vistas de frente: espesor_m de
+  # una horizontal sin espesor propio; ancho_m con que se dibuja una vertical
+  obstaculo: {relleno: "#d6d3d1", opacidad: 0.8, borde: "#57534e", grosor: 1, espesor_m: 0.15, ancho_m: 0.15}
+  previa: {trazo: "6 4"}
+  cursor: {color: "#2563eb"}
+
+modelo3d:
+  render_defecto: lineas   # lineas (lineas ocultas) | solido; se cambia con los botones de la vista 3D
+  # Techos: opacos y elegibles con un clic (como todo lo que se ve desde afuera). El boton
+  # de techos los oculta para ver y elegir el interior (pisos, tabiques, caras interiores).
+  techos_visibles: true
+  espesor_muro: 0.20
+  espesor_losa: 0.20
+  espesor_vidrio: 0.03
+  espesor_puerta: 0.05
+  proteccion: {espesor_m: 0.03, max_lamas: 60}   # alero, aletas y lamas de la celosia
+  # obstrucciones dibujadas: espesor de una horizontal sin alto propio, ancho de una vertical y
+  # espesor de un balcon sin espesor propio (su cara superior queda en el piso del nivel)
+  obstaculo: {espesor_m: 0.15, ancho_m: 0.15, balcon_espesor_m: 0.20}
+  # tabiques: del piso al cielo del nivel, con este espesor (centrado en su linea). Se ven con
+  # los techos ocultos; un clic los elige (doble clic: la planta con Mover). Colores:
+  # clases.tabique y lineas.clases.tabique.
+  tabique: {espesor_m: 0.10}
+  # Volumenes de contexto (FAR dibujado): prismas transparentes desde el terreno natural. La
+  # grilla esta en el terreno natural y la unidad sube su NPT (un departamento alto flota).
+  # Color y transparencia: clases.contexto (solido) y lineas.clases.contexto (lineas); color
+  # de sus aristas: lineas.color.contexto.
+  # encuadre: la camara inicial y Encuadrar tambien los abarcan (false: solo la unidad).
+  # aristas_solido: sus aristas tambien en el modo solido (se leen mejor al ser transparentes).
+  # Un clic los elige solo si el rayo no toca antes la unidad.
+  contexto: {encuadre: false, aristas_solido: true}
+  muros_cubren_losas: true # los muros tapan el canto de las losas
+  inglete_max: 4       # [espesores] mas alla, la esquina se corta recto (angulos muy agudos)
+  area_min_m2: 0.0001
+  distancia_camara: 2.2
+  # Vista inicial y Encuadrar: desde la fachada frontal (lado 1 del nivel 1) y el lateral
+  # que queda a su izquierda mirandola desde afuera. Pesos: frente, lado (negativo = el
+  # otro lateral) y alto.
+  camara: {frente: 0.8, lado: 0.6, alto: 0.7}
+  # Norte en el suelo: circulo, flecha y letra, junto al lateral visible.
+  norte: {radio_m: 0.8, separacion_m: 1.0, segmentos: 48, punta: 0.3, letra: "N", letra_factor: 1.45,
+          color: "#2b3440", estilo: "font-size: 15px; font-weight: 600; color: #2b3440;"}
+  espera_camara_s: 0.6 # la camara se ubica cuando la escena nueva ya cargo
+  raton: {izquierdo: rotar, medio: desplazar, derecho: desplazar}   # rotar | desplazar | zoom; la rueda hace zoom
+  fondo: "#f7f8f9"
+  grilla: true
+  # grilla del suelo: opacidad (0 = invisible, 1 = opaca) y detras: se dibuja antes que todo y
+  # sin profundidad, asi la losa del piso (que coincide con ella) la tapa en vez de verse rayada
+  grilla_opacidad: 0.35
+  grilla_detras: true
+  seleccion: {color: "#f97316"}
+  borrador: {color: "#2563eb", opacidad: 0.35, alto: 0.02}   # perimetro abierto: solo en el suelo
+  contorno: {color: "#6b7280"}                                # dibujo con problemas: solo contornos
+  clases:              # colores del modo solido (y del modo lineas si alli no se redefinen)
+    exterior: {color: "#ffffff", opacidad: 1.0}      # blanco opaco
+    adiabatico: {color: "#f9d5dc", opacidad: 1.0}    # rosado claro
+    vidrio: {color: "#cfeaff", opacidad: 0.3}        # transparente
+    puerta: {color: "#c9a27e", opacidad: 1.0}        # cafe claro
+    proteccion: {color: "#d6d3d1", opacidad: 1.0}    # gris piedra
+    obstaculo: {color: "#c8c4c0", opacidad: 1.0}     # gris (obstrucciones dibujadas)
+    balcon: {color: "#86efac", opacidad: 1.0}        # verde (balcones, solo P04)
+    tabique: {color: "#d1d5db", opacidad: 1.0}       # gris claro (tabiques interiores)
+    contexto: {color: "#94a3b8", opacidad: 0.35}     # gris azulado transparente (volumenes del entorno)
+    piso_adiabatico: {color: "#d4d4d4", opacidad: 1.0}
+    piso_terreno: {color: "#a8a29e", opacidad: 1.0}
+    piso_ventilado: {color: "#fcd34d", opacidad: 1.0}
+    losa_entre_niveles: {color: "#e5e5e5", opacidad: 1.0}
+    techo_adiabatico: {color: "#e4e4e7", opacidad: 1.0}
+    techo_exterior: {color: "#d6a77a", opacidad: 1.0}
+  lineas:              # modo lineas ocultas: aristas oscuras sobre caras claritas
+    color: {muro: "#4b5563", vano: "#4b5563", proteccion: "#4b5563", obstaculo: "#4b5563", balcon: "#15803d",
+            tabique: "#9ca3af", contexto: "#7b8692"}
+    desfase_m: 0.004   # separa la linea de la cara para que no parpadee
+    clases:
+      exterior: {color: "#ffffff", opacidad: 1.0}
+      adiabatico: {color: "#fdeef1", opacidad: 1.0}
+      vidrio: {color: "#e6f4fd", opacidad: 0.35}
+      puerta: {color: "#f1e4d6", opacidad: 1.0}
+      proteccion: {color: "#f5f5f4", opacidad: 1.0}
+      obstaculo: {color: "#efedeb", opacidad: 1.0}
+      balcon: {color: "#bbf7d0", opacidad: 1.0}
+      tabique: {color: "#e5e7eb", opacidad: 1.0}
+      contexto: {color: "#cbd5e1", opacidad: 0.25}
+      piso_adiabatico: {color: "#f3f4f6", opacidad: 1.0}
+      piso_terreno: {color: "#eeebe8", opacidad: 1.0}
+      piso_ventilado: {color: "#fdf6dc", opacidad: 1.0}
+      losa_entre_niveles: {color: "#f5f5f5", opacidad: 1.0}
+      techo_adiabatico: {color: "#f6f6f7", opacidad: 1.0}
+      techo_exterior: {color: "#f7e7da", opacidad: 1.0}

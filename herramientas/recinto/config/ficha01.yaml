@@ -1,0 +1,64 @@
+# ---------------------------------------------------------------------------
+# Traduccion del recinto a la ficha 01 PBTD v2.2 (textos EXACTOS de sus listas).
+# Fuente: salidas/inspeccion/ficha01_listas.txt. Comunas y regiones viven en
+# datos/comunas.yaml y los vidrios en datos/vidrios.yaml.
+# ---------------------------------------------------------------------------
+version: 1
+
+portada:
+  tipo_calificacion: "Pre calificación"     # Tipo_Calificacion
+  tipo_vivienda: "Departamento"             # Tipo_De_Vivienda
+  nombre_proyecto: "Iterador CEV"
+
+ventana:
+  cierre: "Corredera"            # Cierre_Ventanas
+  posicion: "Centrada"           # Posicion_Ventana
+  aislacion_retorno: "Sin"       # Aislacion_Marco_Vano
+  categoria_marco: "PVC"         # Material_Marcos (categoria para PT e infiltraciones)
+  tipo_marco: "PVC"              # abreviatura en Marcos (U 2,8; FM 0,8)
+
+# P04 de aleros y aletas: una fila por muro en CEV-CEVE 87-91.
+p04:
+  # Elemento_Terraza: "Marco Madera", "Marco Metalico", "Muro " (con espacio
+  # final en la ficha), "Cornisa desplazada". PENDIENTE: confirmar con Lucas.
+  elemento: "Muro "
+  # Aislacion_Terraza (casos de mitigacion del Manual 6.2.5)
+  aislaciones: ["Sin Aislación", "20mmX300mm Inf", "20mmX300mm Inf y Sup", "40mmX600mm Inf y Sup"]
+  aislacion_defecto: "Sin Aislación"
+
+densidad: "Pesado"               # Densidad_Muros, para techo y piso de hormigon
+techo: {camaras_aire: "Sin camara", cubierta: "Cubierta normal"}
+pisos_tipo: {ventilado: "Ventilado", terreno: "No Ventilado"}
+
+# Filas propias en '3. Tablas Envolvente' (las de fabrica no se tocan).
+# Columnas: Muros B nombre, C abreviatura, D materialidad, E U, F espesor
+# solido [cm], G espesor aislante [cm], H posicion. Techos igual sin E.
+# Pisos: D U ventilado, E lambda y F espesor [cm] del aislante bajo piso, M posicion.
+# Vidrios: B nombre, C abreviatura, D U, E FS (solo vidrios que no son de fabrica).
+# El nombre no debe ser prefijo de otro: se busca dentro de las listas Texto_*.
+catalogo:
+  vidrio:
+    filas: [32, 42]              # filas libres del bloque Vidrios (27-42): un vidrio propio por fila
+  muro:
+    fila: 62
+    nombre: "H.A. {solido_mm} + EPS {aislante_mm} mm"
+    abreviatura: "Muro HA{solido_mm} EPS{aislante_mm}"
+    materialidad: "Pesado"
+    posicion: "Exterior"         # PENDIENTE: confirmar EPS por el exterior
+  muro_ficticio:                 # Manual 6.7: ventana que ocupa toda la fachada
+    fila: 63
+    nombre: "Tabique madera U max zona (Manual 6.7)"
+    abreviatura: "Muro ficticio 6.7"
+    materialidad: "Madera"
+    espesor_solido_cm: 10        # INFERIDO
+    posicion: "Sin"
+  techo:
+    fila: 80
+    nombre: "Losa H.A. {solido_mm} + EPS {aislante_mm} mm"
+    abreviatura: "Techo HA{solido_mm} EPS{aislante_mm}"
+    posicion: "Exterior"
+  piso:
+    fila: 88
+    nombre: "Losa piso H.A. {solido_mm} + EPS {aislante_mm} mm"
+    abreviatura: "Piso HA{solido_mm} EPS{aislante_mm}"
+    posicion: "Exterior"

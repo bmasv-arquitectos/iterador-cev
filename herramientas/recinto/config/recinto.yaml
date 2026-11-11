@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------------------
+# Recinto tipo del iterador CEV. Todo lo modificable vive aqui (como un CSS).
+# Marcas:  VERIFICADO = sale del Manual CEV 2025.08.18 (seccion indicada)
+#          PENDIENTE  = decision de Lucas o dato de la ficha aun no leido
+#          INFERIDO   = supuesto razonable, revisar
+# ---------------------------------------------------------------------------
+version: 1
+
+# Ids internos f1..f4 (no cambian). f1 = frente, de longitud = largo.
+# f2 queda a la DERECHA de f1 para un observador en el interior mirando hacia
+# el frente (misma convencion que las aletas izq./der. del Manual 6.7.3.2);
+# azimut f2 = azimut f1 + 90 (horario). Para usar la convencion inversa
+# (mirando la fachada desde la calle) basta intercambiar Derecha e Izquierda.
+# Azimut entre -180 y 180, positivo horario desde el Norte (VERIFICADO 6.2.1).
+fachadas:
+  orden: [f1, f2, f3, f4]
+  nombres: {f1: "Frente", f2: "Derecha", f3: "Atrás", f4: "Izquierda"}
+  orden_panel: [f1, f3, f4, f2]   # orden de los botones en la interfaz
+
+limites:
+  largo: [2.0, 20.0]
+  ancho: [2.0, 20.0]
+  altura: [2.0, 4.0]
+  paso_azimut: 45
+
+ventana:
+  # Piso a cielo por defecto: alto = altura libre - antepecho - dintel.
+  antepecho: 0.0
+  dintel: 0.0
+  # Si el muro que sobra a los lados es menor que esto, la ventana "ocupa toda
+  # la fachada" y se crea un muro no adiabatico de 0,05 m2 (VERIFICADO 6.7).
+  tolerancia_fachada_completa: 0.01
+  muro_ficticio_area: 0.05
+
+# Puentes termicos (criterio de Lucas, 2026-11; corregido 2026-11-04):
+#  - Esquinas verticales, contadas UNA sola vez (6.2.3): entre dos muros
+#    exteriores P01; entre un muro exterior y uno adiabatico P03 (Manual CEV:
+#    la union de un muro exterior con uno adiabatico es P03), en el muro exterior.
+#  - Bordes horizontales: por muro exterior, largo en el cielo + largo en el
+#    piso como P03; si el techo es exterior el del cielo pasa a P01, si el
+#    piso es ventilado el del piso pasa a P01. Piso contra terreno: ni P01
+#    ni P03 (VERIFICADO 6.2.3).
+#  - P04: aleros y aletas que sobresalen del muro, largo total del encuentro
+#    (6.2.5): alero = ancho de la ventana; aleta = alto de la ventana + D.
+puentes:
+  esquina_con_adiabatico: p03        # p03 (Manual) | p01
+  p04: {alero: true, aletas: true}
+
+proteccion:
+  # INFERIDO: alero a nivel de cielo sobre ventana piso-cielo -> D = 0.
+  alero_d: 0.0
+  # borde_ventana: aletas pegadas al vano (S = 0)
+  # borde_fachada: aletas en las esquinas (S = (largo - ancho_ventana) / 2)
+  aletas_en: borde_ventana

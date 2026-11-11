@@ -1,0 +1,10 @@
+Modelos de referencia del menu "Cargar" del editor de unidad.
+
+Para crear uno: dibujalo en el editor, usa Guardar y copia el .json aqui con
+el nombre que indica config/editor.yaml (seccion cargar:):
+
+  departamento_referencia.json  ->  "Departamento referencia"
+  casa_referencia.json          ->  "Casa referencia"
+
+La opcion se activa sola al recargar la pagina (F5). Para agregar otra opcion,
+suma una linea en cargar: con su texto y el nombre de su archivo.

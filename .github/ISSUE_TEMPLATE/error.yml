@@ -1,0 +1,31 @@
+name: Error
+description: Algo no funciona como debería
+labels: [error]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Versión
+      description: Botón «Acerca de», abajo a la izquierda
+      placeholder: 0.1 beta
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows
+      placeholder: Windows 11
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Qué pasó y cómo repetirlo
+      description: Los pasos, lo que esperabas y lo que ocurrió
+    validations:
+      required: true
+  - type: textarea
+    id: archivos
+    attributes:
+      label: Archivos
+      description: >-
+        Arrastra aquí la unidad guardada (unidad.json) y, si el programa se cerró,
+        %LOCALAPPDATA%\IteradorCEV\registro.txt

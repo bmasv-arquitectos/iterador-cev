@@ -1,0 +1,35 @@
+.venv/
+.venv-exe/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+salidas/fichas_cev
+salidas/motor_cev
+salidas/iterador
+salidas/hibrido
+salidas/inspeccion/ficha01_formulas.csv
+dist/
+build/
+distribucion/generado/
+distribucion/instalador/
+data/
+*.xlsx
+*.xls
+*.xlsm
+*.pdf
+~$*
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+
+# Excepcion: las plantillas oficiales en blanco SI se versionan, para que la
+# herramienta funcione recien clonado el repo. Las reglas de arriba son por
+# extension (no por carpeta), asi que estas negaciones si tienen efecto.
+!herramientas/*/bases/*.xlsx
+!herramientas/*/bases/*.xlsm
+!herramientas/*/bases/*.pdf
+
+salidas/

@@ -1,0 +1,29 @@
+# Cierra los pull requests de personas externas (el proyecto no acepta contribuciones de
+# codigo: ver CONTRIBUTING.md). No descarga el codigo del pull request.
+name: Cerrar pull requests
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  cerrar:
+    if: >-
+      github.event.pull_request.author_association != 'OWNER' &&
+      github.event.pull_request.author_association != 'MEMBER' &&
+      github.event.pull_request.author_association != 'COLLABORATOR'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cerrar con un mensaje
+        run: gh pr close "$PR" --repo "$REPO" --comment "$MENSAJE"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          MENSAJE: >-
+            Gracias por el interés. Por ahora este proyecto no acepta contribuciones de código
+            (ver CONTRIBUTING.md). Los reportes de errores y las ideas son bienvenidos en Issues,
+            y los forks están permitidos bajo la licencia AGPL-3.0.

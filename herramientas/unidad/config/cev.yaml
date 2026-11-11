@@ -1,0 +1,150 @@
+# ---------------------------------------------------------------------------
+# Unidad -> ficha 01 (herramientas/unidad/cev.py). Criterios de puentes de
+# Lucas (2026-11-04) y del Manual CEV 2025.08.18 (seccion entre parentesis).
+# Los textos de las listas de la ficha siguen en recinto/config/ficha01.yaml.
+# ---------------------------------------------------------------------------
+version: 10
+
+# Tipo de vivienda -> texto EXACTO de la lista Tipo_De_Vivienda de la ficha 01
+# ('0. Tablas referencia'!CA11:CA13; "Casa Pareada o  continua" lleva dos espacios).
+# La planilla 03 usa LEFT(E16;4) = "Casa" para la demanda de referencia.
+tipos_vivienda:
+  departamento: "Departamento"
+  casa_aislada: "Casa Aislada"
+  casa_pareada: "Casa Pareada o  continua"
+
+# Soluciones generales de una unidad nueva (herramientas/unidad/generales.py). Muros,
+# techos y pisos parten cumpliendo la norma de la zona; el vidrio y la puerta, con
+# estos valores (puerta null = puertas.defecto). nombres: los de una general
+# personalizada en la ficha (no deben repetir el de una solucion propia).
+generales:
+  vidrio: DVH_AIRE_12
+  puerta: null
+  nombres:
+    muro: "Muro general"
+    techo: "Techo general"
+    piso_terreno: "Piso terreno general"
+    piso_ventilado: "Piso ventilado general"
+    vidrio: "Vidrio general"
+    puerta: "Puerta general"
+
+# Obstrucciones solares (herramientas/unidad/obstrucciones.py):
+#   - voladizo del nivel de arriba sobre una ventana (detectado) -> FAV1;
+#   - obstruccion horizontal dibujada (balcon, cornisa, alero) -> FAV1 de las ventanas
+#     de su nivel bajo ella; vertical dibujada (muro saliente, aleta) -> FAV2 de las
+#     ventanas del mismo plano de fachada;
+#   - autosombra: el muro propio que sale en un rincon entrante (unidad en L) -> FAV2;
+#   - balcon dibujado (losa en el piso del nivel): NO hace sombra, solo suma su P04
+#     (criterio de Lucas 2026-11-07).
+# Prioridad: FAV1 = alero propio > horizontal dibujada (menor D) > voladizo; FAV2 de cada
+# lado = aleta propia > vertical dibujada o autosombra, la mas cercana.
+# CRITERIO PROVISORIO DE LUCAS (2026-11-05), el Manual no lo aborda: si la obstruccion no
+# cubre toda la ventana (ancho para FAV1, alto para FAV2), se considera solo si cubre MAS
+# que cobertura_min. A proposito no esta en la interfaz.
+obstrucciones:
+  activo: true          # false: no se detecta ni se usa ninguna (como antes)
+  autosombra: true      # false: no se detecta la autosombra de los rincones entrantes
+  cobertura_min: 0.5    # fraccion de la ventana (0..1); se exige cobertura > este valor
+  largo: promedio       # L con obstruccion irregular: promedio | minimo | maximo de los rayos que la tocan
+  muestras: 41          # rayos repartidos a lo ancho de la ventana
+  decimales: 2          # L, D, P y S redondeados (m)
+  alcance_m: 30.0       # largo maximo de cada rayo
+  contacto_m: 0.05      # una obstruccion dibujada se apoya en un muro si queda a menos de esto
+  # Un borde del balcon se apoya en un muro si queda entre -contacto_m (hacia adentro) y
+  # contacto_balcon_m hacia afuera de su cara interior: asi cuenta igual un balcon dibujado
+  # desde la cara exterior del muro (espesor 0,2 m).
+  contacto_balcon_m: 0.3
+  # P04 de las obstrucciones dibujadas y los balcones (se cuentan por defecto; cada uno se
+  # puede apagar o ajustar en su detalle). elementos: lista Elemento_Terraza de la ficha
+  # ("Muro " lleva un espacio al final). aislacion null: la de recinto/config/ficha01.yaml
+  # (p04). El voladizo detectado no suma P04 (es una losa).
+  p04:
+    elementos: ["Muro ", "Cornisa desplazada", "Marco Madera", "Marco Metalico"]
+    elemento: {horizontal: "Muro ", vertical: "Muro ", balcon: "Muro "}
+    aislacion: null
+
+# FAR dibujado (herramientas/unidad/contexto_far.py con el motor herramientas/far;
+# metodo en herramientas/far): los volumenes de contexto de la unidad
+# se convierten en las obstrucciones remotas de la ficha ('CEV-CEVE' E127:H134 y
+# E139:H146 y siguientes: division, A, B, D por orientacion) y en el azimut de cada
+# bloque (G125, L125, Q125, V125, G137...: el texto de la lista de azimut, uno de los
+# dos de cada orientacion). Una unidad sin volumenes de contexto no escribe nada.
+far:
+  activo: true             # false: se ignoran los volumenes de contexto
+  # Que orientaciones llevan FAR. CRITERIO DE LUCAS (2026-11-07), el Manual no lo aclara:
+  #   unidad      todas las orientaciones en que la unidad tiene muros, exteriores o
+  #               adiabaticos (el caso de referencia gira la vivienda y sus ventanas leen
+  #               el FAR de la orientacion a la que quedan mirando; la propuesta solo lee
+  #               las orientaciones con ventanas, asi que no cambia);
+  #   exteriores  solo las orientaciones con muros exteriores.
+  # El punto de referencia es el mismo en los dos: el punto medio de los muros de esa
+  # orientacion, ponderado por area.
+  orientaciones: unidad
+  muro_min: 1.6            # [m] muros de altura libre <= esto no son fachada (no definen el punto)
+  # Semicirculo. CRITERIO DE LUCAS (2026-11-07): el FAR es siempre paralelo a la fachada;
+  # la orientacion solo clasifica el bloque de la ficha.
+  #   real     centrado en la normal de los muros de esa orientacion (promedio por area)
+  #   nominal  centrado en el azimut nominal de la orientacion (N 0, NE 45...)
+  semicirculo: real
+  losa_m: 0.2              # [m] losa entre niveles, para la altura del punto en unidades de 2-3 niveles
+  decimales: 1             # A, B y D en la ficha [m]
+  division: "División {k}" # texto de la lista de la ficha (columna Division)
+  motor:                   # herramientas.far.Parametros
+    paso_grados: 0.1       # resolucion del barrido (los bordes se afinan por biseccion)
+    ancho_min_grados: 0.5  # tramos mas angostos se omiten (astillas de esquina)
+    descarte: ninguno      # ninguno | logico (D/B o A/B < umbral) | literal (B/D o B/A < umbral)
+    umbral_descarte: 0.1
+    maximo: 8              # filas por orientacion de la ficha; sobre eso, las mas relevantes
+
+# Puertas (CEV-CEVE 96-98, maximo 3). '3. Tablas Envolvente' filas 12-23:
+#   B nombre, C abreviatura, D U de la hoja [W/m2K], E vidrio (abreviatura de
+#   la tabla de vidrios), F fraccion vidriada, G U del marco, H fraccion de marco.
+#   La ficha calcula I = D (1 - F - H) + U_vidrio F + G H: es el U que usa el motor.
+# tipos: filas DE FABRICA (C12:C17, confirmadas 2026-11-04) con el texto que ve el
+#   usuario, el U efectivo I (vidrio VM U 5,8; marco G 1,25; H 0,0878; solo para
+#   mostrar) y la materialidad para infiltraciones (columna H de CEV-CEVE).
+# Las personalizadas van a las filas libres 18-23: B y C nombre, D U, F G H en 0
+#   (puerta opaca sin marco aparte: I = D).
+puertas:
+  filas: [18, 23]
+  defecto: "MS"
+  tipos:
+    "MS": {texto: "Madera sólida · U 1,85", u: 1.85, categoria: "Madera Solida"}
+    "MS < 50% Vidrio": {texto: "Madera, 40 % vidrio simple · U 3,41", u: 3.41, categoria: "Madera Solida"}
+    "MS < 100% Vidrio": {texto: "Madera, 85 % vidrio simple · U 5,16", u: 5.16, categoria: "Madera Solida"}
+    "ML": {texto: "Madera liviana · U 2,51", u: 2.51, categoria: "Madera Liviana"}
+    "ML < 50% Vidrio": {texto: "Madera liviana, 45 % vidrio simple · U 3,89", u: 3.89, categoria: "Madera Liviana"}
+    "ML < 100% Vidrio": {texto: "Madera liviana, 85 % vidrio simple · U 5,18", u: 5.18, categoria: "Madera Liviana"}
+
+puentes:
+  # Esquina vertical entre dos muros exteriores (6.2.3): se cuenta UNA vez, en el
+  # muro que termina en el vertice. Entrante = rincon de una planta en L.
+  esquina: {saliente: p01, entrante: p02, colineal: null}
+  # Union de un muro exterior con uno adiabatico: P03 en el muro exterior, sea
+  # esquina saliente, entrante o entre dos tramos alineados de un mismo lado
+  # (Manual CEV; correccion de Lucas 2026-11-04).
+  esquina_con_adiabatico: {saliente: p03, entrante: p03, colineal: p03}
+  # Bordes horizontales de cada muro exterior, segun lo que hay arriba o abajo
+  borde_techo: {exterior: p01, adiabatico: p03}
+  borde_piso: {ventilado: p01, terreno: null, adiabatico: p03}
+  losa_entre_niveles: p03      # losa entre dos niveles de la unidad, en cada nivel
+  tabique: p03                 # tabique interior que llega a un muro exterior (x altura)
+  p04: {alero: true, aletas: true}   # 6.2.5: alero propio = ancho; aleta propia = alto + D
+
+ventana:
+  # Si lo que queda de muro es menor que tolerancia x altura, la ventana ocupa todo
+  # el muro y se declara un muro de muro_ficticio_area m2 (6.7).
+  tolerancia_fachada_completa: 0.01
+  muro_ficticio_area: 0.05
+
+proteccion:
+  alero_d: 0.0                 # FAV1 D si la ventana no lo define
+  aletas_en: borde_ventana     # borde_ventana: S = 0 | borde_muro: S = distancia al extremo del muro
+
+# Filas propias de '3. Tablas Envolvente'. Nombres y abreviaturas: ficha01.yaml.
+catalogo:
+  muros: {filas: [62, 75]}     # la fila del muro ficticio (ficha01.yaml) se salta
+  techos: {filas: [80, 82]}    # una por solucion de techo exterior (79 es el adiabatico de fabrica)
+  pisos:
+    filas: [88, 91]            # una por condicion (terreno, ventilado) y solucion
+    sufijo: {ventilado: " V", terreno: " T"}   # si dos pisos quedan con la misma abreviatura

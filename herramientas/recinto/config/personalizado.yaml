@@ -1,0 +1,115 @@
+# ---------------------------------------------------------------------------
+# Componentes personalizados: el estudiante reemplaza muro, techo, piso,
+# vidrio o puerta por uno propio y llena a mano las columnas de '3. Tablas
+# Envolvente' de la ficha 01 v2.2 (fuente: salidas/inspeccion/ficha01_listas.txt).
+# Muro, techo y piso: uno por recinto (en la unidad, un muro por solucion).
+# Vidrio: uno por ventana; las filas libres de vidrio estan en
+# config/ficha01.yaml (catalogo.vidrio.filas). Puerta: filas en unidad/config/cev.yaml.
+#
+# Campo: clave, etiqueta, tipo (texto | num | lista), col (columna del
+# catalogo; null = va a la fila del elemento en CEV-CEVE), defecto,
+# min/max/paso (num), lista (clave de 'listas'), opcional (num vacio o 0 =
+# no se escribe), solo (piso: ventilado | terreno).
+# La abreviatura (columna C) se escribe igual al nombre.
+# reservados: textos de opciones que ya existen en las listas Texto_* de la
+# ficha. El nombre no puede estar contenido en ellos, porque la seleccion de
+# paquetes (1.2) busca el nombre dentro de esas opciones.
+# ---------------------------------------------------------------------------
+version: 2
+
+listas:
+  densidad: [Madera, Liviano-Otro, Intermedio, Pesado]                    # Densidad_Muros
+  posicion: [Sin, Interior, Exterior, Ambas, Inter Elementos]            # Posicion_Aislacion
+  camaras: [Sin camara, No ventilada, Ligeramente ventilada, ventilada]  # Camaras_Aire_Techo
+  cubierta: [Cubierta normal, Cubierta Vegetal]                          # Cubiertas_Techos
+  materialidad_puerta: [Madera Solida, Madera Liviana, Aluminio]          # Materialidad_Puertas
+
+elementos:
+  muro:
+    titulo: "Muro personalizado"
+    nota: "Se aplica a todos los muros exteriores."
+    bloque: Muros
+    fila: 62
+    reservados:
+      - "Muro Adiabatico espesor solido  [cm]"
+      - "Muro  con aislación por , de materialidad , con U=  [W/m2K], espesor solido [cm] y espesor aislante de  [cm]"
+      - "Tabique madera U max zona (Manual 6.7)"
+    campos:
+      - {clave: nombre, etiqueta: "Nombre", tipo: texto, col: B, defecto: "Muro personalizado"}
+      - {clave: densidad, etiqueta: "Tipología / densidad", tipo: lista, lista: densidad, col: D, defecto: Pesado}
+      - {clave: u, etiqueta: "U [W/m²K]", tipo: num, col: E, min: 0.05, max: 6.0, paso: 0.01, defecto: 0.8}
+      - {clave: solido_cm, etiqueta: "Espesor sólido [cm]", tipo: num, col: F, min: 0, max: 100, paso: 0.5, defecto: 20}
+      - {clave: aislante_cm, etiqueta: "Espesor aislante [cm]", tipo: num, col: G, min: 0, max: 50, paso: 0.5, defecto: 4}
+      - {clave: posicion, etiqueta: "Posición aislación", tipo: lista, lista: posicion, col: H, defecto: Exterior}
+
+  techo:
+    titulo: "Techo personalizado"
+    bloque: Techos
+    fila: 80
+    reservados:
+      - "Techo Adiabatico"
+      - "Techo  con aislación por  con U=  [W/m2K] y espesor aislante de  [cm]"
+    campos:
+      - {clave: nombre, etiqueta: "Nombre", tipo: texto, col: B, defecto: "Techo personalizado"}
+      - {clave: u, etiqueta: "U [W/m²K]", tipo: num, col: D, min: 0.05, max: 6.0, paso: 0.01, defecto: 0.38}
+      - {clave: solido_cm, etiqueta: "Espesor sólido [cm]", tipo: num, col: F, min: 0, max: 100, paso: 0.5, defecto: 15}
+      - {clave: aislante_cm, etiqueta: "Espesor aislante [cm]", tipo: num, col: G, min: 0, max: 50, paso: 0.5, defecto: 10}
+      - {clave: posicion, etiqueta: "Posición aislación", tipo: lista, lista: posicion, col: H, defecto: Exterior}
+      - {clave: densidad, etiqueta: "Densidad techo", tipo: lista, lista: densidad, col: null, defecto: Pesado}
+      - {clave: camaras, etiqueta: "Cámaras de aire", tipo: lista, lista: camaras, col: null, defecto: "Sin camara"}
+      - {clave: cubierta, etiqueta: "Tipo de cubierta", tipo: lista, lista: cubierta, col: null, defecto: "Cubierta normal"}
+
+  piso:
+    titulo: "Piso personalizado"
+    bloque: Pisos
+    fila: 88
+    reservados:
+      - "Piso Adiabatico"
+      - "Piso  con aislación por , con U  =  [W/m2K], "
+    campos:
+      - {clave: nombre, etiqueta: "Nombre", tipo: texto, col: B, defecto: "Piso personalizado"}
+      - {clave: u, etiqueta: "U piso ventilado [W/m²K]", tipo: num, col: D, min: 0.05, max: 6.0, paso: 0.01, defecto: 0.6, solo: ventilado}
+      - {clave: lambda_aislante, etiqueta: "λ aislante bajo piso [W/mK]", tipo: num, col: E, min: 0.01, max: 5, paso: 0.001, defecto: 0.0413, solo: terreno, opcional: true}
+      - {clave: e_aislante_cm, etiqueta: "Espesor aislante bajo piso [cm]", tipo: num, col: F, min: 0, max: 50, paso: 0.5, defecto: 6, solo: terreno, opcional: true}
+      - {clave: refv_lambda, etiqueta: "Refuerzo vertical λ [W/mK]", tipo: num, col: G, min: 0.01, max: 5, paso: 0.001, defecto: null, solo: terreno, opcional: true}
+      - {clave: refv_e_cm, etiqueta: "Refuerzo vertical e [cm]", tipo: num, col: H, min: 0, max: 50, paso: 0.5, defecto: null, solo: terreno, opcional: true}
+      - {clave: refv_d_cm, etiqueta: "Refuerzo vertical D [cm]", tipo: num, col: I, min: 0, max: 500, paso: 1, defecto: null, solo: terreno, opcional: true}
+      - {clave: refh_lambda, etiqueta: "Refuerzo horizontal λ [W/mK]", tipo: num, col: J, min: 0.01, max: 5, paso: 0.001, defecto: null, solo: terreno, opcional: true}
+      - {clave: refh_e_cm, etiqueta: "Refuerzo horizontal e [cm]", tipo: num, col: K, min: 0, max: 50, paso: 0.5, defecto: null, solo: terreno, opcional: true}
+      - {clave: refh_d_cm, etiqueta: "Refuerzo horizontal D [cm]", tipo: num, col: L, min: 0, max: 500, paso: 1, defecto: null, solo: terreno, opcional: true}
+      - {clave: posicion, etiqueta: "Posición aislación", tipo: lista, lista: posicion, col: M, defecto: Exterior}
+      - {clave: densidad, etiqueta: "Densidad piso", tipo: lista, lista: densidad, col: null, defecto: Pesado}
+
+  vidrio:
+    titulo: "Vidrio personalizado"
+    nota: "Solo para esta ventana."
+    bloque: Vidrios
+    reservados:
+      - "Vidrio Monolítico (VM). Sin espaciador"
+      - "DVH con espaciador de 6mm"
+      - "DVH con espaciador de 9mm"
+      - "DVH con espaciador de 12mm"
+      - "DVH con espaciador de 15mm o mayor"
+      - "Vidrio  con U=  [W/m2K] y factor solar de "
+    campos:
+      - {clave: nombre, etiqueta: "Nombre", tipo: texto, col: B, defecto: "Vidrio personalizado"}
+      - {clave: u, etiqueta: "U vidrio [W/m²K]", tipo: num, col: D, min: 0.3, max: 6.5, paso: 0.01, defecto: 2.85}
+      - {clave: fs, etiqueta: "Factor solar (FS)", tipo: num, col: E, min: 0.01, max: 1.0, paso: 0.01, defecto: 0.77}
+
+  puerta:
+    titulo: "Puerta personalizada"
+    nota: "Puerta opaca: sin vidrio ni marco aparte."
+    bloque: Puertas
+    fila: 18
+    reservados:
+      - "Puerta Madera Solida con U= 1.91 [W/m2K] y  0 % de vidrio"
+      - "Puerta Madera con hasta 50% zona vidriada con U= 1.91 [W/m2K] y  40 % de vidrio"
+      - "Puerta Madera con hasta 100% zona vidriada con U= 1.91 [W/m2K] y  85 % de vidrio"
+      - "Puerta Liviana de madera con U= 2.63 [W/m2K] y  0 % de vidrio"
+      - "Puerta Liviana madera con hasta 50% zona vidriada con U= 2.53 [W/m2K] y  45 % de vidrio"
+      - "Puerta Liviana madera con hasta 100% zona vidriada con U= 2.18 [W/m2K] y  85 % de vidrio"
+      - "Puerta  con U=  [W/m2K] y  0 % de vidrio"
+    campos:
+      - {clave: nombre, etiqueta: "Nombre", tipo: texto, col: B, defecto: "Puerta personalizada"}
+      - {clave: u, etiqueta: "U puerta [W/m²K]", tipo: num, col: D, min: 0.1, max: 6.0, paso: 0.01, defecto: 2.0}
+      - {clave: categoria, etiqueta: "Materialidad (infiltraciones)", tipo: lista, lista: materialidad_puerta, col: null, defecto: "Madera Liviana"}

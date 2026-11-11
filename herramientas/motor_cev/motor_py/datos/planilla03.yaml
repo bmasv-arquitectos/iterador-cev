@@ -1,0 +1,6387 @@
+# Tablas extraidas de la plantilla oficial PBTD v2.2. No editar a mano.
+origen:
+  plantilla: 03.-PBTD-Datos-de-Equipos-y-Resultados-v2.2.xlsm
+  sha256: fa9f2e0f0da4c9a5921f110f3158ed4c59c4290728779e210e613a4d7df9cee1
+  fecha: '2026-11-04T05:29:02'
+  generado_por: extraccion desde la plantilla oficial
+formulas_distintas: []
+distintas_detalle: {}
+constantes_faltantes: []
+n_verificadas: 9435
+filas_bf:
+- 7
+- 8
+- 9
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18
+- 19
+- 20
+- 21
+- 22
+- 23
+- 24
+- 25
+- 26
+- 27
+- 28
+- 29
+- 33
+- 34
+- 35
+- 36
+- 37
+- 38
+- 39
+- 40
+- 41
+- 42
+- 43
+- 44
+- 45
+- 46
+- 47
+- 48
+- 49
+- 50
+- 51
+- 52
+- 53
+- 54
+- 55
+- 59
+- 60
+- 61
+- 62
+- 63
+- 64
+- 65
+- 66
+- 67
+- 68
+- 69
+- 70
+- 71
+- 72
+- 73
+- 74
+- 75
+- 76
+- 77
+- 78
+- 79
+- 80
+- 81
+- 85
+- 86
+- 87
+- 88
+- 89
+- 90
+- 91
+- 92
+- 93
+- 94
+- 95
+- 96
+- 97
+- 98
+- 99
+- 100
+- 101
+- 102
+- 103
+- 104
+- 105
+- 106
+- 107
+- 111
+- 112
+- 113
+- 114
+- 115
+- 116
+- 117
+- 118
+- 119
+- 120
+- 121
+- 122
+- 123
+- 124
+- 125
+- 126
+- 127
+- 128
+- 129
+- 130
+- 131
+- 132
+- 133
+- 137
+- 138
+- 139
+- 140
+- 141
+- 142
+- 143
+- 144
+- 145
+- 146
+- 147
+- 148
+- 149
+- 150
+- 151
+- 152
+- 153
+- 154
+- 155
+- 156
+- 157
+- 158
+- 159
+- 163
+- 164
+- 165
+- 166
+- 167
+- 168
+- 169
+- 170
+- 171
+- 172
+- 173
+- 174
+- 175
+- 176
+- 177
+- 178
+- 179
+- 180
+- 181
+- 182
+- 183
+- 184
+- 185
+- 189
+- 190
+- 191
+- 192
+- 193
+- 194
+- 195
+- 196
+- 197
+- 198
+- 199
+- 200
+- 201
+- 202
+- 203
+- 204
+- 205
+- 206
+- 207
+- 208
+- 209
+- 210
+- 211
+- 215
+- 216
+- 217
+- 218
+- 219
+- 220
+- 221
+- 222
+- 223
+- 224
+- 225
+- 226
+- 227
+- 228
+- 229
+- 230
+- 231
+- 232
+- 233
+- 234
+- 235
+- 236
+- 237
+- 241
+- 242
+- 243
+- 244
+- 245
+- 246
+- 247
+- 248
+- 249
+- 250
+- 251
+- 252
+- 253
+- 254
+- 255
+- 256
+- 257
+- 258
+- 259
+- 260
+- 261
+- 262
+- 263
+- 267
+- 268
+- 269
+- 270
+- 271
+- 272
+- 273
+- 274
+- 275
+- 276
+- 277
+- 278
+- 279
+- 280
+- 281
+- 282
+- 283
+- 284
+- 285
+- 286
+- 287
+- 288
+- 289
+- 293
+- 294
+- 295
+- 296
+- 297
+- 298
+- 299
+- 300
+- 301
+- 302
+- 303
+- 304
+- 305
+- 306
+- 307
+- 308
+- 309
+- 310
+- 311
+- 312
+- 313
+- 314
+- 315
+- 319
+- 320
+- 321
+- 322
+- 323
+- 324
+- 325
+- 326
+- 327
+- 328
+- 329
+- 330
+- 331
+- 332
+- 333
+- 334
+- 335
+- 336
+- 337
+- 338
+- 339
+- 340
+- 341
+- 345
+- 346
+- 347
+- 348
+- 349
+- 350
+- 351
+- 352
+- 353
+- 354
+- 355
+- 356
+- 357
+- 358
+- 359
+- 360
+- 361
+- 362
+- 363
+- 364
+- 365
+- 366
+- 367
+- 371
+- 372
+- 373
+- 374
+- 375
+- 376
+- 377
+- 378
+- 379
+- 380
+- 381
+- 382
+- 383
+- 384
+- 385
+- 386
+- 387
+- 388
+- 389
+- 390
+- 391
+- 392
+- 393
+- 397
+- 398
+- 399
+- 400
+- 401
+- 402
+- 403
+- 404
+- 405
+- 406
+- 407
+- 408
+- 409
+- 410
+- 411
+- 412
+- 413
+- 414
+- 415
+- 416
+- 417
+- 418
+- 419
+- 423
+- 424
+- 425
+- 426
+- 427
+- 428
+- 429
+- 430
+- 431
+- 432
+- 433
+- 434
+- 435
+- 436
+- 437
+- 438
+- 439
+- 440
+- 441
+- 442
+- 443
+- 444
+- 445
+- 449
+- 450
+- 451
+- 452
+- 453
+- 454
+- 455
+- 456
+- 457
+- 458
+- 459
+- 460
+- 461
+- 462
+- 463
+- 464
+- 465
+- 466
+- 467
+- 468
+- 469
+- 470
+- 471
+- 475
+- 476
+- 477
+- 478
+- 479
+- 480
+- 481
+- 482
+- 483
+- 484
+- 485
+- 486
+- 487
+- 488
+- 489
+- 490
+- 491
+- 492
+- 493
+- 494
+- 495
+- 496
+- 497
+- 501
+- 502
+- 503
+- 504
+- 505
+- 506
+- 507
+- 508
+- 509
+- 510
+- 511
+- 512
+- 513
+- 514
+- 515
+- 516
+- 517
+- 518
+- 519
+- 520
+- 521
+- 522
+- 523
+- 527
+- 528
+- 529
+- 530
+- 531
+- 532
+- 533
+- 534
+- 535
+- 536
+- 537
+- 538
+- 539
+- 540
+- 541
+- 542
+- 543
+- 544
+- 545
+- 546
+- 547
+- 548
+- 549
+- 553
+- 554
+- 555
+- 556
+- 557
+- 558
+- 559
+- 560
+- 561
+- 562
+- 563
+- 564
+- 565
+- 566
+- 567
+- 568
+- 569
+- 570
+- 571
+- 572
+- 573
+- 574
+- 575
+- 579
+- 580
+- 581
+- 582
+- 583
+- 584
+- 585
+- 586
+- 587
+- 588
+- 589
+- 590
+- 591
+- 592
+- 593
+- 594
+- 595
+- 596
+- 597
+- 598
+- 599
+- 600
+- 601
+- 605
+- 606
+- 607
+- 608
+- 609
+- 610
+- 611
+- 612
+- 613
+- 614
+- 615
+- 616
+- 617
+- 618
+- 619
+- 620
+- 621
+- 622
+- 623
+- 624
+- 625
+- 626
+- 627
+- 631
+- 632
+- 633
+- 634
+- 635
+- 636
+- 637
+- 638
+- 639
+- 640
+- 641
+- 642
+- 643
+- 644
+- 645
+- 646
+- 647
+- 648
+- 649
+- 650
+- 651
+- 652
+- 653
+- 657
+- 658
+- 659
+- 660
+- 661
+- 662
+- 663
+- 664
+- 665
+- 666
+- 667
+- 668
+- 669
+- 670
+- 671
+- 672
+- 673
+- 674
+- 675
+- 676
+- 677
+- 678
+- 679
+- 683
+- 684
+- 685
+- 686
+- 687
+- 688
+- 689
+- 690
+- 691
+- 692
+- 693
+- 694
+- 695
+- 696
+- 697
+- 698
+- 699
+- 700
+- 701
+- 702
+- 703
+- 704
+- 705
+- 709
+- 710
+- 711
+- 712
+- 713
+- 714
+- 715
+- 716
+- 717
+- 718
+- 719
+- 720
+- 721
+- 722
+- 723
+- 724
+- 725
+- 726
+- 727
+- 728
+- 729
+- 730
+- 731
+- 735
+- 736
+- 737
+- 738
+- 739
+- 740
+- 741
+- 742
+- 743
+- 744
+- 745
+- 746
+- 747
+- 748
+- 749
+- 750
+- 751
+- 752
+- 753
+- 754
+- 755
+- 756
+- 757
+- 761
+- 762
+- 763
+- 764
+- 765
+- 766
+- 767
+- 768
+- 769
+- 770
+- 771
+- 772
+- 773
+- 774
+- 775
+- 776
+- 777
+- 778
+- 779
+- 780
+- 781
+- 782
+- 783
+- 787
+- 788
+- 789
+- 790
+- 791
+- 792
+- 793
+- 794
+- 795
+- 796
+- 797
+- 798
+- 799
+- 800
+- 801
+- 802
+- 803
+- 804
+- 805
+- 806
+- 807
+- 808
+- 809
+- 813
+- 814
+- 815
+- 816
+- 817
+- 818
+- 819
+- 820
+- 821
+- 822
+- 823
+- 824
+- 825
+- 826
+- 827
+- 828
+- 829
+- 830
+- 831
+- 832
+- 833
+- 834
+- 835
+- 839
+- 840
+- 841
+- 842
+- 843
+- 844
+- 845
+- 846
+- 847
+- 848
+- 849
+- 850
+- 851
+- 852
+- 853
+- 854
+- 855
+- 856
+- 857
+- 858
+- 859
+- 860
+- 861
+- 865
+- 866
+- 867
+- 868
+- 869
+- 870
+- 871
+- 872
+- 873
+- 874
+- 875
+- 876
+- 877
+- 878
+- 879
+- 880
+- 881
+- 882
+- 883
+- 884
+- 885
+- 886
+- 887
+- 891
+- 892
+- 893
+- 894
+- 895
+- 896
+- 897
+- 898
+- 899
+- 900
+- 901
+- 902
+- 903
+- 904
+- 905
+- 906
+- 907
+- 908
+- 909
+- 910
+- 911
+- 912
+- 913
+- 917
+- 918
+- 919
+- 920
+- 921
+- 922
+- 923
+- 924
+- 925
+- 926
+- 927
+- 928
+- 929
+- 930
+- 931
+- 932
+- 933
+- 934
+- 935
+- 936
+- 937
+- 938
+- 939
+- 943
+- 944
+- 945
+- 946
+- 947
+- 948
+- 949
+- 950
+- 951
+- 952
+- 953
+- 954
+- 955
+- 956
+- 957
+- 958
+- 959
+- 960
+- 961
+- 962
+- 963
+- 964
+- 965
+- 969
+- 970
+- 971
+- 972
+- 973
+- 974
+- 975
+- 976
+- 977
+- 978
+- 979
+- 980
+- 981
+- 982
+- 983
+- 984
+- 985
+- 986
+- 987
+- 988
+- 989
+- 990
+- 991
+- 995
+- 996
+- 997
+- 998
+- 999
+- 1000
+- 1001
+- 1002
+- 1003
+- 1004
+- 1005
+- 1006
+- 1007
+- 1008
+- 1009
+- 1010
+- 1011
+- 1012
+- 1013
+- 1014
+- 1015
+- 1016
+- 1017
+- 1021
+- 1022
+- 1023
+- 1024
+- 1025
+- 1026
+- 1027
+- 1028
+- 1029
+- 1030
+- 1031
+- 1032
+- 1033
+- 1034
+- 1035
+- 1036
+- 1037
+- 1038
+- 1039
+- 1040
+- 1041
+- 1042
+- 1043
+- 1047
+- 1048
+- 1049
+- 1050
+- 1051
+- 1052
+- 1053
+- 1054
+- 1055
+- 1056
+- 1057
+- 1058
+- 1059
+- 1060
+- 1061
+- 1062
+- 1063
+- 1064
+- 1065
+- 1066
+- 1067
+- 1068
+- 1069
+- 1073
+- 1074
+- 1075
+- 1076
+- 1077
+- 1078
+- 1079
+- 1080
+- 1081
+- 1082
+- 1083
+- 1084
+- 1085
+- 1086
+- 1087
+- 1088
+- 1089
+- 1090
+- 1091
+- 1092
+- 1093
+- 1094
+- 1095
+- 1099
+- 1100
+- 1101
+- 1102
+- 1103
+- 1104
+- 1105
+- 1106
+- 1107
+- 1108
+- 1109
+- 1110
+- 1111
+- 1112
+- 1113
+- 1114
+- 1115
+- 1116
+- 1117
+- 1118
+- 1119
+- 1120
+- 1121
+- 1125
+- 1126
+- 1127
+- 1128
+- 1129
+- 1130
+- 1131
+- 1132
+- 1133
+- 1134
+- 1135
+- 1136
+- 1137
+- 1138
+- 1139
+- 1140
+- 1141
+- 1142
+- 1143
+- 1144
+- 1145
+- 1146
+- 1147
+- 1151
+- 1152
+- 1153
+- 1154
+- 1155
+- 1156
+- 1157
+- 1158
+- 1159
+- 1160
+- 1161
+- 1162
+- 1163
+- 1164
+- 1165
+- 1166
+- 1167
+- 1168
+- 1169
+- 1170
+- 1171
+- 1172
+- 1173
+- 1177
+- 1178
+- 1179
+- 1180
+- 1181
+- 1182
+- 1183
+- 1184
+- 1185
+- 1186
+- 1187
+- 1188
+- 1189
+- 1190
+- 1191
+- 1192
+- 1193
+- 1194
+- 1195
+- 1196
+- 1197
+- 1198
+- 1199
+- 1203
+- 1204
+- 1205
+- 1206
+- 1207
+- 1208
+- 1209
+- 1210
+- 1211
+- 1212
+- 1213
+- 1214
+- 1215
+- 1216
+- 1217
+- 1218
+- 1219
+- 1220
+- 1221
+- 1222
+- 1223
+- 1224
+- 1225
+- 1229
+- 1230
+- 1231
+- 1232
+- 1233
+- 1234
+- 1235
+- 1236
+- 1237
+- 1238
+- 1239
+- 1240
+- 1241
+- 1242
+- 1243
+- 1244
+- 1245
+- 1246
+- 1247
+- 1248
+- 1249
+- 1250
+- 1251
+- 1255
+- 1256
+- 1257
+- 1258
+- 1259
+- 1260
+- 1261
+- 1262
+- 1263
+- 1264
+- 1265
+- 1266
+- 1267
+- 1268
+- 1269
+- 1270
+- 1271
+- 1272
+- 1273
+- 1274
+- 1275
+- 1276
+- 1277
+- 1281
+- 1282
+- 1283
+- 1284
+- 1285
+- 1286
+- 1287
+- 1288
+- 1289
+- 1290
+- 1291
+- 1292
+- 1293
+- 1294
+- 1295
+- 1296
+- 1297
+- 1298
+- 1299
+- 1300
+- 1301
+- 1302
+- 1303
+- 1307
+- 1308
+- 1309
+- 1310
+- 1311
+- 1312
+- 1313
+- 1314
+- 1315
+- 1316
+- 1317
+- 1318
+- 1319
+- 1320
+- 1321
+- 1322
+- 1323
+- 1324
+- 1325
+- 1326
+- 1327
+- 1328
+- 1329
+- 1333
+- 1334
+- 1335
+- 1336
+- 1337
+- 1338
+- 1339
+- 1340
+- 1341
+- 1342
+- 1343
+- 1344
+- 1345
+- 1346
+- 1347
+- 1348
+- 1349
+- 1350
+- 1351
+- 1352
+- 1353
+- 1354
+- 1355
+- 1359
+- 1360
+- 1361
+- 1362
+- 1363
+- 1364
+- 1365
+- 1366
+- 1367
+- 1368
+- 1369
+- 1370
+- 1371
+- 1372
+- 1373
+- 1374
+- 1375
+- 1376
+- 1377
+- 1378
+- 1379
+- 1380
+- 1381
+- 1385
+- 1386
+- 1387
+- 1388
+- 1389
+- 1390
+- 1391
+- 1392
+- 1393
+- 1394
+- 1395
+- 1396
+- 1397
+- 1398
+- 1399
+- 1400
+- 1401
+- 1402
+- 1403
+- 1404
+- 1405
+- 1406
+- 1407
+- 1411
+- 1412
+- 1413
+- 1414
+- 1415
+- 1416
+- 1417
+- 1418
+- 1419
+- 1420
+- 1421
+- 1422
+- 1423
+- 1424
+- 1425
+- 1426
+- 1427
+- 1428
+- 1429
+- 1430
+- 1431
+- 1432
+- 1433
+- 1437
+- 1438
+- 1439
+- 1440
+- 1441
+- 1442
+- 1443
+- 1444
+- 1445
+- 1446
+- 1447
+- 1448
+- 1449
+- 1450
+- 1451
+- 1452
+- 1453
+- 1454
+- 1455
+- 1456
+- 1457
+- 1458
+- 1459
+- 1463
+- 1464
+- 1465
+- 1466
+- 1467
+- 1468
+- 1469
+- 1470
+- 1471
+- 1472
+- 1473
+- 1474
+- 1475
+- 1476
+- 1477
+- 1478
+- 1479
+- 1480
+- 1481
+- 1482
+- 1483
+- 1484
+- 1485
+- 1489
+- 1490
+- 1491
+- 1492
+- 1493
+- 1494
+- 1495
+- 1496
+- 1497
+- 1498
+- 1499
+- 1500
+- 1501
+- 1502
+- 1503
+- 1504
+- 1505
+- 1506
+- 1507
+- 1508
+- 1509
+- 1510
+- 1511
+- 1515
+- 1516
+- 1517
+- 1518
+- 1519
+- 1520
+- 1521
+- 1522
+- 1523
+- 1524
+- 1525
+- 1526
+- 1527
+- 1528
+- 1529
+- 1530
+- 1531
+- 1532
+- 1533
+- 1534
+- 1535
+- 1536
+- 1537
+- 1541
+- 1542
+- 1543
+- 1544
+- 1545
+- 1546
+- 1547
+- 1548
+- 1549
+- 1550
+- 1551
+- 1552
+- 1553
+- 1554
+- 1555
+- 1556
+- 1557
+- 1558
+- 1559
+- 1560
+- 1561
+- 1562
+- 1563
+- 1567
+- 1568
+- 1569
+- 1570
+- 1571
+- 1572
+- 1573
+- 1574
+- 1575
+- 1576
+- 1577
+- 1578
+- 1579
+- 1580
+- 1581
+- 1582
+- 1583
+- 1584
+- 1585
+- 1586
+- 1587
+- 1588
+- 1589
+- 1593
+- 1594
+- 1595
+- 1596
+- 1597
+- 1598
+- 1599
+- 1600
+- 1601
+- 1602
+- 1603
+- 1604
+- 1605
+- 1606
+- 1607
+- 1608
+- 1609
+- 1610
+- 1611
+- 1612
+- 1613
+- 1614
+- 1615
+- 1619
+- 1620
+- 1621
+- 1622
+- 1623
+- 1624
+- 1625
+- 1626
+- 1627
+- 1628
+- 1629
+- 1630
+- 1631
+- 1632
+- 1633
+- 1634
+- 1635
+- 1636
+- 1637
+- 1638
+- 1639
+- 1640
+- 1641
+- 1645
+- 1646
+- 1647
+- 1648
+- 1649
+- 1650
+- 1651
+- 1652
+- 1653
+- 1654
+- 1655
+- 1656
+- 1657
+- 1658
+- 1659
+- 1660
+- 1661
+- 1662
+- 1663
+- 1664
+- 1665
+- 1666
+- 1667
+- 1671
+- 1672
+- 1673
+- 1674
+- 1675
+- 1676
+- 1677
+- 1678
+- 1679
+- 1680
+- 1681
+- 1682
+- 1683
+- 1684
+- 1685
+- 1686
+- 1687
+- 1688
+- 1689
+- 1690
+- 1691
+- 1692
+- 1693
+- 1697
+- 1698
+- 1699
+- 1700
+- 1701
+- 1702
+- 1703
+- 1704
+- 1705
+- 1706
+- 1707
+- 1708
+- 1709
+- 1710
+- 1711
+- 1712
+- 1713
+- 1714
+- 1715
+- 1716
+- 1717
+- 1718
+- 1719
+- 1723
+- 1724
+- 1725
+- 1726
+- 1727
+- 1728
+- 1729
+- 1730
+- 1731
+- 1732
+- 1733
+- 1734
+- 1735
+- 1736
+- 1737
+- 1738
+- 1739
+- 1740
+- 1741
+- 1742
+- 1743
+- 1744
+- 1745
+- 1749
+- 1750
+- 1751
+- 1752
+- 1753
+- 1754
+- 1755
+- 1756
+- 1757
+- 1758
+- 1759
+- 1760
+- 1761
+- 1762
+- 1763
+- 1764
+- 1765
+- 1766
+- 1767
+- 1768
+- 1769
+- 1770
+- 1771
+- 1775
+- 1776
+- 1777
+- 1778
+- 1779
+- 1780
+- 1781
+- 1782
+- 1783
+- 1784
+- 1785
+- 1786
+- 1787
+- 1788
+- 1789
+- 1790
+- 1791
+- 1792
+- 1793
+- 1794
+- 1795
+- 1796
+- 1797
+- 1801
+- 1802
+- 1803
+- 1804
+- 1805
+- 1806
+- 1807
+- 1808
+- 1809
+- 1810
+- 1811
+- 1812
+- 1813
+- 1814
+- 1815
+- 1816
+- 1817
+- 1818
+- 1819
+- 1820
+- 1821
+- 1822
+- 1823
+- 1827
+- 1828
+- 1829
+- 1830
+- 1831
+- 1832
+- 1833
+- 1834
+- 1835
+- 1836
+- 1837
+- 1838
+- 1839
+- 1840
+- 1841
+- 1842
+- 1843
+- 1844
+- 1845
+- 1846
+- 1847
+- 1848
+- 1849
+- 1853
+- 1854
+- 1855
+- 1856
+- 1857
+- 1858
+- 1859
+- 1860
+- 1861
+- 1862
+- 1863
+- 1864
+- 1865
+- 1866
+- 1867
+- 1868
+- 1869
+- 1870
+- 1871
+- 1872
+- 1873
+- 1874
+- 1875
+- 1879
+- 1880
+- 1881
+- 1882
+- 1883
+- 1884
+- 1885
+- 1886
+- 1887
+- 1888
+- 1889
+- 1890
+- 1891
+- 1892
+- 1893
+- 1894
+- 1895
+- 1896
+- 1897
+- 1898
+- 1899
+- 1900
+- 1901
+- 1905
+- 1906
+- 1907
+- 1908
+- 1909
+- 1910
+- 1911
+- 1912
+- 1913
+- 1914
+- 1915
+- 1916
+- 1917
+- 1918
+- 1919
+- 1920
+- 1921
+- 1922
+- 1923
+- 1924
+- 1925
+- 1926
+- 1927
+- 1931
+- 1932
+- 1933
+- 1934
+- 1935
+- 1936
+- 1937
+- 1938
+- 1939
+- 1940
+- 1941
+- 1942
+- 1943
+- 1944
+- 1945
+- 1946
+- 1947
+- 1948
+- 1949
+- 1950
+- 1951
+- 1952
+- 1953
+- 1957
+- 1958
+- 1959
+- 1960
+- 1961
+- 1962
+- 1963
+- 1964
+- 1965
+- 1966
+- 1967
+- 1968
+- 1969
+- 1970
+- 1971
+- 1972
+- 1973
+- 1974
+- 1975
+- 1976
+- 1977
+- 1978
+- 1979
+- 1983
+- 1984
+- 1985
+- 1986
+- 1987
+- 1988
+- 1989
+- 1990
+- 1991
+- 1992
+- 1993
+- 1994
+- 1995
+- 1996
+- 1997
+- 1998
+- 1999
+- 2000
+- 2001
+- 2002
+- 2003
+- 2004
+- 2005
+- 2009
+- 2010
+- 2011
+- 2012
+- 2013
+- 2014
+- 2015
+- 2016
+- 2017
+- 2018
+- 2019
+- 2020
+- 2021
+- 2022
+- 2023
+- 2024
+- 2025
+- 2026
+- 2027
+- 2028
+- 2029
+- 2030
+- 2031
+- 2035
+- 2036
+- 2037
+- 2038
+- 2039
+- 2040
+- 2041
+- 2042
+- 2043
+- 2044
+- 2045
+- 2046
+- 2047
+- 2048
+- 2049
+- 2050
+- 2051
+- 2052
+- 2053
+- 2054
+- 2055
+- 2056
+- 2057
+- 2061
+- 2062
+- 2063
+- 2064
+- 2065
+- 2066
+- 2067
+- 2068
+- 2069
+- 2070
+- 2071
+- 2072
+- 2073
+- 2074
+- 2075
+- 2076
+- 2077
+- 2078
+- 2079
+- 2080
+- 2081
+- 2082
+- 2083
+- 2087
+- 2088
+- 2089
+- 2090
+- 2091
+- 2092
+- 2093
+- 2094
+- 2095
+- 2096
+- 2097
+- 2098
+- 2099
+- 2100
+- 2101
+- 2102
+- 2103
+- 2104
+- 2105
+- 2106
+- 2107
+- 2108
+- 2109
+- 2113
+- 2114
+- 2115
+- 2116
+- 2117
+- 2118
+- 2119
+- 2120
+- 2121
+- 2122
+- 2123
+- 2124
+- 2125
+- 2126
+- 2127
+- 2128
+- 2129
+- 2130
+- 2131
+- 2132
+- 2133
+- 2134
+- 2135
+- 2139
+- 2140
+- 2141
+- 2142
+- 2143
+- 2144
+- 2145
+- 2146
+- 2147
+- 2148
+- 2149
+- 2150
+- 2151
+- 2152
+- 2153
+- 2154
+- 2155
+- 2156
+- 2157
+- 2158
+- 2159
+- 2160
+- 2161
+- 2165
+- 2166
+- 2167
+- 2168
+- 2169
+- 2170
+- 2171
+- 2172
+- 2173
+- 2174
+- 2175
+- 2176
+- 2177
+- 2178
+- 2179
+- 2180
+- 2181
+- 2182
+- 2183
+- 2184
+- 2185
+- 2186
+- 2187
+- 2191
+- 2192
+- 2193
+- 2194
+- 2195
+- 2196
+- 2197
+- 2198
+- 2199
+- 2200
+- 2201
+- 2202
+- 2203
+- 2204
+- 2205
+- 2206
+- 2207
+- 2208
+- 2209
+- 2210
+- 2211
+- 2212
+- 2213
+- 2217
+- 2218
+- 2219
+- 2220
+- 2221
+- 2222
+- 2223
+- 2224
+- 2225
+- 2226
+- 2227
+- 2228
+- 2229
+- 2230
+- 2231
+- 2232
+- 2233
+- 2234
+- 2235
+- 2236
+- 2237
+- 2238
+- 2239
+- 2243
+- 2244
+- 2245
+- 2246
+- 2247
+- 2248
+- 2249
+- 2250
+- 2251
+- 2252
+- 2253
+- 2254
+- 2255
+- 2256
+- 2257
+- 2258
+- 2259
+- 2260
+- 2261
+- 2262
+- 2263
+- 2264
+- 2265
+- 2269
+- 2270
+- 2271
+- 2272
+- 2273
+- 2274
+- 2275
+- 2276
+- 2277
+- 2278
+- 2279
+- 2280
+- 2281
+- 2282
+- 2283
+- 2284
+- 2285
+- 2286
+- 2287
+- 2288
+- 2289
+- 2290
+- 2291
+- 2295
+- 2296
+- 2297
+- 2298
+- 2299
+- 2300
+- 2301
+- 2302
+- 2303
+- 2304
+- 2305
+- 2306
+- 2307
+- 2308
+- 2309
+- 2310
+- 2311
+- 2312
+- 2313
+- 2314
+- 2315
+- 2316
+- 2317
+- 2321
+- 2322
+- 2323
+- 2324
+- 2325
+- 2326
+- 2327
+- 2328
+- 2329
+- 2330
+- 2331
+- 2332
+- 2333
+- 2334
+- 2335
+- 2336
+- 2337
+- 2338
+- 2339
+- 2340
+- 2341
+- 2342
+- 2343
+- 2347
+- 2348
+- 2349
+- 2350
+- 2351
+- 2352
+- 2353
+- 2354
+- 2355
+- 2356
+- 2357
+- 2358
+- 2359
+- 2360
+- 2361
+- 2362
+- 2363
+- 2364
+- 2365
+- 2366
+- 2367
+- 2368
+- 2369
+- 2373
+- 2374
+- 2375
+- 2376
+- 2377
+- 2378
+- 2379
+- 2380
+- 2381
+- 2382
+- 2383
+- 2384
+- 2385
+- 2386
+- 2387
+- 2388
+- 2389
+- 2390
+- 2391
+- 2392
+- 2393
+- 2394
+- 2395
+- 2399
+- 2400
+- 2401
+- 2402
+- 2403
+- 2404
+- 2405
+- 2406
+- 2407
+- 2408
+- 2409
+- 2410
+- 2411
+- 2412
+- 2413
+- 2414
+- 2415
+- 2416
+- 2417
+- 2418
+- 2419
+- 2420
+- 2421
+- 2425
+- 2426
+- 2427
+- 2428
+- 2429
+- 2430
+- 2431
+- 2432
+- 2433
+- 2434
+- 2435
+- 2436
+- 2437
+- 2438
+- 2439
+- 2440
+- 2441
+- 2442
+- 2443
+- 2444
+- 2445
+- 2446
+- 2447
+- 2451
+- 2452
+- 2453
+- 2454
+- 2455
+- 2456
+- 2457
+- 2458
+- 2459
+- 2460
+- 2461
+- 2462
+- 2463
+- 2464
+- 2465
+- 2466
+- 2467
+- 2468
+- 2469
+- 2470
+- 2471
+- 2472
+- 2473
+- 2477
+- 2478
+- 2479
+- 2480
+- 2481
+- 2482
+- 2483
+- 2484
+- 2485
+- 2486
+- 2487
+- 2488
+- 2489
+- 2490
+- 2491
+- 2492
+- 2493
+- 2494
+- 2495
+- 2496
+- 2497
+- 2498
+- 2499
+- 2503
+- 2504
+- 2505
+- 2506
+- 2507
+- 2508
+- 2509
+- 2510
+- 2511
+- 2512
+- 2513
+- 2514
+- 2515
+- 2516
+- 2517
+- 2518
+- 2519
+- 2520
+- 2521
+- 2522
+- 2523
+- 2524
+- 2525
+- 2529
+- 2530
+- 2531
+- 2532
+- 2533
+- 2534
+- 2535
+- 2536
+- 2537
+- 2538
+- 2539
+- 2540
+- 2541
+- 2542
+- 2543
+- 2544
+- 2545
+- 2546
+- 2547
+- 2548
+- 2549
+- 2550
+- 2551
+- 2555
+- 2556
+- 2557
+- 2558
+- 2559
+- 2560
+- 2561
+- 2562
+- 2563
+- 2564
+- 2565
+- 2566
+- 2567
+- 2568
+- 2569
+- 2570
+- 2571
+- 2572
+- 2573
+- 2574
+- 2575
+- 2576
+- 2577
+- 2581
+- 2582
+- 2583
+- 2584
+- 2585
+- 2586
+- 2587
+- 2588
+- 2589
+- 2590
+- 2591
+- 2592
+- 2593
+- 2594
+- 2595
+- 2596
+- 2597
+- 2598
+- 2599
+- 2600
+- 2601
+- 2602
+- 2603
+- 2607
+- 2608
+- 2609
+- 2610
+- 2611
+- 2612
+- 2613
+- 2614
+- 2615
+- 2616
+- 2617
+- 2618
+- 2619
+- 2620
+- 2621
+- 2622
+- 2623
+- 2624
+- 2625
+- 2626
+- 2627
+- 2628
+- 2629
+- 2633
+- 2634
+- 2635
+- 2636
+- 2637
+- 2638
+- 2639
+- 2640
+- 2641
+- 2642
+- 2643
+- 2644
+- 2645
+- 2646
+- 2647
+- 2648
+- 2649
+- 2650
+- 2651
+- 2652
+- 2653
+- 2654
+- 2655
+- 2659
+- 2660
+- 2661
+- 2662
+- 2663
+- 2664
+- 2665
+- 2666
+- 2667
+- 2668
+- 2669
+- 2670
+- 2671
+- 2672
+- 2673
+- 2674
+- 2675
+- 2676
+- 2677
+- 2678
+- 2679
+- 2680
+- 2681
+- 2685
+- 2686
+- 2687
+- 2688
+- 2689
+- 2690
+- 2691
+- 2692
+- 2693
+- 2694
+- 2695
+- 2696
+- 2697
+- 2698
+- 2699
+- 2700
+- 2701
+- 2702
+- 2703
+- 2704
+- 2705
+- 2706
+- 2707
+- 2711
+- 2712
+- 2713
+- 2714
+- 2715
+- 2716
+- 2717
+- 2718
+- 2719
+- 2720
+- 2721
+- 2722
+- 2723
+- 2724
+- 2725
+- 2726
+- 2727
+- 2728
+- 2729
+- 2730
+- 2731
+- 2732
+- 2733
+- 2737
+- 2738
+- 2739
+- 2740
+- 2741
+- 2742
+- 2743
+- 2744
+- 2745
+- 2746
+- 2747
+- 2748
+- 2749
+- 2750
+- 2751
+- 2752
+- 2753
+- 2754
+- 2755
+- 2756
+- 2757
+- 2758
+- 2759
+- 2763
+- 2764
+- 2765
+- 2766
+- 2767
+- 2768
+- 2769
+- 2770
+- 2771
+- 2772
+- 2773
+- 2774
+- 2775
+- 2776
+- 2777
+- 2778
+- 2779
+- 2780
+- 2781
+- 2782
+- 2783
+- 2784
+- 2785
+- 2789
+- 2790
+- 2791
+- 2792
+- 2793
+- 2794
+- 2795
+- 2796
+- 2797
+- 2798
+- 2799
+- 2800
+- 2801
+- 2802
+- 2803
+- 2804
+- 2805
+- 2806
+- 2807
+- 2808
+- 2809
+- 2810
+- 2811
+- 2815
+- 2816
+- 2817
+- 2818
+- 2819
+- 2820
+- 2821
+- 2822
+- 2823
+- 2824
+- 2825
+- 2826
+- 2827
+- 2828
+- 2829
+- 2830
+- 2831
+- 2832
+- 2833
+- 2834
+- 2835
+- 2836
+- 2837
+- 2841
+- 2842
+- 2843
+- 2844
+- 2845
+- 2846
+- 2847
+- 2848
+- 2849
+- 2850
+- 2851
+- 2852
+- 2853
+- 2854
+- 2855
+- 2856
+- 2857
+- 2858
+- 2859
+- 2860
+- 2861
+- 2862
+- 2863
+- 2867
+- 2868
+- 2869
+- 2870
+- 2871
+- 2872
+- 2873
+- 2874
+- 2875
+- 2876
+- 2877
+- 2878
+- 2879
+- 2880
+- 2881
+- 2882
+- 2883
+- 2884
+- 2885
+- 2886
+- 2887
+- 2888
+- 2889
+- 2893
+- 2894
+- 2895
+- 2896
+- 2897
+- 2898
+- 2899
+- 2900
+- 2901
+- 2902
+- 2903
+- 2904
+- 2905
+- 2906
+- 2907
+- 2908
+- 2909
+- 2910
+- 2911
+- 2912
+- 2913
+- 2914
+- 2915
+- 2919
+- 2920
+- 2921
+- 2922
+- 2923
+- 2924
+- 2925
+- 2926
+- 2927
+- 2928
+- 2929
+- 2930
+- 2931
+- 2932
+- 2933
+- 2934
+- 2935
+- 2936
+- 2937
+- 2938
+- 2939
+- 2940
+- 2941
+- 2945
+- 2946
+- 2947
+- 2948
+- 2949
+- 2950
+- 2951
+- 2952
+- 2953
+- 2954
+- 2955
+- 2956
+- 2957
+- 2958
+- 2959
+- 2960
+- 2961
+- 2962
+- 2963
+- 2964
+- 2965
+- 2966
+- 2967
+- 2971
+- 2972
+- 2973
+- 2974
+- 2975
+- 2976
+- 2977
+- 2978
+- 2979
+- 2980
+- 2981
+- 2982
+- 2983
+- 2984
+- 2985
+- 2986
+- 2987
+- 2988
+- 2989
+- 2990
+- 2991
+- 2992
+- 2993
+- 2997
+- 2998
+- 2999
+- 3000
+- 3001
+- 3002
+- 3003
+- 3004
+- 3005
+- 3006
+- 3007
+- 3008
+- 3009
+- 3010
+- 3011
+- 3012
+- 3013
+- 3014
+- 3015
+- 3016
+- 3017
+- 3018
+- 3019
+- 3023
+- 3024
+- 3025
+- 3026
+- 3027
+- 3028
+- 3029
+- 3030
+- 3031
+- 3032
+- 3033
+- 3034
+- 3035
+- 3036
+- 3037
+- 3038
+- 3039
+- 3040
+- 3041
+- 3042
+- 3043
+- 3044
+- 3045
+- 3049
+- 3050
+- 3051
+- 3052
+- 3053
+- 3054
+- 3055
+- 3056
+- 3057
+- 3058
+- 3059
+- 3060
+- 3061
+- 3062
+- 3063
+- 3064
+- 3065
+- 3066
+- 3067
+- 3068
+- 3069
+- 3070
+- 3071
+- 3075
+- 3076
+- 3077
+- 3078
+- 3079
+- 3080
+- 3081
+- 3082
+- 3083
+- 3084
+- 3085
+- 3086
+- 3087
+- 3088
+- 3089
+- 3090
+- 3091
+- 3092
+- 3093
+- 3094
+- 3095
+- 3096
+- 3097
+- 3101
+- 3102
+- 3103
+- 3104
+- 3105
+- 3106
+- 3107
+- 3108
+- 3109
+- 3110
+- 3111
+- 3112
+- 3113
+- 3114
+- 3115
+- 3116
+- 3117
+- 3118
+- 3119
+- 3120
+- 3121
+- 3122
+- 3123
+constantes:
+  Resultados:
+    BN2: Zona
+    BN3: Rango nocturno
+    BO3: 22
+    BP3: 6
+    BF5: Tiempo 0-23 [hrs]
+    BG5: Caso []
+    BH5: HD (-)
+    BI5: HD (+)
+    BN5: Tmin rango Confort
+    BF6: 0
+    BG6: Caso Propuesto Con Clima
+    BN6: Zona
+    BO6: Enero
+    BP6: Febrero
+    BQ6: Marzo
+    BR6: Abril
+    BS6: Mayo
+    BT6: Junio
+    BU6: Julio
+    BV6: Agosto
+    BW6: Septiembre
+    BX6: Octubre
+    BY6: Noviembre
+    BZ6: Diciembre
+    BG7: Caso Propuesto Con Clima
+    BN7: a
+    BG8: Caso Propuesto Con Clima
+    BN8: b
+    BG9: Caso Propuesto Con Clima
+    BN9: c
+    BG10: Caso Propuesto Con Clima
+    BN10: d
+    BG11: Caso Propuesto Con Clima
+    BN11: e
+    BG12: Caso Propuesto Con Clima
+    BN12: f
+    BG13: Caso Propuesto Con Clima
+    BN13: g
+    BG14: Caso Propuesto Con Clima
+    BN14: h
+    BG15: Caso Propuesto Con Clima
+    BN15: i
+    BG16: Caso Propuesto Con Clima
+    BN16: j
+    BG17: Caso Propuesto Con Clima
+    BG18: Caso Propuesto Con Clima
+    BN18: Tmax rango Confort
+    BG19: Caso Propuesto Con Clima
+    BN19: Zona
+    BO19: Enero
+    BP19: Febrero
+    BQ19: Marzo
+    BR19: Abril
+    BS19: Mayo
+    BT19: Junio
+    BU19: Julio
+    BV19: Agosto
+    BW19: Septiembre
+    BX19: Octubre
+    BY19: Noviembre
+    BZ19: Diciembre
+    BG20: Caso Propuesto Con Clima
+    BN20: a
+    BG21: Caso Propuesto Con Clima
+    BN21: b
+    BG22: Caso Propuesto Con Clima
+    BN22: c
+    BG23: Caso Propuesto Con Clima
+    BN23: d
+    BG24: Caso Propuesto Con Clima
+    BN24: e
+    BG25: Caso Propuesto Con Clima
+    BN25: f
+    BG26: Caso Propuesto Con Clima
+    BN26: g
+    BG27: Caso Propuesto Con Clima
+    BN27: h
+    BG28: Caso Propuesto Con Clima
+    BN28: i
+    BG29: Caso Propuesto Con Clima
+    BN29: j
+    BG30: Caso Propuesto Con Clima
+    BG31: Caso Propuesto Con Clima
+    BN31: Tm
+    BF32: 0
+    BG32: Caso Propuesto Con Clima
+    BN32: Zona
+    BO32: Enero
+    BP32: Febrero
+    BQ32: Marzo
+    BR32: Abril
+    BS32: Mayo
+    BT32: Junio
+    BU32: Julio
+    BV32: Agosto
+    BW32: Septiembre
+    BX32: Octubre
+    BY32: Noviembre
+    BZ32: Diciembre
+    BG33: Caso Propuesto Con Clima
+    BN33: A
+    BO33: 20.830913978494625
+    BP33: 20.581994047619045
+    BQ33: 19.618548387096777
+    BR33: 18.18013888888889
+    BS33: 16.93521505376344
+    BT33: 15.804444444444444
+    BU33: 15.102688172043012
+    BV33: 15.133736559139782
+    BW33: 15.908611111111115
+    BX33: 16.912365591397847
+    BY33: 18.266250000000003
+    BZ33: 19.708064516129035
+    BG34: Caso Propuesto Con Clima
+    BN34: B
+    BO34: 19.363440860215054
+    BP34: 18.854761904761904
+    BQ34: 17.35927419354839
+    BR34: 15.18875
+    BS34: 13.05215053763441
+    BT34: 11.332499999999998
+    BU34: 10.82244623655914
+    BV34: 11.601344086021506
+    BW34: 13.119027777777779
+    BX34: 14.411962365591398
+    BY34: 16.108888888888888
+    BZ34: 17.963306451612905
+    BG35: Caso Propuesto Con Clima
+    BN35: C
+    BO35: 18.00040322580645
+    BP35: 17.897767857142856
+    BQ35: 16.70416666666667
+    BR35: 14.919722222222221
+    BS35: 13.51438172043011
+    BT35: 12.306944444444442
+    BU35: 11.80510752688172
+    BV35: 12.114650537634406
+    BW35: 12.938194444444443
+    BX35: 14.133602150537635
+    BY35: 15.822083333333332
+    BZ35: 17.30255376397849
+    BG36: Caso Propuesto Con Clima
+    BN36: D
+    BO36: 19.917204301075266
+    BP36: 19.214434523809526
+    BQ36: 17.214247311827954
+    BR36: 13.863888888888892
+    BS36: 10.791801075268815
+    BT36: 8.420138888888891
+    BU36: 8.121505376344087
+    BV36: 9.326344086021505
+    BW36: 11.359583333333333
+    BX36: 13.739516129032255
+    BY36: 16.40111111111111
+    BZ36: 18.8116935490121
+    BG37: Caso Propuesto Con Clima
+    BN37: E
+    BO37: 16.805107526881724
+    BP37: 16.300148809523808
+    BQ37: 14.607392473118281
+    BR37: 12.107916666666668
+    BS37: 10.968010752688173
+    BT37: 9.00625
+    BU37: 6.401881720430108
+    BV37: 8.59005376344086
+    BW37: 10.019027777777778
+    BX37: 11.705913978494623
+    BY37: 14.221111111111114
+    BZ37: 16.204838710209675
+    BG38: Caso Propuesto Con Clima
+    BN38: F
+    BO38: 16.897580645161284
+    BP38: 16.608035714285712
+    BQ38: 14.809946236559142
+    BR38: 12.004583333333331
+    BS38: 9.898252688172045
+    BT38: 7.895833333333332
+    BU38: 7.675403225806449
+    BV38: 8.108467741935483
+    BW38: 9.698611111111111
+    BX38: 11.503494623655916
+    BY38: 13.326388888888888
+    BZ38: 15.422311828438174
+    BG39: Caso Propuesto Con Clima
+    BN39: G
+    BO39: 16.496639784946236
+    BP39: 15.537797619047618
+    BQ39: 14.068817204301075
+    BR39: 11.240416666666667
+    BS39: 9.376612903225805
+    BT39: 7.339722222222221
+    BU39: 6.905779569892473
+    BV39: 7.5357526881720425
+    BW39: 9.174861111111111
+    BX39: 11.112903225806448
+    BY39: 13.711249999999998
+    BZ39: 15.917473118279574
+    BG40: Caso Propuesto Con Clima
+    BN40: H
+    BO40: 15.512634408602146
+    BP40: 14.552976190476192
+    BQ40: 13.164919354838714
+    BR40: 11.478333333333333
+    BS40: 7.543951612903225
+    BT40: 4.132361111111112
+    BU40: 4.257795698924731
+    BV40: 4.33225806451613
+    BW40: 6.209166666666666
+    BX40: 8.648521505376342
+    BY40: 11.055277777777777
+    BZ40: 14.005510752688169
+    BG41: Caso Propuesto Con Clima
+    BN41: I
+    BO41: 11.705107526881719
+    BP41: 10.580208333333333
+    BQ41: 8.900672043010754
+    BR41: 6.692083333333333
+    BS41: 4.220967741935484
+    BT41: 2.5775000000000006
+    BU41: 2.538844086021505
+    BV41: 2.8794354838709677
+    BW41: 4.61208333333333
+    BX41: 7.086290322580644
+    BY41: 8.534305555555557
+    BZ41: 10.206451612955647
+    BG42: Caso Propuesto Con Clima
+    BN42: J
+    BO42: 15.506451612903227
+    BP42: 14.64315476190476
+    BQ42: 12.367338709677421
+    BR42: 11.704861111111109
+    BS42: 9.541666666666668
+    BT42: 7.141388888888887
+    BU42: 8.4127688172043
+    BV42: 8.363844086021505
+    BW42: 10.798888888888888
+    BX42: 11.30510752688172
+    BY42: 13.661944444444444
+    BZ42: 13.220026881720429
+    BG43: Caso Propuesto Con Clima
+    BG44: Caso Propuesto Con Clima
+    BG45: Caso Propuesto Con Clima
+    BG46: Caso Propuesto Con Clima
+    BG47: Caso Propuesto Con Clima
+    BG48: Caso Propuesto Con Clima
+    BG49: Caso Propuesto Con Clima
+    BG50: Caso Propuesto Con Clima
+    BG51: Caso Propuesto Con Clima
+    BG52: Caso Propuesto Con Clima
+    BG53: Caso Propuesto Con Clima
+    BG54: Caso Propuesto Con Clima
+    BG55: Caso Propuesto Con Clima
+    BN55: Temperatura media de confort
+    BG56: Caso Propuesto Con Clima
+    BN56: Zona
+    BO56: Enero
+    BP56: Febrero
+    BQ56: Marzo
+    BR56: Abril
+    BS56: Mayo
+    BT56: Junio
+    BU56: Julio
+    BV56: Agosto
+    BW56: Septiembre
+    BX56: Octubre
+    BY56: Noviembre
+    BZ56: Diciembre
+    BG57: Caso Propuesto Con Clima
+    BN57: A
+    BF58: 0
+    BG58: Caso Propuesto Con Clima
+    BN58: B
+    BG59: Caso Propuesto Con Clima
+    BN59: C
+    BG60: Caso Propuesto Con Clima
+    BN60: D
+    BG61: Caso Propuesto Con Clima
+    BN61: E
+    BG62: Caso Propuesto Con Clima
+    BN62: F
+    BG63: Caso Propuesto Con Clima
+    BN63: G
+    BG64: Caso Propuesto Con Clima
+    BN64: H
+    BG65: Caso Propuesto Con Clima
+    BN65: I
+    BG66: Caso Propuesto Con Clima
+    BN66: J
+    BG67: Caso Propuesto Con Clima
+    BG68: Caso Propuesto Con Clima
+    BG69: Caso Propuesto Con Clima
+    BG70: Caso Propuesto Con Clima
+    BN70: Temperatura media de confort
+    BO70: Enero
+    BP70: Febrero
+    BQ70: Marzo
+    BR70: Abril
+    BS70: Mayo
+    BT70: Junio
+    BU70: Julio
+    BV70: Agosto
+    BW70: Septiembre
+    BX70: Octubre
+    BY70: Noviembre
+    BZ70: Diciembre
+    BG71: Caso Propuesto Con Clima
+    BG72: Caso Propuesto Con Clima
+    BN72: 0
+    BG73: Caso Propuesto Con Clima
+    BN73: 1
+    BG74: Caso Propuesto Con Clima
+    BN74: 2
+    BG75: Caso Propuesto Con Clima
+    BN75: 3
+    BG76: Caso Propuesto Con Clima
+    BN76: 4
+    BG77: Caso Propuesto Con Clima
+    BN77: 5
+    BG78: Caso Propuesto Con Clima
+    BN78: 6
+    BG79: Caso Propuesto Con Clima
+    BN79: 7
+    BG80: Caso Propuesto Con Clima
+    BN80: 8
+    BG81: Caso Propuesto Con Clima
+    BN81: 9
+    BG82: Caso Propuesto Con Clima
+    BN82: 10
+    BG83: Caso Propuesto Con Clima
+    BN83: 11
+    BF84: 0
+    BG84: Caso Propuesto Con Clima
+    BN84: 12
+    BG85: Caso Propuesto Con Clima
+    BN85: 13
+    BG86: Caso Propuesto Con Clima
+    BN86: 14
+    BG87: Caso Propuesto Con Clima
+    BN87: 15
+    BG88: Caso Propuesto Con Clima
+    BN88: 16
+    BG89: Caso Propuesto Con Clima
+    BN89: 17
+    BG90: Caso Propuesto Con Clima
+    BN90: 18
+    BG91: Caso Propuesto Con Clima
+    BN91: 19
+    BG92: Caso Propuesto Con Clima
+    BN92: 20
+    BG93: Caso Propuesto Con Clima
+    BN93: 21
+    BG94: Caso Propuesto Con Clima
+    BN94: 22
+    BG95: Caso Propuesto Con Clima
+    BN95: 23
+    BG96: Caso Propuesto Con Clima
+    BG97: Caso Propuesto Con Clima
+    BG98: Caso Propuesto Con Clima
+    BG99: Caso Propuesto Con Clima
+    BG100: Caso Propuesto Con Clima
+    BG101: Caso Propuesto Con Clima
+    BG102: Caso Propuesto Con Clima
+    BG103: Caso Propuesto Con Clima
+    BG104: Caso Propuesto Con Clima
+    BG105: Caso Propuesto Con Clima
+    BG106: Caso Propuesto Con Clima
+    BG107: Caso Propuesto Con Clima
+    BG108: Caso Propuesto Con Clima
+    BG109: Caso Propuesto Con Clima
+    BF110: 0
+    BG110: Caso Propuesto Con Clima
+    BG111: Caso Propuesto Con Clima
+    BG112: Caso Propuesto Con Clima
+    BG113: Caso Propuesto Con Clima
+    BG114: Caso Propuesto Con Clima
+    BG115: Caso Propuesto Con Clima
+    BG116: Caso Propuesto Con Clima
+    BG117: Caso Propuesto Con Clima
+    BG118: Caso Propuesto Con Clima
+    BG119: Caso Propuesto Con Clima
+    BG120: Caso Propuesto Con Clima
+    BG121: Caso Propuesto Con Clima
+    BG122: Caso Propuesto Con Clima
+    BG123: Caso Propuesto Con Clima
+    BG124: Caso Propuesto Con Clima
+    BG125: Caso Propuesto Con Clima
+    BG126: Caso Propuesto Con Clima
+    BG127: Caso Propuesto Con Clima
+    BG128: Caso Propuesto Con Clima
+    BG129: Caso Propuesto Con Clima
+    BG130: Caso Propuesto Con Clima
+    BG131: Caso Propuesto Con Clima
+    BG132: Caso Propuesto Con Clima
+    BG133: Caso Propuesto Con Clima
+    BG134: Caso Propuesto Con Clima
+    BG135: Caso Propuesto Con Clima
+    BF136: 0
+    BG136: Caso Propuesto Con Clima
+    BG137: Caso Propuesto Con Clima
+    BG138: Caso Propuesto Con Clima
+    BG139: Caso Propuesto Con Clima
+    BG140: Caso Propuesto Con Clima
+    BG141: Caso Propuesto Con Clima
+    BG142: Caso Propuesto Con Clima
+    BG143: Caso Propuesto Con Clima
+    BG144: Caso Propuesto Con Clima
+    BG145: Caso Propuesto Con Clima
+    BG146: Caso Propuesto Con Clima
+    BG147: Caso Propuesto Con Clima
+    BG148: Caso Propuesto Con Clima
+    BG149: Caso Propuesto Con Clima
+    BG150: Caso Propuesto Con Clima
+    BG151: Caso Propuesto Con Clima
+    BG152: Caso Propuesto Con Clima
+    BG153: Caso Propuesto Con Clima
+    BG154: Caso Propuesto Con Clima
+    BG155: Caso Propuesto Con Clima
+    BG156: Caso Propuesto Con Clima
+    BG157: Caso Propuesto Con Clima
+    BG158: Caso Propuesto Con Clima
+    BG159: Caso Propuesto Con Clima
+    BG160: Caso Propuesto Con Clima
+    BG161: Caso Propuesto Con Clima
+    BF162: 0
+    BG162: Caso Propuesto Con Clima
+    BG163: Caso Propuesto Con Clima
+    BG164: Caso Propuesto Con Clima
+    BG165: Caso Propuesto Con Clima
+    BG166: Caso Propuesto Con Clima
+    BG167: Caso Propuesto Con Clima
+    BG168: Caso Propuesto Con Clima
+    BG169: Caso Propuesto Con Clima
+    BG170: Caso Propuesto Con Clima
+    BG171: Caso Propuesto Con Clima
+    BG172: Caso Propuesto Con Clima
+    BG173: Caso Propuesto Con Clima
+    BG174: Caso Propuesto Con Clima
+    BG175: Caso Propuesto Con Clima
+    BG176: Caso Propuesto Con Clima
+    BG177: Caso Propuesto Con Clima
+    BG178: Caso Propuesto Con Clima
+    BG179: Caso Propuesto Con Clima
+    BG180: Caso Propuesto Con Clima
+    BG181: Caso Propuesto Con Clima
+    BG182: Caso Propuesto Con Clima
+    BG183: Caso Propuesto Con Clima
+    BG184: Caso Propuesto Con Clima
+    BG185: Caso Propuesto Con Clima
+    BG186: Caso Propuesto Con Clima
+    BG187: Caso Propuesto Con Clima
+    BF188: 0
+    BG188: Caso Propuesto Con Clima
+    BG189: Caso Propuesto Con Clima
+    BG190: Caso Propuesto Con Clima
+    BG191: Caso Propuesto Con Clima
+    BG192: Caso Propuesto Con Clima
+    BG193: Caso Propuesto Con Clima
+    BG194: Caso Propuesto Con Clima
+    BG195: Caso Propuesto Con Clima
+    BG196: Caso Propuesto Con Clima
+    BG197: Caso Propuesto Con Clima
+    BG198: Caso Propuesto Con Clima
+    BG199: Caso Propuesto Con Clima
+    BG200: Caso Propuesto Con Clima
+    BG201: Caso Propuesto Con Clima
+    BG202: Caso Propuesto Con Clima
+    BG203: Caso Propuesto Con Clima
+    BG204: Caso Propuesto Con Clima
+    BG205: Caso Propuesto Con Clima
+    BG206: Caso Propuesto Con Clima
+    BG207: Caso Propuesto Con Clima
+    BG208: Caso Propuesto Con Clima
+    BG209: Caso Propuesto Con Clima
+    BG210: Caso Propuesto Con Clima
+    BG211: Caso Propuesto Con Clima
+    BG212: Caso Propuesto Con Clima
+    BG213: Caso Propuesto Con Clima
+    BF214: 0
+    BG214: Caso Propuesto Con Clima
+    BG215: Caso Propuesto Con Clima
+    BG216: Caso Propuesto Con Clima
+    BG217: Caso Propuesto Con Clima
+    BG218: Caso Propuesto Con Clima
+    BG219: Caso Propuesto Con Clima
+    BG220: Caso Propuesto Con Clima
+    BG221: Caso Propuesto Con Clima
+    BG222: Caso Propuesto Con Clima
+    BG223: Caso Propuesto Con Clima
+    BG224: Caso Propuesto Con Clima
+    BG225: Caso Propuesto Con Clima
+    BG226: Caso Propuesto Con Clima
+    BG227: Caso Propuesto Con Clima
+    BG228: Caso Propuesto Con Clima
+    BG229: Caso Propuesto Con Clima
+    BG230: Caso Propuesto Con Clima
+    BG231: Caso Propuesto Con Clima
+    BG232: Caso Propuesto Con Clima
+    BG233: Caso Propuesto Con Clima
+    BG234: Caso Propuesto Con Clima
+    BG235: Caso Propuesto Con Clima
+    BG236: Caso Propuesto Con Clima
+    BG237: Caso Propuesto Con Clima
+    BG238: Caso Propuesto Con Clima
+    BG239: Caso Propuesto Con Clima
+    BF240: 0
+    BG240: Caso Propuesto Con Clima
+    BG241: Caso Propuesto Con Clima
+    BG242: Caso Propuesto Con Clima
+    BG243: Caso Propuesto Con Clima
+    BG244: Caso Propuesto Con Clima
+    BG245: Caso Propuesto Con Clima
+    BG246: Caso Propuesto Con Clima
+    BG247: Caso Propuesto Con Clima
+    BG248: Caso Propuesto Con Clima
+    BG249: Caso Propuesto Con Clima
+    BG250: Caso Propuesto Con Clima
+    BG251: Caso Propuesto Con Clima
+    BG252: Caso Propuesto Con Clima
+    BG253: Caso Propuesto Con Clima
+    BG254: Caso Propuesto Con Clima
+    BG255: Caso Propuesto Con Clima
+    BG256: Caso Propuesto Con Clima
+    BG257: Caso Propuesto Con Clima
+    BG258: Caso Propuesto Con Clima
+    BG259: Caso Propuesto Con Clima
+    BG260: Caso Propuesto Con Clima
+    BG261: Caso Propuesto Con Clima
+    BG262: Caso Propuesto Con Clima
+    BG263: Caso Propuesto Con Clima
+    BG264: Caso Propuesto Con Clima
+    BG265: Caso Propuesto Con Clima
+    BF266: 0
+    BG266: Caso Propuesto Con Clima
+    BG267: Caso Propuesto Con Clima
+    BG268: Caso Propuesto Con Clima
+    BG269: Caso Propuesto Con Clima
+    BG270: Caso Propuesto Con Clima
+    BG271: Caso Propuesto Con Clima
+    BG272: Caso Propuesto Con Clima
+    BG273: Caso Propuesto Con Clima
+    BG274: Caso Propuesto Con Clima
+    BG275: Caso Propuesto Con Clima
+    BG276: Caso Propuesto Con Clima
+    BG277: Caso Propuesto Con Clima
+    BG278: Caso Propuesto Con Clima
+    BG279: Caso Propuesto Con Clima
+    BG280: Caso Propuesto Con Clima
+    BG281: Caso Propuesto Con Clima
+    BG282: Caso Propuesto Con Clima
+    BG283: Caso Propuesto Con Clima
+    BG284: Caso Propuesto Con Clima
+    BG285: Caso Propuesto Con Clima
+    BG286: Caso Propuesto Con Clima
+    BG287: Caso Propuesto Con Clima
+    BG288: Caso Propuesto Con Clima
+    BG289: Caso Propuesto Con Clima
+    BG290: Caso Propuesto Con Clima
+    BG291: Caso Propuesto Con Clima
+    BF292: 0
+    BG292: Caso Propuesto Con Clima
+    BG293: Caso Propuesto Con Clima
+    BG294: Caso Propuesto Con Clima
+    BG295: Caso Propuesto Con Clima
+    BG296: Caso Propuesto Con Clima
+    BG297: Caso Propuesto Con Clima
+    BG298: Caso Propuesto Con Clima
+    BG299: Caso Propuesto Con Clima
+    BG300: Caso Propuesto Con Clima
+    BG301: Caso Propuesto Con Clima
+    BG302: Caso Propuesto Con Clima
+    BG303: Caso Propuesto Con Clima
+    BG304: Caso Propuesto Con Clima
+    BG305: Caso Propuesto Con Clima
+    BG306: Caso Propuesto Con Clima
+    BG307: Caso Propuesto Con Clima
+    BG308: Caso Propuesto Con Clima
+    BG309: Caso Propuesto Con Clima
+    BG310: Caso Propuesto Con Clima
+    BG311: Caso Propuesto Con Clima
+    BG312: Caso Propuesto Con Clima
+    BG313: Caso Propuesto Con Clima
+    BG314: Caso Propuesto Con Clima
+    BG315: Caso Propuesto Con Clima
+    BG316: Caso Propuesto Con Clima
+    BG317: Caso Propuesto Con Clima
+    BF318: 0
+    BG318: Caso Propuesto Sin Clima
+    BG319: Caso Propuesto Sin Clima
+    BG320: Caso Propuesto Sin Clima
+    BG321: Caso Propuesto Sin Clima
+    BG322: Caso Propuesto Sin Clima
+    BG323: Caso Propuesto Sin Clima
+    BG324: Caso Propuesto Sin Clima
+    BG325: Caso Propuesto Sin Clima
+    BG326: Caso Propuesto Sin Clima
+    BG327: Caso Propuesto Sin Clima
+    BG328: Caso Propuesto Sin Clima
+    BG329: Caso Propuesto Sin Clima
+    BG330: Caso Propuesto Sin Clima
+    BG331: Caso Propuesto Sin Clima
+    BG332: Caso Propuesto Sin Clima
+    BG333: Caso Propuesto Sin Clima
+    BG334: Caso Propuesto Sin Clima
+    BG335: Caso Propuesto Sin Clima
+    BG336: Caso Propuesto Sin Clima
+    BG337: Caso Propuesto Sin Clima
+    BG338: Caso Propuesto Sin Clima
+    BG339: Caso Propuesto Sin Clima
+    BG340: Caso Propuesto Sin Clima
+    BG341: Caso Propuesto Sin Clima
+    BG342: Caso Propuesto Sin Clima
+    BG343: Caso Propuesto Sin Clima
+    BF344: 0
+    BG344: Caso Propuesto Sin Clima
+    BG345: Caso Propuesto Sin Clima
+    BG346: Caso Propuesto Sin Clima
+    BG347: Caso Propuesto Sin Clima
+    BG348: Caso Propuesto Sin Clima
+    BG349: Caso Propuesto Sin Clima
+    BG350: Caso Propuesto Sin Clima
+    BG351: Caso Propuesto Sin Clima
+    BG352: Caso Propuesto Sin Clima
+    BG353: Caso Propuesto Sin Clima
+    BG354: Caso Propuesto Sin Clima
+    BG355: Caso Propuesto Sin Clima
+    BG356: Caso Propuesto Sin Clima
+    BG357: Caso Propuesto Sin Clima
+    BG358: Caso Propuesto Sin Clima
+    BG359: Caso Propuesto Sin Clima
+    BG360: Caso Propuesto Sin Clima
+    BG361: Caso Propuesto Sin Clima
+    BG362: Caso Propuesto Sin Clima
+    BG363: Caso Propuesto Sin Clima
+    BG364: Caso Propuesto Sin Clima
+    BG365: Caso Propuesto Sin Clima
+    BG366: Caso Propuesto Sin Clima
+    BG367: Caso Propuesto Sin Clima
+    BG368: Caso Propuesto Sin Clima
+    BG369: Caso Propuesto Sin Clima
+    BF370: 0
+    BG370: Caso Propuesto Sin Clima
+    BG371: Caso Propuesto Sin Clima
+    BG372: Caso Propuesto Sin Clima
+    BG373: Caso Propuesto Sin Clima
+    BG374: Caso Propuesto Sin Clima
+    BG375: Caso Propuesto Sin Clima
+    BG376: Caso Propuesto Sin Clima
+    BG377: Caso Propuesto Sin Clima
+    BG378: Caso Propuesto Sin Clima
+    BG379: Caso Propuesto Sin Clima
+    BG380: Caso Propuesto Sin Clima
+    BG381: Caso Propuesto Sin Clima
+    BG382: Caso Propuesto Sin Clima
+    BG383: Caso Propuesto Sin Clima
+    BG384: Caso Propuesto Sin Clima
+    BG385: Caso Propuesto Sin Clima
+    BG386: Caso Propuesto Sin Clima
+    BG387: Caso Propuesto Sin Clima
+    BG388: Caso Propuesto Sin Clima
+    BG389: Caso Propuesto Sin Clima
+    BG390: Caso Propuesto Sin Clima
+    BG391: Caso Propuesto Sin Clima
+    BG392: Caso Propuesto Sin Clima
+    BG393: Caso Propuesto Sin Clima
+    BG394: Caso Propuesto Sin Clima
+    BG395: Caso Propuesto Sin Clima
+    BF396: 0
+    BG396: Caso Propuesto Sin Clima
+    BG397: Caso Propuesto Sin Clima
+    BG398: Caso Propuesto Sin Clima
+    BG399: Caso Propuesto Sin Clima
+    BG400: Caso Propuesto Sin Clima
+    BG401: Caso Propuesto Sin Clima
+    BG402: Caso Propuesto Sin Clima
+    BG403: Caso Propuesto Sin Clima
+    BG404: Caso Propuesto Sin Clima
+    BG405: Caso Propuesto Sin Clima
+    BG406: Caso Propuesto Sin Clima
+    BG407: Caso Propuesto Sin Clima
+    BG408: Caso Propuesto Sin Clima
+    BG409: Caso Propuesto Sin Clima
+    BG410: Caso Propuesto Sin Clima
+    BG411: Caso Propuesto Sin Clima
+    BG412: Caso Propuesto Sin Clima
+    BG413: Caso Propuesto Sin Clima
+    BG414: Caso Propuesto Sin Clima
+    BG415: Caso Propuesto Sin Clima
+    BG416: Caso Propuesto Sin Clima
+    BG417: Caso Propuesto Sin Clima
+    BG418: Caso Propuesto Sin Clima
+    BG419: Caso Propuesto Sin Clima
+    BG420: Caso Propuesto Sin Clima
+    BG421: Caso Propuesto Sin Clima
+    BF422: 0
+    BG422: Caso Propuesto Sin Clima
+    BG423: Caso Propuesto Sin Clima
+    BG424: Caso Propuesto Sin Clima
+    BG425: Caso Propuesto Sin Clima
+    BG426: Caso Propuesto Sin Clima
+    BG427: Caso Propuesto Sin Clima
+    BG428: Caso Propuesto Sin Clima
+    BG429: Caso Propuesto Sin Clima
+    BG430: Caso Propuesto Sin Clima
+    BG431: Caso Propuesto Sin Clima
+    BG432: Caso Propuesto Sin Clima
+    BG433: Caso Propuesto Sin Clima
+    BG434: Caso Propuesto Sin Clima
+    BG435: Caso Propuesto Sin Clima
+    BG436: Caso Propuesto Sin Clima
+    BG437: Caso Propuesto Sin Clima
+    BG438: Caso Propuesto Sin Clima
+    BG439: Caso Propuesto Sin Clima
+    BG440: Caso Propuesto Sin Clima
+    BG441: Caso Propuesto Sin Clima
+    BG442: Caso Propuesto Sin Clima
+    BG443: Caso Propuesto Sin Clima
+    BG444: Caso Propuesto Sin Clima
+    BG445: Caso Propuesto Sin Clima
+    BG446: Caso Propuesto Sin Clima
+    BG447: Caso Propuesto Sin Clima
+    BF448: 0
+    BG448: Caso Propuesto Sin Clima
+    BG449: Caso Propuesto Sin Clima
+    BG450: Caso Propuesto Sin Clima
+    BG451: Caso Propuesto Sin Clima
+    BG452: Caso Propuesto Sin Clima
+    BG453: Caso Propuesto Sin Clima
+    BG454: Caso Propuesto Sin Clima
+    BG455: Caso Propuesto Sin Clima
+    BG456: Caso Propuesto Sin Clima
+    BG457: Caso Propuesto Sin Clima
+    BG458: Caso Propuesto Sin Clima
+    BG459: Caso Propuesto Sin Clima
+    BG460: Caso Propuesto Sin Clima
+    BG461: Caso Propuesto Sin Clima
+    BG462: Caso Propuesto Sin Clima
+    BG463: Caso Propuesto Sin Clima
+    BG464: Caso Propuesto Sin Clima
+    BG465: Caso Propuesto Sin Clima
+    BG466: Caso Propuesto Sin Clima
+    BG467: Caso Propuesto Sin Clima
+    BG468: Caso Propuesto Sin Clima
+    BG469: Caso Propuesto Sin Clima
+    BG470: Caso Propuesto Sin Clima
+    BG471: Caso Propuesto Sin Clima
+    BG472: Caso Propuesto Sin Clima
+    BG473: Caso Propuesto Sin Clima
+    BF474: 0
+    BG474: Caso Propuesto Sin Clima
+    BG475: Caso Propuesto Sin Clima
+    BG476: Caso Propuesto Sin Clima
+    BG477: Caso Propuesto Sin Clima
+    BG478: Caso Propuesto Sin Clima
+    BG479: Caso Propuesto Sin Clima
+    BG480: Caso Propuesto Sin Clima
+    BG481: Caso Propuesto Sin Clima
+    BG482: Caso Propuesto Sin Clima
+    BG483: Caso Propuesto Sin Clima
+    BG484: Caso Propuesto Sin Clima
+    BG485: Caso Propuesto Sin Clima
+    BG486: Caso Propuesto Sin Clima
+    BG487: Caso Propuesto Sin Clima
+    BG488: Caso Propuesto Sin Clima
+    BG489: Caso Propuesto Sin Clima
+    BG490: Caso Propuesto Sin Clima
+    BG491: Caso Propuesto Sin Clima
+    BG492: Caso Propuesto Sin Clima
+    BG493: Caso Propuesto Sin Clima
+    BG494: Caso Propuesto Sin Clima
+    BG495: Caso Propuesto Sin Clima
+    BG496: Caso Propuesto Sin Clima
+    BG497: Caso Propuesto Sin Clima
+    BG498: Caso Propuesto Sin Clima
+    BG499: Caso Propuesto Sin Clima
+    BF500: 0
+    BG500: Caso Propuesto Sin Clima
+    BG501: Caso Propuesto Sin Clima
+    BG502: Caso Propuesto Sin Clima
+    BG503: Caso Propuesto Sin Clima
+    BG504: Caso Propuesto Sin Clima
+    BG505: Caso Propuesto Sin Clima
+    BG506: Caso Propuesto Sin Clima
+    BG507: Caso Propuesto Sin Clima
+    BG508: Caso Propuesto Sin Clima
+    BG509: Caso Propuesto Sin Clima
+    BG510: Caso Propuesto Sin Clima
+    BG511: Caso Propuesto Sin Clima
+    BG512: Caso Propuesto Sin Clima
+    BG513: Caso Propuesto Sin Clima
+    BG514: Caso Propuesto Sin Clima
+    BG515: Caso Propuesto Sin Clima
+    BG516: Caso Propuesto Sin Clima
+    BG517: Caso Propuesto Sin Clima
+    BG518: Caso Propuesto Sin Clima
+    BG519: Caso Propuesto Sin Clima
+    BG520: Caso Propuesto Sin Clima
+    BG521: Caso Propuesto Sin Clima
+    BG522: Caso Propuesto Sin Clima
+    BG523: Caso Propuesto Sin Clima
+    BG524: Caso Propuesto Sin Clima
+    BG525: Caso Propuesto Sin Clima
+    BF526: 0
+    BG526: Caso Propuesto Sin Clima
+    BG527: Caso Propuesto Sin Clima
+    BG528: Caso Propuesto Sin Clima
+    BG529: Caso Propuesto Sin Clima
+    BG530: Caso Propuesto Sin Clima
+    BG531: Caso Propuesto Sin Clima
+    BG532: Caso Propuesto Sin Clima
+    BG533: Caso Propuesto Sin Clima
+    BG534: Caso Propuesto Sin Clima
+    BG535: Caso Propuesto Sin Clima
+    BG536: Caso Propuesto Sin Clima
+    BG537: Caso Propuesto Sin Clima
+    BG538: Caso Propuesto Sin Clima
+    BG539: Caso Propuesto Sin Clima
+    BG540: Caso Propuesto Sin Clima
+    BG541: Caso Propuesto Sin Clima
+    BG542: Caso Propuesto Sin Clima
+    BG543: Caso Propuesto Sin Clima
+    BG544: Caso Propuesto Sin Clima
+    BG545: Caso Propuesto Sin Clima
+    BG546: Caso Propuesto Sin Clima
+    BG547: Caso Propuesto Sin Clima
+    BG548: Caso Propuesto Sin Clima
+    BG549: Caso Propuesto Sin Clima
+    BG550: Caso Propuesto Sin Clima
+    BG551: Caso Propuesto Sin Clima
+    BF552: 0
+    BG552: Caso Propuesto Sin Clima
+    BG553: Caso Propuesto Sin Clima
+    BG554: Caso Propuesto Sin Clima
+    BG555: Caso Propuesto Sin Clima
+    BG556: Caso Propuesto Sin Clima
+    BG557: Caso Propuesto Sin Clima
+    BG558: Caso Propuesto Sin Clima
+    BG559: Caso Propuesto Sin Clima
+    BG560: Caso Propuesto Sin Clima
+    BG561: Caso Propuesto Sin Clima
+    BG562: Caso Propuesto Sin Clima
+    BG563: Caso Propuesto Sin Clima
+    BG564: Caso Propuesto Sin Clima
+    BG565: Caso Propuesto Sin Clima
+    BG566: Caso Propuesto Sin Clima
+    BG567: Caso Propuesto Sin Clima
+    BG568: Caso Propuesto Sin Clima
+    BG569: Caso Propuesto Sin Clima
+    BG570: Caso Propuesto Sin Clima
+    BG571: Caso Propuesto Sin Clima
+    BG572: Caso Propuesto Sin Clima
+    BG573: Caso Propuesto Sin Clima
+    BG574: Caso Propuesto Sin Clima
+    BG575: Caso Propuesto Sin Clima
+    BG576: Caso Propuesto Sin Clima
+    BG577: Caso Propuesto Sin Clima
+    BF578: 0
+    BG578: Caso Propuesto Sin Clima
+    BG579: Caso Propuesto Sin Clima
+    BG580: Caso Propuesto Sin Clima
+    BG581: Caso Propuesto Sin Clima
+    BG582: Caso Propuesto Sin Clima
+    BG583: Caso Propuesto Sin Clima
+    BG584: Caso Propuesto Sin Clima
+    BG585: Caso Propuesto Sin Clima
+    BG586: Caso Propuesto Sin Clima
+    BG587: Caso Propuesto Sin Clima
+    BG588: Caso Propuesto Sin Clima
+    BG589: Caso Propuesto Sin Clima
+    BG590: Caso Propuesto Sin Clima
+    BG591: Caso Propuesto Sin Clima
+    BG592: Caso Propuesto Sin Clima
+    BG593: Caso Propuesto Sin Clima
+    BG594: Caso Propuesto Sin Clima
+    BG595: Caso Propuesto Sin Clima
+    BG596: Caso Propuesto Sin Clima
+    BG597: Caso Propuesto Sin Clima
+    BG598: Caso Propuesto Sin Clima
+    BG599: Caso Propuesto Sin Clima
+    BG600: Caso Propuesto Sin Clima
+    BG601: Caso Propuesto Sin Clima
+    BG602: Caso Propuesto Sin Clima
+    BG603: Caso Propuesto Sin Clima
+    BF604: 0
+    BG604: Caso Propuesto Sin Clima
+    BG605: Caso Propuesto Sin Clima
+    BG606: Caso Propuesto Sin Clima
+    BG607: Caso Propuesto Sin Clima
+    BG608: Caso Propuesto Sin Clima
+    BG609: Caso Propuesto Sin Clima
+    BG610: Caso Propuesto Sin Clima
+    BG611: Caso Propuesto Sin Clima
+    BG612: Caso Propuesto Sin Clima
+    BG613: Caso Propuesto Sin Clima
+    BG614: Caso Propuesto Sin Clima
+    BG615: Caso Propuesto Sin Clima
+    BG616: Caso Propuesto Sin Clima
+    BG617: Caso Propuesto Sin Clima
+    BG618: Caso Propuesto Sin Clima
+    BG619: Caso Propuesto Sin Clima
+    BG620: Caso Propuesto Sin Clima
+    BG621: Caso Propuesto Sin Clima
+    BG622: Caso Propuesto Sin Clima
+    BG623: Caso Propuesto Sin Clima
+    BG624: Caso Propuesto Sin Clima
+    BG625: Caso Propuesto Sin Clima
+    BG626: Caso Propuesto Sin Clima
+    BG627: Caso Propuesto Sin Clima
+    BG628: Caso Propuesto Sin Clima
+    BG629: Caso Propuesto Sin Clima
+    BF630: 0
+    BG630: Caso Base 0° Con Clima
+    BG631: Caso Base 0° Con Clima
+    BG632: Caso Base 0° Con Clima
+    BG633: Caso Base 0° Con Clima
+    BG634: Caso Base 0° Con Clima
+    BG635: Caso Base 0° Con Clima
+    BG636: Caso Base 0° Con Clima
+    BG637: Caso Base 0° Con Clima
+    BG638: Caso Base 0° Con Clima
+    BG639: Caso Base 0° Con Clima
+    BG640: Caso Base 0° Con Clima
+    BG641: Caso Base 0° Con Clima
+    BG642: Caso Base 0° Con Clima
+    BG643: Caso Base 0° Con Clima
+    BG644: Caso Base 0° Con Clima
+    BG645: Caso Base 0° Con Clima
+    BG646: Caso Base 0° Con Clima
+    BG647: Caso Base 0° Con Clima
+    BG648: Caso Base 0° Con Clima
+    BG649: Caso Base 0° Con Clima
+    BG650: Caso Base 0° Con Clima
+    BG651: Caso Base 0° Con Clima
+    BG652: Caso Base 0° Con Clima
+    BG653: Caso Base 0° Con Clima
+    BG654: Caso Base 0° Con Clima
+    BG655: Caso Base 0° Con Clima
+    BF656: 0
+    BG656: Caso Base 0° Con Clima
+    BG657: Caso Base 0° Con Clima
+    BG658: Caso Base 0° Con Clima
+    BG659: Caso Base 0° Con Clima
+    BG660: Caso Base 0° Con Clima
+    BG661: Caso Base 0° Con Clima
+    BG662: Caso Base 0° Con Clima
+    BG663: Caso Base 0° Con Clima
+    BG664: Caso Base 0° Con Clima
+    BG665: Caso Base 0° Con Clima
+    BG666: Caso Base 0° Con Clima
+    BG667: Caso Base 0° Con Clima
+    BG668: Caso Base 0° Con Clima
+    BG669: Caso Base 0° Con Clima
+    BG670: Caso Base 0° Con Clima
+    BG671: Caso Base 0° Con Clima
+    BG672: Caso Base 0° Con Clima
+    BG673: Caso Base 0° Con Clima
+    BG674: Caso Base 0° Con Clima
+    BG675: Caso Base 0° Con Clima
+    BG676: Caso Base 0° Con Clima
+    BG677: Caso Base 0° Con Clima
+    BG678: Caso Base 0° Con Clima
+    BG679: Caso Base 0° Con Clima
+    BG680: Caso Base 0° Con Clima
+    BG681: Caso Base 0° Con Clima
+    BF682: 0
+    BG682: Caso Base 0° Con Clima
+    BG683: Caso Base 0° Con Clima
+    BG684: Caso Base 0° Con Clima
+    BG685: Caso Base 0° Con Clima
+    BG686: Caso Base 0° Con Clima
+    BG687: Caso Base 0° Con Clima
+    BG688: Caso Base 0° Con Clima
+    BG689: Caso Base 0° Con Clima
+    BG690: Caso Base 0° Con Clima
+    BG691: Caso Base 0° Con Clima
+    BG692: Caso Base 0° Con Clima
+    BG693: Caso Base 0° Con Clima
+    BG694: Caso Base 0° Con Clima
+    BG695: Caso Base 0° Con Clima
+    BG696: Caso Base 0° Con Clima
+    BG697: Caso Base 0° Con Clima
+    BG698: Caso Base 0° Con Clima
+    BG699: Caso Base 0° Con Clima
+    BG700: Caso Base 0° Con Clima
+    BG701: Caso Base 0° Con Clima
+    BG702: Caso Base 0° Con Clima
+    BG703: Caso Base 0° Con Clima
+    BG704: Caso Base 0° Con Clima
+    BG705: Caso Base 0° Con Clima
+    BG706: Caso Base 0° Con Clima
+    BG707: Caso Base 0° Con Clima
+    BF708: 0
+    BG708: Caso Base 0° Con Clima
+    BG709: Caso Base 0° Con Clima
+    BG710: Caso Base 0° Con Clima
+    BG711: Caso Base 0° Con Clima
+    BG712: Caso Base 0° Con Clima
+    BG713: Caso Base 0° Con Clima
+    BG714: Caso Base 0° Con Clima
+    BG715: Caso Base 0° Con Clima
+    BG716: Caso Base 0° Con Clima
+    BG717: Caso Base 0° Con Clima
+    BG718: Caso Base 0° Con Clima
+    BG719: Caso Base 0° Con Clima
+    BG720: Caso Base 0° Con Clima
+    BG721: Caso Base 0° Con Clima
+    BG722: Caso Base 0° Con Clima
+    BG723: Caso Base 0° Con Clima
+    BG724: Caso Base 0° Con Clima
+    BG725: Caso Base 0° Con Clima
+    BG726: Caso Base 0° Con Clima
+    BG727: Caso Base 0° Con Clima
+    BG728: Caso Base 0° Con Clima
+    BG729: Caso Base 0° Con Clima
+    BG730: Caso Base 0° Con Clima
+    BG731: Caso Base 0° Con Clima
+    BG732: Caso Base 0° Con Clima
+    BG733: Caso Base 0° Con Clima
+    BF734: 0
+    BG734: Caso Base 0° Con Clima
+    BG735: Caso Base 0° Con Clima
+    BG736: Caso Base 0° Con Clima
+    BG737: Caso Base 0° Con Clima
+    BG738: Caso Base 0° Con Clima
+    BG739: Caso Base 0° Con Clima
+    BG740: Caso Base 0° Con Clima
+    BG741: Caso Base 0° Con Clima
+    BG742: Caso Base 0° Con Clima
+    BG743: Caso Base 0° Con Clima
+    BG744: Caso Base 0° Con Clima
+    BG745: Caso Base 0° Con Clima
+    BG746: Caso Base 0° Con Clima
+    BG747: Caso Base 0° Con Clima
+    BG748: Caso Base 0° Con Clima
+    BG749: Caso Base 0° Con Clima
+    BG750: Caso Base 0° Con Clima
+    BG751: Caso Base 0° Con Clima
+    BG752: Caso Base 0° Con Clima
+    BG753: Caso Base 0° Con Clima
+    BG754: Caso Base 0° Con Clima
+    BG755: Caso Base 0° Con Clima
+    BG756: Caso Base 0° Con Clima
+    BG757: Caso Base 0° Con Clima
+    BG758: Caso Base 0° Con Clima
+    BG759: Caso Base 0° Con Clima
+    BF760: 0
+    BG760: Caso Base 0° Con Clima
+    BG761: Caso Base 0° Con Clima
+    BG762: Caso Base 0° Con Clima
+    BG763: Caso Base 0° Con Clima
+    BG764: Caso Base 0° Con Clima
+    BG765: Caso Base 0° Con Clima
+    BG766: Caso Base 0° Con Clima
+    BG767: Caso Base 0° Con Clima
+    BG768: Caso Base 0° Con Clima
+    BG769: Caso Base 0° Con Clima
+    BG770: Caso Base 0° Con Clima
+    BG771: Caso Base 0° Con Clima
+    BG772: Caso Base 0° Con Clima
+    BG773: Caso Base 0° Con Clima
+    BG774: Caso Base 0° Con Clima
+    BG775: Caso Base 0° Con Clima
+    BG776: Caso Base 0° Con Clima
+    BG777: Caso Base 0° Con Clima
+    BG778: Caso Base 0° Con Clima
+    BG779: Caso Base 0° Con Clima
+    BG780: Caso Base 0° Con Clima
+    BG781: Caso Base 0° Con Clima
+    BG782: Caso Base 0° Con Clima
+    BG783: Caso Base 0° Con Clima
+    BG784: Caso Base 0° Con Clima
+    BG785: Caso Base 0° Con Clima
+    BF786: 0
+    BG786: Caso Base 0° Con Clima
+    BG787: Caso Base 0° Con Clima
+    BG788: Caso Base 0° Con Clima
+    BG789: Caso Base 0° Con Clima
+    BG790: Caso Base 0° Con Clima
+    BG791: Caso Base 0° Con Clima
+    BG792: Caso Base 0° Con Clima
+    BG793: Caso Base 0° Con Clima
+    BG794: Caso Base 0° Con Clima
+    BG795: Caso Base 0° Con Clima
+    BG796: Caso Base 0° Con Clima
+    BG797: Caso Base 0° Con Clima
+    BG798: Caso Base 0° Con Clima
+    BG799: Caso Base 0° Con Clima
+    BG800: Caso Base 0° Con Clima
+    BG801: Caso Base 0° Con Clima
+    BG802: Caso Base 0° Con Clima
+    BG803: Caso Base 0° Con Clima
+    BG804: Caso Base 0° Con Clima
+    BG805: Caso Base 0° Con Clima
+    BG806: Caso Base 0° Con Clima
+    BG807: Caso Base 0° Con Clima
+    BG808: Caso Base 0° Con Clima
+    BG809: Caso Base 0° Con Clima
+    BG810: Caso Base 0° Con Clima
+    BG811: Caso Base 0° Con Clima
+    BF812: 0
+    BG812: Caso Base 0° Con Clima
+    BG813: Caso Base 0° Con Clima
+    BG814: Caso Base 0° Con Clima
+    BG815: Caso Base 0° Con Clima
+    BG816: Caso Base 0° Con Clima
+    BG817: Caso Base 0° Con Clima
+    BG818: Caso Base 0° Con Clima
+    BG819: Caso Base 0° Con Clima
+    BG820: Caso Base 0° Con Clima
+    BG821: Caso Base 0° Con Clima
+    BG822: Caso Base 0° Con Clima
+    BG823: Caso Base 0° Con Clima
+    BG824: Caso Base 0° Con Clima
+    BG825: Caso Base 0° Con Clima
+    BG826: Caso Base 0° Con Clima
+    BG827: Caso Base 0° Con Clima
+    BG828: Caso Base 0° Con Clima
+    BG829: Caso Base 0° Con Clima
+    BG830: Caso Base 0° Con Clima
+    BG831: Caso Base 0° Con Clima
+    BG832: Caso Base 0° Con Clima
+    BG833: Caso Base 0° Con Clima
+    BG834: Caso Base 0° Con Clima
+    BG835: Caso Base 0° Con Clima
+    BG836: Caso Base 0° Con Clima
+    BG837: Caso Base 0° Con Clima
+    BF838: 0
+    BG838: Caso Base 0° Con Clima
+    BG839: Caso Base 0° Con Clima
+    BG840: Caso Base 0° Con Clima
+    BG841: Caso Base 0° Con Clima
+    BG842: Caso Base 0° Con Clima
+    BG843: Caso Base 0° Con Clima
+    BG844: Caso Base 0° Con Clima
+    BG845: Caso Base 0° Con Clima
+    BG846: Caso Base 0° Con Clima
+    BG847: Caso Base 0° Con Clima
+    BG848: Caso Base 0° Con Clima
+    BG849: Caso Base 0° Con Clima
+    BG850: Caso Base 0° Con Clima
+    BG851: Caso Base 0° Con Clima
+    BG852: Caso Base 0° Con Clima
+    BG853: Caso Base 0° Con Clima
+    BG854: Caso Base 0° Con Clima
+    BG855: Caso Base 0° Con Clima
+    BG856: Caso Base 0° Con Clima
+    BG857: Caso Base 0° Con Clima
+    BG858: Caso Base 0° Con Clima
+    BG859: Caso Base 0° Con Clima
+    BG860: Caso Base 0° Con Clima
+    BG861: Caso Base 0° Con Clima
+    BG862: Caso Base 0° Con Clima
+    BG863: Caso Base 0° Con Clima
+    BF864: 0
+    BG864: Caso Base 0° Con Clima
+    BG865: Caso Base 0° Con Clima
+    BG866: Caso Base 0° Con Clima
+    BG867: Caso Base 0° Con Clima
+    BG868: Caso Base 0° Con Clima
+    BG869: Caso Base 0° Con Clima
+    BG870: Caso Base 0° Con Clima
+    BG871: Caso Base 0° Con Clima
+    BG872: Caso Base 0° Con Clima
+    BG873: Caso Base 0° Con Clima
+    BG874: Caso Base 0° Con Clima
+    BG875: Caso Base 0° Con Clima
+    BG876: Caso Base 0° Con Clima
+    BG877: Caso Base 0° Con Clima
+    BG878: Caso Base 0° Con Clima
+    BG879: Caso Base 0° Con Clima
+    BG880: Caso Base 0° Con Clima
+    BG881: Caso Base 0° Con Clima
+    BG882: Caso Base 0° Con Clima
+    BG883: Caso Base 0° Con Clima
+    BG884: Caso Base 0° Con Clima
+    BG885: Caso Base 0° Con Clima
+    BG886: Caso Base 0° Con Clima
+    BG887: Caso Base 0° Con Clima
+    BG888: Caso Base 0° Con Clima
+    BG889: Caso Base 0° Con Clima
+    BF890: 0
+    BG890: Caso Base 0° Con Clima
+    BG891: Caso Base 0° Con Clima
+    BG892: Caso Base 0° Con Clima
+    BG893: Caso Base 0° Con Clima
+    BG894: Caso Base 0° Con Clima
+    BG895: Caso Base 0° Con Clima
+    BG896: Caso Base 0° Con Clima
+    BG897: Caso Base 0° Con Clima
+    BG898: Caso Base 0° Con Clima
+    BG899: Caso Base 0° Con Clima
+    BG900: Caso Base 0° Con Clima
+    BG901: Caso Base 0° Con Clima
+    BG902: Caso Base 0° Con Clima
+    BG903: Caso Base 0° Con Clima
+    BG904: Caso Base 0° Con Clima
+    BG905: Caso Base 0° Con Clima
+    BG906: Caso Base 0° Con Clima
+    BG907: Caso Base 0° Con Clima
+    BG908: Caso Base 0° Con Clima
+    BG909: Caso Base 0° Con Clima
+    BG910: Caso Base 0° Con Clima
+    BG911: Caso Base 0° Con Clima
+    BG912: Caso Base 0° Con Clima
+    BG913: Caso Base 0° Con Clima
+    BG914: Caso Base 0° Con Clima
+    BG915: Caso Base 0° Con Clima
+    BF916: 0
+    BG916: Caso Base 0° Con Clima
+    BG917: Caso Base 0° Con Clima
+    BG918: Caso Base 0° Con Clima
+    BG919: Caso Base 0° Con Clima
+    BG920: Caso Base 0° Con Clima
+    BG921: Caso Base 0° Con Clima
+    BG922: Caso Base 0° Con Clima
+    BG923: Caso Base 0° Con Clima
+    BG924: Caso Base 0° Con Clima
+    BG925: Caso Base 0° Con Clima
+    BG926: Caso Base 0° Con Clima
+    BG927: Caso Base 0° Con Clima
+    BG928: Caso Base 0° Con Clima
+    BG929: Caso Base 0° Con Clima
+    BG930: Caso Base 0° Con Clima
+    BG931: Caso Base 0° Con Clima
+    BG932: Caso Base 0° Con Clima
+    BG933: Caso Base 0° Con Clima
+    BG934: Caso Base 0° Con Clima
+    BG935: Caso Base 0° Con Clima
+    BG936: Caso Base 0° Con Clima
+    BG937: Caso Base 0° Con Clima
+    BG938: Caso Base 0° Con Clima
+    BG939: Caso Base 0° Con Clima
+    BG940: Caso Base 0° Con Clima
+    BG941: Caso Base 0° Con Clima
+    BF942: 0
+    BG942: Caso Base 0° Sin Clima
+    BG943: Caso Base 0° Sin Clima
+    BG944: Caso Base 0° Sin Clima
+    BG945: Caso Base 0° Sin Clima
+    BG946: Caso Base 0° Sin Clima
+    BG947: Caso Base 0° Sin Clima
+    BG948: Caso Base 0° Sin Clima
+    BG949: Caso Base 0° Sin Clima
+    BG950: Caso Base 0° Sin Clima
+    BG951: Caso Base 0° Sin Clima
+    BG952: Caso Base 0° Sin Clima
+    BG953: Caso Base 0° Sin Clima
+    BG954: Caso Base 0° Sin Clima
+    BG955: Caso Base 0° Sin Clima
+    BG956: Caso Base 0° Sin Clima
+    BG957: Caso Base 0° Sin Clima
+    BG958: Caso Base 0° Sin Clima
+    BG959: Caso Base 0° Sin Clima
+    BG960: Caso Base 0° Sin Clima
+    BG961: Caso Base 0° Sin Clima
+    BG962: Caso Base 0° Sin Clima
+    BG963: Caso Base 0° Sin Clima
+    BG964: Caso Base 0° Sin Clima
+    BG965: Caso Base 0° Sin Clima
+    BG966: Caso Base 0° Sin Clima
+    BG967: Caso Base 0° Sin Clima
+    BF968: 0
+    BG968: Caso Base 0° Sin Clima
+    BG969: Caso Base 0° Sin Clima
+    BG970: Caso Base 0° Sin Clima
+    BG971: Caso Base 0° Sin Clima
+    BG972: Caso Base 0° Sin Clima
+    BG973: Caso Base 0° Sin Clima
+    BG974: Caso Base 0° Sin Clima
+    BG975: Caso Base 0° Sin Clima
+    BG976: Caso Base 0° Sin Clima
+    BG977: Caso Base 0° Sin Clima
+    BG978: Caso Base 0° Sin Clima
+    BG979: Caso Base 0° Sin Clima
+    BG980: Caso Base 0° Sin Clima
+    BG981: Caso Base 0° Sin Clima
+    BG982: Caso Base 0° Sin Clima
+    BG983: Caso Base 0° Sin Clima
+    BG984: Caso Base 0° Sin Clima
+    BG985: Caso Base 0° Sin Clima
+    BG986: Caso Base 0° Sin Clima
+    BG987: Caso Base 0° Sin Clima
+    BG988: Caso Base 0° Sin Clima
+    BG989: Caso Base 0° Sin Clima
+    BG990: Caso Base 0° Sin Clima
+    BG991: Caso Base 0° Sin Clima
+    BG992: Caso Base 0° Sin Clima
+    BG993: Caso Base 0° Sin Clima
+    BF994: 0
+    BG994: Caso Base 0° Sin Clima
+    BG995: Caso Base 0° Sin Clima
+    BG996: Caso Base 0° Sin Clima
+    BG997: Caso Base 0° Sin Clima
+    BG998: Caso Base 0° Sin Clima
+    BG999: Caso Base 0° Sin Clima
+    BG1000: Caso Base 0° Sin Clima
+    BG1001: Caso Base 0° Sin Clima
+    BG1002: Caso Base 0° Sin Clima
+    BG1003: Caso Base 0° Sin Clima
+    BG1004: Caso Base 0° Sin Clima
+    BG1005: Caso Base 0° Sin Clima
+    BG1006: Caso Base 0° Sin Clima
+    BG1007: Caso Base 0° Sin Clima
+    BG1008: Caso Base 0° Sin Clima
+    BG1009: Caso Base 0° Sin Clima
+    BG1010: Caso Base 0° Sin Clima
+    BG1011: Caso Base 0° Sin Clima
+    BG1012: Caso Base 0° Sin Clima
+    BG1013: Caso Base 0° Sin Clima
+    BG1014: Caso Base 0° Sin Clima
+    BG1015: Caso Base 0° Sin Clima
+    BG1016: Caso Base 0° Sin Clima
+    BG1017: Caso Base 0° Sin Clima
+    BG1018: Caso Base 0° Sin Clima
+    BG1019: Caso Base 0° Sin Clima
+    BF1020: 0
+    BG1020: Caso Base 0° Sin Clima
+    BG1021: Caso Base 0° Sin Clima
+    BG1022: Caso Base 0° Sin Clima
+    BG1023: Caso Base 0° Sin Clima
+    BG1024: Caso Base 0° Sin Clima
+    BG1025: Caso Base 0° Sin Clima
+    BG1026: Caso Base 0° Sin Clima
+    BG1027: Caso Base 0° Sin Clima
+    BG1028: Caso Base 0° Sin Clima
+    BG1029: Caso Base 0° Sin Clima
+    BG1030: Caso Base 0° Sin Clima
+    BG1031: Caso Base 0° Sin Clima
+    BG1032: Caso Base 0° Sin Clima
+    BG1033: Caso Base 0° Sin Clima
+    BG1034: Caso Base 0° Sin Clima
+    BG1035: Caso Base 0° Sin Clima
+    BG1036: Caso Base 0° Sin Clima
+    BG1037: Caso Base 0° Sin Clima
+    BG1038: Caso Base 0° Sin Clima
+    BG1039: Caso Base 0° Sin Clima
+    BG1040: Caso Base 0° Sin Clima
+    BG1041: Caso Base 0° Sin Clima
+    BG1042: Caso Base 0° Sin Clima
+    BG1043: Caso Base 0° Sin Clima
+    BG1044: Caso Base 0° Sin Clima
+    BG1045: Caso Base 0° Sin Clima
+    BF1046: 0
+    BG1046: Caso Base 0° Sin Clima
+    BG1047: Caso Base 0° Sin Clima
+    BG1048: Caso Base 0° Sin Clima
+    BG1049: Caso Base 0° Sin Clima
+    BG1050: Caso Base 0° Sin Clima
+    BG1051: Caso Base 0° Sin Clima
+    BG1052: Caso Base 0° Sin Clima
+    BG1053: Caso Base 0° Sin Clima
+    BG1054: Caso Base 0° Sin Clima
+    BG1055: Caso Base 0° Sin Clima
+    BG1056: Caso Base 0° Sin Clima
+    BG1057: Caso Base 0° Sin Clima
+    BG1058: Caso Base 0° Sin Clima
+    BG1059: Caso Base 0° Sin Clima
+    BG1060: Caso Base 0° Sin Clima
+    BG1061: Caso Base 0° Sin Clima
+    BG1062: Caso Base 0° Sin Clima
+    BG1063: Caso Base 0° Sin Clima
+    BG1064: Caso Base 0° Sin Clima
+    BG1065: Caso Base 0° Sin Clima
+    BG1066: Caso Base 0° Sin Clima
+    BG1067: Caso Base 0° Sin Clima
+    BG1068: Caso Base 0° Sin Clima
+    BG1069: Caso Base 0° Sin Clima
+    BG1070: Caso Base 0° Sin Clima
+    BG1071: Caso Base 0° Sin Clima
+    BF1072: 0
+    BG1072: Caso Base 0° Sin Clima
+    BG1073: Caso Base 0° Sin Clima
+    BG1074: Caso Base 0° Sin Clima
+    BG1075: Caso Base 0° Sin Clima
+    BG1076: Caso Base 0° Sin Clima
+    BG1077: Caso Base 0° Sin Clima
+    BG1078: Caso Base 0° Sin Clima
+    BG1079: Caso Base 0° Sin Clima
+    BG1080: Caso Base 0° Sin Clima
+    BG1081: Caso Base 0° Sin Clima
+    BG1082: Caso Base 0° Sin Clima
+    BG1083: Caso Base 0° Sin Clima
+    BG1084: Caso Base 0° Sin Clima
+    BG1085: Caso Base 0° Sin Clima
+    BG1086: Caso Base 0° Sin Clima
+    BG1087: Caso Base 0° Sin Clima
+    BG1088: Caso Base 0° Sin Clima
+    BG1089: Caso Base 0° Sin Clima
+    BG1090: Caso Base 0° Sin Clima
+    BG1091: Caso Base 0° Sin Clima
+    BG1092: Caso Base 0° Sin Clima
+    BG1093: Caso Base 0° Sin Clima
+    BG1094: Caso Base 0° Sin Clima
+    BG1095: Caso Base 0° Sin Clima
+    BG1096: Caso Base 0° Sin Clima
+    BG1097: Caso Base 0° Sin Clima
+    BF1098: 0
+    BG1098: Caso Base 0° Sin Clima
+    BG1099: Caso Base 0° Sin Clima
+    BG1100: Caso Base 0° Sin Clima
+    BG1101: Caso Base 0° Sin Clima
+    BG1102: Caso Base 0° Sin Clima
+    BG1103: Caso Base 0° Sin Clima
+    BG1104: Caso Base 0° Sin Clima
+    BG1105: Caso Base 0° Sin Clima
+    BG1106: Caso Base 0° Sin Clima
+    BG1107: Caso Base 0° Sin Clima
+    BG1108: Caso Base 0° Sin Clima
+    BG1109: Caso Base 0° Sin Clima
+    BG1110: Caso Base 0° Sin Clima
+    BG1111: Caso Base 0° Sin Clima
+    BG1112: Caso Base 0° Sin Clima
+    BG1113: Caso Base 0° Sin Clima
+    BG1114: Caso Base 0° Sin Clima
+    BG1115: Caso Base 0° Sin Clima
+    BG1116: Caso Base 0° Sin Clima
+    BG1117: Caso Base 0° Sin Clima
+    BG1118: Caso Base 0° Sin Clima
+    BG1119: Caso Base 0° Sin Clima
+    BG1120: Caso Base 0° Sin Clima
+    BG1121: Caso Base 0° Sin Clima
+    BG1122: Caso Base 0° Sin Clima
+    BG1123: Caso Base 0° Sin Clima
+    BF1124: 0
+    BG1124: Caso Base 0° Sin Clima
+    BG1125: Caso Base 0° Sin Clima
+    BG1126: Caso Base 0° Sin Clima
+    BG1127: Caso Base 0° Sin Clima
+    BG1128: Caso Base 0° Sin Clima
+    BG1129: Caso Base 0° Sin Clima
+    BG1130: Caso Base 0° Sin Clima
+    BG1131: Caso Base 0° Sin Clima
+    BG1132: Caso Base 0° Sin Clima
+    BG1133: Caso Base 0° Sin Clima
+    BG1134: Caso Base 0° Sin Clima
+    BG1135: Caso Base 0° Sin Clima
+    BG1136: Caso Base 0° Sin Clima
+    BG1137: Caso Base 0° Sin Clima
+    BG1138: Caso Base 0° Sin Clima
+    BG1139: Caso Base 0° Sin Clima
+    BG1140: Caso Base 0° Sin Clima
+    BG1141: Caso Base 0° Sin Clima
+    BG1142: Caso Base 0° Sin Clima
+    BG1143: Caso Base 0° Sin Clima
+    BG1144: Caso Base 0° Sin Clima
+    BG1145: Caso Base 0° Sin Clima
+    BG1146: Caso Base 0° Sin Clima
+    BG1147: Caso Base 0° Sin Clima
+    BG1148: Caso Base 0° Sin Clima
+    BG1149: Caso Base 0° Sin Clima
+    BF1150: 0
+    BG1150: Caso Base 0° Sin Clima
+    BG1151: Caso Base 0° Sin Clima
+    BG1152: Caso Base 0° Sin Clima
+    BG1153: Caso Base 0° Sin Clima
+    BG1154: Caso Base 0° Sin Clima
+    BG1155: Caso Base 0° Sin Clima
+    BG1156: Caso Base 0° Sin Clima
+    BG1157: Caso Base 0° Sin Clima
+    BG1158: Caso Base 0° Sin Clima
+    BG1159: Caso Base 0° Sin Clima
+    BG1160: Caso Base 0° Sin Clima
+    BG1161: Caso Base 0° Sin Clima
+    BG1162: Caso Base 0° Sin Clima
+    BG1163: Caso Base 0° Sin Clima
+    BG1164: Caso Base 0° Sin Clima
+    BG1165: Caso Base 0° Sin Clima
+    BG1166: Caso Base 0° Sin Clima
+    BG1167: Caso Base 0° Sin Clima
+    BG1168: Caso Base 0° Sin Clima
+    BG1169: Caso Base 0° Sin Clima
+    BG1170: Caso Base 0° Sin Clima
+    BG1171: Caso Base 0° Sin Clima
+    BG1172: Caso Base 0° Sin Clima
+    BG1173: Caso Base 0° Sin Clima
+    BG1174: Caso Base 0° Sin Clima
+    BG1175: Caso Base 0° Sin Clima
+    BF1176: 0
+    BG1176: Caso Base 0° Sin Clima
+    BG1177: Caso Base 0° Sin Clima
+    BG1178: Caso Base 0° Sin Clima
+    BG1179: Caso Base 0° Sin Clima
+    BG1180: Caso Base 0° Sin Clima
+    BG1181: Caso Base 0° Sin Clima
+    BG1182: Caso Base 0° Sin Clima
+    BG1183: Caso Base 0° Sin Clima
+    BG1184: Caso Base 0° Sin Clima
+    BG1185: Caso Base 0° Sin Clima
+    BG1186: Caso Base 0° Sin Clima
+    BG1187: Caso Base 0° Sin Clima
+    BG1188: Caso Base 0° Sin Clima
+    BG1189: Caso Base 0° Sin Clima
+    BG1190: Caso Base 0° Sin Clima
+    BG1191: Caso Base 0° Sin Clima
+    BG1192: Caso Base 0° Sin Clima
+    BG1193: Caso Base 0° Sin Clima
+    BG1194: Caso Base 0° Sin Clima
+    BG1195: Caso Base 0° Sin Clima
+    BG1196: Caso Base 0° Sin Clima
+    BG1197: Caso Base 0° Sin Clima
+    BG1198: Caso Base 0° Sin Clima
+    BG1199: Caso Base 0° Sin Clima
+    BG1200: Caso Base 0° Sin Clima
+    BG1201: Caso Base 0° Sin Clima
+    BF1202: 0
+    BG1202: Caso Base 0° Sin Clima
+    BG1203: Caso Base 0° Sin Clima
+    BG1204: Caso Base 0° Sin Clima
+    BG1205: Caso Base 0° Sin Clima
+    BG1206: Caso Base 0° Sin Clima
+    BG1207: Caso Base 0° Sin Clima
+    BG1208: Caso Base 0° Sin Clima
+    BG1209: Caso Base 0° Sin Clima
+    BG1210: Caso Base 0° Sin Clima
+    BG1211: Caso Base 0° Sin Clima
+    BG1212: Caso Base 0° Sin Clima
+    BG1213: Caso Base 0° Sin Clima
+    BG1214: Caso Base 0° Sin Clima
+    BG1215: Caso Base 0° Sin Clima
+    BG1216: Caso Base 0° Sin Clima
+    BG1217: Caso Base 0° Sin Clima
+    BG1218: Caso Base 0° Sin Clima
+    BG1219: Caso Base 0° Sin Clima
+    BG1220: Caso Base 0° Sin Clima
+    BG1221: Caso Base 0° Sin Clima
+    BG1222: Caso Base 0° Sin Clima
+    BG1223: Caso Base 0° Sin Clima
+    BG1224: Caso Base 0° Sin Clima
+    BG1225: Caso Base 0° Sin Clima
+    BG1226: Caso Base 0° Sin Clima
+    BG1227: Caso Base 0° Sin Clima
+    BF1228: 0
+    BG1228: Caso Base 0° Sin Clima
+    BG1229: Caso Base 0° Sin Clima
+    BG1230: Caso Base 0° Sin Clima
+    BG1231: Caso Base 0° Sin Clima
+    BG1232: Caso Base 0° Sin Clima
+    BG1233: Caso Base 0° Sin Clima
+    BG1234: Caso Base 0° Sin Clima
+    BG1235: Caso Base 0° Sin Clima
+    BG1236: Caso Base 0° Sin Clima
+    BG1237: Caso Base 0° Sin Clima
+    BG1238: Caso Base 0° Sin Clima
+    BG1239: Caso Base 0° Sin Clima
+    BG1240: Caso Base 0° Sin Clima
+    BG1241: Caso Base 0° Sin Clima
+    BG1242: Caso Base 0° Sin Clima
+    BG1243: Caso Base 0° Sin Clima
+    BG1244: Caso Base 0° Sin Clima
+    BG1245: Caso Base 0° Sin Clima
+    BG1246: Caso Base 0° Sin Clima
+    BG1247: Caso Base 0° Sin Clima
+    BG1248: Caso Base 0° Sin Clima
+    BG1249: Caso Base 0° Sin Clima
+    BG1250: Caso Base 0° Sin Clima
+    BG1251: Caso Base 0° Sin Clima
+    BG1252: Caso Base 0° Sin Clima
+    BG1253: Caso Base 0° Sin Clima
+    BF1254: 0
+    BG1254: Caso Base 90° Con Clima
+    BG1255: Caso Base 90° Con Clima
+    BG1256: Caso Base 90° Con Clima
+    BG1257: Caso Base 90° Con Clima
+    BG1258: Caso Base 90° Con Clima
+    BG1259: Caso Base 90° Con Clima
+    BG1260: Caso Base 90° Con Clima
+    BG1261: Caso Base 90° Con Clima
+    BG1262: Caso Base 90° Con Clima
+    BG1263: Caso Base 90° Con Clima
+    BG1264: Caso Base 90° Con Clima
+    BG1265: Caso Base 90° Con Clima
+    BG1266: Caso Base 90° Con Clima
+    BG1267: Caso Base 90° Con Clima
+    BG1268: Caso Base 90° Con Clima
+    BG1269: Caso Base 90° Con Clima
+    BG1270: Caso Base 90° Con Clima
+    BG1271: Caso Base 90° Con Clima
+    BG1272: Caso Base 90° Con Clima
+    BG1273: Caso Base 90° Con Clima
+    BG1274: Caso Base 90° Con Clima
+    BG1275: Caso Base 90° Con Clima
+    BG1276: Caso Base 90° Con Clima
+    BG1277: Caso Base 90° Con Clima
+    BG1278: Caso Base 90° Con Clima
+    BG1279: Caso Base 90° Con Clima
+    BF1280: 0
+    BG1280: Caso Base 90° Con Clima
+    BG1281: Caso Base 90° Con Clima
+    BG1282: Caso Base 90° Con Clima
+    BG1283: Caso Base 90° Con Clima
+    BG1284: Caso Base 90° Con Clima
+    BG1285: Caso Base 90° Con Clima
+    BG1286: Caso Base 90° Con Clima
+    BG1287: Caso Base 90° Con Clima
+    BG1288: Caso Base 90° Con Clima
+    BG1289: Caso Base 90° Con Clima
+    BG1290: Caso Base 90° Con Clima
+    BG1291: Caso Base 90° Con Clima
+    BG1292: Caso Base 90° Con Clima
+    BG1293: Caso Base 90° Con Clima
+    BG1294: Caso Base 90° Con Clima
+    BG1295: Caso Base 90° Con Clima
+    BG1296: Caso Base 90° Con Clima
+    BG1297: Caso Base 90° Con Clima
+    BG1298: Caso Base 90° Con Clima
+    BG1299: Caso Base 90° Con Clima
+    BG1300: Caso Base 90° Con Clima
+    BG1301: Caso Base 90° Con Clima
+    BG1302: Caso Base 90° Con Clima
+    BG1303: Caso Base 90° Con Clima
+    BG1304: Caso Base 90° Con Clima
+    BG1305: Caso Base 90° Con Clima
+    BF1306: 0
+    BG1306: Caso Base 90° Con Clima
+    BG1307: Caso Base 90° Con Clima
+    BG1308: Caso Base 90° Con Clima
+    BG1309: Caso Base 90° Con Clima
+    BG1310: Caso Base 90° Con Clima
+    BG1311: Caso Base 90° Con Clima
+    BG1312: Caso Base 90° Con Clima
+    BG1313: Caso Base 90° Con Clima
+    BG1314: Caso Base 90° Con Clima
+    BG1315: Caso Base 90° Con Clima
+    BG1316: Caso Base 90° Con Clima
+    BG1317: Caso Base 90° Con Clima
+    BG1318: Caso Base 90° Con Clima
+    BG1319: Caso Base 90° Con Clima
+    BG1320: Caso Base 90° Con Clima
+    BG1321: Caso Base 90° Con Clima
+    BG1322: Caso Base 90° Con Clima
+    BG1323: Caso Base 90° Con Clima
+    BG1324: Caso Base 90° Con Clima
+    BG1325: Caso Base 90° Con Clima
+    BG1326: Caso Base 90° Con Clima
+    BG1327: Caso Base 90° Con Clima
+    BG1328: Caso Base 90° Con Clima
+    BG1329: Caso Base 90° Con Clima
+    BG1330: Caso Base 90° Con Clima
+    BG1331: Caso Base 90° Con Clima
+    BF1332: 0
+    BG1332: Caso Base 90° Con Clima
+    BG1333: Caso Base 90° Con Clima
+    BG1334: Caso Base 90° Con Clima
+    BG1335: Caso Base 90° Con Clima
+    BG1336: Caso Base 90° Con Clima
+    BG1337: Caso Base 90° Con Clima
+    BG1338: Caso Base 90° Con Clima
+    BG1339: Caso Base 90° Con Clima
+    BG1340: Caso Base 90° Con Clima
+    BG1341: Caso Base 90° Con Clima
+    BG1342: Caso Base 90° Con Clima
+    BG1343: Caso Base 90° Con Clima
+    BG1344: Caso Base 90° Con Clima
+    BG1345: Caso Base 90° Con Clima
+    BG1346: Caso Base 90° Con Clima
+    BG1347: Caso Base 90° Con Clima
+    BG1348: Caso Base 90° Con Clima
+    BG1349: Caso Base 90° Con Clima
+    BG1350: Caso Base 90° Con Clima
+    BG1351: Caso Base 90° Con Clima
+    BG1352: Caso Base 90° Con Clima
+    BG1353: Caso Base 90° Con Clima
+    BG1354: Caso Base 90° Con Clima
+    BG1355: Caso Base 90° Con Clima
+    BG1356: Caso Base 90° Con Clima
+    BG1357: Caso Base 90° Con Clima
+    BF1358: 0
+    BG1358: Caso Base 90° Con Clima
+    BG1359: Caso Base 90° Con Clima
+    BG1360: Caso Base 90° Con Clima
+    BG1361: Caso Base 90° Con Clima
+    BG1362: Caso Base 90° Con Clima
+    BG1363: Caso Base 90° Con Clima
+    BG1364: Caso Base 90° Con Clima
+    BG1365: Caso Base 90° Con Clima
+    BG1366: Caso Base 90° Con Clima
+    BG1367: Caso Base 90° Con Clima
+    BG1368: Caso Base 90° Con Clima
+    BG1369: Caso Base 90° Con Clima
+    BG1370: Caso Base 90° Con Clima
+    BG1371: Caso Base 90° Con Clima
+    BG1372: Caso Base 90° Con Clima
+    BG1373: Caso Base 90° Con Clima
+    BG1374: Caso Base 90° Con Clima
+    BG1375: Caso Base 90° Con Clima
+    BG1376: Caso Base 90° Con Clima
+    BG1377: Caso Base 90° Con Clima
+    BG1378: Caso Base 90° Con Clima
+    BG1379: Caso Base 90° Con Clima
+    BG1380: Caso Base 90° Con Clima
+    BG1381: Caso Base 90° Con Clima
+    BG1382: Caso Base 90° Con Clima
+    BG1383: Caso Base 90° Con Clima
+    BF1384: 0
+    BG1384: Caso Base 90° Con Clima
+    BG1385: Caso Base 90° Con Clima
+    BG1386: Caso Base 90° Con Clima
+    BG1387: Caso Base 90° Con Clima
+    BG1388: Caso Base 90° Con Clima
+    BG1389: Caso Base 90° Con Clima
+    BG1390: Caso Base 90° Con Clima
+    BG1391: Caso Base 90° Con Clima
+    BG1392: Caso Base 90° Con Clima
+    BG1393: Caso Base 90° Con Clima
+    BG1394: Caso Base 90° Con Clima
+    BG1395: Caso Base 90° Con Clima
+    BG1396: Caso Base 90° Con Clima
+    BG1397: Caso Base 90° Con Clima
+    BG1398: Caso Base 90° Con Clima
+    BG1399: Caso Base 90° Con Clima
+    BG1400: Caso Base 90° Con Clima
+    BG1401: Caso Base 90° Con Clima
+    BG1402: Caso Base 90° Con Clima
+    BG1403: Caso Base 90° Con Clima
+    BG1404: Caso Base 90° Con Clima
+    BG1405: Caso Base 90° Con Clima
+    BG1406: Caso Base 90° Con Clima
+    BG1407: Caso Base 90° Con Clima
+    BG1408: Caso Base 90° Con Clima
+    BG1409: Caso Base 90° Con Clima
+    BF1410: 0
+    BG1410: Caso Base 90° Con Clima
+    BG1411: Caso Base 90° Con Clima
+    BG1412: Caso Base 90° Con Clima
+    BG1413: Caso Base 90° Con Clima
+    BG1414: Caso Base 90° Con Clima
+    BG1415: Caso Base 90° Con Clima
+    BG1416: Caso Base 90° Con Clima
+    BG1417: Caso Base 90° Con Clima
+    BG1418: Caso Base 90° Con Clima
+    BG1419: Caso Base 90° Con Clima
+    BG1420: Caso Base 90° Con Clima
+    BG1421: Caso Base 90° Con Clima
+    BG1422: Caso Base 90° Con Clima
+    BG1423: Caso Base 90° Con Clima
+    BG1424: Caso Base 90° Con Clima
+    BG1425: Caso Base 90° Con Clima
+    BG1426: Caso Base 90° Con Clima
+    BG1427: Caso Base 90° Con Clima
+    BG1428: Caso Base 90° Con Clima
+    BG1429: Caso Base 90° Con Clima
+    BG1430: Caso Base 90° Con Clima
+    BG1431: Caso Base 90° Con Clima
+    BG1432: Caso Base 90° Con Clima
+    BG1433: Caso Base 90° Con Clima
+    BG1434: Caso Base 90° Con Clima
+    BG1435: Caso Base 90° Con Clima
+    BF1436: 0
+    BG1436: Caso Base 90° Con Clima
+    BG1437: Caso Base 90° Con Clima
+    BG1438: Caso Base 90° Con Clima
+    BG1439: Caso Base 90° Con Clima
+    BG1440: Caso Base 90° Con Clima
+    BG1441: Caso Base 90° Con Clima
+    BG1442: Caso Base 90° Con Clima
+    BG1443: Caso Base 90° Con Clima
+    BG1444: Caso Base 90° Con Clima
+    BG1445: Caso Base 90° Con Clima
+    BG1446: Caso Base 90° Con Clima
+    BG1447: Caso Base 90° Con Clima
+    BG1448: Caso Base 90° Con Clima
+    BG1449: Caso Base 90° Con Clima
+    BG1450: Caso Base 90° Con Clima
+    BG1451: Caso Base 90° Con Clima
+    BG1452: Caso Base 90° Con Clima
+    BG1453: Caso Base 90° Con Clima
+    BG1454: Caso Base 90° Con Clima
+    BG1455: Caso Base 90° Con Clima
+    BG1456: Caso Base 90° Con Clima
+    BG1457: Caso Base 90° Con Clima
+    BG1458: Caso Base 90° Con Clima
+    BG1459: Caso Base 90° Con Clima
+    BG1460: Caso Base 90° Con Clima
+    BG1461: Caso Base 90° Con Clima
+    BF1462: 0
+    BG1462: Caso Base 90° Con Clima
+    BG1463: Caso Base 90° Con Clima
+    BG1464: Caso Base 90° Con Clima
+    BG1465: Caso Base 90° Con Clima
+    BG1466: Caso Base 90° Con Clima
+    BG1467: Caso Base 90° Con Clima
+    BG1468: Caso Base 90° Con Clima
+    BG1469: Caso Base 90° Con Clima
+    BG1470: Caso Base 90° Con Clima
+    BG1471: Caso Base 90° Con Clima
+    BG1472: Caso Base 90° Con Clima
+    BG1473: Caso Base 90° Con Clima
+    BG1474: Caso Base 90° Con Clima
+    BG1475: Caso Base 90° Con Clima
+    BG1476: Caso Base 90° Con Clima
+    BG1477: Caso Base 90° Con Clima
+    BG1478: Caso Base 90° Con Clima
+    BG1479: Caso Base 90° Con Clima
+    BG1480: Caso Base 90° Con Clima
+    BG1481: Caso Base 90° Con Clima
+    BG1482: Caso Base 90° Con Clima
+    BG1483: Caso Base 90° Con Clima
+    BG1484: Caso Base 90° Con Clima
+    BG1485: Caso Base 90° Con Clima
+    BG1486: Caso Base 90° Con Clima
+    BG1487: Caso Base 90° Con Clima
+    BF1488: 0
+    BG1488: Caso Base 90° Con Clima
+    BG1489: Caso Base 90° Con Clima
+    BG1490: Caso Base 90° Con Clima
+    BG1491: Caso Base 90° Con Clima
+    BG1492: Caso Base 90° Con Clima
+    BG1493: Caso Base 90° Con Clima
+    BG1494: Caso Base 90° Con Clima
+    BG1495: Caso Base 90° Con Clima
+    BG1496: Caso Base 90° Con Clima
+    BG1497: Caso Base 90° Con Clima
+    BG1498: Caso Base 90° Con Clima
+    BG1499: Caso Base 90° Con Clima
+    BG1500: Caso Base 90° Con Clima
+    BG1501: Caso Base 90° Con Clima
+    BG1502: Caso Base 90° Con Clima
+    BG1503: Caso Base 90° Con Clima
+    BG1504: Caso Base 90° Con Clima
+    BG1505: Caso Base 90° Con Clima
+    BG1506: Caso Base 90° Con Clima
+    BG1507: Caso Base 90° Con Clima
+    BG1508: Caso Base 90° Con Clima
+    BG1509: Caso Base 90° Con Clima
+    BG1510: Caso Base 90° Con Clima
+    BG1511: Caso Base 90° Con Clima
+    BG1512: Caso Base 90° Con Clima
+    BG1513: Caso Base 90° Con Clima
+    BF1514: 0
+    BG1514: Caso Base 90° Con Clima
+    BG1515: Caso Base 90° Con Clima
+    BG1516: Caso Base 90° Con Clima
+    BG1517: Caso Base 90° Con Clima
+    BG1518: Caso Base 90° Con Clima
+    BG1519: Caso Base 90° Con Clima
+    BG1520: Caso Base 90° Con Clima
+    BG1521: Caso Base 90° Con Clima
+    BG1522: Caso Base 90° Con Clima
+    BG1523: Caso Base 90° Con Clima
+    BG1524: Caso Base 90° Con Clima
+    BG1525: Caso Base 90° Con Clima
+    BG1526: Caso Base 90° Con Clima
+    BG1527: Caso Base 90° Con Clima
+    BG1528: Caso Base 90° Con Clima
+    BG1529: Caso Base 90° Con Clima
+    BG1530: Caso Base 90° Con Clima
+    BG1531: Caso Base 90° Con Clima
+    BG1532: Caso Base 90° Con Clima
+    BG1533: Caso Base 90° Con Clima
+    BG1534: Caso Base 90° Con Clima
+    BG1535: Caso Base 90° Con Clima
+    BG1536: Caso Base 90° Con Clima
+    BG1537: Caso Base 90° Con Clima
+    BG1538: Caso Base 90° Con Clima
+    BG1539: Caso Base 90° Con Clima
+    BF1540: 0
+    BG1540: Caso Base 90° Con Clima
+    BG1541: Caso Base 90° Con Clima
+    BG1542: Caso Base 90° Con Clima
+    BG1543: Caso Base 90° Con Clima
+    BG1544: Caso Base 90° Con Clima
+    BG1545: Caso Base 90° Con Clima
+    BG1546: Caso Base 90° Con Clima
+    BG1547: Caso Base 90° Con Clima
+    BG1548: Caso Base 90° Con Clima
+    BG1549: Caso Base 90° Con Clima
+    BG1550: Caso Base 90° Con Clima
+    BG1551: Caso Base 90° Con Clima
+    BG1552: Caso Base 90° Con Clima
+    BG1553: Caso Base 90° Con Clima
+    BG1554: Caso Base 90° Con Clima
+    BG1555: Caso Base 90° Con Clima
+    BG1556: Caso Base 90° Con Clima
+    BG1557: Caso Base 90° Con Clima
+    BG1558: Caso Base 90° Con Clima
+    BG1559: Caso Base 90° Con Clima
+    BG1560: Caso Base 90° Con Clima
+    BG1561: Caso Base 90° Con Clima
+    BG1562: Caso Base 90° Con Clima
+    BG1563: Caso Base 90° Con Clima
+    BG1564: Caso Base 90° Con Clima
+    BG1565: Caso Base 90° Con Clima
+    BF1566: 0
+    BG1566: Caso Base 90° Sin Clima
+    BG1567: Caso Base 90° Sin Clima
+    BG1568: Caso Base 90° Sin Clima
+    BG1569: Caso Base 90° Sin Clima
+    BG1570: Caso Base 90° Sin Clima
+    BG1571: Caso Base 90° Sin Clima
+    BG1572: Caso Base 90° Sin Clima
+    BG1573: Caso Base 90° Sin Clima
+    BG1574: Caso Base 90° Sin Clima
+    BG1575: Caso Base 90° Sin Clima
+    BG1576: Caso Base 90° Sin Clima
+    BG1577: Caso Base 90° Sin Clima
+    BG1578: Caso Base 90° Sin Clima
+    BG1579: Caso Base 90° Sin Clima
+    BG1580: Caso Base 90° Sin Clima
+    BG1581: Caso Base 90° Sin Clima
+    BG1582: Caso Base 90° Sin Clima
+    BG1583: Caso Base 90° Sin Clima
+    BG1584: Caso Base 90° Sin Clima
+    BG1585: Caso Base 90° Sin Clima
+    BG1586: Caso Base 90° Sin Clima
+    BG1587: Caso Base 90° Sin Clima
+    BG1588: Caso Base 90° Sin Clima
+    BG1589: Caso Base 90° Sin Clima
+    BG1590: Caso Base 90° Sin Clima
+    BG1591: Caso Base 90° Sin Clima
+    BF1592: 0
+    BG1592: Caso Base 90° Sin Clima
+    BG1593: Caso Base 90° Sin Clima
+    BG1594: Caso Base 90° Sin Clima
+    BG1595: Caso Base 90° Sin Clima
+    BG1596: Caso Base 90° Sin Clima
+    BG1597: Caso Base 90° Sin Clima
+    BG1598: Caso Base 90° Sin Clima
+    BG1599: Caso Base 90° Sin Clima
+    BG1600: Caso Base 90° Sin Clima
+    BG1601: Caso Base 90° Sin Clima
+    BG1602: Caso Base 90° Sin Clima
+    BG1603: Caso Base 90° Sin Clima
+    BG1604: Caso Base 90° Sin Clima
+    BG1605: Caso Base 90° Sin Clima
+    BG1606: Caso Base 90° Sin Clima
+    BG1607: Caso Base 90° Sin Clima
+    BG1608: Caso Base 90° Sin Clima
+    BG1609: Caso Base 90° Sin Clima
+    BG1610: Caso Base 90° Sin Clima
+    BG1611: Caso Base 90° Sin Clima
+    BG1612: Caso Base 90° Sin Clima
+    BG1613: Caso Base 90° Sin Clima
+    BG1614: Caso Base 90° Sin Clima
+    BG1615: Caso Base 90° Sin Clima
+    BG1616: Caso Base 90° Sin Clima
+    BG1617: Caso Base 90° Sin Clima
+    BF1618: 0
+    BG1618: Caso Base 90° Sin Clima
+    BG1619: Caso Base 90° Sin Clima
+    BG1620: Caso Base 90° Sin Clima
+    BG1621: Caso Base 90° Sin Clima
+    BG1622: Caso Base 90° Sin Clima
+    BG1623: Caso Base 90° Sin Clima
+    BG1624: Caso Base 90° Sin Clima
+    BG1625: Caso Base 90° Sin Clima
+    BG1626: Caso Base 90° Sin Clima
+    BG1627: Caso Base 90° Sin Clima
+    BG1628: Caso Base 90° Sin Clima
+    BG1629: Caso Base 90° Sin Clima
+    BG1630: Caso Base 90° Sin Clima
+    BG1631: Caso Base 90° Sin Clima
+    BG1632: Caso Base 90° Sin Clima
+    BG1633: Caso Base 90° Sin Clima
+    BG1634: Caso Base 90° Sin Clima
+    BG1635: Caso Base 90° Sin Clima
+    BG1636: Caso Base 90° Sin Clima
+    BG1637: Caso Base 90° Sin Clima
+    BG1638: Caso Base 90° Sin Clima
+    BG1639: Caso Base 90° Sin Clima
+    BG1640: Caso Base 90° Sin Clima
+    BG1641: Caso Base 90° Sin Clima
+    BG1642: Caso Base 90° Sin Clima
+    BG1643: Caso Base 90° Sin Clima
+    BF1644: 0
+    BG1644: Caso Base 90° Sin Clima
+    BG1645: Caso Base 90° Sin Clima
+    BG1646: Caso Base 90° Sin Clima
+    BG1647: Caso Base 90° Sin Clima
+    BG1648: Caso Base 90° Sin Clima
+    BG1649: Caso Base 90° Sin Clima
+    BG1650: Caso Base 90° Sin Clima
+    BG1651: Caso Base 90° Sin Clima
+    BG1652: Caso Base 90° Sin Clima
+    BG1653: Caso Base 90° Sin Clima
+    BG1654: Caso Base 90° Sin Clima
+    BG1655: Caso Base 90° Sin Clima
+    BG1656: Caso Base 90° Sin Clima
+    BG1657: Caso Base 90° Sin Clima
+    BG1658: Caso Base 90° Sin Clima
+    BG1659: Caso Base 90° Sin Clima
+    BG1660: Caso Base 90° Sin Clima
+    BG1661: Caso Base 90° Sin Clima
+    BG1662: Caso Base 90° Sin Clima
+    BG1663: Caso Base 90° Sin Clima
+    BG1664: Caso Base 90° Sin Clima
+    BG1665: Caso Base 90° Sin Clima
+    BG1666: Caso Base 90° Sin Clima
+    BG1667: Caso Base 90° Sin Clima
+    BG1668: Caso Base 90° Sin Clima
+    BG1669: Caso Base 90° Sin Clima
+    BF1670: 0
+    BG1670: Caso Base 90° Sin Clima
+    BG1671: Caso Base 90° Sin Clima
+    BG1672: Caso Base 90° Sin Clima
+    BG1673: Caso Base 90° Sin Clima
+    BG1674: Caso Base 90° Sin Clima
+    BG1675: Caso Base 90° Sin Clima
+    BG1676: Caso Base 90° Sin Clima
+    BG1677: Caso Base 90° Sin Clima
+    BG1678: Caso Base 90° Sin Clima
+    BG1679: Caso Base 90° Sin Clima
+    BG1680: Caso Base 90° Sin Clima
+    BG1681: Caso Base 90° Sin Clima
+    BG1682: Caso Base 90° Sin Clima
+    BG1683: Caso Base 90° Sin Clima
+    BG1684: Caso Base 90° Sin Clima
+    BG1685: Caso Base 90° Sin Clima
+    BG1686: Caso Base 90° Sin Clima
+    BG1687: Caso Base 90° Sin Clima
+    BG1688: Caso Base 90° Sin Clima
+    BG1689: Caso Base 90° Sin Clima
+    BG1690: Caso Base 90° Sin Clima
+    BG1691: Caso Base 90° Sin Clima
+    BG1692: Caso Base 90° Sin Clima
+    BG1693: Caso Base 90° Sin Clima
+    BG1694: Caso Base 90° Sin Clima
+    BG1695: Caso Base 90° Sin Clima
+    BF1696: 0
+    BG1696: Caso Base 90° Sin Clima
+    BG1697: Caso Base 90° Sin Clima
+    BG1698: Caso Base 90° Sin Clima
+    BG1699: Caso Base 90° Sin Clima
+    BG1700: Caso Base 90° Sin Clima
+    BG1701: Caso Base 90° Sin Clima
+    BG1702: Caso Base 90° Sin Clima
+    BG1703: Caso Base 90° Sin Clima
+    BG1704: Caso Base 90° Sin Clima
+    BG1705: Caso Base 90° Sin Clima
+    BG1706: Caso Base 90° Sin Clima
+    BG1707: Caso Base 90° Sin Clima
+    BG1708: Caso Base 90° Sin Clima
+    BG1709: Caso Base 90° Sin Clima
+    BG1710: Caso Base 90° Sin Clima
+    BG1711: Caso Base 90° Sin Clima
+    BG1712: Caso Base 90° Sin Clima
+    BG1713: Caso Base 90° Sin Clima
+    BG1714: Caso Base 90° Sin Clima
+    BG1715: Caso Base 90° Sin Clima
+    BG1716: Caso Base 90° Sin Clima
+    BG1717: Caso Base 90° Sin Clima
+    BG1718: Caso Base 90° Sin Clima
+    BG1719: Caso Base 90° Sin Clima
+    BG1720: Caso Base 90° Sin Clima
+    BG1721: Caso Base 90° Sin Clima
+    BF1722: 0
+    BG1722: Caso Base 90° Sin Clima
+    BG1723: Caso Base 90° Sin Clima
+    BG1724: Caso Base 90° Sin Clima
+    BG1725: Caso Base 90° Sin Clima
+    BG1726: Caso Base 90° Sin Clima
+    BG1727: Caso Base 90° Sin Clima
+    BG1728: Caso Base 90° Sin Clima
+    BG1729: Caso Base 90° Sin Clima
+    BG1730: Caso Base 90° Sin Clima
+    BG1731: Caso Base 90° Sin Clima
+    BG1732: Caso Base 90° Sin Clima
+    BG1733: Caso Base 90° Sin Clima
+    BG1734: Caso Base 90° Sin Clima
+    BG1735: Caso Base 90° Sin Clima
+    BG1736: Caso Base 90° Sin Clima
+    BG1737: Caso Base 90° Sin Clima
+    BG1738: Caso Base 90° Sin Clima
+    BG1739: Caso Base 90° Sin Clima
+    BG1740: Caso Base 90° Sin Clima
+    BG1741: Caso Base 90° Sin Clima
+    BG1742: Caso Base 90° Sin Clima
+    BG1743: Caso Base 90° Sin Clima
+    BG1744: Caso Base 90° Sin Clima
+    BG1745: Caso Base 90° Sin Clima
+    BG1746: Caso Base 90° Sin Clima
+    BG1747: Caso Base 90° Sin Clima
+    BF1748: 0
+    BG1748: Caso Base 90° Sin Clima
+    BG1749: Caso Base 90° Sin Clima
+    BG1750: Caso Base 90° Sin Clima
+    BG1751: Caso Base 90° Sin Clima
+    BG1752: Caso Base 90° Sin Clima
+    BG1753: Caso Base 90° Sin Clima
+    BG1754: Caso Base 90° Sin Clima
+    BG1755: Caso Base 90° Sin Clima
+    BG1756: Caso Base 90° Sin Clima
+    BG1757: Caso Base 90° Sin Clima
+    BG1758: Caso Base 90° Sin Clima
+    BG1759: Caso Base 90° Sin Clima
+    BG1760: Caso Base 90° Sin Clima
+    BG1761: Caso Base 90° Sin Clima
+    BG1762: Caso Base 90° Sin Clima
+    BG1763: Caso Base 90° Sin Clima
+    BG1764: Caso Base 90° Sin Clima
+    BG1765: Caso Base 90° Sin Clima
+    BG1766: Caso Base 90° Sin Clima
+    BG1767: Caso Base 90° Sin Clima
+    BG1768: Caso Base 90° Sin Clima
+    BG1769: Caso Base 90° Sin Clima
+    BG1770: Caso Base 90° Sin Clima
+    BG1771: Caso Base 90° Sin Clima
+    BG1772: Caso Base 90° Sin Clima
+    BG1773: Caso Base 90° Sin Clima
+    BF1774: 0
+    BG1774: Caso Base 90° Sin Clima
+    BG1775: Caso Base 90° Sin Clima
+    BG1776: Caso Base 90° Sin Clima
+    BG1777: Caso Base 90° Sin Clima
+    BG1778: Caso Base 90° Sin Clima
+    BG1779: Caso Base 90° Sin Clima
+    BG1780: Caso Base 90° Sin Clima
+    BG1781: Caso Base 90° Sin Clima
+    BG1782: Caso Base 90° Sin Clima
+    BG1783: Caso Base 90° Sin Clima
+    BG1784: Caso Base 90° Sin Clima
+    BG1785: Caso Base 90° Sin Clima
+    BG1786: Caso Base 90° Sin Clima
+    BG1787: Caso Base 90° Sin Clima
+    BG1788: Caso Base 90° Sin Clima
+    BG1789: Caso Base 90° Sin Clima
+    BG1790: Caso Base 90° Sin Clima
+    BG1791: Caso Base 90° Sin Clima
+    BG1792: Caso Base 90° Sin Clima
+    BG1793: Caso Base 90° Sin Clima
+    BG1794: Caso Base 90° Sin Clima
+    BG1795: Caso Base 90° Sin Clima
+    BG1796: Caso Base 90° Sin Clima
+    BG1797: Caso Base 90° Sin Clima
+    BG1798: Caso Base 90° Sin Clima
+    BG1799: Caso Base 90° Sin Clima
+    BF1800: 0
+    BG1800: Caso Base 90° Sin Clima
+    BG1801: Caso Base 90° Sin Clima
+    BG1802: Caso Base 90° Sin Clima
+    BG1803: Caso Base 90° Sin Clima
+    BG1804: Caso Base 90° Sin Clima
+    BG1805: Caso Base 90° Sin Clima
+    BG1806: Caso Base 90° Sin Clima
+    BG1807: Caso Base 90° Sin Clima
+    BG1808: Caso Base 90° Sin Clima
+    BG1809: Caso Base 90° Sin Clima
+    BG1810: Caso Base 90° Sin Clima
+    BG1811: Caso Base 90° Sin Clima
+    BG1812: Caso Base 90° Sin Clima
+    BG1813: Caso Base 90° Sin Clima
+    BG1814: Caso Base 90° Sin Clima
+    BG1815: Caso Base 90° Sin Clima
+    BG1816: Caso Base 90° Sin Clima
+    BG1817: Caso Base 90° Sin Clima
+    BG1818: Caso Base 90° Sin Clima
+    BG1819: Caso Base 90° Sin Clima
+    BG1820: Caso Base 90° Sin Clima
+    BG1821: Caso Base 90° Sin Clima
+    BG1822: Caso Base 90° Sin Clima
+    BG1823: Caso Base 90° Sin Clima
+    BG1824: Caso Base 90° Sin Clima
+    BG1825: Caso Base 90° Sin Clima
+    BF1826: 0
+    BG1826: Caso Base 90° Sin Clima
+    BG1827: Caso Base 90° Sin Clima
+    BG1828: Caso Base 90° Sin Clima
+    BG1829: Caso Base 90° Sin Clima
+    BG1830: Caso Base 90° Sin Clima
+    BG1831: Caso Base 90° Sin Clima
+    BG1832: Caso Base 90° Sin Clima
+    BG1833: Caso Base 90° Sin Clima
+    BG1834: Caso Base 90° Sin Clima
+    BG1835: Caso Base 90° Sin Clima
+    BG1836: Caso Base 90° Sin Clima
+    BG1837: Caso Base 90° Sin Clima
+    BG1838: Caso Base 90° Sin Clima
+    BG1839: Caso Base 90° Sin Clima
+    BG1840: Caso Base 90° Sin Clima
+    BG1841: Caso Base 90° Sin Clima
+    BG1842: Caso Base 90° Sin Clima
+    BG1843: Caso Base 90° Sin Clima
+    BG1844: Caso Base 90° Sin Clima
+    BG1845: Caso Base 90° Sin Clima
+    BG1846: Caso Base 90° Sin Clima
+    BG1847: Caso Base 90° Sin Clima
+    BG1848: Caso Base 90° Sin Clima
+    BG1849: Caso Base 90° Sin Clima
+    BG1850: Caso Base 90° Sin Clima
+    BG1851: Caso Base 90° Sin Clima
+    BF1852: 0
+    BG1852: Caso Base 90° Sin Clima
+    BG1853: Caso Base 90° Sin Clima
+    BG1854: Caso Base 90° Sin Clima
+    BG1855: Caso Base 90° Sin Clima
+    BG1856: Caso Base 90° Sin Clima
+    BG1857: Caso Base 90° Sin Clima
+    BG1858: Caso Base 90° Sin Clima
+    BG1859: Caso Base 90° Sin Clima
+    BG1860: Caso Base 90° Sin Clima
+    BG1861: Caso Base 90° Sin Clima
+    BG1862: Caso Base 90° Sin Clima
+    BG1863: Caso Base 90° Sin Clima
+    BG1864: Caso Base 90° Sin Clima
+    BG1865: Caso Base 90° Sin Clima
+    BG1866: Caso Base 90° Sin Clima
+    BG1867: Caso Base 90° Sin Clima
+    BG1868: Caso Base 90° Sin Clima
+    BG1869: Caso Base 90° Sin Clima
+    BG1870: Caso Base 90° Sin Clima
+    BG1871: Caso Base 90° Sin Clima
+    BG1872: Caso Base 90° Sin Clima
+    BG1873: Caso Base 90° Sin Clima
+    BG1874: Caso Base 90° Sin Clima
+    BG1875: Caso Base 90° Sin Clima
+    BG1876: Caso Base 90° Sin Clima
+    BG1877: Caso Base 90° Sin Clima
+    BF1878: 0
+    BG1878: Caso Base 180° Con Clima
+    BG1879: Caso Base 180° Con Clima
+    BG1880: Caso Base 180° Con Clima
+    BG1881: Caso Base 180° Con Clima
+    BG1882: Caso Base 180° Con Clima
+    BG1883: Caso Base 180° Con Clima
+    BG1884: Caso Base 180° Con Clima
+    BG1885: Caso Base 180° Con Clima
+    BG1886: Caso Base 180° Con Clima
+    BG1887: Caso Base 180° Con Clima
+    BG1888: Caso Base 180° Con Clima
+    BG1889: Caso Base 180° Con Clima
+    BG1890: Caso Base 180° Con Clima
+    BG1891: Caso Base 180° Con Clima
+    BG1892: Caso Base 180° Con Clima
+    BG1893: Caso Base 180° Con Clima
+    BG1894: Caso Base 180° Con Clima
+    BG1895: Caso Base 180° Con Clima
+    BG1896: Caso Base 180° Con Clima
+    BG1897: Caso Base 180° Con Clima
+    BG1898: Caso Base 180° Con Clima
+    BG1899: Caso Base 180° Con Clima
+    BG1900: Caso Base 180° Con Clima
+    BG1901: Caso Base 180° Con Clima
+    BG1902: Caso Base 180° Con Clima
+    BG1903: Caso Base 180° Con Clima
+    BF1904: 0
+    BG1904: Caso Base 180° Con Clima
+    BG1905: Caso Base 180° Con Clima
+    BG1906: Caso Base 180° Con Clima
+    BG1907: Caso Base 180° Con Clima
+    BG1908: Caso Base 180° Con Clima
+    BG1909: Caso Base 180° Con Clima
+    BG1910: Caso Base 180° Con Clima
+    BG1911: Caso Base 180° Con Clima
+    BG1912: Caso Base 180° Con Clima
+    BG1913: Caso Base 180° Con Clima
+    BG1914: Caso Base 180° Con Clima
+    BG1915: Caso Base 180° Con Clima
+    BG1916: Caso Base 180° Con Clima
+    BG1917: Caso Base 180° Con Clima
+    BG1918: Caso Base 180° Con Clima
+    BG1919: Caso Base 180° Con Clima
+    BG1920: Caso Base 180° Con Clima
+    BG1921: Caso Base 180° Con Clima
+    BG1922: Caso Base 180° Con Clima
+    BG1923: Caso Base 180° Con Clima
+    BG1924: Caso Base 180° Con Clima
+    BG1925: Caso Base 180° Con Clima
+    BG1926: Caso Base 180° Con Clima
+    BG1927: Caso Base 180° Con Clima
+    BG1928: Caso Base 180° Con Clima
+    BG1929: Caso Base 180° Con Clima
+    BF1930: 0
+    BG1930: Caso Base 180° Con Clima
+    BG1931: Caso Base 180° Con Clima
+    BG1932: Caso Base 180° Con Clima
+    BG1933: Caso Base 180° Con Clima
+    BG1934: Caso Base 180° Con Clima
+    BG1935: Caso Base 180° Con Clima
+    BG1936: Caso Base 180° Con Clima
+    BG1937: Caso Base 180° Con Clima
+    BG1938: Caso Base 180° Con Clima
+    BG1939: Caso Base 180° Con Clima
+    BG1940: Caso Base 180° Con Clima
+    BG1941: Caso Base 180° Con Clima
+    BG1942: Caso Base 180° Con Clima
+    BG1943: Caso Base 180° Con Clima
+    BG1944: Caso Base 180° Con Clima
+    BG1945: Caso Base 180° Con Clima
+    BG1946: Caso Base 180° Con Clima
+    BG1947: Caso Base 180° Con Clima
+    BG1948: Caso Base 180° Con Clima
+    BG1949: Caso Base 180° Con Clima
+    BG1950: Caso Base 180° Con Clima
+    BG1951: Caso Base 180° Con Clima
+    BG1952: Caso Base 180° Con Clima
+    BG1953: Caso Base 180° Con Clima
+    BG1954: Caso Base 180° Con Clima
+    BG1955: Caso Base 180° Con Clima
+    BF1956: 0
+    BG1956: Caso Base 180° Con Clima
+    BG1957: Caso Base 180° Con Clima
+    BG1958: Caso Base 180° Con Clima
+    BG1959: Caso Base 180° Con Clima
+    BG1960: Caso Base 180° Con Clima
+    BG1961: Caso Base 180° Con Clima
+    BG1962: Caso Base 180° Con Clima
+    BG1963: Caso Base 180° Con Clima
+    BG1964: Caso Base 180° Con Clima
+    BG1965: Caso Base 180° Con Clima
+    BG1966: Caso Base 180° Con Clima
+    BG1967: Caso Base 180° Con Clima
+    BG1968: Caso Base 180° Con Clima
+    BG1969: Caso Base 180° Con Clima
+    BG1970: Caso Base 180° Con Clima
+    BG1971: Caso Base 180° Con Clima
+    BG1972: Caso Base 180° Con Clima
+    BG1973: Caso Base 180° Con Clima
+    BG1974: Caso Base 180° Con Clima
+    BG1975: Caso Base 180° Con Clima
+    BG1976: Caso Base 180° Con Clima
+    BG1977: Caso Base 180° Con Clima
+    BG1978: Caso Base 180° Con Clima
+    BG1979: Caso Base 180° Con Clima
+    BG1980: Caso Base 180° Con Clima
+    BG1981: Caso Base 180° Con Clima
+    BF1982: 0
+    BG1982: Caso Base 180° Con Clima
+    BG1983: Caso Base 180° Con Clima
+    BG1984: Caso Base 180° Con Clima
+    BG1985: Caso Base 180° Con Clima
+    BG1986: Caso Base 180° Con Clima
+    BG1987: Caso Base 180° Con Clima
+    BG1988: Caso Base 180° Con Clima
+    BG1989: Caso Base 180° Con Clima
+    BG1990: Caso Base 180° Con Clima
+    BG1991: Caso Base 180° Con Clima
+    BG1992: Caso Base 180° Con Clima
+    BG1993: Caso Base 180° Con Clima
+    BG1994: Caso Base 180° Con Clima
+    BG1995: Caso Base 180° Con Clima
+    BG1996: Caso Base 180° Con Clima
+    BG1997: Caso Base 180° Con Clima
+    BG1998: Caso Base 180° Con Clima
+    BG1999: Caso Base 180° Con Clima
+    BG2000: Caso Base 180° Con Clima
+    BG2001: Caso Base 180° Con Clima
+    BG2002: Caso Base 180° Con Clima
+    BG2003: Caso Base 180° Con Clima
+    BG2004: Caso Base 180° Con Clima
+    BG2005: Caso Base 180° Con Clima
+    BG2006: Caso Base 180° Con Clima
+    BG2007: Caso Base 180° Con Clima
+    BF2008: 0
+    BG2008: Caso Base 180° Con Clima
+    BG2009: Caso Base 180° Con Clima
+    BG2010: Caso Base 180° Con Clima
+    BG2011: Caso Base 180° Con Clima
+    BG2012: Caso Base 180° Con Clima
+    BG2013: Caso Base 180° Con Clima
+    BG2014: Caso Base 180° Con Clima
+    BG2015: Caso Base 180° Con Clima
+    BG2016: Caso Base 180° Con Clima
+    BG2017: Caso Base 180° Con Clima
+    BG2018: Caso Base 180° Con Clima
+    BG2019: Caso Base 180° Con Clima
+    BG2020: Caso Base 180° Con Clima
+    BG2021: Caso Base 180° Con Clima
+    BG2022: Caso Base 180° Con Clima
+    BG2023: Caso Base 180° Con Clima
+    BG2024: Caso Base 180° Con Clima
+    BG2025: Caso Base 180° Con Clima
+    BG2026: Caso Base 180° Con Clima
+    BG2027: Caso Base 180° Con Clima
+    BG2028: Caso Base 180° Con Clima
+    BG2029: Caso Base 180° Con Clima
+    BG2030: Caso Base 180° Con Clima
+    BG2031: Caso Base 180° Con Clima
+    BG2032: Caso Base 180° Con Clima
+    BG2033: Caso Base 180° Con Clima
+    BF2034: 0
+    BG2034: Caso Base 180° Con Clima
+    BG2035: Caso Base 180° Con Clima
+    BG2036: Caso Base 180° Con Clima
+    BG2037: Caso Base 180° Con Clima
+    BG2038: Caso Base 180° Con Clima
+    BG2039: Caso Base 180° Con Clima
+    BG2040: Caso Base 180° Con Clima
+    BG2041: Caso Base 180° Con Clima
+    BG2042: Caso Base 180° Con Clima
+    BG2043: Caso Base 180° Con Clima
+    BG2044: Caso Base 180° Con Clima
+    BG2045: Caso Base 180° Con Clima
+    BG2046: Caso Base 180° Con Clima
+    BG2047: Caso Base 180° Con Clima
+    BG2048: Caso Base 180° Con Clima
+    BG2049: Caso Base 180° Con Clima
+    BG2050: Caso Base 180° Con Clima
+    BG2051: Caso Base 180° Con Clima
+    BG2052: Caso Base 180° Con Clima
+    BG2053: Caso Base 180° Con Clima
+    BG2054: Caso Base 180° Con Clima
+    BG2055: Caso Base 180° Con Clima
+    BG2056: Caso Base 180° Con Clima
+    BG2057: Caso Base 180° Con Clima
+    BG2058: Caso Base 180° Con Clima
+    BG2059: Caso Base 180° Con Clima
+    BF2060: 0
+    BG2060: Caso Base 180° Con Clima
+    BG2061: Caso Base 180° Con Clima
+    BG2062: Caso Base 180° Con Clima
+    BG2063: Caso Base 180° Con Clima
+    BG2064: Caso Base 180° Con Clima
+    BG2065: Caso Base 180° Con Clima
+    BG2066: Caso Base 180° Con Clima
+    BG2067: Caso Base 180° Con Clima
+    BG2068: Caso Base 180° Con Clima
+    BG2069: Caso Base 180° Con Clima
+    BG2070: Caso Base 180° Con Clima
+    BG2071: Caso Base 180° Con Clima
+    BG2072: Caso Base 180° Con Clima
+    BG2073: Caso Base 180° Con Clima
+    BG2074: Caso Base 180° Con Clima
+    BG2075: Caso Base 180° Con Clima
+    BG2076: Caso Base 180° Con Clima
+    BG2077: Caso Base 180° Con Clima
+    BG2078: Caso Base 180° Con Clima
+    BG2079: Caso Base 180° Con Clima
+    BG2080: Caso Base 180° Con Clima
+    BG2081: Caso Base 180° Con Clima
+    BG2082: Caso Base 180° Con Clima
+    BG2083: Caso Base 180° Con Clima
+    BG2084: Caso Base 180° Con Clima
+    BG2085: Caso Base 180° Con Clima
+    BF2086: 0
+    BG2086: Caso Base 180° Con Clima
+    BG2087: Caso Base 180° Con Clima
+    BG2088: Caso Base 180° Con Clima
+    BG2089: Caso Base 180° Con Clima
+    BG2090: Caso Base 180° Con Clima
+    BG2091: Caso Base 180° Con Clima
+    BG2092: Caso Base 180° Con Clima
+    BG2093: Caso Base 180° Con Clima
+    BG2094: Caso Base 180° Con Clima
+    BG2095: Caso Base 180° Con Clima
+    BG2096: Caso Base 180° Con Clima
+    BG2097: Caso Base 180° Con Clima
+    BG2098: Caso Base 180° Con Clima
+    BG2099: Caso Base 180° Con Clima
+    BG2100: Caso Base 180° Con Clima
+    BG2101: Caso Base 180° Con Clima
+    BG2102: Caso Base 180° Con Clima
+    BG2103: Caso Base 180° Con Clima
+    BG2104: Caso Base 180° Con Clima
+    BG2105: Caso Base 180° Con Clima
+    BG2106: Caso Base 180° Con Clima
+    BG2107: Caso Base 180° Con Clima
+    BG2108: Caso Base 180° Con Clima
+    BG2109: Caso Base 180° Con Clima
+    BG2110: Caso Base 180° Con Clima
+    BG2111: Caso Base 180° Con Clima
+    BF2112: 0
+    BG2112: Caso Base 180° Con Clima
+    BG2113: Caso Base 180° Con Clima
+    BG2114: Caso Base 180° Con Clima
+    BG2115: Caso Base 180° Con Clima
+    BG2116: Caso Base 180° Con Clima
+    BG2117: Caso Base 180° Con Clima
+    BG2118: Caso Base 180° Con Clima
+    BG2119: Caso Base 180° Con Clima
+    BG2120: Caso Base 180° Con Clima
+    BG2121: Caso Base 180° Con Clima
+    BG2122: Caso Base 180° Con Clima
+    BG2123: Caso Base 180° Con Clima
+    BG2124: Caso Base 180° Con Clima
+    BG2125: Caso Base 180° Con Clima
+    BG2126: Caso Base 180° Con Clima
+    BG2127: Caso Base 180° Con Clima
+    BG2128: Caso Base 180° Con Clima
+    BG2129: Caso Base 180° Con Clima
+    BG2130: Caso Base 180° Con Clima
+    BG2131: Caso Base 180° Con Clima
+    BG2132: Caso Base 180° Con Clima
+    BG2133: Caso Base 180° Con Clima
+    BG2134: Caso Base 180° Con Clima
+    BG2135: Caso Base 180° Con Clima
+    BG2136: Caso Base 180° Con Clima
+    BG2137: Caso Base 180° Con Clima
+    BF2138: 0
+    BG2138: Caso Base 180° Con Clima
+    BG2139: Caso Base 180° Con Clima
+    BG2140: Caso Base 180° Con Clima
+    BG2141: Caso Base 180° Con Clima
+    BG2142: Caso Base 180° Con Clima
+    BG2143: Caso Base 180° Con Clima
+    BG2144: Caso Base 180° Con Clima
+    BG2145: Caso Base 180° Con Clima
+    BG2146: Caso Base 180° Con Clima
+    BG2147: Caso Base 180° Con Clima
+    BG2148: Caso Base 180° Con Clima
+    BG2149: Caso Base 180° Con Clima
+    BG2150: Caso Base 180° Con Clima
+    BG2151: Caso Base 180° Con Clima
+    BG2152: Caso Base 180° Con Clima
+    BG2153: Caso Base 180° Con Clima
+    BG2154: Caso Base 180° Con Clima
+    BG2155: Caso Base 180° Con Clima
+    BG2156: Caso Base 180° Con Clima
+    BG2157: Caso Base 180° Con Clima
+    BG2158: Caso Base 180° Con Clima
+    BG2159: Caso Base 180° Con Clima
+    BG2160: Caso Base 180° Con Clima
+    BG2161: Caso Base 180° Con Clima
+    BG2162: Caso Base 180° Con Clima
+    BG2163: Caso Base 180° Con Clima
+    BF2164: 0
+    BG2164: Caso Base 180° Con Clima
+    BG2165: Caso Base 180° Con Clima
+    BG2166: Caso Base 180° Con Clima
+    BG2167: Caso Base 180° Con Clima
+    BG2168: Caso Base 180° Con Clima
+    BG2169: Caso Base 180° Con Clima
+    BG2170: Caso Base 180° Con Clima
+    BG2171: Caso Base 180° Con Clima
+    BG2172: Caso Base 180° Con Clima
+    BG2173: Caso Base 180° Con Clima
+    BG2174: Caso Base 180° Con Clima
+    BG2175: Caso Base 180° Con Clima
+    BG2176: Caso Base 180° Con Clima
+    BG2177: Caso Base 180° Con Clima
+    BG2178: Caso Base 180° Con Clima
+    BG2179: Caso Base 180° Con Clima
+    BG2180: Caso Base 180° Con Clima
+    BG2181: Caso Base 180° Con Clima
+    BG2182: Caso Base 180° Con Clima
+    BG2183: Caso Base 180° Con Clima
+    BG2184: Caso Base 180° Con Clima
+    BG2185: Caso Base 180° Con Clima
+    BG2186: Caso Base 180° Con Clima
+    BG2187: Caso Base 180° Con Clima
+    BG2188: Caso Base 180° Con Clima
+    BG2189: Caso Base 180° Con Clima
+    BF2190: 0
+    BG2190: Caso Base 180° Sin Clima
+    BG2191: Caso Base 180° Sin Clima
+    BG2192: Caso Base 180° Sin Clima
+    BG2193: Caso Base 180° Sin Clima
+    BG2194: Caso Base 180° Sin Clima
+    BG2195: Caso Base 180° Sin Clima
+    BG2196: Caso Base 180° Sin Clima
+    BG2197: Caso Base 180° Sin Clima
+    BG2198: Caso Base 180° Sin Clima
+    BG2199: Caso Base 180° Sin Clima
+    BG2200: Caso Base 180° Sin Clima
+    BG2201: Caso Base 180° Sin Clima
+    BG2202: Caso Base 180° Sin Clima
+    BG2203: Caso Base 180° Sin Clima
+    BG2204: Caso Base 180° Sin Clima
+    BG2205: Caso Base 180° Sin Clima
+    BG2206: Caso Base 180° Sin Clima
+    BG2207: Caso Base 180° Sin Clima
+    BG2208: Caso Base 180° Sin Clima
+    BG2209: Caso Base 180° Sin Clima
+    BG2210: Caso Base 180° Sin Clima
+    BG2211: Caso Base 180° Sin Clima
+    BG2212: Caso Base 180° Sin Clima
+    BG2213: Caso Base 180° Sin Clima
+    BG2214: Caso Base 180° Sin Clima
+    BG2215: Caso Base 180° Sin Clima
+    BF2216: 0
+    BG2216: Caso Base 180° Sin Clima
+    BG2217: Caso Base 180° Sin Clima
+    BG2218: Caso Base 180° Sin Clima
+    BG2219: Caso Base 180° Sin Clima
+    BG2220: Caso Base 180° Sin Clima
+    BG2221: Caso Base 180° Sin Clima
+    BG2222: Caso Base 180° Sin Clima
+    BG2223: Caso Base 180° Sin Clima
+    BG2224: Caso Base 180° Sin Clima
+    BG2225: Caso Base 180° Sin Clima
+    BG2226: Caso Base 180° Sin Clima
+    BG2227: Caso Base 180° Sin Clima
+    BG2228: Caso Base 180° Sin Clima
+    BG2229: Caso Base 180° Sin Clima
+    BG2230: Caso Base 180° Sin Clima
+    BG2231: Caso Base 180° Sin Clima
+    BG2232: Caso Base 180° Sin Clima
+    BG2233: Caso Base 180° Sin Clima
+    BG2234: Caso Base 180° Sin Clima
+    BG2235: Caso Base 180° Sin Clima
+    BG2236: Caso Base 180° Sin Clima
+    BG2237: Caso Base 180° Sin Clima
+    BG2238: Caso Base 180° Sin Clima
+    BG2239: Caso Base 180° Sin Clima
+    BG2240: Caso Base 180° Sin Clima
+    BG2241: Caso Base 180° Sin Clima
+    BF2242: 0
+    BG2242: Caso Base 180° Sin Clima
+    BG2243: Caso Base 180° Sin Clima
+    BG2244: Caso Base 180° Sin Clima
+    BG2245: Caso Base 180° Sin Clima
+    BG2246: Caso Base 180° Sin Clima
+    BG2247: Caso Base 180° Sin Clima
+    BG2248: Caso Base 180° Sin Clima
+    BG2249: Caso Base 180° Sin Clima
+    BG2250: Caso Base 180° Sin Clima
+    BG2251: Caso Base 180° Sin Clima
+    BG2252: Caso Base 180° Sin Clima
+    BG2253: Caso Base 180° Sin Clima
+    BG2254: Caso Base 180° Sin Clima
+    BG2255: Caso Base 180° Sin Clima
+    BG2256: Caso Base 180° Sin Clima
+    BG2257: Caso Base 180° Sin Clima
+    BG2258: Caso Base 180° Sin Clima
+    BG2259: Caso Base 180° Sin Clima
+    BG2260: Caso Base 180° Sin Clima
+    BG2261: Caso Base 180° Sin Clima
+    BG2262: Caso Base 180° Sin Clima
+    BG2263: Caso Base 180° Sin Clima
+    BG2264: Caso Base 180° Sin Clima
+    BG2265: Caso Base 180° Sin Clima
+    BG2266: Caso Base 180° Sin Clima
+    BG2267: Caso Base 180° Sin Clima
+    BF2268: 0
+    BG2268: Caso Base 180° Sin Clima
+    BG2269: Caso Base 180° Sin Clima
+    BG2270: Caso Base 180° Sin Clima
+    BG2271: Caso Base 180° Sin Clima
+    BG2272: Caso Base 180° Sin Clima
+    BG2273: Caso Base 180° Sin Clima
+    BG2274: Caso Base 180° Sin Clima
+    BG2275: Caso Base 180° Sin Clima
+    BG2276: Caso Base 180° Sin Clima
+    BG2277: Caso Base 180° Sin Clima
+    BG2278: Caso Base 180° Sin Clima
+    BG2279: Caso Base 180° Sin Clima
+    BG2280: Caso Base 180° Sin Clima
+    BG2281: Caso Base 180° Sin Clima
+    BG2282: Caso Base 180° Sin Clima
+    BG2283: Caso Base 180° Sin Clima
+    BG2284: Caso Base 180° Sin Clima
+    BG2285: Caso Base 180° Sin Clima
+    BG2286: Caso Base 180° Sin Clima
+    BG2287: Caso Base 180° Sin Clima
+    BG2288: Caso Base 180° Sin Clima
+    BG2289: Caso Base 180° Sin Clima
+    BG2290: Caso Base 180° Sin Clima
+    BG2291: Caso Base 180° Sin Clima
+    BG2292: Caso Base 180° Sin Clima
+    BG2293: Caso Base 180° Sin Clima
+    BF2294: 0
+    BG2294: Caso Base 180° Sin Clima
+    BG2295: Caso Base 180° Sin Clima
+    BG2296: Caso Base 180° Sin Clima
+    BG2297: Caso Base 180° Sin Clima
+    BG2298: Caso Base 180° Sin Clima
+    BG2299: Caso Base 180° Sin Clima
+    BG2300: Caso Base 180° Sin Clima
+    BG2301: Caso Base 180° Sin Clima
+    BG2302: Caso Base 180° Sin Clima
+    BG2303: Caso Base 180° Sin Clima
+    BG2304: Caso Base 180° Sin Clima
+    BG2305: Caso Base 180° Sin Clima
+    BG2306: Caso Base 180° Sin Clima
+    BG2307: Caso Base 180° Sin Clima
+    BG2308: Caso Base 180° Sin Clima
+    BG2309: Caso Base 180° Sin Clima
+    BG2310: Caso Base 180° Sin Clima
+    BG2311: Caso Base 180° Sin Clima
+    BG2312: Caso Base 180° Sin Clima
+    BG2313: Caso Base 180° Sin Clima
+    BG2314: Caso Base 180° Sin Clima
+    BG2315: Caso Base 180° Sin Clima
+    BG2316: Caso Base 180° Sin Clima
+    BG2317: Caso Base 180° Sin Clima
+    BG2318: Caso Base 180° Sin Clima
+    BG2319: Caso Base 180° Sin Clima
+    BF2320: 0
+    BG2320: Caso Base 180° Sin Clima
+    BG2321: Caso Base 180° Sin Clima
+    BG2322: Caso Base 180° Sin Clima
+    BG2323: Caso Base 180° Sin Clima
+    BG2324: Caso Base 180° Sin Clima
+    BG2325: Caso Base 180° Sin Clima
+    BG2326: Caso Base 180° Sin Clima
+    BG2327: Caso Base 180° Sin Clima
+    BG2328: Caso Base 180° Sin Clima
+    BG2329: Caso Base 180° Sin Clima
+    BG2330: Caso Base 180° Sin Clima
+    BG2331: Caso Base 180° Sin Clima
+    BG2332: Caso Base 180° Sin Clima
+    BG2333: Caso Base 180° Sin Clima
+    BG2334: Caso Base 180° Sin Clima
+    BG2335: Caso Base 180° Sin Clima
+    BG2336: Caso Base 180° Sin Clima
+    BG2337: Caso Base 180° Sin Clima
+    BG2338: Caso Base 180° Sin Clima
+    BG2339: Caso Base 180° Sin Clima
+    BG2340: Caso Base 180° Sin Clima
+    BG2341: Caso Base 180° Sin Clima
+    BG2342: Caso Base 180° Sin Clima
+    BG2343: Caso Base 180° Sin Clima
+    BG2344: Caso Base 180° Sin Clima
+    BG2345: Caso Base 180° Sin Clima
+    BF2346: 0
+    BG2346: Caso Base 180° Sin Clima
+    BG2347: Caso Base 180° Sin Clima
+    BG2348: Caso Base 180° Sin Clima
+    BG2349: Caso Base 180° Sin Clima
+    BG2350: Caso Base 180° Sin Clima
+    BG2351: Caso Base 180° Sin Clima
+    BG2352: Caso Base 180° Sin Clima
+    BG2353: Caso Base 180° Sin Clima
+    BG2354: Caso Base 180° Sin Clima
+    BG2355: Caso Base 180° Sin Clima
+    BG2356: Caso Base 180° Sin Clima
+    BG2357: Caso Base 180° Sin Clima
+    BG2358: Caso Base 180° Sin Clima
+    BG2359: Caso Base 180° Sin Clima
+    BG2360: Caso Base 180° Sin Clima
+    BG2361: Caso Base 180° Sin Clima
+    BG2362: Caso Base 180° Sin Clima
+    BG2363: Caso Base 180° Sin Clima
+    BG2364: Caso Base 180° Sin Clima
+    BG2365: Caso Base 180° Sin Clima
+    BG2366: Caso Base 180° Sin Clima
+    BG2367: Caso Base 180° Sin Clima
+    BG2368: Caso Base 180° Sin Clima
+    BG2369: Caso Base 180° Sin Clima
+    BG2370: Caso Base 180° Sin Clima
+    BG2371: Caso Base 180° Sin Clima
+    BF2372: 0
+    BG2372: Caso Base 180° Sin Clima
+    BG2373: Caso Base 180° Sin Clima
+    BG2374: Caso Base 180° Sin Clima
+    BG2375: Caso Base 180° Sin Clima
+    BG2376: Caso Base 180° Sin Clima
+    BG2377: Caso Base 180° Sin Clima
+    BG2378: Caso Base 180° Sin Clima
+    BG2379: Caso Base 180° Sin Clima
+    BG2380: Caso Base 180° Sin Clima
+    BG2381: Caso Base 180° Sin Clima
+    BG2382: Caso Base 180° Sin Clima
+    BG2383: Caso Base 180° Sin Clima
+    BG2384: Caso Base 180° Sin Clima
+    BG2385: Caso Base 180° Sin Clima
+    BG2386: Caso Base 180° Sin Clima
+    BG2387: Caso Base 180° Sin Clima
+    BG2388: Caso Base 180° Sin Clima
+    BG2389: Caso Base 180° Sin Clima
+    BG2390: Caso Base 180° Sin Clima
+    BG2391: Caso Base 180° Sin Clima
+    BG2392: Caso Base 180° Sin Clima
+    BG2393: Caso Base 180° Sin Clima
+    BG2394: Caso Base 180° Sin Clima
+    BG2395: Caso Base 180° Sin Clima
+    BG2396: Caso Base 180° Sin Clima
+    BG2397: Caso Base 180° Sin Clima
+    BF2398: 0
+    BG2398: Caso Base 180° Sin Clima
+    BG2399: Caso Base 180° Sin Clima
+    BG2400: Caso Base 180° Sin Clima
+    BG2401: Caso Base 180° Sin Clima
+    BG2402: Caso Base 180° Sin Clima
+    BG2403: Caso Base 180° Sin Clima
+    BG2404: Caso Base 180° Sin Clima
+    BG2405: Caso Base 180° Sin Clima
+    BG2406: Caso Base 180° Sin Clima
+    BG2407: Caso Base 180° Sin Clima
+    BG2408: Caso Base 180° Sin Clima
+    BG2409: Caso Base 180° Sin Clima
+    BG2410: Caso Base 180° Sin Clima
+    BG2411: Caso Base 180° Sin Clima
+    BG2412: Caso Base 180° Sin Clima
+    BG2413: Caso Base 180° Sin Clima
+    BG2414: Caso Base 180° Sin Clima
+    BG2415: Caso Base 180° Sin Clima
+    BG2416: Caso Base 180° Sin Clima
+    BG2417: Caso Base 180° Sin Clima
+    BG2418: Caso Base 180° Sin Clima
+    BG2419: Caso Base 180° Sin Clima
+    BG2420: Caso Base 180° Sin Clima
+    BG2421: Caso Base 180° Sin Clima
+    BG2422: Caso Base 180° Sin Clima
+    BG2423: Caso Base 180° Sin Clima
+    BF2424: 0
+    BG2424: Caso Base 180° Sin Clima
+    BG2425: Caso Base 180° Sin Clima
+    BG2426: Caso Base 180° Sin Clima
+    BG2427: Caso Base 180° Sin Clima
+    BG2428: Caso Base 180° Sin Clima
+    BG2429: Caso Base 180° Sin Clima
+    BG2430: Caso Base 180° Sin Clima
+    BG2431: Caso Base 180° Sin Clima
+    BG2432: Caso Base 180° Sin Clima
+    BG2433: Caso Base 180° Sin Clima
+    BG2434: Caso Base 180° Sin Clima
+    BG2435: Caso Base 180° Sin Clima
+    BG2436: Caso Base 180° Sin Clima
+    BG2437: Caso Base 180° Sin Clima
+    BG2438: Caso Base 180° Sin Clima
+    BG2439: Caso Base 180° Sin Clima
+    BG2440: Caso Base 180° Sin Clima
+    BG2441: Caso Base 180° Sin Clima
+    BG2442: Caso Base 180° Sin Clima
+    BG2443: Caso Base 180° Sin Clima
+    BG2444: Caso Base 180° Sin Clima
+    BG2445: Caso Base 180° Sin Clima
+    BG2446: Caso Base 180° Sin Clima
+    BG2447: Caso Base 180° Sin Clima
+    BG2448: Caso Base 180° Sin Clima
+    BG2449: Caso Base 180° Sin Clima
+    BF2450: 0
+    BG2450: Caso Base 180° Sin Clima
+    BG2451: Caso Base 180° Sin Clima
+    BG2452: Caso Base 180° Sin Clima
+    BG2453: Caso Base 180° Sin Clima
+    BG2454: Caso Base 180° Sin Clima
+    BG2455: Caso Base 180° Sin Clima
+    BG2456: Caso Base 180° Sin Clima
+    BG2457: Caso Base 180° Sin Clima
+    BG2458: Caso Base 180° Sin Clima
+    BG2459: Caso Base 180° Sin Clima
+    BG2460: Caso Base 180° Sin Clima
+    BG2461: Caso Base 180° Sin Clima
+    BG2462: Caso Base 180° Sin Clima
+    BG2463: Caso Base 180° Sin Clima
+    BG2464: Caso Base 180° Sin Clima
+    BG2465: Caso Base 180° Sin Clima
+    BG2466: Caso Base 180° Sin Clima
+    BG2467: Caso Base 180° Sin Clima
+    BG2468: Caso Base 180° Sin Clima
+    BG2469: Caso Base 180° Sin Clima
+    BG2470: Caso Base 180° Sin Clima
+    BG2471: Caso Base 180° Sin Clima
+    BG2472: Caso Base 180° Sin Clima
+    BG2473: Caso Base 180° Sin Clima
+    BG2474: Caso Base 180° Sin Clima
+    BG2475: Caso Base 180° Sin Clima
+    BF2476: 0
+    BG2476: Caso Base 180° Sin Clima
+    BG2477: Caso Base 180° Sin Clima
+    BG2478: Caso Base 180° Sin Clima
+    BG2479: Caso Base 180° Sin Clima
+    BG2480: Caso Base 180° Sin Clima
+    BG2481: Caso Base 180° Sin Clima
+    BG2482: Caso Base 180° Sin Clima
+    BG2483: Caso Base 180° Sin Clima
+    BG2484: Caso Base 180° Sin Clima
+    BG2485: Caso Base 180° Sin Clima
+    BG2486: Caso Base 180° Sin Clima
+    BG2487: Caso Base 180° Sin Clima
+    BG2488: Caso Base 180° Sin Clima
+    BG2489: Caso Base 180° Sin Clima
+    BG2490: Caso Base 180° Sin Clima
+    BG2491: Caso Base 180° Sin Clima
+    BG2492: Caso Base 180° Sin Clima
+    BG2493: Caso Base 180° Sin Clima
+    BG2494: Caso Base 180° Sin Clima
+    BG2495: Caso Base 180° Sin Clima
+    BG2496: Caso Base 180° Sin Clima
+    BG2497: Caso Base 180° Sin Clima
+    BG2498: Caso Base 180° Sin Clima
+    BG2499: Caso Base 180° Sin Clima
+    BG2500: Caso Base 180° Sin Clima
+    BG2501: Caso Base 180° Sin Clima
+    BF2502: 0
+    BG2502: Caso Base 270° Con Clima
+    BG2503: Caso Base 270° Con Clima
+    BG2504: Caso Base 270° Con Clima
+    BG2505: Caso Base 270° Con Clima
+    BG2506: Caso Base 270° Con Clima
+    BG2507: Caso Base 270° Con Clima
+    BG2508: Caso Base 270° Con Clima
+    BG2509: Caso Base 270° Con Clima
+    BG2510: Caso Base 270° Con Clima
+    BG2511: Caso Base 270° Con Clima
+    BG2512: Caso Base 270° Con Clima
+    BG2513: Caso Base 270° Con Clima
+    BG2514: Caso Base 270° Con Clima
+    BG2515: Caso Base 270° Con Clima
+    BG2516: Caso Base 270° Con Clima
+    BG2517: Caso Base 270° Con Clima
+    BG2518: Caso Base 270° Con Clima
+    BG2519: Caso Base 270° Con Clima
+    BG2520: Caso Base 270° Con Clima
+    BG2521: Caso Base 270° Con Clima
+    BG2522: Caso Base 270° Con Clima
+    BG2523: Caso Base 270° Con Clima
+    BG2524: Caso Base 270° Con Clima
+    BG2525: Caso Base 270° Con Clima
+    BG2526: Caso Base 270° Con Clima
+    BG2527: Caso Base 270° Con Clima
+    BF2528: 0
+    BG2528: Caso Base 270° Con Clima
+    BG2529: Caso Base 270° Con Clima
+    BG2530: Caso Base 270° Con Clima
+    BG2531: Caso Base 270° Con Clima
+    BG2532: Caso Base 270° Con Clima
+    BG2533: Caso Base 270° Con Clima
+    BG2534: Caso Base 270° Con Clima
+    BG2535: Caso Base 270° Con Clima
+    BG2536: Caso Base 270° Con Clima
+    BG2537: Caso Base 270° Con Clima
+    BG2538: Caso Base 270° Con Clima
+    BG2539: Caso Base 270° Con Clima
+    BG2540: Caso Base 270° Con Clima
+    BG2541: Caso Base 270° Con Clima
+    BG2542: Caso Base 270° Con Clima
+    BG2543: Caso Base 270° Con Clima
+    BG2544: Caso Base 270° Con Clima
+    BG2545: Caso Base 270° Con Clima
+    BG2546: Caso Base 270° Con Clima
+    BG2547: Caso Base 270° Con Clima
+    BG2548: Caso Base 270° Con Clima
+    BG2549: Caso Base 270° Con Clima
+    BG2550: Caso Base 270° Con Clima
+    BG2551: Caso Base 270° Con Clima
+    BG2552: Caso Base 270° Con Clima
+    BG2553: Caso Base 270° Con Clima
+    BF2554: 0
+    BG2554: Caso Base 270° Con Clima
+    BG2555: Caso Base 270° Con Clima
+    BG2556: Caso Base 270° Con Clima
+    BG2557: Caso Base 270° Con Clima
+    BG2558: Caso Base 270° Con Clima
+    BG2559: Caso Base 270° Con Clima
+    BG2560: Caso Base 270° Con Clima
+    BG2561: Caso Base 270° Con Clima
+    BG2562: Caso Base 270° Con Clima
+    BG2563: Caso Base 270° Con Clima
+    BG2564: Caso Base 270° Con Clima
+    BG2565: Caso Base 270° Con Clima
+    BG2566: Caso Base 270° Con Clima
+    BG2567: Caso Base 270° Con Clima
+    BG2568: Caso Base 270° Con Clima
+    BG2569: Caso Base 270° Con Clima
+    BG2570: Caso Base 270° Con Clima
+    BG2571: Caso Base 270° Con Clima
+    BG2572: Caso Base 270° Con Clima
+    BG2573: Caso Base 270° Con Clima
+    BG2574: Caso Base 270° Con Clima
+    BG2575: Caso Base 270° Con Clima
+    BG2576: Caso Base 270° Con Clima
+    BG2577: Caso Base 270° Con Clima
+    BG2578: Caso Base 270° Con Clima
+    BG2579: Caso Base 270° Con Clima
+    BF2580: 0
+    BG2580: Caso Base 270° Con Clima
+    BG2581: Caso Base 270° Con Clima
+    BG2582: Caso Base 270° Con Clima
+    BG2583: Caso Base 270° Con Clima
+    BG2584: Caso Base 270° Con Clima
+    BG2585: Caso Base 270° Con Clima
+    BG2586: Caso Base 270° Con Clima
+    BG2587: Caso Base 270° Con Clima
+    BG2588: Caso Base 270° Con Clima
+    BG2589: Caso Base 270° Con Clima
+    BG2590: Caso Base 270° Con Clima
+    BG2591: Caso Base 270° Con Clima
+    BG2592: Caso Base 270° Con Clima
+    BG2593: Caso Base 270° Con Clima
+    BG2594: Caso Base 270° Con Clima
+    BG2595: Caso Base 270° Con Clima
+    BG2596: Caso Base 270° Con Clima
+    BG2597: Caso Base 270° Con Clima
+    BG2598: Caso Base 270° Con Clima
+    BG2599: Caso Base 270° Con Clima
+    BG2600: Caso Base 270° Con Clima
+    BG2601: Caso Base 270° Con Clima
+    BG2602: Caso Base 270° Con Clima
+    BG2603: Caso Base 270° Con Clima
+    BG2604: Caso Base 270° Con Clima
+    BG2605: Caso Base 270° Con Clima
+    BF2606: 0
+    BG2606: Caso Base 270° Con Clima
+    BG2607: Caso Base 270° Con Clima
+    BG2608: Caso Base 270° Con Clima
+    BG2609: Caso Base 270° Con Clima
+    BG2610: Caso Base 270° Con Clima
+    BG2611: Caso Base 270° Con Clima
+    BG2612: Caso Base 270° Con Clima
+    BG2613: Caso Base 270° Con Clima
+    BG2614: Caso Base 270° Con Clima
+    BG2615: Caso Base 270° Con Clima
+    BG2616: Caso Base 270° Con Clima
+    BG2617: Caso Base 270° Con Clima
+    BG2618: Caso Base 270° Con Clima
+    BG2619: Caso Base 270° Con Clima
+    BG2620: Caso Base 270° Con Clima
+    BG2621: Caso Base 270° Con Clima
+    BG2622: Caso Base 270° Con Clima
+    BG2623: Caso Base 270° Con Clima
+    BG2624: Caso Base 270° Con Clima
+    BG2625: Caso Base 270° Con Clima
+    BG2626: Caso Base 270° Con Clima
+    BG2627: Caso Base 270° Con Clima
+    BG2628: Caso Base 270° Con Clima
+    BG2629: Caso Base 270° Con Clima
+    BG2630: Caso Base 270° Con Clima
+    BG2631: Caso Base 270° Con Clima
+    BF2632: 0
+    BG2632: Caso Base 270° Con Clima
+    BG2633: Caso Base 270° Con Clima
+    BG2634: Caso Base 270° Con Clima
+    BG2635: Caso Base 270° Con Clima
+    BG2636: Caso Base 270° Con Clima
+    BG2637: Caso Base 270° Con Clima
+    BG2638: Caso Base 270° Con Clima
+    BG2639: Caso Base 270° Con Clima
+    BG2640: Caso Base 270° Con Clima
+    BG2641: Caso Base 270° Con Clima
+    BG2642: Caso Base 270° Con Clima
+    BG2643: Caso Base 270° Con Clima
+    BG2644: Caso Base 270° Con Clima
+    BG2645: Caso Base 270° Con Clima
+    BG2646: Caso Base 270° Con Clima
+    BG2647: Caso Base 270° Con Clima
+    BG2648: Caso Base 270° Con Clima
+    BG2649: Caso Base 270° Con Clima
+    BG2650: Caso Base 270° Con Clima
+    BG2651: Caso Base 270° Con Clima
+    BG2652: Caso Base 270° Con Clima
+    BG2653: Caso Base 270° Con Clima
+    BG2654: Caso Base 270° Con Clima
+    BG2655: Caso Base 270° Con Clima
+    BG2656: Caso Base 270° Con Clima
+    BG2657: Caso Base 270° Con Clima
+    BF2658: 0
+    BG2658: Caso Base 270° Con Clima
+    BG2659: Caso Base 270° Con Clima
+    BG2660: Caso Base 270° Con Clima
+    BG2661: Caso Base 270° Con Clima
+    BG2662: Caso Base 270° Con Clima
+    BG2663: Caso Base 270° Con Clima
+    BG2664: Caso Base 270° Con Clima
+    BG2665: Caso Base 270° Con Clima
+    BG2666: Caso Base 270° Con Clima
+    BG2667: Caso Base 270° Con Clima
+    BG2668: Caso Base 270° Con Clima
+    BG2669: Caso Base 270° Con Clima
+    BG2670: Caso Base 270° Con Clima
+    BG2671: Caso Base 270° Con Clima
+    BG2672: Caso Base 270° Con Clima
+    BG2673: Caso Base 270° Con Clima
+    BG2674: Caso Base 270° Con Clima
+    BG2675: Caso Base 270° Con Clima
+    BG2676: Caso Base 270° Con Clima
+    BG2677: Caso Base 270° Con Clima
+    BG2678: Caso Base 270° Con Clima
+    BG2679: Caso Base 270° Con Clima
+    BG2680: Caso Base 270° Con Clima
+    BG2681: Caso Base 270° Con Clima
+    BG2682: Caso Base 270° Con Clima
+    BG2683: Caso Base 270° Con Clima
+    BF2684: 0
+    BG2684: Caso Base 270° Con Clima
+    BG2685: Caso Base 270° Con Clima
+    BG2686: Caso Base 270° Con Clima
+    BG2687: Caso Base 270° Con Clima
+    BG2688: Caso Base 270° Con Clima
+    BG2689: Caso Base 270° Con Clima
+    BG2690: Caso Base 270° Con Clima
+    BG2691: Caso Base 270° Con Clima
+    BG2692: Caso Base 270° Con Clima
+    BG2693: Caso Base 270° Con Clima
+    BG2694: Caso Base 270° Con Clima
+    BG2695: Caso Base 270° Con Clima
+    BG2696: Caso Base 270° Con Clima
+    BG2697: Caso Base 270° Con Clima
+    BG2698: Caso Base 270° Con Clima
+    BG2699: Caso Base 270° Con Clima
+    BG2700: Caso Base 270° Con Clima
+    BG2701: Caso Base 270° Con Clima
+    BG2702: Caso Base 270° Con Clima
+    BG2703: Caso Base 270° Con Clima
+    BG2704: Caso Base 270° Con Clima
+    BG2705: Caso Base 270° Con Clima
+    BG2706: Caso Base 270° Con Clima
+    BG2707: Caso Base 270° Con Clima
+    BG2708: Caso Base 270° Con Clima
+    BG2709: Caso Base 270° Con Clima
+    BF2710: 0
+    BG2710: Caso Base 270° Con Clima
+    BG2711: Caso Base 270° Con Clima
+    BG2712: Caso Base 270° Con Clima
+    BG2713: Caso Base 270° Con Clima
+    BG2714: Caso Base 270° Con Clima
+    BG2715: Caso Base 270° Con Clima
+    BG2716: Caso Base 270° Con Clima
+    BG2717: Caso Base 270° Con Clima
+    BG2718: Caso Base 270° Con Clima
+    BG2719: Caso Base 270° Con Clima
+    BG2720: Caso Base 270° Con Clima
+    BG2721: Caso Base 270° Con Clima
+    BG2722: Caso Base 270° Con Clima
+    BG2723: Caso Base 270° Con Clima
+    BG2724: Caso Base 270° Con Clima
+    BG2725: Caso Base 270° Con Clima
+    BG2726: Caso Base 270° Con Clima
+    BG2727: Caso Base 270° Con Clima
+    BG2728: Caso Base 270° Con Clima
+    BG2729: Caso Base 270° Con Clima
+    BG2730: Caso Base 270° Con Clima
+    BG2731: Caso Base 270° Con Clima
+    BG2732: Caso Base 270° Con Clima
+    BG2733: Caso Base 270° Con Clima
+    BG2734: Caso Base 270° Con Clima
+    BG2735: Caso Base 270° Con Clima
+    BF2736: 0
+    BG2736: Caso Base 270° Con Clima
+    BG2737: Caso Base 270° Con Clima
+    BG2738: Caso Base 270° Con Clima
+    BG2739: Caso Base 270° Con Clima
+    BG2740: Caso Base 270° Con Clima
+    BG2741: Caso Base 270° Con Clima
+    BG2742: Caso Base 270° Con Clima
+    BG2743: Caso Base 270° Con Clima
+    BG2744: Caso Base 270° Con Clima
+    BG2745: Caso Base 270° Con Clima
+    BG2746: Caso Base 270° Con Clima
+    BG2747: Caso Base 270° Con Clima
+    BG2748: Caso Base 270° Con Clima
+    BG2749: Caso Base 270° Con Clima
+    BG2750: Caso Base 270° Con Clima
+    BG2751: Caso Base 270° Con Clima
+    BG2752: Caso Base 270° Con Clima
+    BG2753: Caso Base 270° Con Clima
+    BG2754: Caso Base 270° Con Clima
+    BG2755: Caso Base 270° Con Clima
+    BG2756: Caso Base 270° Con Clima
+    BG2757: Caso Base 270° Con Clima
+    BG2758: Caso Base 270° Con Clima
+    BG2759: Caso Base 270° Con Clima
+    BG2760: Caso Base 270° Con Clima
+    BG2761: Caso Base 270° Con Clima
+    BF2762: 0
+    BG2762: Caso Base 270° Con Clima
+    BG2763: Caso Base 270° Con Clima
+    BG2764: Caso Base 270° Con Clima
+    BG2765: Caso Base 270° Con Clima
+    BG2766: Caso Base 270° Con Clima
+    BG2767: Caso Base 270° Con Clima
+    BG2768: Caso Base 270° Con Clima
+    BG2769: Caso Base 270° Con Clima
+    BG2770: Caso Base 270° Con Clima
+    BG2771: Caso Base 270° Con Clima
+    BG2772: Caso Base 270° Con Clima
+    BG2773: Caso Base 270° Con Clima
+    BG2774: Caso Base 270° Con Clima
+    BG2775: Caso Base 270° Con Clima
+    BG2776: Caso Base 270° Con Clima
+    BG2777: Caso Base 270° Con Clima
+    BG2778: Caso Base 270° Con Clima
+    BG2779: Caso Base 270° Con Clima
+    BG2780: Caso Base 270° Con Clima
+    BG2781: Caso Base 270° Con Clima
+    BG2782: Caso Base 270° Con Clima
+    BG2783: Caso Base 270° Con Clima
+    BG2784: Caso Base 270° Con Clima
+    BG2785: Caso Base 270° Con Clima
+    BG2786: Caso Base 270° Con Clima
+    BG2787: Caso Base 270° Con Clima
+    BF2788: 0
+    BG2788: Caso Base 270° Con Clima
+    BG2789: Caso Base 270° Con Clima
+    BG2790: Caso Base 270° Con Clima
+    BG2791: Caso Base 270° Con Clima
+    BG2792: Caso Base 270° Con Clima
+    BG2793: Caso Base 270° Con Clima
+    BG2794: Caso Base 270° Con Clima
+    BG2795: Caso Base 270° Con Clima
+    BG2796: Caso Base 270° Con Clima
+    BG2797: Caso Base 270° Con Clima
+    BG2798: Caso Base 270° Con Clima
+    BG2799: Caso Base 270° Con Clima
+    BG2800: Caso Base 270° Con Clima
+    BG2801: Caso Base 270° Con Clima
+    BG2802: Caso Base 270° Con Clima
+    BG2803: Caso Base 270° Con Clima
+    BG2804: Caso Base 270° Con Clima
+    BG2805: Caso Base 270° Con Clima
+    BG2806: Caso Base 270° Con Clima
+    BG2807: Caso Base 270° Con Clima
+    BG2808: Caso Base 270° Con Clima
+    BG2809: Caso Base 270° Con Clima
+    BG2810: Caso Base 270° Con Clima
+    BG2811: Caso Base 270° Con Clima
+    BG2812: Caso Base 270° Con Clima
+    BG2813: Caso Base 270° Con Clima
+    BF2814: 0
+    BG2814: Caso Base 270° Sin Clima
+    BG2815: Caso Base 270° Sin Clima
+    BG2816: Caso Base 270° Sin Clima
+    BG2817: Caso Base 270° Sin Clima
+    BG2818: Caso Base 270° Sin Clima
+    BG2819: Caso Base 270° Sin Clima
+    BG2820: Caso Base 270° Sin Clima
+    BG2821: Caso Base 270° Sin Clima
+    BG2822: Caso Base 270° Sin Clima
+    BG2823: Caso Base 270° Sin Clima
+    BG2824: Caso Base 270° Sin Clima
+    BG2825: Caso Base 270° Sin Clima
+    BG2826: Caso Base 270° Sin Clima
+    BG2827: Caso Base 270° Sin Clima
+    BG2828: Caso Base 270° Sin Clima
+    BG2829: Caso Base 270° Sin Clima
+    BG2830: Caso Base 270° Sin Clima
+    BG2831: Caso Base 270° Sin Clima
+    BG2832: Caso Base 270° Sin Clima
+    BG2833: Caso Base 270° Sin Clima
+    BG2834: Caso Base 270° Sin Clima
+    BG2835: Caso Base 270° Sin Clima
+    BG2836: Caso Base 270° Sin Clima
+    BG2837: Caso Base 270° Sin Clima
+    BG2838: Caso Base 270° Sin Clima
+    BG2839: Caso Base 270° Sin Clima
+    BF2840: 0
+    BG2840: Caso Base 270° Sin Clima
+    BG2841: Caso Base 270° Sin Clima
+    BG2842: Caso Base 270° Sin Clima
+    BG2843: Caso Base 270° Sin Clima
+    BG2844: Caso Base 270° Sin Clima
+    BG2845: Caso Base 270° Sin Clima
+    BG2846: Caso Base 270° Sin Clima
+    BG2847: Caso Base 270° Sin Clima
+    BG2848: Caso Base 270° Sin Clima
+    BG2849: Caso Base 270° Sin Clima
+    BG2850: Caso Base 270° Sin Clima
+    BG2851: Caso Base 270° Sin Clima
+    BG2852: Caso Base 270° Sin Clima
+    BG2853: Caso Base 270° Sin Clima
+    BG2854: Caso Base 270° Sin Clima
+    BG2855: Caso Base 270° Sin Clima
+    BG2856: Caso Base 270° Sin Clima
+    BG2857: Caso Base 270° Sin Clima
+    BG2858: Caso Base 270° Sin Clima
+    BG2859: Caso Base 270° Sin Clima
+    BG2860: Caso Base 270° Sin Clima
+    BG2861: Caso Base 270° Sin Clima
+    BG2862: Caso Base 270° Sin Clima
+    BG2863: Caso Base 270° Sin Clima
+    BG2864: Caso Base 270° Sin Clima
+    BG2865: Caso Base 270° Sin Clima
+    BF2866: 0
+    BG2866: Caso Base 270° Sin Clima
+    BG2867: Caso Base 270° Sin Clima
+    BG2868: Caso Base 270° Sin Clima
+    BG2869: Caso Base 270° Sin Clima
+    BG2870: Caso Base 270° Sin Clima
+    BG2871: Caso Base 270° Sin Clima
+    BG2872: Caso Base 270° Sin Clima
+    BG2873: Caso Base 270° Sin Clima
+    BG2874: Caso Base 270° Sin Clima
+    BG2875: Caso Base 270° Sin Clima
+    BG2876: Caso Base 270° Sin Clima
+    BG2877: Caso Base 270° Sin Clima
+    BG2878: Caso Base 270° Sin Clima
+    BG2879: Caso Base 270° Sin Clima
+    BG2880: Caso Base 270° Sin Clima
+    BG2881: Caso Base 270° Sin Clima
+    BG2882: Caso Base 270° Sin Clima
+    BG2883: Caso Base 270° Sin Clima
+    BG2884: Caso Base 270° Sin Clima
+    BG2885: Caso Base 270° Sin Clima
+    BG2886: Caso Base 270° Sin Clima
+    BG2887: Caso Base 270° Sin Clima
+    BG2888: Caso Base 270° Sin Clima
+    BG2889: Caso Base 270° Sin Clima
+    BG2890: Caso Base 270° Sin Clima
+    BG2891: Caso Base 270° Sin Clima
+    BF2892: 0
+    BG2892: Caso Base 270° Sin Clima
+    BG2893: Caso Base 270° Sin Clima
+    BG2894: Caso Base 270° Sin Clima
+    BG2895: Caso Base 270° Sin Clima
+    BG2896: Caso Base 270° Sin Clima
+    BG2897: Caso Base 270° Sin Clima
+    BG2898: Caso Base 270° Sin Clima
+    BG2899: Caso Base 270° Sin Clima
+    BG2900: Caso Base 270° Sin Clima
+    BG2901: Caso Base 270° Sin Clima
+    BG2902: Caso Base 270° Sin Clima
+    BG2903: Caso Base 270° Sin Clima
+    BG2904: Caso Base 270° Sin Clima
+    BG2905: Caso Base 270° Sin Clima
+    BG2906: Caso Base 270° Sin Clima
+    BG2907: Caso Base 270° Sin Clima
+    BG2908: Caso Base 270° Sin Clima
+    BG2909: Caso Base 270° Sin Clima
+    BG2910: Caso Base 270° Sin Clima
+    BG2911: Caso Base 270° Sin Clima
+    BG2912: Caso Base 270° Sin Clima
+    BG2913: Caso Base 270° Sin Clima
+    BG2914: Caso Base 270° Sin Clima
+    BG2915: Caso Base 270° Sin Clima
+    BG2916: Caso Base 270° Sin Clima
+    BG2917: Caso Base 270° Sin Clima
+    BF2918: 0
+    BG2918: Caso Base 270° Sin Clima
+    BG2919: Caso Base 270° Sin Clima
+    BG2920: Caso Base 270° Sin Clima
+    BG2921: Caso Base 270° Sin Clima
+    BG2922: Caso Base 270° Sin Clima
+    BG2923: Caso Base 270° Sin Clima
+    BG2924: Caso Base 270° Sin Clima
+    BG2925: Caso Base 270° Sin Clima
+    BG2926: Caso Base 270° Sin Clima
+    BG2927: Caso Base 270° Sin Clima
+    BG2928: Caso Base 270° Sin Clima
+    BG2929: Caso Base 270° Sin Clima
+    BG2930: Caso Base 270° Sin Clima
+    BG2931: Caso Base 270° Sin Clima
+    BG2932: Caso Base 270° Sin Clima
+    BG2933: Caso Base 270° Sin Clima
+    BG2934: Caso Base 270° Sin Clima
+    BG2935: Caso Base 270° Sin Clima
+    BG2936: Caso Base 270° Sin Clima
+    BG2937: Caso Base 270° Sin Clima
+    BG2938: Caso Base 270° Sin Clima
+    BG2939: Caso Base 270° Sin Clima
+    BG2940: Caso Base 270° Sin Clima
+    BG2941: Caso Base 270° Sin Clima
+    BG2942: Caso Base 270° Sin Clima
+    BG2943: Caso Base 270° Sin Clima
+    BF2944: 0
+    BG2944: Caso Base 270° Sin Clima
+    BG2945: Caso Base 270° Sin Clima
+    BG2946: Caso Base 270° Sin Clima
+    BG2947: Caso Base 270° Sin Clima
+    BG2948: Caso Base 270° Sin Clima
+    BG2949: Caso Base 270° Sin Clima
+    BG2950: Caso Base 270° Sin Clima
+    BG2951: Caso Base 270° Sin Clima
+    BG2952: Caso Base 270° Sin Clima
+    BG2953: Caso Base 270° Sin Clima
+    BG2954: Caso Base 270° Sin Clima
+    BG2955: Caso Base 270° Sin Clima
+    BG2956: Caso Base 270° Sin Clima
+    BG2957: Caso Base 270° Sin Clima
+    BG2958: Caso Base 270° Sin Clima
+    BG2959: Caso Base 270° Sin Clima
+    BG2960: Caso Base 270° Sin Clima
+    BG2961: Caso Base 270° Sin Clima
+    BG2962: Caso Base 270° Sin Clima
+    BG2963: Caso Base 270° Sin Clima
+    BG2964: Caso Base 270° Sin Clima
+    BG2965: Caso Base 270° Sin Clima
+    BG2966: Caso Base 270° Sin Clima
+    BG2967: Caso Base 270° Sin Clima
+    BG2968: Caso Base 270° Sin Clima
+    BG2969: Caso Base 270° Sin Clima
+    BF2970: 0
+    BG2970: Caso Base 270° Sin Clima
+    BG2971: Caso Base 270° Sin Clima
+    BG2972: Caso Base 270° Sin Clima
+    BG2973: Caso Base 270° Sin Clima
+    BG2974: Caso Base 270° Sin Clima
+    BG2975: Caso Base 270° Sin Clima
+    BG2976: Caso Base 270° Sin Clima
+    BG2977: Caso Base 270° Sin Clima
+    BG2978: Caso Base 270° Sin Clima
+    BG2979: Caso Base 270° Sin Clima
+    BG2980: Caso Base 270° Sin Clima
+    BG2981: Caso Base 270° Sin Clima
+    BG2982: Caso Base 270° Sin Clima
+    BG2983: Caso Base 270° Sin Clima
+    BG2984: Caso Base 270° Sin Clima
+    BG2985: Caso Base 270° Sin Clima
+    BG2986: Caso Base 270° Sin Clima
+    BG2987: Caso Base 270° Sin Clima
+    BG2988: Caso Base 270° Sin Clima
+    BG2989: Caso Base 270° Sin Clima
+    BG2990: Caso Base 270° Sin Clima
+    BG2991: Caso Base 270° Sin Clima
+    BG2992: Caso Base 270° Sin Clima
+    BG2993: Caso Base 270° Sin Clima
+    BG2994: Caso Base 270° Sin Clima
+    BG2995: Caso Base 270° Sin Clima
+    BF2996: 0
+    BG2996: Caso Base 270° Sin Clima
+    BG2997: Caso Base 270° Sin Clima
+    BG2998: Caso Base 270° Sin Clima
+    BG2999: Caso Base 270° Sin Clima
+    BG3000: Caso Base 270° Sin Clima
+    BG3001: Caso Base 270° Sin Clima
+    BG3002: Caso Base 270° Sin Clima
+    BG3003: Caso Base 270° Sin Clima
+    BG3004: Caso Base 270° Sin Clima
+    BG3005: Caso Base 270° Sin Clima
+    BG3006: Caso Base 270° Sin Clima
+    BG3007: Caso Base 270° Sin Clima
+    BG3008: Caso Base 270° Sin Clima
+    BG3009: Caso Base 270° Sin Clima
+    BG3010: Caso Base 270° Sin Clima
+    BG3011: Caso Base 270° Sin Clima
+    BG3012: Caso Base 270° Sin Clima
+    BG3013: Caso Base 270° Sin Clima
+    BG3014: Caso Base 270° Sin Clima
+    BG3015: Caso Base 270° Sin Clima
+    BG3016: Caso Base 270° Sin Clima
+    BG3017: Caso Base 270° Sin Clima
+    BG3018: Caso Base 270° Sin Clima
+    BG3019: Caso Base 270° Sin Clima
+    BG3020: Caso Base 270° Sin Clima
+    BG3021: Caso Base 270° Sin Clima
+    BF3022: 0
+    BG3022: Caso Base 270° Sin Clima
+    BG3023: Caso Base 270° Sin Clima
+    BG3024: Caso Base 270° Sin Clima
+    BG3025: Caso Base 270° Sin Clima
+    BG3026: Caso Base 270° Sin Clima
+    BG3027: Caso Base 270° Sin Clima
+    BG3028: Caso Base 270° Sin Clima
+    BG3029: Caso Base 270° Sin Clima
+    BG3030: Caso Base 270° Sin Clima
+    BG3031: Caso Base 270° Sin Clima
+    BG3032: Caso Base 270° Sin Clima
+    BG3033: Caso Base 270° Sin Clima
+    BG3034: Caso Base 270° Sin Clima
+    BG3035: Caso Base 270° Sin Clima
+    BG3036: Caso Base 270° Sin Clima
+    BG3037: Caso Base 270° Sin Clima
+    BG3038: Caso Base 270° Sin Clima
+    BG3039: Caso Base 270° Sin Clima
+    BG3040: Caso Base 270° Sin Clima
+    BG3041: Caso Base 270° Sin Clima
+    BG3042: Caso Base 270° Sin Clima
+    BG3043: Caso Base 270° Sin Clima
+    BG3044: Caso Base 270° Sin Clima
+    BG3045: Caso Base 270° Sin Clima
+    BG3046: Caso Base 270° Sin Clima
+    BG3047: Caso Base 270° Sin Clima
+    BF3048: 0
+    BG3048: Caso Base 270° Sin Clima
+    BG3049: Caso Base 270° Sin Clima
+    BG3050: Caso Base 270° Sin Clima
+    BG3051: Caso Base 270° Sin Clima
+    BG3052: Caso Base 270° Sin Clima
+    BG3053: Caso Base 270° Sin Clima
+    BG3054: Caso Base 270° Sin Clima
+    BG3055: Caso Base 270° Sin Clima
+    BG3056: Caso Base 270° Sin Clima
+    BG3057: Caso Base 270° Sin Clima
+    BG3058: Caso Base 270° Sin Clima
+    BG3059: Caso Base 270° Sin Clima
+    BG3060: Caso Base 270° Sin Clima
+    BG3061: Caso Base 270° Sin Clima
+    BG3062: Caso Base 270° Sin Clima
+    BG3063: Caso Base 270° Sin Clima
+    BG3064: Caso Base 270° Sin Clima
+    BG3065: Caso Base 270° Sin Clima
+    BG3066: Caso Base 270° Sin Clima
+    BG3067: Caso Base 270° Sin Clima
+    BG3068: Caso Base 270° Sin Clima
+    BG3069: Caso Base 270° Sin Clima
+    BG3070: Caso Base 270° Sin Clima
+    BG3071: Caso Base 270° Sin Clima
+    BG3072: Caso Base 270° Sin Clima
+    BG3073: Caso Base 270° Sin Clima
+    BF3074: 0
+    BG3074: Caso Base 270° Sin Clima
+    BG3075: Caso Base 270° Sin Clima
+    BG3076: Caso Base 270° Sin Clima
+    BG3077: Caso Base 270° Sin Clima
+    BG3078: Caso Base 270° Sin Clima
+    BG3079: Caso Base 270° Sin Clima
+    BG3080: Caso Base 270° Sin Clima
+    BG3081: Caso Base 270° Sin Clima
+    BG3082: Caso Base 270° Sin Clima
+    BG3083: Caso Base 270° Sin Clima
+    BG3084: Caso Base 270° Sin Clima
+    BG3085: Caso Base 270° Sin Clima
+    BG3086: Caso Base 270° Sin Clima
+    BG3087: Caso Base 270° Sin Clima
+    BG3088: Caso Base 270° Sin Clima
+    BG3089: Caso Base 270° Sin Clima
+    BG3090: Caso Base 270° Sin Clima
+    BG3091: Caso Base 270° Sin Clima
+    BG3092: Caso Base 270° Sin Clima
+    BG3093: Caso Base 270° Sin Clima
+    BG3094: Caso Base 270° Sin Clima
+    BG3095: Caso Base 270° Sin Clima
+    BG3096: Caso Base 270° Sin Clima
+    BG3097: Caso Base 270° Sin Clima
+    BG3098: Caso Base 270° Sin Clima
+    BG3099: Caso Base 270° Sin Clima
+    BF3100: 0
+    BG3100: Caso Base 270° Sin Clima
+    BG3101: Caso Base 270° Sin Clima
+    BG3102: Caso Base 270° Sin Clima
+    BG3103: Caso Base 270° Sin Clima
+    BG3104: Caso Base 270° Sin Clima
+    BG3105: Caso Base 270° Sin Clima
+    BG3106: Caso Base 270° Sin Clima
+    BG3107: Caso Base 270° Sin Clima
+    BG3108: Caso Base 270° Sin Clima
+    BG3109: Caso Base 270° Sin Clima
+    BG3110: Caso Base 270° Sin Clima
+    BG3111: Caso Base 270° Sin Clima
+    BG3112: Caso Base 270° Sin Clima
+    BG3113: Caso Base 270° Sin Clima
+    BG3114: Caso Base 270° Sin Clima
+    BG3115: Caso Base 270° Sin Clima
+    BG3116: Caso Base 270° Sin Clima
+    BG3117: Caso Base 270° Sin Clima
+    BG3118: Caso Base 270° Sin Clima
+    BG3119: Caso Base 270° Sin Clima
+    BG3120: Caso Base 270° Sin Clima
+    BG3121: Caso Base 270° Sin Clima
+    BG3122: Caso Base 270° Sin Clima
+    BG3123: Caso Base 270° Sin Clima
+    BG3124: Caso Base 270° Sin Clima
+    BG3125: Caso Base 270° Sin Clima
+  Resumen:
+    O4: 31
+    P4: 28
+    Q4: 31
+    R4: 30
+    S4: 31
+    T4: 30
+    U4: 31
+    V4: 31
+    W4: 30
+    X4: 31
+    Y4: 30
+    Z4: 31
+    AD4: Demandas anuales por m2
+    N5: Caso
+    O5: 1
+    AA5: Total
+    AD5: Zona RT - PDA
+    AE5: Calefacción
+    AF5: Enfriamiento
+    AG5: Calefacción
+    AH5: Enfriamiento
+    O6: Enero
+    P6: Febrero
+    Q6: Marzo
+    R6: Abril
+    S6: Mayo
+    T6: Junio
+    U6: Julio
+    V6: Agosto
+    W6: Septiembre
+    X6: Octubre
+    Y6: Noviembre
+    Z6: Diciembre
+    AA6: Total
+    AE6: Casa
+    AF6: Casa
+    AG6: Depa
+    AH6: Depa
+    N7: Calefacción - Vivienda
+    AD7: A
+    AE7: 55.3
+    AF7: 141.1
+    AG7: 12.9
+    AH7: 46.8
+    N8: Calefacción - Base
+    AD8: B
+    AE8: 205.4
+    AF8: 171
+    AG8: 66.9
+    AH8: 51.6
+    N9: Refrigeración - Vivienda
+    AD9: C
+    AE9: 164.2
+    AF9: 64.7
+    AG9: 63.5
+    AH9: 17.6
+    N10: Refrigeración - Base
+    AD10: D
+    AE10: 152.5
+    AF10: 72.3
+    AG10: 85.1
+    AH10: 28.4
+    AD11: 'E '
+    AE11: 158.3
+    AF11: 39.8
+    AG11: 96.8
+    AH11: 15.3
+    N12: 'Enfriamiento: HD(-) - Vivienda'
+    AD12: F
+    AE12: 170.3
+    AF12: 39.3
+    AG12: 107.9
+    AH12: 15.3
+    N13: 'Enfriamiento: HD(-) - Base'
+    AD13: G
+    AE13: 162.5
+    AF13: 24.2
+    AG13: 114.7
+    AH13: 11.2
+    N14: 'Sobrecalentamiento: HD(+) - Vivienda'
+    AD14: H
+    AE14: 264.4
+    AF14: 1.6
+    AG14: 220.2
+    AH14: 1.5
+    N15: 'Sobrecalentamiento: HD(+) - Base'
+    AD15: I
+    AE15: 264.4
+    AF15: 1.6
+    AG15: 220.2
+    AH15: 1.5
+    N19: Caso Propuesto Con Clima
+    AC19: Zona del Proyecto
+    N20: Caso Base 0° Con Clima
+    AC20: Tipo de Vivienda
+    N21: Caso Base 90° Con Clima
+    AC21: Demanda de Calefacción de Referencia
+    N22: Caso Base 180° Con Clima
+    AC22: Demanda de Enfriamiento de Referencia
+    N23: Caso Base 270° Con Clima
+    AC23: Demanda Total de Referencia
+    N24: Caso Propuesto Con Clima
+    N25: Caso Base 0° Con Clima
+    N26: Caso Base 90° Con Clima
+    N27: Caso Base 180° Con Clima
+    N28: Caso Base 270° Con Clima
+    N30: Caso Propuesto Sin Clima
+    N31: Caso Base 0° Sin Clima
+    N32: Caso Base 90° Sin Clima
+    N33: Caso Base 180° Sin Clima
+    N34: Caso Base 270° Sin Clima
+    N35: Caso Propuesto Sin Clima

@@ -1,0 +1,4 @@
+codigo;descripcion;u;pct_marco_tipico;familia_infiltracion;fuente
+pvc;Perfil PVC;2.80;0.2;pvc;Tabla 15.2 Manual de Procedimientos CEV
+aluminio;Aluminio sin RPT;5.80;0.15;aluminio;Tabla 15.2 Manual de Procedimientos CEV
+aluminio_crpt;Aluminio con rotura de puente térmico;3.3;0.15;aluminio;Tabla 15.2 Manual de Procedimientos CEV

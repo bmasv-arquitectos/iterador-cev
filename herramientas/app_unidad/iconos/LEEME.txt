@@ -1,0 +1,10 @@
+Iconos del editor de unidad. Cada boton busca <nombre>.png y, si no existe,
+<nombre>.svg. Para cambiar un icono basta dejar un PNG con el mismo nombre
+(48 x 48 px, fondo transparente) y recargar la pagina (F5). Si quieres volver
+al de fabrica, borra el PNG.
+
+Herramientas: seleccionar, mover, dibujar, tabique, obstaculo_h, obstaculo_v,
+              ventana, puerta, cortar, borrar
+Archivo:      deshacer, rehacer, abrir, guardar, caja, vaciar
+Niveles:      nivel_mas, nivel_menos
+Vistas:       planta, alzado, 3d, encuadrar, zoom_mas, zoom_menos

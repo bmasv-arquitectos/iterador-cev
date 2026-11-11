@@ -1,0 +1,245 @@
+/* =====================================================================
+   Estilo del editor de unidad (herramientas/app_unidad).
+
+   Edita este archivo y recarga la pagina del navegador (F5): no hay que
+   reiniciar el programa. Casi todo sale de las variables de :root; mas
+   abajo esta cada parte de la interfaz por si quieres afinar algo puntual.
+
+   Iconos: herramientas/app_unidad/iconos/<nombre>.svg. Un archivo
+   <nombre>.png en la misma carpeta reemplaza al SVG (tamano sugerido
+   48 x 48 px, fondo transparente). Los nombres estan en iconos/LEEME.txt.
+   Colores del dibujo (muros, ventanas, 3D) y textos: config/editor.yaml.
+   Colores y medidas de la etiqueta CEV: app_cev/config/etiqueta.yaml (y
+   los cambios para este editor en config/editor.yaml, calculo.etiqueta).
+   ===================================================================== */
+
+:root {
+  /* --- tipografia --- */
+  --fuente: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --tam-texto: 12px;          /* texto de las cajas */
+  --tam-titulo: 11px;         /* titulos en mayusculas (cajas, grupos) */
+  --tam-boton: 12px;          /* botones con texto */
+  --tam-estado: 11px;         /* barra de estado inferior */
+  --peso-titulo: 600;
+  --espaciado-titulo: 0.06em;
+
+  /* --- colores --- */
+  --fondo: #ffffff;           /* detras del dibujo */
+  --texto: #2b3440;
+  --texto-suave: #7b8692;
+  --borde: #d6dce2;
+  --boton: #ffffff;
+  --boton-hover: #f1f4f6;
+  --activo: #d4ebfb;          /* boton u opcion seleccionada (celeste) */
+  --activo-borde: #8cc3ea;
+  --activo-texto: #1d4f73;
+  --peligro: #b42318;         /* eliminar, errores */
+  --progreso: #4a9fd8;        /* barra de progreso del calculo */
+  --aviso: #b54708;           /* resultado desactualizado */
+  --aviso-legal: #b42318;     /* aviso de uso referencial (bajo la etiqueta) */
+
+  /* --- cajas flotantes (toolbox de la izquierda y panel de resultados) --- */
+  --panel: rgba(255, 255, 255, 0.82);        /* ultimo numero = opacidad */
+  --panel-titulo: rgba(247, 249, 250, 0.94);
+  --panel-desenfoque: 6px;                   /* desenfoque del dibujo detras */
+  --panel-ancho: 320px;                      /* cajas de la izquierda */
+  --panel-der-ancho: 300px;                  /* panel de resultados (derecha) */
+  --sombra: 0 1px 4px rgba(20, 30, 40, 0.14);
+  --radio: 4px;                              /* esquinas redondeadas */
+
+  /* --- arbol de componentes (caja Envolvente) --- */
+  --arbol-fila-relleno: 0px;                 /* alto de cada fila: relleno arriba y abajo (0 = lo mas junto) */
+  --arbol-fila-texto: 12px;                  /* nombre de cada fila (N1-L1, Techo N1...) */
+  --arbol-detalle-texto: 11px;               /* detalle gris a la derecha (orientacion, area...) */
+  --arbol-subnivel-margen: 4px;              /* espacio sobre "Nivel 1", "Nivel 2" */
+  --arbol-grupo-separacion: 1px;             /* espacio sobre la linea entre grupos */
+  --arbol-linea: #8cc3ea;                    /* linea a la izquierda de lo desplegado */
+  --arbol-padre: #eef6fc;                    /* muro cuya ventana o puerta esta elegida */
+  --arbol-divisor: #909090;                  /* linea entre muros, vanos y techos y pisos */
+  --arbol-despliegue: 600ms;                 /* duracion de la animacion al desplegar */
+  --arbol-curva: cubic-bezier(0.8, 0.8, 0.3, 1);   /* suavidad (ease-out) */
+
+  /* --- etiqueta CEV en el panel de resultados --- */
+  --etiqueta-fondo: #ffffff;
+  --etiqueta-relleno: 10px;
+
+  /* --- barras y botones --- */
+  --alto-barra: 34px;
+  --boton-ancho: 36px;
+  --icono: 20px;
+  --margen: 8px;              /* distancia de las barras al borde */
+  --separacion: 6px;          /* entre grupos de botones */
+}
+
+/* ---------------------------------------------------------- base */
+html, body { margin: 0; overflow: hidden; background: var(--fondo); }
+body, .q-field, .q-item, .q-btn, .q-tooltip, .q-table, .q-menu {
+  font-family: var(--fuente) !important;
+  color: var(--texto);
+}
+.nicegui-content { padding: 0 !important; }
+
+/* ---------------------------------------------------------- lienzo (planta, alzado y 3D) */
+.lienzo { position: fixed !important; inset: 0; width: 100vw; height: 100vh; z-index: 0; }
+.lienzo img { width: 100vw; height: 100vh; }
+
+/* ---------------------------------------------------------- barras superiores */
+.barra { position: fixed; top: var(--margen); display: flex; align-items: center;
+         gap: var(--separacion); z-index: 10; }
+.barra-sup { left: var(--margen); }
+.barra-nav { right: var(--margen); }
+
+.barra-titulo { height: var(--alto-barra); display: flex; align-items: center; padding: 0 12px;
+                background: var(--boton); border: 1px solid var(--borde); border-radius: var(--radio);
+                box-shadow: var(--sombra); font-size: var(--tam-titulo); font-weight: var(--peso-titulo);
+                letter-spacing: var(--espaciado-titulo); text-transform: uppercase; box-sizing: border-box; }
+
+/* grupo = botones pegados con un solo borde */
+.grupo { display: flex; background: var(--boton); border: 1px solid var(--borde);
+         border-radius: var(--radio); box-shadow: var(--sombra); overflow: hidden; }
+.boton { min-width: var(--boton-ancho); height: var(--alto-barra); display: flex; align-items: center;
+         justify-content: center; padding: 0 7px; box-sizing: border-box; cursor: pointer;
+         border-right: 1px solid var(--borde); background: var(--boton); color: var(--texto);
+         font-size: var(--tam-boton); user-select: none; }
+.boton:last-child { border-right: none; }
+.boton:hover { background: var(--boton-hover); }
+.boton.activo { background: var(--activo); color: var(--activo-texto);
+                box-shadow: inset 0 0 0 1px var(--activo-borde); }
+.boton .icono { width: var(--icono); height: var(--icono); pointer-events: none; }
+.boton-texto { white-space: nowrap; }
+.etiqueta-grupo { height: var(--alto-barra); display: flex; align-items: center; padding: 0 8px;
+                  border-right: 1px solid var(--borde); font-size: var(--tam-titulo);
+                  font-weight: var(--peso-titulo); letter-spacing: var(--espaciado-titulo);
+                  text-transform: uppercase; color: var(--texto-suave); }
+
+/* dentro de las cajas los grupos son mas bajos */
+.caja .grupo { box-shadow: none; display: inline-flex; }
+.caja .boton { height: 26px; }
+
+/* texto que aparece al dejar el cursor sobre un boton */
+.q-tooltip { background: rgba(200, 213, 229, 0.92) !important; font-size: 11px !important;
+             padding: 4px 8px !important; border-radius: var(--radio) !important; }
+
+/* menu desplegable (Cargar, motor, vidrios) */
+.q-menu { border: 1px solid var(--borde); border-radius: var(--radio) !important;
+          box-shadow: var(--sombra) !important; }
+.q-menu .q-item { min-height: 30px; padding: 4px 14px; font-size: var(--tam-boton); }
+.q-menu .q-item:hover { background: var(--boton-hover); }
+
+/* ---------------------------------------------------------- toolbox (cajas de la izquierda) */
+.toolbox { position: fixed; left: var(--margen);
+           top: calc(var(--alto-barra) + 3 * var(--margen));
+           width: var(--panel-ancho);
+           max-height: calc(100vh - var(--alto-barra) - 6 * var(--margen));
+           overflow-y: auto; display: flex; flex-direction: column; gap: var(--separacion); z-index: 10; }
+/* panel de resultados: misma caja, a la derecha (se muestra u oculta con su boton) */
+.toolbox-der { left: auto; right: var(--margen); width: var(--panel-der-ancho); }
+.caja { background: var(--panel); backdrop-filter: blur(var(--panel-desenfoque));
+        -webkit-backdrop-filter: blur(var(--panel-desenfoque)); border: 1px solid var(--borde);
+        border-radius: var(--radio); box-shadow: var(--sombra); font-size: var(--tam-texto);
+        overflow: hidden; flex-shrink: 0; }
+.caja-titulo { background: var(--panel-titulo); min-height: 30px !important; padding: 0 10px !important;
+               font-size: var(--tam-titulo); font-weight: var(--peso-titulo);
+               letter-spacing: var(--espaciado-titulo); text-transform: uppercase; }
+.caja .q-expansion-item__content { padding: 8px 10px 10px; }
+.caja .q-field__label, .caja .q-field__native, .caja .q-field__input,
+.caja .q-select__dropdown-icon { font-size: var(--tam-texto); }
+.caja .q-field--dense .q-field__control { min-height: 34px; }
+
+.titulo-componente { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.subtitulo { font-size: var(--tam-titulo); font-weight: var(--peso-titulo);
+             letter-spacing: var(--espaciado-titulo); text-transform: uppercase;
+             color: var(--texto-suave); margin-top: 10px; margin-bottom: 2px; }
+.texto-suave { color: var(--texto-suave); font-size: var(--tam-texto); }
+.dato { display: flex; justify-content: space-between; width: 100%; font-size: var(--tam-texto);
+        padding: 1px 0; gap: 8px; }
+.dato-etiqueta { color: var(--texto-suave); white-space: nowrap; }
+
+/* arbol de componentes (caja Envolvente). Cada fila es .item-lista: su alto lo da el
+   relleno de arriba y abajo (--arbol-fila-relleno). El titulo de cada grupo (MUROS,
+   VENTANAS...) es una fila .grupo: un clic despliega la solucion general del grupo. */
+.item-lista { display: flex; justify-content: space-between; align-items: baseline; gap: 8px;
+              padding: var(--arbol-fila-relleno) 6px; margin: 0 -6px; border-radius: var(--radio);
+              cursor: pointer; font-size: var(--arbol-fila-texto); user-select: none;
+              transition: background-color 0.18s ease; }
+.item-lista:hover { background: var(--boton-hover); }
+.item-lista.activo { background: var(--activo); color: var(--activo-texto);
+                     box-shadow: inset 0 0 0 1px var(--activo-borde); }
+.item-lista.padre { background: var(--arbol-padre); }
+.item-nombre { font-weight: 600; white-space: nowrap; }
+.item-detalle { color: var(--texto-suave); font-size: var(--arbol-detalle-texto); text-align: right;
+                overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.item-lista.activo .item-detalle { color: var(--activo-texto); }
+.item-lista.grupo { padding-top: calc(var(--arbol-fila-relleno) + 2px); padding-bottom: calc(var(--arbol-fila-relleno) + 2px); }
+.grupo-nombre { font-size: var(--tam-titulo); font-weight: var(--peso-titulo); letter-spacing: var(--espaciado-titulo);
+                text-transform: uppercase; color: var(--texto-suave); white-space: nowrap; }
+.item-lista.grupo.activo .grupo-nombre { color: var(--activo-texto); }
+.subnivel { font-size: 10.5px; color: var(--texto-suave); margin: var(--arbol-subnivel-margen) 0 1px; }
+.divisor { height: 1px; background: var(--arbol-divisor); margin: var(--arbol-grupo-separacion) 0 2px; }
+.detalle-item { border-left: 2px solid var(--arbol-linea); margin: 4px 0 10px 2px; padding: 2px 0 6px 10px; }
+/* despliegue: aparece de a poco al elegir (no al editar sus campos) */
+.detalle-item.abre { overflow: hidden; transform-origin: top;
+                     animation: desplegar var(--arbol-despliegue) var(--arbol-curva) both; }
+@keyframes desplegar {
+  0%   { max-height: 0; opacity: 0; transform: translateY(-6px); padding-top: 0; padding-bottom: 0; }
+  35%  { opacity: 0.6; }
+  100% { max-height: 1200px; opacity: 1; transform: none; }
+}
+.detalle-suelto { border-bottom: 1px solid var(--borde); padding-bottom: 8px; margin-bottom: 4px; }
+
+/* botones de accion dentro de las cajas (Todo el lado igual, Eliminar, Calcular, ...) */
+.acciones { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+.accion { height: 26px; display: inline-flex; align-items: center; padding: 0 9px; cursor: pointer;
+          background: var(--boton); border: 1px solid var(--borde); border-radius: var(--radio);
+          font-size: var(--tam-boton); user-select: none; }
+.accion:hover { background: var(--boton-hover); }
+.accion.peligro { color: var(--peligro); }
+.accion.principal { background: var(--activo); color: var(--activo-texto); border-color: var(--activo-borde);
+                    font-weight: 600; }
+.accion.principal:hover { filter: brightness(0.97); }
+.accion.ancho { width: 100%; justify-content: center; height: 32px; box-sizing: border-box;
+                letter-spacing: var(--espaciado-titulo); text-transform: uppercase;
+                font-size: var(--tam-titulo); }
+
+/* resultados del dibujo (areas, puentes) */
+.errores { color: var(--peligro); font-size: 11px; }
+.errores ul { margin: 0; padding-left: 16px; }
+.resumen { font-weight: 600; margin: 4px 0; }
+.tabla { background: transparent !important; box-shadow: none !important; }
+.tabla th, .tabla td { font-size: 11px !important; padding: 2px 4px !important; height: auto !important; }
+.tabla thead tr { height: 24px !important; }
+
+/* calculo: etiqueta (como una tarjeta impresa), Calcular, motor, progreso y detalle */
+.etiqueta-calculo { width: 100%; box-sizing: border-box; background: var(--etiqueta-fondo);
+                    border: 1px solid var(--borde); border-radius: var(--radio);
+                    padding: var(--etiqueta-relleno); }
+.etiqueta-calculo svg { display: block; width: 100%; height: auto; }
+.aviso-calculo { color: var(--aviso); font-size: 11px; margin-top: 6px; }
+.calcular { margin-top: 10px; }
+.motor { margin-top: 6px; }
+.progreso { margin-top: 8px; border-radius: var(--radio); }
+.progreso .q-linear-progress__model { background: var(--progreso) !important; }
+.progreso .q-linear-progress__track { background: var(--borde) !important; opacity: 1 !important; }
+.progreso-texto { color: var(--texto-suave); font-size: 11px; margin-top: 2px; }
+.detalle-calculo { color: var(--texto-suave); font-size: 11px; margin-top: 8px; }
+.detalle-calculo p { margin: 2px 0; }
+.detalle-calculo code { font-size: 10px; background: transparent; padding: 0; word-break: break-all; }
+
+/* ---------------------------------------------------------- barra de estado (abajo) */
+.estado { position: fixed; left: calc(var(--panel-ancho) + 2 * var(--margen)); bottom: var(--margen);
+          right: var(--margen); display: flex; gap: 16px; z-index: 5; pointer-events: none; }
+.estado.con-derecha { right: calc(var(--panel-der-ancho) + 2 * var(--margen)); }
+.estado span, .estado div { background: var(--panel); border-radius: var(--radio); padding: 3px 8px;
+                            font-size: var(--tam-estado); color: var(--texto-suave); }
+
+/* ---------------------------------------------------------- distribucion (aviso legal y Acerca de) */
+/* aviso bajo la etiqueta del panel Resultados */
+.aviso-legal-texto { color: var(--aviso-legal); font-size: 10.5px; line-height: 1.3; margin-top: 6px; }
+/* dialogo al abrir y dialogo Acerca de */
+.aviso-legal, .acerca-de { max-width: 460px; font-family: var(--fuente); font-size: var(--tam-texto); gap: 8px; }
+.aviso-legal-titulo, .acerca-de-titulo { font-size: 14px; font-weight: 600; }
+.acerca-de-nota { color: var(--texto-suave); font-size: 11px; }
+/* boton Acerca de: abajo a la izquierda, sobre todo lo demas */
+.boton-acerca { position: fixed !important; left: var(--margen); bottom: var(--margen); z-index: 20;
+                font-size: var(--tam-estado) !important; color: var(--texto-suave) !important;
+                background: var(--panel) !important; min-height: 22px !important; padding: 0 8px !important; }

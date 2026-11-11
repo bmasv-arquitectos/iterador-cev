@@ -1,0 +1,302 @@
+# ---------------------------------------------------------------------------
+# Mapa de celdas: ficha oficial PBTD v2.2 <-> Excel MASTER.
+#
+# Dos mitades bien separadas:
+#   - Las secciones de NIVEL SUPERIOR describen la ficha oficial (donde se
+#     escribe cada dato). Todas tienen 'filas' y 'columnas'.
+#   - La seccion 'master:' describe el Excel de entrada (de donde se lee).
+#     Ahi las columnas se referencian por NOMBRE DE ENCABEZADO, para poder
+#     reordenar el MASTER sin romper nada.
+#
+# OJO al editar: si una clave de 'master:' se pega sin indentar, queda a nivel
+# superior y PISA a la de la ficha sin que YAML avise. Ese es el origen del
+# error "falta la clave 'filas'".
+# ---------------------------------------------------------------------------
+
+version_plantilla: "2.2"
+hoja: "CEV-CEVE"
+celda_version: "E24"
+
+identificacion:
+  unidad: "E13"               # 6.- Identificacion de la vivienda a evaluar
+  dormitorios: "E11"          # 5.- Dormitorios de la vivienda
+
+# 2.- Dimensiones: una fila por nivel de la vivienda.
+dimensiones:
+  filas: [52, 53, 54]
+  columnas:
+    area: "D"
+    altura: "E"               # altura libre (cielo a piso), NO piso a piso
+
+# 3.1.- Muros (16 filas)
+muros:
+  filas: [66, 81]
+  columnas:
+    tipo: "D"                 # material; "Muro Adiabatico" para medianeros
+    azimut: "E"
+    area: "H"                 # area NETA: el motor no descuenta los vanos
+    p01: "K"
+    p02: "L"
+    p03: "M"
+
+# Puentes termicos P04 (5 filas). Una fila por muro que declare P04; el
+# material y el azimut se heredan del muro. La columna F (orientacion) la
+# calcula la ficha a partir del azimut.
+puentes_p04:
+  filas: [87, 91]
+  columnas:
+    muro: "D"
+    azimut: "E"
+    elemento_perpendicular: "G"
+    aislacion: "H"
+    longitud: "I"
+
+# Puertas (3 filas). Se leen de cada hoja de unidad del MASTER.
+puertas:
+  filas: [96, 98]
+  columnas:
+    tipo: "D"
+    azimut: "E"
+    categoria_infiltraciones: "H"
+    alto: "K"
+    ancho: "L"
+    fav1_d: "P"
+    fav1_l: "Q"
+    fav2i_p: "R"
+    fav2i_s: "S"
+    fav2d_p: "T"
+    fav2d_s: "U"
+    fav3_e: "V"
+    fav3_t: "W"
+    fav3_b: "X"
+
+# Ventanas (20 filas). FAV 3: el angulo de las lamas va en X (b, horizontales)
+# o en Y (a, verticales).
+ventanas:
+  filas: [103, 122]
+  columnas:
+    tipo: "D"
+    azimut: "E"
+    elemento: "G"             # material del muro que la aloja
+    cierre: "H"
+    posicion: "I"
+    aislacion_retorno: "J"
+    alto: "K"
+    ancho: "L"
+    categoria_marco: "M"
+    tipo_marco: "N"
+    fav1_d: "P"
+    fav1_l: "Q"
+    fav2i_p: "R"
+    fav2i_s: "S"
+    fav2d_p: "T"
+    fav2d_s: "U"
+    fav3_e: "V"
+    fav3_t: "W"
+    fav3_b: "X"
+    fav3_a: "Y"
+
+# Obstrucciones del entorno (FAR): 8 orientaciones x 8 filas.
+# La columna "a" es la que se decrementa por piso y dispara el borrado.
+obstrucciones:
+  filas_por_grupo: 8
+  grupos:
+    - {orientacion: "N",  fila_inicio: 127, azimut: "G125", division: "E", a: "F", b: "G", d: "H"}
+    - {orientacion: "E",  fila_inicio: 127, azimut: "L125", division: "J", a: "K", b: "L", d: "M"}
+    - {orientacion: "S",  fila_inicio: 127, azimut: "Q125", division: "O", a: "P", b: "Q", d: "R"}
+    - {orientacion: "O",  fila_inicio: 127, azimut: "V125", division: "T", a: "U", b: "V", d: "W"}
+    - {orientacion: "NE", fila_inicio: 139, azimut: "G137", division: "E", a: "F", b: "G", d: "H"}
+    - {orientacion: "SE", fila_inicio: 139, azimut: "L137", division: "J", a: "K", b: "L", d: "M"}
+    - {orientacion: "SO", fila_inicio: 139, azimut: "Q137", division: "O", a: "P", b: "Q", d: "R"}
+    - {orientacion: "NO", fila_inicio: 139, azimut: "V137", division: "T", a: "U", b: "V", d: "W"}
+
+techos:
+  filas: [150, 154]
+  columnas:
+    tipo: "D"
+    densidad: "F"
+    area: "G"
+    camaras_aire: "K"
+    tipo_cubierta: "L"
+
+pisos:
+  filas: [158, 161]
+  columnas:
+    tipo: "D"
+    densidad: "F"
+    area: "G"
+    perimetro_terreno: "K"
+    ventilado: "L"
+
+# ---------------------------------------------------------------------------
+# LECTURA DEL MASTER
+# ---------------------------------------------------------------------------
+master:
+  hoja_proyecto: "Proyecto"
+  hoja_indice: "Área"
+
+  # El MASTER declara el area BRUTA de cada muro y el script le resta los
+  # vanos de sus ventanas. El motor no descuenta nada: si se entrega el area
+  # bruta, la superficie de las ventanas se cuenta dos veces.
+  restar_ventanas: true
+
+  proyecto:
+    claves_obligatorias:
+      - "Altura piso a piso [m]"
+  # Etapa de iteracion: combinaciones de envolvente a probar antes de la
+  # calificacion final.
+  iteraciones:
+    hoja: "Iteraciones"
+    fila_encabezado: 1
+    columna_nombre: "A"
+    familias:
+      Muros: "muros"
+      Techos: "techos"
+      Pisos: "pisos"
+      Vidrios: "vidrios"
+      Marcos: "marcos"
+
+  indice:
+    unidad: "Departamento"
+    piso: "Piso"              # opcional: si falta, se deduce del numero
+    plantilla: "Plantilla"
+    dormitorios: "Dormitorios"
+    perimetro_terreno: "Perímetro terreno"
+    carpeta: "Carpeta"        # opcional: agrupador de la salida
+    # Opcional, solo departamentos: "Si" en las unidades cuyo cielo da a la
+    # techumbre. Su P03 cielo se traspasa a P01. Vacio = no se toca nada.
+    cielo_p01: "Cielo a P01"
+
+  # Niveles de la vivienda -> filas 52-54 de la ficha. Se usan las columnas
+  # que existan; una casa de un piso solo necesita la primera.
+  niveles:
+    - {area: "Área piso 1", altura: "Altura piso 1"}
+    - {area: "Área piso 2", altura: "Altura piso 2"}
+    - {area: "Área piso 3", altura: "Altura piso 3"}
+  # Compatibilidad con departamentos: si no hay ninguna columna de nivel.
+  area_simple: "Área"
+
+  # Tabla de envolventes horizontales de la hoja Proyecto. Cada fila es una
+  # fila de la ficha; el area sale de la columna indicada de la hoja indice.
+  horizontales:
+    fila_encabezado: 34
+    nombre: "A"
+    columna_area: "B"
+    material: "C"
+    densidad: "D"
+    tipo: "E"                 # tipo de cubierta / piso ventilado
+    extra: "F"                # camaras de aire (techos)
+    perimetro: "G"            # "Si" en la fila que toca el terreno
+
+  muros:
+    fila_encabezado: 3
+    tipo: "Material"
+    azimut: "Azimut"
+    area: "Área"              # BRUTA, con vanos: el script los descuenta
+    p01: "P01"
+    p02: "P02"
+    p03: "P03"                # exacto: no debe capturar "P03 muro"
+    p03_cielo: "P03 cielo"    # parte del P03 que pasa a P01 bajo techumbre
+    p04: "P04"
+    p04_elemento: "P04 elemento"
+    p04_aislacion: "P04 aislación"
+
+  ventanas:
+    fila_encabezado: 21
+    tipo: "Material"          # 1a ocurrencia: material de la ventana
+    tipo_ocurrencia: 1
+    elemento: "Material"      # 2a ocurrencia: material del muro que la aloja
+    elemento_ocurrencia: 2
+    azimut: "Azimut"
+    cierre: "Cierre ventana"
+    posicion: "Posición"
+    alto: "Alto"
+    ancho: "Ancho"
+    fav_col_inicio: "L"       # D, L, P, S, P, S, E, T, b (9 columnas)
+    muro: "Muro"              # muro que aloja la ventana
+
+  # Puertas de cada hoja de unidad (hasta 3). La tabla se ubica buscando el
+  # encabezado ancla, porque su fila depende de cuantos muros y ventanas haya.
+  puertas:
+    ancla: "Tipo Puerta"
+    tipo: "Tipo Puerta"
+    azimut: "Azimut"
+    alto: "Alto"
+    ancho: "Ancho"
+    muro: "Muro"
+    categoria: "Categoría para Infiltraciones"
+
+  far:
+    hoja: "FAR"
+    fila_inicio: 3
+    filas_por_unidad: 8
+    fila_azimut: 1
+    unidad: "A"
+    grupos:
+      - {orientacion: "N", division: "B", a: "C", b: "D", d: "E", azimut: "D"}
+      - {orientacion: "E", division: "G", a: "H", b: "I", d: "J", azimut: "I"}
+      - {orientacion: "S", division: "L", a: "M", b: "N", d: "O", azimut: "N"}
+      - {orientacion: "O", division: "Q", a: "R", b: "S", d: "T", azimut: "S"}
+
+# ---------------------------------------------------------------------------
+# Catalogo de materiales: hoja "Materiales" del MASTER -> "3. Tablas
+# Envolvente" de la ficha. Los bloques son espejo: misma forma, desplazados
+# +1 columna, con las filas de fabrica de la ficha ya descontadas.
+# ---------------------------------------------------------------------------
+catalogo:
+  hoja_master: "Materiales"
+  hoja_ficha: "3. Tablas Envolvente"
+  desplazamiento_columnas: 1
+  bloques:
+    - {nombre: "Puertas", master: 3,  ficha: 18, filas: 6,  cols: "A:G", ficha_todas: [12, 23]}
+    - {nombre: "Vidrios", master: 12, ficha: 32, filas: 11, cols: "A:D", ficha_todas: [27, 42]}
+    - {nombre: "Marcos",  master: 26, ficha: 50, filas: 8,  cols: "A:D", ficha_todas: [46, 57]}
+    - {nombre: "Muros",   master: 37, ficha: 62, filas: 14, cols: "A:G", ficha_todas: [61, 75]}
+    - {nombre: "Techos",  master: 54, ficha: 80, filas: 3,  cols: "A:G", ficha_todas: [79, 82]}
+    - {nombre: "Pisos",   master: 61, ficha: 88, filas: 4,  cols: "A:L", ficha_todas: [87, 91]}
+  columnas_ficha: {nombre: "B", abreviatura: "C"}
+  familias:
+    muros:   {bloque: "Muros",   columna: "B"}
+    techos:  {bloque: "Techos",  columna: "B"}
+    pisos:   {bloque: "Pisos",   columna: "B"}
+    vidrios: {bloque: "Vidrios", columna: "B"}
+    marcos:  {bloque: "Marcos",  columna: "B"}
+
+# 1.2 Descripcion de la envolvente. Cada opcion se arma concatenando nombre y
+# transmitancia, asi que hay que RECALCULAR despues de escribir las tablas:
+# antes de eso las opciones nuevas todavia no existen.
+paquetes:
+  "Muro principal":     {celda: "E33", lista: "Texto_Muros",   bloque: "Muros"}
+  "Muro secundario":    {celda: "E34", lista: "Texto_Muros",   bloque: "Muros"}
+  "Piso principal":     {celda: "E35", lista: "Texto_Pisos",   bloque: "Pisos"}
+  "Techo principal":    {celda: "E36", lista: "Texto_Techos",  bloque: "Techos"}
+  "Techo secundario":   {celda: "E37", lista: "Texto_Techos",  bloque: "Techos"}
+  "Ventana principal":  {celda: "E38", lista: "Texto_Vidrios", bloque: "Vidrios"}
+  "Ventana secundaria": {celda: "E39", lista: "Texto_Vidrios", bloque: "Vidrios"}
+  "Marco principal":    {celda: "O38", lista: "Texto_Marcos",  bloque: "Marcos"}
+  "Marco secundario":   {celda: "O39", lista: "Texto_Marcos",  bloque: "Marcos"}
+  "Puerta principal":   {celda: "E40", lista: "Texto_Puertas", bloque: "Puertas"}
+
+# Datos constantes que van de la hoja Proyecto a la portada de la ficha.
+# Los null no son celda unica: se repiten en cada fila de ventana.
+proyecto_a_ficha:
+  "Tipo de Calificación": "E7"
+  "Región": "E8"
+  "Comuna": "E9"
+  "Zona Térmica Proyecto": "E10"
+  "Nombre del proyecto": "E14"
+  "Dirección de la vivienda": "E15"
+  "Tipo de vivienda": "E16"
+  "Rol vivienda": "E19"
+  "Evaluador energético": "E20"
+  "Rol registro evaluador": "E21"
+  "RUT Evaluador": "E22"
+  "Caso interno Evaluador": "E25"
+  "Iteración Evaluador": "E26"
+  "Solicitado por": "E28"
+  "RUT Mandante": "E29"
+  "Sistema de calefacción": "E44"
+  "Sistema de agua caliente sanitaria": "E45"
+  "Ventana: Aislación con/sin retorno": null
+  "Ventana: Categoría para PT y Infilt": null
+  "Ventana: Tipo marco": null

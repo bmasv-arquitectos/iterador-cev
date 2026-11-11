@@ -1,0 +1,378 @@
+# ---------------------------------------------------------------------------
+# Comunas, regiones y zonas termicas. FUENTE UNICA del iterador.
+#
+# Region y comuna: textos EXACTOS de la ficha 01 v2.2 ('0. Tablas referencia'
+# U12:V357), en su mismo orden. Se escriben tal cual en CEV-CEVE!E8 y E9.
+#   Ojo: "Isla\u00a0\u00a0de Pascua" y "Pedro\u00a0Aguirre Cerda" llevan espacios
+#   duros (U+00A0) en la ficha; aqui van escapados igual.
+# Zonas: las que ofrece la ficha (AK:AM -> CEV-CEVE!L9:N9).
+# Condiciones de meridiano/altitud: Manual CEV 2025.08.18, Anexo F (solo para
+# ayudar al estudiante a elegir; la ficha no las trae).
+# Formato: comuna con una zona -> zona. Comuna con varias -> lista de
+# [zona, meridiano, altitud MSNM].
+# Antartica: el Manual dice POLAR, la ficha dice I -> se usa I.
+# ---------------------------------------------------------------------------
+fuente: "Ficha 01 PBTD v2.2 (comunas, regiones, zonas) + Manual CEV 2025.08.18 Anexo F (condiciones)"
+regiones:
+  "Región_de_Arica_y_de_Parinacota":
+    Arica: [[A, "-", "< 1.100"], [B, "-", "1.100 ≤ altitud < 3.000"], [H, "-", "≥ 3.000"]]
+    Camarones: [[A, "-", "< 1.100"], [B, "-", "1.100 ≤ altitud < 3.000"], [H, "-", "≥ 3.000"]]
+    General Lagos: [[H, "-", "≥ 3.000"]]
+    Putre: [[H, "-", "≥ 3.000"]]
+  "Región_de_Tarapacá":
+    Alto Hospicio: A
+    Camiña: [[B, "-", "1.100 ≤ altitud < 3.000"], [H, "-", "≥ 3.000"]]
+    Colchane: H
+    Huara: [[A, "-", "< 1.100"], [B, "-", "1.100 ≤ altitud < 3.000"], [H, "-", "≥ 3.000"]]
+    Iquique: A
+    Pica: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Pozo Almonte: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+  "Región_de_Antofagasta":
+    Antofagasta: [[A, "≥ 70°", "-"], [B, "< 70°", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Calama: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    María Elena: B
+    Mejillones: A
+    Ollagüe: H
+    San Pedro de Atacama: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Sierra Gorda: B
+    Taltal: [[A, "≥ 70°", "-"], [B, "< 70°", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Tocopilla: A
+  "Región_de_Atacama":
+    Alto del Carmen: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Caldera: A
+    Chañaral: A
+    Copiapó: [[A, "> 70° 44'", "-"], [B, "≤ 70° 44'", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Diego de Almagro: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Freirina: A
+    Huasco: A
+    Tierra Amarilla: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Vallenar: B
+  "Región_de_Coquimbo":
+    Andacollo: B
+    Canela: C
+    Combarbalá: [[B, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Coquimbo: C
+    Illapel: [[B, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    La Higuera: [[C, "> 71°", "-"], [B, "≤ 71°", "-"]]
+    La Serena: [[C, "> 71°", "-"], [B, "≤ 71°", "-"]]
+    Los Vilos: C
+    Monte Patria: [[B, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Ovalle: [[C, "> 71° 15'", "-"], [B, "≤ 71° 15'", "-"]]
+    Paiguano: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Punitaqui: B
+    Río Hurtado: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+    Salamanca: [[B, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Vicuña: [[B, "-", "< 3.000"], [H, "-", "≥ 3.000"]]
+  "Región_de_Valparaíso":
+    Algarrobo: C
+    Cabildo: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Calera: D
+    Calle Larga: D
+    Cartagena: C
+    Casablanca: C
+    Catemu: D
+    Concón: C
+    El Quisco: C
+    El Tabo: C
+    Hijuelas: D
+    "Isla\u00a0\u00a0de Pascua": A
+    Juan Fernández: C
+    La Cruz: D
+    La Ligua: [[C, "> 71° 15'", "-"], [D, "≤ 71° 15'", "-"]]
+    Limache: D
+    Llaillay: D
+    Los Andes: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Nogales: D
+    Olmué: D
+    Panquehue: D
+    Papudo: C
+    Petorca: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Puchuncaví: C
+    Putaendo: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Quillota: D
+    Quilpué: D
+    Quintero: C
+    Rinconada: D
+    San Antonio: C
+    San Esteban: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    San Felipe: D
+    Santa María: D
+    Santo Domingo: C
+    Valparaíso: C
+    Villa Alemana: D
+    Viña del Mar: C
+    Zapallar: C
+  "Región_Metropolitana_de_Santiago":
+    Alhué: D
+    Buin: D
+    Calera de Tango: D
+    Cerrillos: D
+    Cerro Navia: D
+    Colina: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Conchalí: D
+    Curacaví: D
+    El Bosque: D
+    El Monte: D
+    Estación Central: D
+    Huechuraba: D
+    Independencia: D
+    Isla de Maipo: D
+    La Cisterna: D
+    La Florida: D
+    La Granja: D
+    La Pintana: D
+    La Reina: D
+    Lampa: D
+    Las Condes: D
+    Lo Barnechea: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    Lo Espejo: D
+    Lo Prado: D
+    Macul: D
+    Maipú: D
+    María Pinto: D
+    Melipilla: D
+    Ñuñoa: D
+    Padre Hurtado: D
+    Paine: D
+    "Pedro\u00a0Aguirre Cerda": D
+    Peñaflor: D
+    Peñalolén: D
+    Pirque: D
+    Providencia: D
+    Pudahuel: D
+    Puente Alto: D
+    Quilicura: D
+    Quinta Normal: D
+    Recoleta: D
+    Renca: D
+    San Bernardo: D
+    San Joaquín: D
+    San José de Maipo: [[D, "-", "< 2.000"], [H, "-", "≥ 2.000"]]
+    San Miguel: D
+    San Pedro: D
+    San Ramón: D
+    Santiago: D
+    Talagante: D
+    Tiltil: D
+    Vitacura: D
+  "Región_de_OHiggins":
+    Chépica: D
+    Chimbarongo: D
+    Codegua: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Coinco: D
+    Coltauco: D
+    Doñihue: D
+    Graneros: D
+    La Estrella: D
+    Las Cabras: D
+    Litueche: C
+    Lolol: D
+    Machalí: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Malloa: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Marchihue: D
+    Mostazal: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Nancagua: D
+    Navidad: C
+    Olivar: D
+    Palmilla: D
+    Paredones: C
+    Peralillo: D
+    Peumo: D
+    Pichidegua: D
+    Pichilemu: C
+    Placilla: D
+    Pumanque: D
+    Quinta de Tilcoco: D
+    Rancagua: D
+    Rengo: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Requínoa: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    San Fernando: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    San Vicente: D
+    Santa Cruz: D
+  "Región_de_Maule":
+    Cauquenes: E
+    Chanco: E
+    Colbún: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Constitución: E
+    Curepto: E
+    Curicó: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Empedrado: E
+    Hualañé: D
+    Licantén: C
+    Linares: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Longaví: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Maule: D
+    Molina: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Parral: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Pelarco: D
+    Pelluhue: E
+    Pencahue: D
+    Rauco: D
+    Retiro: D
+    Río Claro: D
+    Romeral: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Sagrada Familia: D
+    San Clemente: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    San Javier: D
+    San Rafael: D
+    Talca: D
+    Teno: [[D, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Vichuquén: C
+    Villa Alegre: D
+    Yerbas Buenas: D
+  "Región_de_Ñuble":
+    Bulnes: F
+    Chillán: F
+    Chillán Viejo: F
+    Cobquecura: E
+    Coelemu: E
+    Coihueco: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    El Carmen: F
+    Ninhue: F
+    Ñiquén: F
+    Pemuco: F
+    Pinto: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Portezuelo: F
+    Quillón: F
+    Quirihue: E
+    Ránquil: F
+    San Carlos: F
+    San Fabián: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    San Ignacio: F
+    San Nicolás: F
+    Treguaco: E
+    Yungay: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+  "Región_de_Biobío":
+    Alto Biobío: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Antuco: [[F, "-", "< 1.000"], [H, "-", "> 1.000"]]
+    Arauco: E
+    Cabrero: F
+    Cañete: E
+    Chiguayante: E
+    Concepción: E
+    Contulmo: E
+    Coronel: E
+    Curanilahue: E
+    Florida: F
+    Hualpén: E
+    Hualqui: E
+    Laja: F
+    Lebu: E
+    Los Álamos: E
+    Los Ángeles: F
+    Lota: E
+    Mulchén: F
+    Nacimiento: F
+    Negrete: F
+    Penco: E
+    Quilaco: F
+    Quilleco: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    San Pedro de la Paz: E
+    San Rosendo: F
+    Santa Bárbara: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Santa Juana: E
+    Talcahuano: E
+    Tirúa: E
+    Tomé: E
+    Tucapel: [[F, "-", "< 1.000"], [H, "-", "≥ 1.000"]]
+    Yumbel: F
+  "Región_de_Araucanía":
+    Angol: F
+    Carahue: E
+    Cholchol: F
+    Collipulli: F
+    Cunco: F
+    Curacautín: F
+    Curarrehue: H
+    Ercilla: F
+    Freire: F
+    Galvarino: F
+    Gorbea: F
+    Lautaro: F
+    Loncoche: F
+    Lonquimay: H
+    Los Sauces: F
+    Lumaco: F
+    Melipeuco: H
+    Nueva Imperial: F
+    Padre Las Casas: F
+    Perquenco: F
+    Pitrufquén: F
+    Pucón: H
+    Purén: F
+    Renaico: F
+    Saavedra: E
+    Temuco: F
+    Teodoro Schmidt: E
+    Toltén: E
+    Traiguén: F
+    Victoria: F
+    Vilcún: F
+    Villarrica: F
+  "Región_de_Los_Ríos":
+    Corral: G
+    Futrono: F
+    La Unión: [[G, "> 73° 15'", "-"], [F, "≤ 73° 15'", "-"]]
+    Lago Ranco: F
+    Lanco: F
+    Los Lagos: F
+    Máfil: G
+    Mariquina: G
+    Paillaco: F
+    Panguipulli: F
+    Río Bueno: F
+    Valdivia: G
+  "Región_de_Los_Lagos":
+    Ancud: G
+    Calbuco: G
+    Castro: G
+    Chaitén: G
+    Chonchi: G
+    Cochamó: G
+    Curaco de Vélez: G
+    Dalcahue: G
+    Fresia: G
+    Frutillar: G
+    Futaleufú: I
+    Hualaihué: G
+    Llanquihue: G
+    Los Muermos: G
+    Maullín: G
+    Osorno: G
+    Palena: I
+    Puerto Montt: G
+    Puerto Octay: G
+    Puerto Varas: G
+    Puqueldón: G
+    Purranque: G
+    Puyehue: G
+    Queilén: G
+    Quellón: G
+    Quemchi: G
+    Quinchao: G
+    Río Negro: G
+    San Juan de la Costa: G
+    San Pablo: G
+  "Región_de_Aisén":
+    Aysén: I
+    Chile Chico: I
+    Cisnes: I
+    Cochrane: I
+    Coyhaique: I
+    Guaitecas: I
+    Lago Verde: I
+    O'Higgins: I
+    Río Ibáñez: I
+    Tortel: I
+  "Región_de_Magallanes_y_Antártica_Chilena":
+    Cabo de Hornos: I
+    Antártica: I
+    Laguna Blanca: I
+    Natales: I
+    Porvenir: I
+    Primavera: I
+    Punta Arenas: I
+    Río Verde: I
+    San Gregorio: I
+    Timaukel: I
+    Torres del Paine: I

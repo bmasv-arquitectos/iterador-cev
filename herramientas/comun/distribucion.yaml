@@ -1,0 +1,68 @@
+# ---------------------------------------------------------------------------
+# Distribucion del Iterador CEV (herramientas/comun/app_config.py). Solo textos y
+# opciones: el codigo no cambia. La variable de entorno ITERADOR_MODO reemplaza el
+# modo (en el servidor web: ITERADOR_MODO=web).
+# ---------------------------------------------------------------------------
+version: 3
+app:
+  nombre: Iterador CEV
+  version: "0.1 beta"
+  version_numero: "0.1.0"     # la misma, solo numeros (propiedades del .exe y del instalador)
+  modo: escritorio            # escritorio | web
+  motores:                    # motores que ofrece la interfaz en cada modo (los de Excel quedan fuera)
+    escritorio: [python]
+    web: [python]
+  titulo_barra: "{nombre} · {version}"   # rotulo de la barra superior
+  aviso:
+    titulo: Uso referencial
+    texto: >-
+      Uso referencial. No tiene validez legal ni reemplaza la calificación
+      oficial, que solo puede emitir un evaluador acreditado con las
+      herramientas del MINVU.
+    boton: Entiendo
+    al_abrir:                 # una_vez | cada_vez | nunca
+      escritorio: una_vez
+      web: cada_vez
+    repetir_por_version: true # en escritorio se vuelve a mostrar con cada version nueva
+    sufijo_archivo: " REFERENCIAL"          # al final del nombre de la ficha 01 exportada
+    pie_reporte: "{nombre} {version}"       # antes del numero de pagina del reporte PDF
+    en_resultados: true                     # el aviso bajo la etiqueta del panel Resultados
+  creditos:
+    boton: Acerca de
+    autores: "B+V Arquitectos · Lucas Vásquez Gimeno · Eloy Bahamondes Estévez"
+    editor: "B+V Arquitectos"  # editor del programa (Windows: Agregar o quitar programas)
+    url: ""                   # pagina de la oficina (vacio: no se muestra)
+    licencia: "Licencia AGPL-3.0"
+    plantilla: >-
+      La plantilla PBTD (ficha 01) pertenece al MINVU y no está cubierta por la
+      licencia AGPL-3.0.
+    cerrar: Cerrar
+  # Icono (comun/icono_app.py): tres flechas escalonadas con colores de la escala CEV, de
+  # arriba hacia abajo. Medidas como fraccion del lado del icono. Se usa en la ventana
+  # (favicon), en el .exe y en el instalador (se rehace al armar: distribucion/preparar.py).
+  icono:
+    colores: ["#4C8A3F", "#ECD32C", "#A2282D"]   # A, D y G de app_cev/config/etiqueta.yaml
+    largos: [0.62, 0.81, 1.0]                    # largo de cada flecha (fraccion del ancho util)
+    alto_barra: 0.24
+    separacion: 0.08
+    punta: 0.13
+    margen: 0.04
+    tamanos: [16, 20, 24, 32, 40, 48, 64, 128, 256]   # tamanos dentro del .ico [px]
+  # Ventana propia (pywebview sobre WebView2) en vez del navegador, solo en escritorio.
+  # nativa: auto (solo en el programa empaquetado) | true | false. La variable
+  # ITERADOR_VENTANA=nativa o navegador la reemplaza (para probar sin empaquetar).
+  # En la ventana propia, cada descarga abre el «Guardar como» de Windows y el archivo
+  # queda solo donde el usuario elige.
+  ventana:
+    nativa: auto
+    ancho: 1440
+    alto: 900
+    maximizada: true
+    depurar: false            # true: herramientas de desarrollador (clic derecho > Inspeccionar)
+    textos:
+      guardado: "Guardado en {ruta}"
+      error_dialogo: "No se pudo abrir «Guardar como»: {error}"
+      error_guardar: "No se pudo guardar: {error}"
+      todos: "Todos los archivos (*.*)"
+  web:
+    mostrar_carpeta: false    # en la web no se muestra la carpeta del servidor donde quedo el calculo

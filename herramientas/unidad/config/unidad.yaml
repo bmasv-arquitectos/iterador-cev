@@ -1,0 +1,18 @@
+# ---------------------------------------------------------------------------
+# Geometria de la unidad (herramientas/unidad). Todo lo modificable vive aqui.
+# El ajuste del dibujo (angulos de 10 grados, largos de 10 cm) es del editor:
+# config/editor.yaml, snap:.
+# ---------------------------------------------------------------------------
+version: 2
+
+dibujo:
+  precision_m: 0.01          # los puntos se guardan redondeados a 1 cm
+  angulo_obligatorio: null   # null: cualquier angulo. Un numero (ej. 15) exige lados en multiplos de el
+  tolerancia_angulo: 0.05    # [grados] al revisar angulo_obligatorio
+  tolerancia_m: 0.005        # contacto tabique-muro y coberturas entre niveles
+  tolerancia_area_m2: 0.0001 # areas menores se ignoran (piso o techo expuesto)
+
+limites:
+  altura: [2.0, 6.0]         # altura libre [m], igual para todos los niveles
+  lado_min: 0.10             # [m]
+  tramo_min: 0.05            # [m]

@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# Soluciones constructivas por defecto del recinto (decision de Lucas).
+# Base fija + EPS al espesor minimo que cumple el U maximo de la zona.
+# Nombres de material = columna "nombre" de datos/normativa/materiales_nch853.csv
+# ---------------------------------------------------------------------------
+version: 1
+uso: residencial                 # clave de U_MAX_POR_USO (Tabla 1)
+
+aislante:
+  material: "Poliestireno expandido ρ=15"
+  paso_mm: 10                    # PENDIENTE: paso comercial de las planchas
+  minimo_mm: 0
+
+elementos:
+  muro:
+    exigencia: muro              # clave de la tabla de U max
+    flujo: horizontal            # NCh853 Tabla 7
+    base:
+      - {material: "Hormigón armado (normal)", espesor: 0.20}
+  techo:
+    exigencia: techumbre
+    flujo: ascendente
+    base:
+      - {material: "Hormigón armado (normal)", espesor: 0.15}
+  piso_ventilado:
+    exigencia: piso_ventilado
+    flujo: descendente
+    base:
+      - {material: "Hormigón armado (normal)", espesor: 0.15}
+  piso_terreno:
+    # Radier contra terreno: sin exigencia de U (Tabla 13 solo exige el
+    # aislante del sobrecimiento). INFERIDO: mismo EPS que piso ventilado.
+    exigencia: null
+    copiar_espesor_de: piso_ventilado
+    flujo: descendente
+    base:
+      - {material: "Hormigón armado (normal)", espesor: 0.15}
+
+# PENDIENTE: textos de las listas Texto_Muros / Texto_Techos / Texto_Pisos de
+# la ficha 01 con que se escribira cada solucion.

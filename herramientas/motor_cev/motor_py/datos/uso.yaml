@@ -1,0 +1,1867 @@
+# Tablas extraidas de la plantilla oficial PBTD v2.2. No editar a mano.
+origen:
+  plantilla: 01.-PBTD-Datos-de-Arquitectura-v2.2.xlsm
+  sha256: e8ebd98a5d8c0a87ec4e684028a0b21f40496c85ca75dc40b4ae60304945fd26
+  fecha: '2026-11-02T20:17:51'
+  generado_por: extraccion desde la plantilla oficial
+avisos:
+- 0. Tablas referencia!CQ11 es formula (=+CONCATENATE(CN11,CO11,CP11)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ12 es formula (=+CONCATENATE(CN12,CO12,CP12)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ13 es formula (=+CONCATENATE(CN13,CO13,CP13)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ14 es formula (=+CONCATENATE(CN14,CO14,CP14)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ15 es formula (=+CONCATENATE(CN15,CO15,CP15)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ16 es formula (=+CONCATENATE(CN16,CO16,CP16)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ17 es formula (=+CONCATENATE(CN17,CO17,CP17)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ18 es formula (=+CONCATENATE(CN18,CO18,CP18)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ19 es formula (=+CONCATENATE(CN19,CO19,CP19)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ20 es formula (=+CONCATENATE(CN20,CO20,CP20)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ21 es formula (=+CONCATENATE(CN21,CO21,CP21)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ22 es formula (=+CONCATENATE(CN22,CO22,CP22)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ23 es formula (=+CONCATENATE(CN23,CO23,CP23)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ24 es formula (=+CONCATENATE(CN24,CO24,CP24)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ25 es formula (=+CONCATENATE(CN25,CO25,CP25)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ26 es formula (=+CONCATENATE(CN26,CO26,CP26)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ27 es formula (=+CONCATENATE(CN27,CO27,CP27)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ28 es formula (=+CONCATENATE(CN28,CO28,CP28)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ29 es formula (=+CONCATENATE(CN29,CO29,CP29)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ30 es formula (=+CONCATENATE(CN30,CO30,CP30)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ31 es formula (=+CONCATENATE(CN31,CO31,CP31)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ32 es formula (=+CONCATENATE(CN32,CO32,CP32)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ33 es formula (=+CONCATENATE(CN33,CO33,CP33)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ34 es formula (=+CONCATENATE(CN34,CO34,CP34)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ35 es formula (=+CONCATENATE(CN35,CO35,CP35)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ36 es formula (=+CONCATENATE(CN36,CO36,CP36)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ37 es formula (=+CONCATENATE(CN37,CO37,CP37)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ38 es formula (=+CONCATENATE(CN38,CO38,CP38)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ39 es formula (=+CONCATENATE(CN39,CO39,CP39)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ40 es formula (=+CONCATENATE(CN40,CO40,CP40)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ41 es formula (=+CONCATENATE(CN41,CO41,CP41)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ42 es formula (=+CONCATENATE(CN42,CO42,CP42)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ43 es formula (=+CONCATENATE(CN43,CO43,CP43)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ44 es formula (=+CONCATENATE(CN44,CO44,CP44)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ45 es formula (=+CONCATENATE(CN45,CO45,CP45)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ46 es formula (=+CONCATENATE(CN46,CO46,CP46)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ47 es formula (=+CONCATENATE(CN47,CO47,CP47)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ48 es formula (=+CONCATENATE(CN48,CO48,CP48)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ49 es formula (=+CONCATENATE(CN49,CO49,CP49)); se usa el valor guardado en el archivo
+- 0. Tablas referencia!CQ50 es formula (=+CONCATENATE(CN50,CO50,CP50)); se usa el valor guardado en el archivo
+formulas_distintas: []
+perfil:
+  constantes:
+    aporte_personas_dia:
+      valor: 98.4
+      celda: '''0. Perfil de Uso''!D4'
+      nota: rotulo C4 'Aporte personas' [W] (D)
+    aporte_personas_noche:
+      valor: 82
+      celda: '''0. Perfil de Uso''!E4'
+      nota: rotulo C4 'Aporte personas' [W] (E)
+    ilum_dia:
+      valor: 1.5
+      celda: '''0. Perfil de Uso''!D6'
+      nota: rotulo C6 'Aporte Iluminacion' (D)
+    ilum_noche:
+      valor: 0
+      celda: '''0. Perfil de Uso''!E6'
+      nota: rotulo C6 'Aporte Iluminacion' (E)
+    equipos:
+      valor: 0
+      celda: '''0. Perfil de Uso''!D7'
+      nota: rotulo C7 'Aporte Equipos' [W/m2]
+    cargas_variables:
+      valor: Si
+      celda: '''0. Perfil de Uso''!D8'
+      nota: rotulo C8 'Cargas internas Variables'
+    vent_usuario:
+      valor: 2.5
+      celda: '''0. Perfil de Uso''!K3'
+      nota: rotulo J3 'Vent por usuarios' [l/s]
+    vent_superficie:
+      valor: 0.3
+      celda: '''0. Perfil de Uso''!K4'
+      nota: rotulo J4 'Vent por superficie'
+    t_apertura:
+      valor: 15
+      celda: '''0. Perfil de Uso''!K6'
+      nota: rotulo J6 'Temperatura minima de apertura de ventanas nocturna' [C]
+    vent_extra:
+      valor: 3
+      celda: '''0. Perfil de Uso''!K7'
+      nota: rotulo J7 'Se suma la siguiente tasa de ventilacion' [RAH]
+    factor_base:
+      valor: 1.35
+      celda: '''0. Perfil de Uso''!Q3'
+      nota: rotulo P3 'Factor para caso base'
+  filas:
+    mes_num:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 4
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 5
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 6
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 7
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 8
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 9
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 10
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 11
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    - 12
+    mes:
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Enero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Febrero
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Marzo
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Abril
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Mayo
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Junio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Julio
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Agosto
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Septiembre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Octubre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Noviembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    - Diciembre
+    hora:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+perfil4:
+  horas:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  o:
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  ab:
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  - null
+  equipos:
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  - - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  chile_horas:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  chile:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 0.8
+  - 0.8
+  - 0.4
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.3
+  - 0.5
+  - 0.5
+  - 0.75
+  - 0.9
+  - 1
+  - 1
+  - 1
+  lux_min:
+    valor: 250
+    celda: '''4. Perfil de Uso''!U7'
+    nota: rotulo P7 'Lux interior min' [Lux]
+  meses_infiltracion:
+  - Enero
+  - Febrero
+  - Marzo
+  - Abril
+  - Mayo
+  - Junio
+  - Julio
+  - Agosto
+  - Septiembre
+  - Octubre
+  - Noviembre
+  - Diciembre
+  noche_usuarios:
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - true
+  - true
+  noche_iluminacion:
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - true
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - true
+  - true
+infiltraciones:
+  constantes:
+    cat_intermedio:
+      valor: Intermedio
+      celda: '''0. Infiltraciones''!C9'
+      nota: categoria de masa de muros (C8 viene de CEV-CEVE!BW65)
+    cat_pesado:
+      valor: Pesado
+      celda: '''0. Infiltraciones''!C10'
+      nota: categoria de masa de muros
+    k4_invierno:
+      valor: 1
+      celda: '''0. Infiltraciones''!C25'
+      nota: rotulo B25 'K4 invierno'
+    k50_a_rah:
+      valor: 20.8
+      celda: '''0. Infiltraciones''!C27'
+      nota: rotulo B27 'K 50Pa a RAH normal'
+  meses:
+  - Enero
+  - Febrero
+  - Marzo
+  - Abril
+  - Mayo
+  - Junio
+  - Julio
+  - Agosto
+  - Septiembre
+  - Octubre
+  - Noviembre
+  - Diciembre
+ventilacion:
+  meses:
+  - Enero
+  - Febrero
+  - Marzo
+  - Abril
+  - Mayo
+  - Junio
+  - Julio
+  - Agosto
+  - Septiembre
+  - Octubre
+  - Noviembre
+  - Diciembre
+tablas:
+  ventilacion:
+    celda: '''0. Tablas referencia''!EQ12:ER17'
+    filas:
+    - - NO existen ventiladores para la ventilación de la vivienda ni control automatico
+      - 1
+    - - Tiene sistema de ventilación natural controlada automaticamente y sin ventiladores
+      - 2
+    - - Extractor en vivienda unifamiliar sin ductos
+      - 3
+    - - Extractor en vivienda unifamiliar con ductos
+      - 4
+    - - Extractor colectivo en edificio
+      - 5
+    - - Recuperador de calor
+      - 6
+  pi_materialidad:
+    celda: '''0. Tablas referencia''!CG11:CH17'
+    filas:
+    - - Pesado
+      - 6.4
+    - - Intermedio
+      - 7.2
+    - - Intermedio-Madera
+      - 11.8
+    - - Intermedio-Liviano-Otro
+      - 11.8
+    - - Madera
+      - 20.4
+    - - Liviano-Otro
+      - 14
+    - - Otro
+      - 21
+  pi_ventanas:
+    celda: '''0. Tablas referencia''!CQ11:CR50'
+    filas:
+    - - MetalicoAbatirVS
+      - 5.6
+    - - MetalicoCorrederaVS
+      - 46
+    - - MetalicoGuillotinaVS
+      - 29
+    - - MetalicoProyectanteVS
+      - 13
+    - - MetalicoFijaVS
+      - 10
+    - - MetalicoAbatirDVH
+      - 5.6
+    - - MetalicoCorrederaDVH
+      - 46
+    - - MetalicoGuillotinaDVH
+      - 29
+    - - MetalicoProyectanteDVH
+      - 13
+    - - MetalicoFijaDVH
+      - 10
+    - - PVCAbatirVS
+      - 5.6
+    - - PVCCorrederaVS
+      - 46
+    - - PVCGuillotinaVS
+      - 29
+    - - PVCProyectanteVS
+      - 13
+    - - PVCFijaVS
+      - 10
+    - - PVCAbatirDVH
+      - 5.6
+    - - PVCCorrederaDVH
+      - 46
+    - - PVCGuillotinaDVH
+      - 29
+    - - PVCProyectanteDVH
+      - 13
+    - - PVCFijaDVH
+      - 10
+    - - MaderaAbatirVS
+      - 87
+    - - MaderaCorrederaVS
+      - 87
+    - - MaderaGuillotinaVS
+      - 87
+    - - MaderaProyectanteVS
+      - 87
+    - - MaderaFijaVS
+      - 87
+    - - MaderaAbatirDVH
+      - 4
+    - - MaderaCorrederaDVH
+      - 4
+    - - MaderaGuillotinaDVH
+      - 4
+    - - MaderaProyectanteDVH
+      - 4
+    - - MaderaFijaDVH
+      - 4
+    - - FierroAbatirVS
+      - 87
+    - - FierroCorrederaVS
+      - 87
+    - - FierroGuillotinaVS
+      - 87
+    - - FierroProyectanteVS
+      - 87
+    - - FierroFijaVS
+      - 87
+    - - FierroAbatirDVH
+      - 120
+    - - FierroCorrederaDVH
+      - 120
+    - - FierroGuillotinaDVH
+      - 120
+    - - FierroProyectanteDVH
+      - 120
+    - - FierroFijaDVH
+      - 120
+  pi_puertas:
+    celda: '''0. Tablas referencia''!CT11:CU13'
+    filas:
+    - - Madera Liviana
+      - 140
+    - - Madera Solida
+      - 120
+    - - Aluminio
+      - 118
+  k_zona:
+    celda: '''0. Tablas referencia''!CW11:DA20'
+    filas:
+    - - A
+      - 0.91
+      - 1.1
+      - 1.23
+      - 0.78
+    - - B
+      - 1.07
+      - 1.16
+      - 1.16
+      - 0.76
+    - - C
+      - 1
+      - 1.18
+      - 1.24
+      - 0.62
+    - - D
+      - 1
+      - 1.18
+      - 1.24
+      - 0.62
+    - - E
+      - 1
+      - 1.18
+      - 1.24
+      - 0.62
+    - - F
+      - 1
+      - 1.18
+      - 1.24
+      - 0.62
+    - - G
+      - 1
+      - 1.18
+      - 1.24
+      - 0.62
+    - - H
+      - 1.36
+      - 1.15
+      - 1.16
+      - 0.7
+    - - I
+      - 1.91
+      - 1.19
+      - 1.04
+      - 0.83
+    - - J
+      - 1.75
+      - 1.09
+      - 1.07
+      - 0.84
+nombres:
+  base_mat_marcos:
+    hoja: 0. Datos Arq Motor
+    celda: D73
+    rango: D73
+    valor: Metalico
+    formula: ='0. Infiltraciones'!$H$50
+  base_cierre_ventanas:
+    hoja: 0. Datos Arq Motor
+    celda: D74
+    rango: D74
+    valor: Corredera
+    formula: ='0. Infiltraciones'!$H$55
+  base_vidrio_infiltraciones:
+    hoja: 0. Datos Arq Motor
+    celda: D76
+    rango: D76
+    valor: '#DIV/0!'
+    formula: =IF(base_U_vidrio=5.8,"VS","DVH")
+  base_mat_puertas:
+    hoja: 0. Datos Arq Motor
+    celda: D75
+    rango: D75
+    valor: Madera Liviana
+    formula: ='0. Infiltraciones'!$H$44
+  base_infiltracion_variable:
+    hoja: 0. Datos Arq Motor
+    celda: D109
+    rango: D109
+    valor: 'No'
+    formula: null
+  base_U_vidrio:
+    hoja: 0. Datos Arq Motor
+    celda: D64
+    rango: D64
+    valor: '#DIV/0!'
+    formula: =IF(porcentaje_ventanas_2007>VLOOKUP(Zona_2007,Tabla_3_OGUC,2,FALSE),IF(porcentaje_ventanas_2007>VLOOKUP(Zona_2007,Tabla_3_OGUC,3,FALSE),2.4,3.6),5.8)
+formulas:
+  '''0. Perfil de Uso''!D1':
+    igual: true
+  '''0. Perfil de Uso''!D2':
+    igual: true
+  '''0. Perfil de Uso''!Q2':
+    igual: true
+  '''0. Perfil de Uso''!D5':
+    igual: true
+  '''0. Perfil de Uso''!E5':
+    igual: true
+  '''0. Perfil de Uso''!K5':
+    igual: true
+  '''0. Perfil de Uso''!E11':
+    igual: true
+  '''0. Perfil de Uso''!F11':
+    igual: true
+  '''0. Perfil de Uso''!G11':
+    igual: true
+  '''0. Perfil de Uso''!H11':
+    igual: true
+  '''0. Perfil de Uso''!J11':
+    igual: true
+  '''0. Perfil de Uso''!K11':
+    igual: true
+  '''0. Perfil de Uso''!L11':
+    igual: true
+  '''0. Perfil de Uso''!M11':
+    igual: true
+  '''0. Perfil de Uso''!N11':
+    igual: true
+  '''4. Perfil de Uso''!H6':
+    igual: true
+  '''4. Perfil de Uso''!H7':
+    igual: true
+  '''4. Perfil de Uso''!U5':
+    igual: true
+  '''4. Perfil de Uso''!U6':
+    igual: true
+  '''4. Perfil de Uso''!AS10':
+    igual: true
+  '''4. Perfil de Uso''!AS12':
+    igual: true
+  '''4. Perfil de Uso''!D12':
+    igual: true
+  '''4. Perfil de Uso''!P12':
+    igual: true
+  '''4. Perfil de Uso''!P19':
+    igual: true
+  '''0. Ventilacion''!C5':
+    igual: true
+  '''0. Ventilacion''!M5':
+    igual: true
+  '''0. Ventilacion''!C7':
+    igual: true
+  '''0. Ventilacion''!C21':
+    igual: true
+  '''0. Ventilacion''!C22':
+    igual: true
+  '''0. Ventilacion''!C24':
+    igual: true
+  '''0. Ventilacion''!C25':
+    igual: true
+  '''0. Ventilacion''!C26':
+    igual: true
+  '''0. Ventilacion''!B29':
+    igual: true
+  '''0. Ventilacion''!B30':
+    igual: true
+  '''0. Ventilacion''!B31':
+    igual: true
+  '''0. Ventilacion''!B32':
+    igual: true
+  '''0. Ventilacion''!B33':
+    igual: true
+  '''0. Ventilacion''!B34':
+    igual: true
+  '''0. Ventilacion''!L32':
+    igual: true
+  '''0. Ventilacion''!L33':
+    igual: true
+  '''0. Ventilacion''!L34':
+    igual: true
+  '''0. Ventilacion''!D29':
+    igual: true
+  '''0. Ventilacion''!E29':
+    igual: true
+  '''0. Ventilacion''!C43':
+    igual: true
+  '''0. Ventilacion''!C44':
+    igual: true
+  '''0. Ventilacion''!W2':
+    igual: true
+  '''0. Infiltraciones''!L3':
+    igual: true
+  '''0. Infiltraciones''!N3':
+    igual: true
+  '''0. Infiltraciones''!O3':
+    igual: true
+  '''0. Infiltraciones''!P3':
+    igual: true
+  '''0. Infiltraciones''!H6':
+    igual: true
+  '''0. Infiltraciones''!I6':
+    igual: true
+  '''0. Infiltraciones''!J6':
+    igual: true
+  '''0. Infiltraciones''!K6':
+    igual: true
+  '''0. Infiltraciones''!L6':
+    igual: true
+  '''0. Infiltraciones''!N6':
+    igual: true
+  '''0. Infiltraciones''!O6':
+    igual: true
+  '''0. Infiltraciones''!B8':
+    igual: true
+  '''0. Infiltraciones''!D8':
+    igual: true
+  '''0. Infiltraciones''!C11':
+    igual: true
+  '''0. Infiltraciones''!D11':
+    igual: true
+  '''0. Infiltraciones''!C12':
+    igual: true
+  '''0. Infiltraciones''!D12':
+    igual: true
+  '''0. Infiltraciones''!D15':
+    igual: true
+  '''0. Infiltraciones''!D16':
+    igual: true
+  '''0. Infiltraciones''!D19':
+    igual: true
+  '''0. Infiltraciones''!C22':
+    igual: true
+  '''0. Infiltraciones''!C23':
+    igual: true
+  '''0. Infiltraciones''!C24':
+    igual: true
+  '''0. Infiltraciones''!C26':
+    igual: true
+  '''0. Infiltraciones''!K28':
+    igual: true
+  '''0. Infiltraciones''!L28':
+    igual: true
+  '''0. Infiltraciones''!N28':
+    igual: true
+  '''0. Infiltraciones''!D29':
+    igual: true
+  '''0. Datos Clima Motor''!K10':
+    igual: true
+  '''0. Datos Clima Motor''!K34':
+    igual: true
+  '''0. Datos Clima Motor''!X10':
+    igual: true
+  '''0. Datos Clima Motor''!X33':
+    igual: true
+  '''0. Datos Clima Motor''!X34':
+    igual: true
+  '''0. Datos Clima Motor''!X42':
+    igual: true
+  '''0. Datos Clima Motor''!E23':
+    igual: true

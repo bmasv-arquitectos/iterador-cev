@@ -1,0 +1,3156 @@
+# Tablas extraidas de la plantilla oficial PBTD v2.2. No editar a mano.
+origen:
+  plantilla: 01.-PBTD-Datos-de-Arquitectura-v2.2.xlsm
+  sha256: e8ebd98a5d8c0a87ec4e684028a0b21f40496c85ca75dc40b4ae60304945fd26
+  fecha: '2026-11-03T15:13:46'
+  generado_por: extraccion desde la plantilla oficial
+avisos: []
+formulas_distintas: []
+formulas:
+  '''0.FAV Calculos''!BH17':
+    igual: true
+  '''0.FAV Calculos''!BK17':
+    igual: true
+  '''0.FAV Calculos''!BP21':
+    igual: true
+  '''0.FAV Calculos''!BP23':
+    igual: true
+  '''0.FAV Calculos''!BH24':
+    igual: true
+  '''0.FAV Calculos''!BH105':
+    igual: true
+  '''0.FAV Calculos''!BM100':
+    igual: true
+  '''0.FAV Calculos''!BH25':
+    igual: true
+  '''0.FAV Calculos''!BH52':
+    igual: true
+  '''0.FAV Calculos''!BH110':
+    igual: true
+  '''0.FAV Calculos''!BM28':
+    igual: true
+  '''0.FAV Calculos''!BR27':
+    igual: true
+  '''0.FAV Calculos''!BH30':
+    igual: true
+  '''0.FAV Calculos''!CY14':
+    igual: true
+  '''0.FAV Calculos''!BW14':
+    igual: true
+  '''0.FAV Calculos''!CK14':
+    igual: true
+  '''0.FAV Calculos''!GE14':
+    igual: true
+  '''0.FAV Calculos''!FQ14':
+    igual: true
+  '''0.FAV Calculos''!HB14':
+    igual: true
+  '''0.FAV Calculos''!HO14':
+    igual: true
+  '''0.FAV Calculos''!JE14':
+    igual: true
+  '''0.FAV Calculos''!JT14':
+    igual: true
+  '''0.FAV Calculos''!JS14':
+    igual: true
+  '''CEV-CEVE''!AM96':
+    igual: true
+  '''CEV-CEVE''!CF96':
+    igual: true
+far_formulas:
+- M148
+- N148
+- M149
+- N149
+- M150
+- N150
+- M151
+- N151
+- M152
+- N152
+- M153
+- N153
+- M154
+- N154
+- M155
+- N155
+nombres:
+  base_factor_FS:
+    hoja: 0. Datos Arq Motor
+    celda: D95
+    rango: D95
+    valor: 1
+    formula: null
+  base_FS_vidrio:
+    hoja: 0. Datos Arq Motor
+    celda: D65
+    rango: D65
+    valor: '#DIV/0!'
+    formula: =IF(D64=5.8,0.87,0.77)
+  Area_total_opaca_orientacion:
+    hoja: CEV-CEVE
+    celda: D169
+    rango: D169:D178
+    valor: 0
+    formula: =+SUMIFS($H$66:$H$81,$CI$66:$CI$81,C169)+SUMIFS($AJ$96:$AJ$98,$CI$96:$CI$98,C169)+SUMIFS($AG$103:$AG$122,$CI$103:$CI$122,C169)+SUM(G150:G154)
+  Area_total_traslucida_orientacion:
+    hoja: CEV-CEVE
+    celda: H169
+    rango: H169:H177
+    valor: 0
+    formula: =+SUMIFS($AF$96:$AF$98,$CI$96:$CI$98,C169)+SUMIFS($AF$103:$AF$122,$CI$103:$CI$122,C169)
+constantes:
+  JF4: 95
+  GE11: 1
+  HB11: R͞
+  AF12: Radiación directa horizontal [W/m2]
+  AT12: Radiación Difusa horizontal [W/m2]
+  GE12: Rad máx
+  HB12: 207
+  AF13: Enero
+  AG13: Febrero
+  AH13: Marzo
+  AI13: Abril
+  AJ13: Mayo
+  AK13: Junio
+  AL13: Julio
+  AM13: Agosto
+  AN13: Septiembre
+  AO13: Octubre
+  AP13: Noviembre
+  AQ13: Diciembre
+  AT13: Enero
+  AU13: Febrero
+  AV13: Marzo
+  AW13: Abril
+  AX13: Mayo
+  AY13: Junio
+  AZ13: Julio
+  BA13: Agosto
+  BB13: Septiembre
+  BC13: Octubre
+  BD13: Noviembre
+  BE13: Diciembre
+  GE13: Enero
+  GF13: Febrero
+  GG13: Marzo
+  GH13: Abril
+  GI13: Mayo
+  GJ13: Junio
+  GK13: Julio
+  GL13: Agosto
+  GM13: Septiembre
+  GN13: Octubre
+  GO13: Noviembre
+  GP13: Diciembre
+  HB13: Enero
+  HC13: Febrero
+  HD13: Marzo
+  HE13: Abril
+  HF13: Mayo
+  HG13: Junio
+  HH13: Julio
+  HI13: Agosto
+  HJ13: Septiembre
+  HK13: Octubre
+  HL13: Noviembre
+  HM13: Diciembre
+  JF13: Febrero
+  AE14: 0
+  AS14: 0
+  BG14: 1
+  BV14: 0
+  GZ14: b
+  HA14: N
+  IB14: 0
+  JR14: Puerta 1
+  AE15: 1
+  AS15: 1
+  BV15: 1
+  GZ15: c
+  HA15: NE
+  IB15: 1
+  JR15: Puerta 2
+  AE16: 2
+  AS16: 2
+  BG16: Puerta 1
+  BV16: 2
+  GZ16: d
+  HA16: E
+  IB16: 2
+  JR16: Puerta 3
+  AE17: 3
+  AS17: 3
+  BG17: Orientación
+  BV17: 3
+  GZ17: e
+  HA17: SE
+  IB17: 3
+  JR17: Ventana 1
+  AE18: 4
+  AS18: 4
+  BG18: Visión i
+  BV18: 4
+  GZ18: f
+  HA18: S
+  IB18: 4
+  JR18: Ventana 2
+  AE19: 5
+  AS19: 5
+  BG19: Visión f
+  BV19: 5
+  GZ19: g
+  HA19: SO
+  IB19: 5
+  JR19: Ventana 3
+  AE20: 6
+  AS20: 6
+  BG20: Centro izq
+  BV20: 6
+  GZ20: h
+  HA20: O
+  IB20: 6
+  JR20: Ventana 4
+  AE21: 7
+  AS21: 7
+  BG21: Centro der
+  BV21: 7
+  GZ21: i
+  HA21: 'NO'
+  IB21: 7
+  JR21: Ventana 5
+  AE22: 8
+  AS22: 8
+  BG22: Orientacion real
+  BV22: 8
+  HA22: Horiz
+  HB22: 1
+  HC22: 1
+  HD22: 1
+  HE22: 1
+  HF22: 1
+  HG22: 1
+  HH22: 1
+  HI22: 1
+  HJ22: 1
+  HK22: 1
+  HL22: 1
+  HM22: 1
+  IB22: 8
+  JR22: Ventana 6
+  AE23: 9
+  AS23: 9
+  BV23: 9
+  IB23: 9
+  JR23: Ventana 7
+  AE24: 10
+  AS24: 10
+  BG24: '% visibilidad difusa (β) por FAV'
+  BV24: 10
+  HA24: ϒ inicial
+  HB24: ϒ final
+  HC24: centro izq
+  HD24: centro ider
+  IB24: 10
+  JR24: Ventana 8
+  AE25: 11
+  AS25: 11
+  BG25: '% visibilidad difusa (β) por FAR'
+  BV25: 11
+  GZ25: N
+  HA25: -90
+  HB25: 90
+  HC25: 0
+  HD25: 0
+  IB25: 11
+  JR25: Ventana 9
+  AE26: 12
+  AS26: 12
+  BG26: '% visibilidad difusa (β) total'
+  BV26: 12
+  GZ26: E
+  HA26: 0
+  HB26: 180
+  HC26: 90
+  HD26: 90
+  IB26: 12
+  JR26: Ventana 10
+  AE27: 13
+  AS27: 13
+  BG27: Área Traslucida [m2]
+  BV27: 13
+  GZ27: O
+  HA27: -180
+  HB27: 0
+  HC27: -90
+  HD27: -90
+  IB27: 13
+  JR27: Ventana 11
+  AE28: 14
+  AS28: 14
+  BG28: Vidrio
+  BH28: VM
+  BV28: 14
+  GZ28: S
+  HA28: 90
+  HB28: -90
+  HC28: 180
+  HD28: -180
+  IB28: 14
+  JR28: Ventana 12
+  AE29: 15
+  AS29: 15
+  BG29: Factor Solar
+  BV29: 15
+  GZ29: NE
+  HA29: -45
+  HB29: 135
+  HC29: 45
+  HD29: 45
+  IB29: 15
+  JR29: Ventana 13
+  AE30: 16
+  AS30: 16
+  BG30: FSM
+  BV30: 16
+  GZ30: 'NO'
+  HA30: -135
+  HB30: 45
+  HC30: -45
+  HD30: -45
+  IB30: 16
+  JR30: Ventana 14
+  AE31: 17
+  AS31: 17
+  BV31: 17
+  GZ31: SE
+  HA31: 45
+  HB31: -135
+  HC31: 135
+  HD31: 135
+  IB31: 17
+  JR31: Ventana 15
+  AE32: 18
+  AS32: 18
+  BV32: 18
+  GZ32: SO
+  HA32: 135
+  HB32: -45
+  HC32: -135
+  HD32: -135
+  IB32: 18
+  JR32: Ventana 16
+  AE33: 19
+  AS33: 19
+  BV33: 19
+  GZ33: Horiz
+  HA33: -90
+  HB33: 90
+  HC33: 0
+  HD33: 0
+  IB33: 19
+  JR33: Ventana 17
+  AE34: 20
+  AS34: 20
+  BV34: 20
+  IB34: 20
+  JR34: Ventana 18
+  AE35: 21
+  AS35: 21
+  BV35: 21
+  IB35: 21
+  JR35: Ventana 19
+  AE36: 22
+  AS36: 22
+  BV36: 22
+  IB36: 22
+  JR36: Ventana 20
+  AE37: 23
+  AS37: 23
+  BV37: 23
+  IB37: 23
+  GE38: 1
+  AF39: Radiación directa horizontal [W/m2]
+  AT39: Radiación Difusa horizontal [W/m2]
+  GE39: Rad máx
+  AF40: Enero
+  AG40: Febrero
+  AH40: Marzo
+  AI40: Abril
+  AJ40: Mayo
+  AK40: Junio
+  AL40: Julio
+  AM40: Agosto
+  AN40: Septiembre
+  AO40: Octubre
+  AP40: Noviembre
+  AQ40: Diciembre
+  AT40: Enero
+  AU40: Febrero
+  AV40: Marzo
+  AW40: Abril
+  AX40: Mayo
+  AY40: Junio
+  AZ40: Julio
+  BA40: Agosto
+  BB40: Septiembre
+  BC40: Octubre
+  BD40: Noviembre
+  BE40: Diciembre
+  BV40: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE40: Enero
+  GF40: Febrero
+  GG40: Marzo
+  GH40: Abril
+  GI40: Mayo
+  GJ40: Junio
+  GK40: Julio
+  GL40: Agosto
+  GM40: Septiembre
+  GN40: Octubre
+  GO40: Noviembre
+  GP40: Diciembre
+  AE41: 0
+  AS41: 0
+  BV41: 0
+  AE42: 1
+  AS42: 1
+  BV42: 1
+  AE43: 2
+  AS43: 2
+  BG43: Puerta 2
+  BV43: 2
+  AE44: 3
+  AS44: 3
+  BG44: Orientación
+  BV44: 3
+  AE45: 4
+  AS45: 4
+  BG45: Visión i
+  BV45: 4
+  AE46: 5
+  AS46: 5
+  BG46: Visión f
+  BV46: 5
+  AE47: 6
+  AS47: 6
+  BG47: Centro izq
+  BV47: 6
+  AE48: 7
+  AS48: 7
+  BG48: Centro der
+  BV48: 7
+  AE49: 8
+  AS49: 8
+  BG49: Orientacion real
+  BV49: 8
+  AE50: 9
+  AS50: 9
+  BV50: 9
+  AE51: 10
+  AS51: 10
+  BG51: '% visibilidad difusa (β) por FAV'
+  BV51: 10
+  AE52: 11
+  AS52: 11
+  BG52: '% visibilidad difusa (β) por FAR'
+  BV52: 11
+  AE53: 12
+  AS53: 12
+  BG53: '% visibilidad difusa (β) total'
+  BV53: 12
+  AE54: 13
+  AS54: 13
+  BG54: Área Traslucida [m2]
+  BV54: 13
+  AE55: 14
+  AS55: 14
+  BG55: Vidrio
+  BH55: VM
+  BV55: 14
+  AE56: 15
+  AS56: 15
+  BG56: Factor Solar
+  BV56: 15
+  AE57: 16
+  AS57: 16
+  BG57: FSM
+  BV57: 16
+  AE58: 17
+  AS58: 17
+  BV58: 17
+  AE59: 18
+  AS59: 18
+  BV59: 18
+  AE60: 19
+  AS60: 19
+  BV60: 19
+  AE61: 20
+  AS61: 20
+  BV61: 20
+  AE62: 21
+  AS62: 21
+  BV62: 21
+  AE63: 22
+  AS63: 22
+  BV63: 22
+  AE64: 23
+  AS64: 23
+  BV64: 23
+  GE65: 1
+  AF66: Radiación directa horizontal [W/m2]
+  AT66: Radiación Difusa horizontal [W/m2]
+  GE66: Rad máx
+  AF67: Enero
+  AG67: Febrero
+  AH67: Marzo
+  AI67: Abril
+  AJ67: Mayo
+  AK67: Junio
+  AL67: Julio
+  AM67: Agosto
+  AN67: Septiembre
+  AO67: Octubre
+  AP67: Noviembre
+  AQ67: Diciembre
+  AT67: Enero
+  AU67: Febrero
+  AV67: Marzo
+  AW67: Abril
+  AX67: Mayo
+  AY67: Junio
+  AZ67: Julio
+  BA67: Agosto
+  BB67: Septiembre
+  BC67: Octubre
+  BD67: Noviembre
+  BE67: Diciembre
+  BV67: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE67: Enero
+  GF67: Febrero
+  GG67: Marzo
+  GH67: Abril
+  GI67: Mayo
+  GJ67: Junio
+  GK67: Julio
+  GL67: Agosto
+  GM67: Septiembre
+  GN67: Octubre
+  GO67: Noviembre
+  GP67: Diciembre
+  AE68: 0
+  AS68: 0
+  BV68: 0
+  AE69: 1
+  AS69: 1
+  BV69: 1
+  AE70: 2
+  AS70: 2
+  BG70: Puerta 3
+  BV70: 2
+  AE71: 3
+  AS71: 3
+  BG71: Orientación
+  BV71: 3
+  AE72: 4
+  AS72: 4
+  BG72: Visión i
+  BV72: 4
+  AE73: 5
+  AS73: 5
+  BG73: Visión f
+  BV73: 5
+  AE74: 6
+  AS74: 6
+  BG74: Centro izq
+  BV74: 6
+  AE75: 7
+  AS75: 7
+  BG75: Centro der
+  BV75: 7
+  AE76: 8
+  AS76: 8
+  BG76: Orientacion real
+  BV76: 8
+  AE77: 9
+  AS77: 9
+  BV77: 9
+  AE78: 10
+  AS78: 10
+  BG78: '% visibilidad difusa (β) por FAV'
+  BV78: 10
+  AE79: 11
+  AS79: 11
+  BG79: '% visibilidad difusa (β) por FAR'
+  BV79: 11
+  AE80: 12
+  AS80: 12
+  BG80: '% visibilidad difusa (β) total'
+  BV80: 12
+  AE81: 13
+  AS81: 13
+  BG81: Área Traslucida [m2]
+  BV81: 13
+  AE82: 14
+  AS82: 14
+  BG82: Vidrio
+  BH82: VM
+  BV82: 14
+  AE83: 15
+  AS83: 15
+  BG83: Factor Solar
+  BV83: 15
+  AE84: 16
+  AS84: 16
+  BG84: FSM
+  BV84: 16
+  AE85: 17
+  AS85: 17
+  BV85: 17
+  AE86: 18
+  AS86: 18
+  BV86: 18
+  AE87: 19
+  AS87: 19
+  BV87: 19
+  AE88: 20
+  AS88: 20
+  BV88: 20
+  AE89: 21
+  AS89: 21
+  BV89: 21
+  AE90: 22
+  AS90: 22
+  BV90: 22
+  AE91: 23
+  AS91: 23
+  BV91: 23
+  GE92: 1
+  AF93: Radiación directa horizontal [W/m2]
+  AT93: Radiación Difusa horizontal [W/m2]
+  GE93: Rad máx
+  AF94: Enero
+  AG94: Febrero
+  AH94: Marzo
+  AI94: Abril
+  AJ94: Mayo
+  AK94: Junio
+  AL94: Julio
+  AM94: Agosto
+  AN94: Septiembre
+  AO94: Octubre
+  AP94: Noviembre
+  AQ94: Diciembre
+  AT94: Enero
+  AU94: Febrero
+  AV94: Marzo
+  AW94: Abril
+  AX94: Mayo
+  AY94: Junio
+  AZ94: Julio
+  BA94: Agosto
+  BB94: Septiembre
+  BC94: Octubre
+  BD94: Noviembre
+  BE94: Diciembre
+  BV94: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE94: Enero
+  GF94: Febrero
+  GG94: Marzo
+  GH94: Abril
+  GI94: Mayo
+  GJ94: Junio
+  GK94: Julio
+  GL94: Agosto
+  GM94: Septiembre
+  GN94: Octubre
+  GO94: Noviembre
+  GP94: Diciembre
+  AE95: 0
+  AS95: 0
+  BG95: 1
+  BV95: 0
+  AE96: 1
+  AS96: 1
+  BV96: 1
+  AE97: 2
+  AS97: 2
+  BV97: 2
+  AE98: 3
+  AS98: 3
+  BG98: Orientación
+  BV98: 3
+  AE99: 4
+  AS99: 4
+  BG99: Visión i
+  BV99: 4
+  AE100: 5
+  AS100: 5
+  BG100: Visión f
+  BV100: 5
+  AE101: 6
+  AS101: 6
+  BG101: Centro izq
+  BV101: 6
+  AE102: 7
+  AS102: 7
+  BG102: Centro der
+  BV102: 7
+  AE103: 8
+  AS103: 8
+  BG103: Orientacion real
+  BV103: 8
+  AE104: 9
+  AS104: 9
+  BV104: 9
+  AE105: 10
+  AS105: 10
+  BG105: '% visibilidad difusa (β) por FAV'
+  BV105: 10
+  AE106: 11
+  AS106: 11
+  BG106: '% visibilidad difusa (β) por FAR'
+  BV106: 11
+  AE107: 12
+  AS107: 12
+  BG107: '% visibilidad difusa (β) total'
+  BV107: 12
+  AE108: 13
+  AS108: 13
+  BG108: Área Traslucida [m2]
+  BV108: 13
+  AE109: 14
+  AS109: 14
+  BG109: Vidrio
+  BV109: 14
+  AE110: 15
+  AS110: 15
+  BG110: Factor Solar
+  BV110: 15
+  AE111: 16
+  AS111: 16
+  BG111: FSM
+  BV111: 16
+  AE112: 17
+  AS112: 17
+  BV112: 17
+  AE113: 18
+  AS113: 18
+  BV113: 18
+  AE114: 19
+  AS114: 19
+  BV114: 19
+  AE115: 20
+  AS115: 20
+  BV115: 20
+  AE116: 21
+  AS116: 21
+  BV116: 21
+  AE117: 22
+  AS117: 22
+  BV117: 22
+  AE118: 23
+  AS118: 23
+  BV118: 23
+  GE119: 1
+  AF120: Radiación directa horizontal [W/m2]
+  AT120: Radiación Difusa horizontal [W/m2]
+  GE120: Rad máx
+  AF121: Enero
+  AG121: Febrero
+  AH121: Marzo
+  AI121: Abril
+  AJ121: Mayo
+  AK121: Junio
+  AL121: Julio
+  AM121: Agosto
+  AN121: Septiembre
+  AO121: Octubre
+  AP121: Noviembre
+  AQ121: Diciembre
+  AT121: Enero
+  AU121: Febrero
+  AV121: Marzo
+  AW121: Abril
+  AX121: Mayo
+  AY121: Junio
+  AZ121: Julio
+  BA121: Agosto
+  BB121: Septiembre
+  BC121: Octubre
+  BD121: Noviembre
+  BE121: Diciembre
+  BV121: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE121: Enero
+  GF121: Febrero
+  GG121: Marzo
+  GH121: Abril
+  GI121: Mayo
+  GJ121: Junio
+  GK121: Julio
+  GL121: Agosto
+  GM121: Septiembre
+  GN121: Octubre
+  GO121: Noviembre
+  GP121: Diciembre
+  AE122: 0
+  AS122: 0
+  BV122: 0
+  AE123: 1
+  AS123: 1
+  BV123: 1
+  AE124: 2
+  AS124: 2
+  BV124: 2
+  AE125: 3
+  AS125: 3
+  BG125: Orientación
+  BV125: 3
+  AE126: 4
+  AS126: 4
+  BG126: Visión i
+  BV126: 4
+  AE127: 5
+  AS127: 5
+  BG127: Visión f
+  BV127: 5
+  AE128: 6
+  AS128: 6
+  BG128: Centro izq
+  BV128: 6
+  AE129: 7
+  AS129: 7
+  BG129: Centro der
+  BV129: 7
+  AE130: 8
+  AS130: 8
+  BG130: Orientacion real
+  BV130: 8
+  AE131: 9
+  AS131: 9
+  BV131: 9
+  AE132: 10
+  AS132: 10
+  BG132: '% visibilidad difusa (β) por FAV'
+  BV132: 10
+  AE133: 11
+  AS133: 11
+  BG133: '% visibilidad difusa (β) por FAR'
+  BV133: 11
+  AE134: 12
+  AS134: 12
+  BG134: '% visibilidad difusa (β) total'
+  BV134: 12
+  AE135: 13
+  AS135: 13
+  BG135: Área Traslucida [m2]
+  BV135: 13
+  AE136: 14
+  AS136: 14
+  BG136: Vidrio
+  BV136: 14
+  AE137: 15
+  AS137: 15
+  BG137: Factor Solar
+  BV137: 15
+  AE138: 16
+  AS138: 16
+  BG138: FSM
+  BV138: 16
+  AE139: 17
+  AS139: 17
+  BV139: 17
+  AE140: 18
+  AS140: 18
+  BV140: 18
+  AE141: 19
+  AS141: 19
+  BV141: 19
+  AE142: 20
+  AS142: 20
+  BV142: 20
+  AE143: 21
+  AS143: 21
+  BV143: 21
+  AE144: 22
+  AS144: 22
+  BV144: 22
+  AE145: 23
+  AS145: 23
+  BV145: 23
+  GE146: 1
+  AF147: Radiación directa horizontal [W/m2]
+  AT147: Radiación Difusa horizontal [W/m2]
+  GE147: Rad máx
+  AF148: Enero
+  AG148: Febrero
+  AH148: Marzo
+  AI148: Abril
+  AJ148: Mayo
+  AK148: Junio
+  AL148: Julio
+  AM148: Agosto
+  AN148: Septiembre
+  AO148: Octubre
+  AP148: Noviembre
+  AQ148: Diciembre
+  AT148: Enero
+  AU148: Febrero
+  AV148: Marzo
+  AW148: Abril
+  AX148: Mayo
+  AY148: Junio
+  AZ148: Julio
+  BA148: Agosto
+  BB148: Septiembre
+  BC148: Octubre
+  BD148: Noviembre
+  BE148: Diciembre
+  BV148: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE148: Enero
+  GF148: Febrero
+  GG148: Marzo
+  GH148: Abril
+  GI148: Mayo
+  GJ148: Junio
+  GK148: Julio
+  GL148: Agosto
+  GM148: Septiembre
+  GN148: Octubre
+  GO148: Noviembre
+  GP148: Diciembre
+  AE149: 0
+  AS149: 0
+  BV149: 0
+  AE150: 1
+  AS150: 1
+  BV150: 1
+  AE151: 2
+  AS151: 2
+  BV151: 2
+  AE152: 3
+  AS152: 3
+  BG152: Orientación
+  BV152: 3
+  AE153: 4
+  AS153: 4
+  BG153: Visión i
+  BV153: 4
+  AE154: 5
+  AS154: 5
+  BG154: Visión f
+  BV154: 5
+  AE155: 6
+  AS155: 6
+  BG155: Centro izq
+  BV155: 6
+  AE156: 7
+  AS156: 7
+  BG156: Centro der
+  BV156: 7
+  AE157: 8
+  AS157: 8
+  BG157: Orientacion real
+  BV157: 8
+  AE158: 9
+  AS158: 9
+  BV158: 9
+  AE159: 10
+  AS159: 10
+  BG159: '% visibilidad difusa (β) por FAV'
+  BV159: 10
+  AE160: 11
+  AS160: 11
+  BG160: '% visibilidad difusa (β) por FAR'
+  BV160: 11
+  AE161: 12
+  AS161: 12
+  BG161: '% visibilidad difusa (β) total'
+  BV161: 12
+  AE162: 13
+  AS162: 13
+  BG162: Área Traslucida [m2]
+  BV162: 13
+  AE163: 14
+  AS163: 14
+  BG163: Vidrio
+  BV163: 14
+  AE164: 15
+  AS164: 15
+  BG164: Factor Solar
+  BV164: 15
+  AE165: 16
+  AS165: 16
+  BG165: FSM
+  BV165: 16
+  AE166: 17
+  AS166: 17
+  BV166: 17
+  AE167: 18
+  AS167: 18
+  BV167: 18
+  AE168: 19
+  AS168: 19
+  BV168: 19
+  AE169: 20
+  AS169: 20
+  BV169: 20
+  AE170: 21
+  AS170: 21
+  BV170: 21
+  AE171: 22
+  AS171: 22
+  BV171: 22
+  AE172: 23
+  AS172: 23
+  BV172: 23
+  GE173: 1
+  AF174: Radiación directa horizontal [W/m2]
+  AT174: Radiación Difusa horizontal [W/m2]
+  GE174: Rad máx
+  AF175: Enero
+  AG175: Febrero
+  AH175: Marzo
+  AI175: Abril
+  AJ175: Mayo
+  AK175: Junio
+  AL175: Julio
+  AM175: Agosto
+  AN175: Septiembre
+  AO175: Octubre
+  AP175: Noviembre
+  AQ175: Diciembre
+  AT175: Enero
+  AU175: Febrero
+  AV175: Marzo
+  AW175: Abril
+  AX175: Mayo
+  AY175: Junio
+  AZ175: Julio
+  BA175: Agosto
+  BB175: Septiembre
+  BC175: Octubre
+  BD175: Noviembre
+  BE175: Diciembre
+  BV175: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE175: Enero
+  GF175: Febrero
+  GG175: Marzo
+  GH175: Abril
+  GI175: Mayo
+  GJ175: Junio
+  GK175: Julio
+  GL175: Agosto
+  GM175: Septiembre
+  GN175: Octubre
+  GO175: Noviembre
+  GP175: Diciembre
+  AE176: 0
+  AS176: 0
+  BV176: 0
+  AE177: 1
+  AS177: 1
+  BV177: 1
+  AE178: 2
+  AS178: 2
+  BV178: 2
+  AE179: 3
+  AS179: 3
+  BG179: Orientación
+  BV179: 3
+  AE180: 4
+  AS180: 4
+  BG180: Visión i
+  BV180: 4
+  AE181: 5
+  AS181: 5
+  BG181: Visión f
+  BV181: 5
+  AE182: 6
+  AS182: 6
+  BG182: Centro izq
+  BV182: 6
+  AE183: 7
+  AS183: 7
+  BG183: Centro der
+  BV183: 7
+  AE184: 8
+  AS184: 8
+  BG184: Orientacion real
+  BV184: 8
+  AE185: 9
+  AS185: 9
+  BV185: 9
+  AE186: 10
+  AS186: 10
+  BG186: '% visibilidad difusa (β) por FAV'
+  BV186: 10
+  AE187: 11
+  AS187: 11
+  BG187: '% visibilidad difusa (β) por FAR'
+  BV187: 11
+  AE188: 12
+  AS188: 12
+  BG188: '% visibilidad difusa (β) total'
+  BV188: 12
+  AE189: 13
+  AS189: 13
+  BG189: Área Traslucida [m2]
+  BV189: 13
+  AE190: 14
+  AS190: 14
+  BG190: Vidrio
+  BV190: 14
+  AE191: 15
+  AS191: 15
+  BG191: Factor Solar
+  BV191: 15
+  AE192: 16
+  AS192: 16
+  BG192: FSM
+  BV192: 16
+  AE193: 17
+  AS193: 17
+  BV193: 17
+  AE194: 18
+  AS194: 18
+  BV194: 18
+  AE195: 19
+  AS195: 19
+  BV195: 19
+  AE196: 20
+  AS196: 20
+  BV196: 20
+  AE197: 21
+  AS197: 21
+  BV197: 21
+  AE198: 22
+  AS198: 22
+  BV198: 22
+  AE199: 23
+  AS199: 23
+  BV199: 23
+  GE200: 1
+  AF201: Radiación directa horizontal [W/m2]
+  AT201: Radiación Difusa horizontal [W/m2]
+  GE201: Rad máx
+  AF202: Enero
+  AG202: Febrero
+  AH202: Marzo
+  AI202: Abril
+  AJ202: Mayo
+  AK202: Junio
+  AL202: Julio
+  AM202: Agosto
+  AN202: Septiembre
+  AO202: Octubre
+  AP202: Noviembre
+  AQ202: Diciembre
+  AT202: Enero
+  AU202: Febrero
+  AV202: Marzo
+  AW202: Abril
+  AX202: Mayo
+  AY202: Junio
+  AZ202: Julio
+  BA202: Agosto
+  BB202: Septiembre
+  BC202: Octubre
+  BD202: Noviembre
+  BE202: Diciembre
+  BV202: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE202: Enero
+  GF202: Febrero
+  GG202: Marzo
+  GH202: Abril
+  GI202: Mayo
+  GJ202: Junio
+  GK202: Julio
+  GL202: Agosto
+  GM202: Septiembre
+  GN202: Octubre
+  GO202: Noviembre
+  GP202: Diciembre
+  AE203: 0
+  AS203: 0
+  BV203: 0
+  AE204: 1
+  AS204: 1
+  BV204: 1
+  AE205: 2
+  AS205: 2
+  BV205: 2
+  AE206: 3
+  AS206: 3
+  BG206: Orientación
+  BV206: 3
+  AE207: 4
+  AS207: 4
+  BG207: Visión i
+  BV207: 4
+  AE208: 5
+  AS208: 5
+  BG208: Visión f
+  BV208: 5
+  AE209: 6
+  AS209: 6
+  BG209: Centro izq
+  BV209: 6
+  AE210: 7
+  AS210: 7
+  BG210: Centro der
+  BV210: 7
+  AE211: 8
+  AS211: 8
+  BG211: Orientacion real
+  BV211: 8
+  AE212: 9
+  AS212: 9
+  BV212: 9
+  AE213: 10
+  AS213: 10
+  BG213: '% visibilidad difusa (β) por FAV'
+  BV213: 10
+  AE214: 11
+  AS214: 11
+  BG214: '% visibilidad difusa (β) por FAR'
+  BV214: 11
+  AE215: 12
+  AS215: 12
+  BG215: '% visibilidad difusa (β) total'
+  BV215: 12
+  AE216: 13
+  AS216: 13
+  BG216: Área Traslucida [m2]
+  BV216: 13
+  AE217: 14
+  AS217: 14
+  BG217: Vidrio
+  BV217: 14
+  AE218: 15
+  AS218: 15
+  BG218: Factor Solar
+  BV218: 15
+  AE219: 16
+  AS219: 16
+  BG219: FSM
+  BV219: 16
+  AE220: 17
+  AS220: 17
+  BV220: 17
+  AE221: 18
+  AS221: 18
+  BV221: 18
+  AE222: 19
+  AS222: 19
+  BV222: 19
+  AE223: 20
+  AS223: 20
+  BV223: 20
+  AE224: 21
+  AS224: 21
+  BV224: 21
+  AE225: 22
+  AS225: 22
+  BV225: 22
+  AE226: 23
+  AS226: 23
+  BV226: 23
+  GE227: 1
+  AF228: Radiación directa horizontal [W/m2]
+  AT228: Radiación Difusa horizontal [W/m2]
+  GE228: Rad máx
+  AF229: Enero
+  AG229: Febrero
+  AH229: Marzo
+  AI229: Abril
+  AJ229: Mayo
+  AK229: Junio
+  AL229: Julio
+  AM229: Agosto
+  AN229: Septiembre
+  AO229: Octubre
+  AP229: Noviembre
+  AQ229: Diciembre
+  AT229: Enero
+  AU229: Febrero
+  AV229: Marzo
+  AW229: Abril
+  AX229: Mayo
+  AY229: Junio
+  AZ229: Julio
+  BA229: Agosto
+  BB229: Septiembre
+  BC229: Octubre
+  BD229: Noviembre
+  BE229: Diciembre
+  BV229: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE229: Enero
+  GF229: Febrero
+  GG229: Marzo
+  GH229: Abril
+  GI229: Mayo
+  GJ229: Junio
+  GK229: Julio
+  GL229: Agosto
+  GM229: Septiembre
+  GN229: Octubre
+  GO229: Noviembre
+  GP229: Diciembre
+  AE230: 0
+  AS230: 0
+  BV230: 0
+  AE231: 1
+  AS231: 1
+  BV231: 1
+  AE232: 2
+  AS232: 2
+  BV232: 2
+  AE233: 3
+  AS233: 3
+  BG233: Orientación
+  BV233: 3
+  AE234: 4
+  AS234: 4
+  BG234: Visión i
+  BV234: 4
+  AE235: 5
+  AS235: 5
+  BG235: Visión f
+  BV235: 5
+  AE236: 6
+  AS236: 6
+  BG236: Centro izq
+  BV236: 6
+  AE237: 7
+  AS237: 7
+  BG237: Centro der
+  BV237: 7
+  AE238: 8
+  AS238: 8
+  BG238: Orientacion real
+  BV238: 8
+  AE239: 9
+  AS239: 9
+  BV239: 9
+  AE240: 10
+  AS240: 10
+  BG240: '% visibilidad difusa (β) por FAV'
+  BV240: 10
+  AE241: 11
+  AS241: 11
+  BG241: '% visibilidad difusa (β) por FAR'
+  BV241: 11
+  AE242: 12
+  AS242: 12
+  BG242: '% visibilidad difusa (β) total'
+  BV242: 12
+  AE243: 13
+  AS243: 13
+  BG243: Área Traslucida [m2]
+  BV243: 13
+  AE244: 14
+  AS244: 14
+  BG244: Vidrio
+  BV244: 14
+  AE245: 15
+  AS245: 15
+  BG245: Factor Solar
+  BV245: 15
+  AE246: 16
+  AS246: 16
+  BG246: FSM
+  BV246: 16
+  AE247: 17
+  AS247: 17
+  BV247: 17
+  AE248: 18
+  AS248: 18
+  BV248: 18
+  AE249: 19
+  AS249: 19
+  BV249: 19
+  AE250: 20
+  AS250: 20
+  BV250: 20
+  AE251: 21
+  AS251: 21
+  BV251: 21
+  AE252: 22
+  AS252: 22
+  BV252: 22
+  AE253: 23
+  AS253: 23
+  BV253: 23
+  GE254: 1
+  AF255: Radiación directa horizontal [W/m2]
+  AT255: Radiación Difusa horizontal [W/m2]
+  GE255: Rad máx
+  AF256: Enero
+  AG256: Febrero
+  AH256: Marzo
+  AI256: Abril
+  AJ256: Mayo
+  AK256: Junio
+  AL256: Julio
+  AM256: Agosto
+  AN256: Septiembre
+  AO256: Octubre
+  AP256: Noviembre
+  AQ256: Diciembre
+  AT256: Enero
+  AU256: Febrero
+  AV256: Marzo
+  AW256: Abril
+  AX256: Mayo
+  AY256: Junio
+  AZ256: Julio
+  BA256: Agosto
+  BB256: Septiembre
+  BC256: Octubre
+  BD256: Noviembre
+  BE256: Diciembre
+  BV256: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE256: Enero
+  GF256: Febrero
+  GG256: Marzo
+  GH256: Abril
+  GI256: Mayo
+  GJ256: Junio
+  GK256: Julio
+  GL256: Agosto
+  GM256: Septiembre
+  GN256: Octubre
+  GO256: Noviembre
+  GP256: Diciembre
+  AE257: 0
+  AS257: 0
+  BV257: 0
+  AE258: 1
+  AS258: 1
+  BV258: 1
+  AE259: 2
+  AS259: 2
+  BV259: 2
+  AE260: 3
+  AS260: 3
+  BG260: Orientación
+  BV260: 3
+  AE261: 4
+  AS261: 4
+  BG261: Visión i
+  BV261: 4
+  AE262: 5
+  AS262: 5
+  BG262: Visión f
+  BV262: 5
+  AE263: 6
+  AS263: 6
+  BG263: Centro izq
+  BV263: 6
+  AE264: 7
+  AS264: 7
+  BG264: Centro der
+  BV264: 7
+  AE265: 8
+  AS265: 8
+  BG265: Orientacion real
+  BV265: 8
+  AE266: 9
+  AS266: 9
+  BV266: 9
+  AE267: 10
+  AS267: 10
+  BG267: '% visibilidad difusa (β) por FAV'
+  BV267: 10
+  AE268: 11
+  AS268: 11
+  BG268: '% visibilidad difusa (β) por FAR'
+  BV268: 11
+  AE269: 12
+  AS269: 12
+  BG269: '% visibilidad difusa (β) total'
+  BV269: 12
+  AE270: 13
+  AS270: 13
+  BG270: Área Traslucida [m2]
+  BV270: 13
+  AE271: 14
+  AS271: 14
+  BG271: Vidrio
+  BV271: 14
+  AE272: 15
+  AS272: 15
+  BG272: Factor Solar
+  BV272: 15
+  AE273: 16
+  AS273: 16
+  BG273: FSM
+  BV273: 16
+  AE274: 17
+  AS274: 17
+  BV274: 17
+  AE275: 18
+  AS275: 18
+  BV275: 18
+  AE276: 19
+  AS276: 19
+  BV276: 19
+  AE277: 20
+  AS277: 20
+  BV277: 20
+  AE278: 21
+  AS278: 21
+  BV278: 21
+  AE279: 22
+  AS279: 22
+  BV279: 22
+  AE280: 23
+  AS280: 23
+  BV280: 23
+  GE281: 1
+  AF282: Radiación directa horizontal [W/m2]
+  AT282: Radiación Difusa horizontal [W/m2]
+  GE282: Rad máx
+  AF283: Enero
+  AG283: Febrero
+  AH283: Marzo
+  AI283: Abril
+  AJ283: Mayo
+  AK283: Junio
+  AL283: Julio
+  AM283: Agosto
+  AN283: Septiembre
+  AO283: Octubre
+  AP283: Noviembre
+  AQ283: Diciembre
+  AT283: Enero
+  AU283: Febrero
+  AV283: Marzo
+  AW283: Abril
+  AX283: Mayo
+  AY283: Junio
+  AZ283: Julio
+  BA283: Agosto
+  BB283: Septiembre
+  BC283: Octubre
+  BD283: Noviembre
+  BE283: Diciembre
+  BV283: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE283: Enero
+  GF283: Febrero
+  GG283: Marzo
+  GH283: Abril
+  GI283: Mayo
+  GJ283: Junio
+  GK283: Julio
+  GL283: Agosto
+  GM283: Septiembre
+  GN283: Octubre
+  GO283: Noviembre
+  GP283: Diciembre
+  AE284: 0
+  AS284: 0
+  BV284: 0
+  AE285: 1
+  AS285: 1
+  BV285: 1
+  AE286: 2
+  AS286: 2
+  BV286: 2
+  AE287: 3
+  AS287: 3
+  BG287: Orientación
+  BV287: 3
+  AE288: 4
+  AS288: 4
+  BG288: Visión i
+  BV288: 4
+  AE289: 5
+  AS289: 5
+  BG289: Visión f
+  BV289: 5
+  AE290: 6
+  AS290: 6
+  BG290: Centro izq
+  BV290: 6
+  AE291: 7
+  AS291: 7
+  BG291: Centro der
+  BV291: 7
+  AE292: 8
+  AS292: 8
+  BG292: Orientacion real
+  BV292: 8
+  AE293: 9
+  AS293: 9
+  BV293: 9
+  AE294: 10
+  AS294: 10
+  BG294: '% visibilidad difusa (β) por FAV'
+  BV294: 10
+  AE295: 11
+  AS295: 11
+  BG295: '% visibilidad difusa (β) por FAR'
+  BV295: 11
+  AE296: 12
+  AS296: 12
+  BG296: '% visibilidad difusa (β) total'
+  BV296: 12
+  AE297: 13
+  AS297: 13
+  BG297: Área Traslucida [m2]
+  BV297: 13
+  AE298: 14
+  AS298: 14
+  BG298: Vidrio
+  BV298: 14
+  AE299: 15
+  AS299: 15
+  BG299: Factor Solar
+  BV299: 15
+  AE300: 16
+  AS300: 16
+  BG300: FSM
+  BV300: 16
+  AE301: 17
+  AS301: 17
+  BV301: 17
+  AE302: 18
+  AS302: 18
+  BV302: 18
+  AE303: 19
+  AS303: 19
+  BV303: 19
+  AE304: 20
+  AS304: 20
+  BV304: 20
+  AE305: 21
+  AS305: 21
+  BV305: 21
+  AE306: 22
+  AS306: 22
+  BV306: 22
+  AE307: 23
+  AS307: 23
+  BV307: 23
+  GE308: 1
+  AF309: Radiación directa horizontal [W/m2]
+  AT309: Radiación Difusa horizontal [W/m2]
+  GE309: Rad máx
+  AF310: Enero
+  AG310: Febrero
+  AH310: Marzo
+  AI310: Abril
+  AJ310: Mayo
+  AK310: Junio
+  AL310: Julio
+  AM310: Agosto
+  AN310: Septiembre
+  AO310: Octubre
+  AP310: Noviembre
+  AQ310: Diciembre
+  AT310: Enero
+  AU310: Febrero
+  AV310: Marzo
+  AW310: Abril
+  AX310: Mayo
+  AY310: Junio
+  AZ310: Julio
+  BA310: Agosto
+  BB310: Septiembre
+  BC310: Octubre
+  BD310: Noviembre
+  BE310: Diciembre
+  BV310: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE310: Enero
+  GF310: Febrero
+  GG310: Marzo
+  GH310: Abril
+  GI310: Mayo
+  GJ310: Junio
+  GK310: Julio
+  GL310: Agosto
+  GM310: Septiembre
+  GN310: Octubre
+  GO310: Noviembre
+  GP310: Diciembre
+  AE311: 0
+  AS311: 0
+  BV311: 0
+  AE312: 1
+  AS312: 1
+  BV312: 1
+  AE313: 2
+  AS313: 2
+  BV313: 2
+  AE314: 3
+  AS314: 3
+  BG314: Orientación
+  BV314: 3
+  AE315: 4
+  AS315: 4
+  BG315: Visión i
+  BV315: 4
+  AE316: 5
+  AS316: 5
+  BG316: Visión f
+  BV316: 5
+  AE317: 6
+  AS317: 6
+  BG317: Centro izq
+  BV317: 6
+  AE318: 7
+  AS318: 7
+  BG318: Centro der
+  BV318: 7
+  AE319: 8
+  AS319: 8
+  BG319: Orientacion real
+  BV319: 8
+  AE320: 9
+  AS320: 9
+  BV320: 9
+  AE321: 10
+  AS321: 10
+  BG321: '% visibilidad difusa (β) por FAV'
+  BV321: 10
+  AE322: 11
+  AS322: 11
+  BG322: '% visibilidad difusa (β) por FAR'
+  BV322: 11
+  AE323: 12
+  AS323: 12
+  BG323: '% visibilidad difusa (β) total'
+  BV323: 12
+  AE324: 13
+  AS324: 13
+  BG324: Área Traslucida [m2]
+  BV324: 13
+  AE325: 14
+  AS325: 14
+  BG325: Vidrio
+  BV325: 14
+  AE326: 15
+  AS326: 15
+  BG326: Factor Solar
+  BV326: 15
+  AE327: 16
+  AS327: 16
+  BG327: FSM
+  BV327: 16
+  AE328: 17
+  AS328: 17
+  BV328: 17
+  AE329: 18
+  AS329: 18
+  BV329: 18
+  AE330: 19
+  AS330: 19
+  BV330: 19
+  AE331: 20
+  AS331: 20
+  BV331: 20
+  AE332: 21
+  AS332: 21
+  BV332: 21
+  AE333: 22
+  AS333: 22
+  BV333: 22
+  AE334: 23
+  AS334: 23
+  BV334: 23
+  GE335: 1
+  AF336: Radiación directa horizontal [W/m2]
+  AT336: Radiación Difusa horizontal [W/m2]
+  GE336: Rad máx
+  AF337: Enero
+  AG337: Febrero
+  AH337: Marzo
+  AI337: Abril
+  AJ337: Mayo
+  AK337: Junio
+  AL337: Julio
+  AM337: Agosto
+  AN337: Septiembre
+  AO337: Octubre
+  AP337: Noviembre
+  AQ337: Diciembre
+  AT337: Enero
+  AU337: Febrero
+  AV337: Marzo
+  AW337: Abril
+  AX337: Mayo
+  AY337: Junio
+  AZ337: Julio
+  BA337: Agosto
+  BB337: Septiembre
+  BC337: Octubre
+  BD337: Noviembre
+  BE337: Diciembre
+  BV337: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE337: Enero
+  GF337: Febrero
+  GG337: Marzo
+  GH337: Abril
+  GI337: Mayo
+  GJ337: Junio
+  GK337: Julio
+  GL337: Agosto
+  GM337: Septiembre
+  GN337: Octubre
+  GO337: Noviembre
+  GP337: Diciembre
+  AE338: 0
+  AS338: 0
+  BV338: 0
+  AE339: 1
+  AS339: 1
+  BV339: 1
+  AE340: 2
+  AS340: 2
+  BV340: 2
+  AE341: 3
+  AS341: 3
+  BG341: Orientación
+  BV341: 3
+  AE342: 4
+  AS342: 4
+  BG342: Visión i
+  BV342: 4
+  AE343: 5
+  AS343: 5
+  BG343: Visión f
+  BV343: 5
+  AE344: 6
+  AS344: 6
+  BG344: Centro izq
+  BV344: 6
+  AE345: 7
+  AS345: 7
+  BG345: Centro der
+  BV345: 7
+  AE346: 8
+  AS346: 8
+  BG346: Orientacion real
+  BV346: 8
+  AE347: 9
+  AS347: 9
+  BV347: 9
+  AE348: 10
+  AS348: 10
+  BG348: '% visibilidad difusa (β) por FAV'
+  BV348: 10
+  AE349: 11
+  AS349: 11
+  BG349: '% visibilidad difusa (β) por FAR'
+  BV349: 11
+  AE350: 12
+  AS350: 12
+  BG350: '% visibilidad difusa (β) total'
+  BV350: 12
+  AE351: 13
+  AS351: 13
+  BG351: Área Traslucida [m2]
+  BV351: 13
+  AE352: 14
+  AS352: 14
+  BG352: Vidrio
+  BV352: 14
+  AE353: 15
+  AS353: 15
+  BG353: Factor Solar
+  BV353: 15
+  AE354: 16
+  AS354: 16
+  BG354: FSM
+  BV354: 16
+  AE355: 17
+  AS355: 17
+  BV355: 17
+  AE356: 18
+  AS356: 18
+  BV356: 18
+  AE357: 19
+  AS357: 19
+  BV357: 19
+  AE358: 20
+  AS358: 20
+  BV358: 20
+  AE359: 21
+  AS359: 21
+  BV359: 21
+  AE360: 22
+  AS360: 22
+  BV360: 22
+  AE361: 23
+  AS361: 23
+  BV361: 23
+  GE362: 1
+  AF363: Radiación directa horizontal [W/m2]
+  AT363: Radiación Difusa horizontal [W/m2]
+  GE363: Rad máx
+  AF364: Enero
+  AG364: Febrero
+  AH364: Marzo
+  AI364: Abril
+  AJ364: Mayo
+  AK364: Junio
+  AL364: Julio
+  AM364: Agosto
+  AN364: Septiembre
+  AO364: Octubre
+  AP364: Noviembre
+  AQ364: Diciembre
+  AT364: Enero
+  AU364: Febrero
+  AV364: Marzo
+  AW364: Abril
+  AX364: Mayo
+  AY364: Junio
+  AZ364: Julio
+  BA364: Agosto
+  BB364: Septiembre
+  BC364: Octubre
+  BD364: Noviembre
+  BE364: Diciembre
+  BV364: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE364: Enero
+  GF364: Febrero
+  GG364: Marzo
+  GH364: Abril
+  GI364: Mayo
+  GJ364: Junio
+  GK364: Julio
+  GL364: Agosto
+  GM364: Septiembre
+  GN364: Octubre
+  GO364: Noviembre
+  GP364: Diciembre
+  AE365: 0
+  AS365: 0
+  BV365: 0
+  AE366: 1
+  AS366: 1
+  BV366: 1
+  AE367: 2
+  AS367: 2
+  BV367: 2
+  AE368: 3
+  AS368: 3
+  BG368: Orientación
+  BV368: 3
+  AE369: 4
+  AS369: 4
+  BG369: Visión i
+  BV369: 4
+  AE370: 5
+  AS370: 5
+  BG370: Visión f
+  BV370: 5
+  AE371: 6
+  AS371: 6
+  BG371: Centro izq
+  BV371: 6
+  AE372: 7
+  AS372: 7
+  BG372: Centro der
+  BV372: 7
+  AE373: 8
+  AS373: 8
+  BG373: Orientacion real
+  BV373: 8
+  AE374: 9
+  AS374: 9
+  BV374: 9
+  AE375: 10
+  AS375: 10
+  BG375: '% visibilidad difusa (β) por FAV'
+  BV375: 10
+  AE376: 11
+  AS376: 11
+  BG376: '% visibilidad difusa (β) por FAR'
+  BV376: 11
+  AE377: 12
+  AS377: 12
+  BG377: '% visibilidad difusa (β) total'
+  BV377: 12
+  AE378: 13
+  AS378: 13
+  BG378: Área Traslucida [m2]
+  BV378: 13
+  AE379: 14
+  AS379: 14
+  BG379: Vidrio
+  BV379: 14
+  AE380: 15
+  AS380: 15
+  BG380: Factor Solar
+  BV380: 15
+  AE381: 16
+  AS381: 16
+  BG381: FSM
+  BV381: 16
+  AE382: 17
+  AS382: 17
+  BV382: 17
+  AE383: 18
+  AS383: 18
+  BV383: 18
+  AE384: 19
+  AS384: 19
+  BV384: 19
+  AE385: 20
+  AS385: 20
+  BV385: 20
+  AE386: 21
+  AS386: 21
+  BV386: 21
+  AE387: 22
+  AS387: 22
+  BV387: 22
+  AE388: 23
+  AS388: 23
+  BV388: 23
+  GE389: 1
+  AF390: Radiación directa horizontal [W/m2]
+  AT390: Radiación Difusa horizontal [W/m2]
+  GE390: Rad máx
+  AF391: Enero
+  AG391: Febrero
+  AH391: Marzo
+  AI391: Abril
+  AJ391: Mayo
+  AK391: Junio
+  AL391: Julio
+  AM391: Agosto
+  AN391: Septiembre
+  AO391: Octubre
+  AP391: Noviembre
+  AQ391: Diciembre
+  AT391: Enero
+  AU391: Febrero
+  AV391: Marzo
+  AW391: Abril
+  AX391: Mayo
+  AY391: Junio
+  AZ391: Julio
+  BA391: Agosto
+  BB391: Septiembre
+  BC391: Octubre
+  BD391: Noviembre
+  BE391: Diciembre
+  BV391: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE391: Enero
+  GF391: Febrero
+  GG391: Marzo
+  GH391: Abril
+  GI391: Mayo
+  GJ391: Junio
+  GK391: Julio
+  GL391: Agosto
+  GM391: Septiembre
+  GN391: Octubre
+  GO391: Noviembre
+  GP391: Diciembre
+  AE392: 0
+  AS392: 0
+  BV392: 0
+  AE393: 1
+  AS393: 1
+  BV393: 1
+  AE394: 2
+  AS394: 2
+  BV394: 2
+  AE395: 3
+  AS395: 3
+  BG395: Orientación
+  BV395: 3
+  AE396: 4
+  AS396: 4
+  BG396: Visión i
+  BV396: 4
+  AE397: 5
+  AS397: 5
+  BG397: Visión f
+  BV397: 5
+  AE398: 6
+  AS398: 6
+  BG398: Centro izq
+  BV398: 6
+  AE399: 7
+  AS399: 7
+  BG399: Centro der
+  BV399: 7
+  AE400: 8
+  AS400: 8
+  BG400: Orientacion real
+  BV400: 8
+  AE401: 9
+  AS401: 9
+  BV401: 9
+  AE402: 10
+  AS402: 10
+  BG402: '% visibilidad difusa (β) por FAV'
+  BV402: 10
+  AE403: 11
+  AS403: 11
+  BG403: '% visibilidad difusa (β) por FAR'
+  BV403: 11
+  AE404: 12
+  AS404: 12
+  BG404: '% visibilidad difusa (β) total'
+  BV404: 12
+  AE405: 13
+  AS405: 13
+  BG405: Área Traslucida [m2]
+  BV405: 13
+  AE406: 14
+  AS406: 14
+  BG406: Vidrio
+  BV406: 14
+  AE407: 15
+  AS407: 15
+  BG407: Factor Solar
+  BV407: 15
+  AE408: 16
+  AS408: 16
+  BG408: FSM
+  BV408: 16
+  AE409: 17
+  AS409: 17
+  BV409: 17
+  AE410: 18
+  AS410: 18
+  BV410: 18
+  AE411: 19
+  AS411: 19
+  BV411: 19
+  AE412: 20
+  AS412: 20
+  BV412: 20
+  AE413: 21
+  AS413: 21
+  BV413: 21
+  AE414: 22
+  AS414: 22
+  BV414: 22
+  AE415: 23
+  AS415: 23
+  BV415: 23
+  GE416: 1
+  AF417: Radiación directa horizontal [W/m2]
+  AT417: Radiación Difusa horizontal [W/m2]
+  GE417: Rad máx
+  AF418: Enero
+  AG418: Febrero
+  AH418: Marzo
+  AI418: Abril
+  AJ418: Mayo
+  AK418: Junio
+  AL418: Julio
+  AM418: Agosto
+  AN418: Septiembre
+  AO418: Octubre
+  AP418: Noviembre
+  AQ418: Diciembre
+  AT418: Enero
+  AU418: Febrero
+  AV418: Marzo
+  AW418: Abril
+  AX418: Mayo
+  AY418: Junio
+  AZ418: Julio
+  BA418: Agosto
+  BB418: Septiembre
+  BC418: Octubre
+  BD418: Noviembre
+  BE418: Diciembre
+  BV418: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE418: Enero
+  GF418: Febrero
+  GG418: Marzo
+  GH418: Abril
+  GI418: Mayo
+  GJ418: Junio
+  GK418: Julio
+  GL418: Agosto
+  GM418: Septiembre
+  GN418: Octubre
+  GO418: Noviembre
+  GP418: Diciembre
+  AE419: 0
+  AS419: 0
+  BV419: 0
+  AE420: 1
+  AS420: 1
+  BV420: 1
+  AE421: 2
+  AS421: 2
+  BV421: 2
+  AE422: 3
+  AS422: 3
+  BG422: Orientación
+  BV422: 3
+  AE423: 4
+  AS423: 4
+  BG423: Visión i
+  BV423: 4
+  AE424: 5
+  AS424: 5
+  BG424: Visión f
+  BV424: 5
+  AE425: 6
+  AS425: 6
+  BG425: Centro izq
+  BV425: 6
+  AE426: 7
+  AS426: 7
+  BG426: Centro der
+  BV426: 7
+  AE427: 8
+  AS427: 8
+  BG427: Orientacion real
+  BV427: 8
+  AE428: 9
+  AS428: 9
+  BV428: 9
+  AE429: 10
+  AS429: 10
+  BG429: '% visibilidad difusa (β) por FAV'
+  BV429: 10
+  AE430: 11
+  AS430: 11
+  BG430: '% visibilidad difusa (β) por FAR'
+  BV430: 11
+  AE431: 12
+  AS431: 12
+  BG431: '% visibilidad difusa (β) total'
+  BV431: 12
+  AE432: 13
+  AS432: 13
+  BG432: Área Traslucida [m2]
+  BV432: 13
+  AE433: 14
+  AS433: 14
+  BG433: Vidrio
+  BV433: 14
+  AE434: 15
+  AS434: 15
+  BG434: Factor Solar
+  BV434: 15
+  AE435: 16
+  AS435: 16
+  BG435: FSM
+  BV435: 16
+  AE436: 17
+  AS436: 17
+  BV436: 17
+  AE437: 18
+  AS437: 18
+  BV437: 18
+  AE438: 19
+  AS438: 19
+  BV438: 19
+  AE439: 20
+  AS439: 20
+  BV439: 20
+  AE440: 21
+  AS440: 21
+  BV440: 21
+  AE441: 22
+  AS441: 22
+  BV441: 22
+  AE442: 23
+  AS442: 23
+  BV442: 23
+  GE443: 1
+  AF444: Radiación directa horizontal [W/m2]
+  AT444: Radiación Difusa horizontal [W/m2]
+  GE444: Rad máx
+  AF445: Enero
+  AG445: Febrero
+  AH445: Marzo
+  AI445: Abril
+  AJ445: Mayo
+  AK445: Junio
+  AL445: Julio
+  AM445: Agosto
+  AN445: Septiembre
+  AO445: Octubre
+  AP445: Noviembre
+  AQ445: Diciembre
+  AT445: Enero
+  AU445: Febrero
+  AV445: Marzo
+  AW445: Abril
+  AX445: Mayo
+  AY445: Junio
+  AZ445: Julio
+  BA445: Agosto
+  BB445: Septiembre
+  BC445: Octubre
+  BD445: Noviembre
+  BE445: Diciembre
+  BV445: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE445: Enero
+  GF445: Febrero
+  GG445: Marzo
+  GH445: Abril
+  GI445: Mayo
+  GJ445: Junio
+  GK445: Julio
+  GL445: Agosto
+  GM445: Septiembre
+  GN445: Octubre
+  GO445: Noviembre
+  GP445: Diciembre
+  AE446: 0
+  AS446: 0
+  BV446: 0
+  AE447: 1
+  AS447: 1
+  BV447: 1
+  AE448: 2
+  AS448: 2
+  BV448: 2
+  AE449: 3
+  AS449: 3
+  BG449: Orientación
+  BV449: 3
+  AE450: 4
+  AS450: 4
+  BG450: Visión i
+  BV450: 4
+  AE451: 5
+  AS451: 5
+  BG451: Visión f
+  BV451: 5
+  AE452: 6
+  AS452: 6
+  BG452: Centro izq
+  BV452: 6
+  AE453: 7
+  AS453: 7
+  BG453: Centro der
+  BV453: 7
+  AE454: 8
+  AS454: 8
+  BG454: Orientacion real
+  BV454: 8
+  AE455: 9
+  AS455: 9
+  BV455: 9
+  AE456: 10
+  AS456: 10
+  BG456: '% visibilidad difusa (β) por FAV'
+  BV456: 10
+  AE457: 11
+  AS457: 11
+  BG457: '% visibilidad difusa (β) por FAR'
+  BV457: 11
+  AE458: 12
+  AS458: 12
+  BG458: '% visibilidad difusa (β) total'
+  BV458: 12
+  AE459: 13
+  AS459: 13
+  BG459: Área Traslucida [m2]
+  BV459: 13
+  AE460: 14
+  AS460: 14
+  BG460: Vidrio
+  BV460: 14
+  AE461: 15
+  AS461: 15
+  BG461: Factor Solar
+  BV461: 15
+  AE462: 16
+  AS462: 16
+  BG462: FSM
+  BV462: 16
+  AE463: 17
+  AS463: 17
+  BV463: 17
+  AE464: 18
+  AS464: 18
+  BV464: 18
+  AE465: 19
+  AS465: 19
+  BV465: 19
+  AE466: 20
+  AS466: 20
+  BV466: 20
+  AE467: 21
+  AS467: 21
+  BV467: 21
+  AE468: 22
+  AS468: 22
+  BV468: 22
+  AE469: 23
+  AS469: 23
+  BV469: 23
+  GE470: 1
+  AF471: Radiación directa horizontal [W/m2]
+  AT471: Radiación Difusa horizontal [W/m2]
+  GE471: Rad máx
+  AF472: Enero
+  AG472: Febrero
+  AH472: Marzo
+  AI472: Abril
+  AJ472: Mayo
+  AK472: Junio
+  AL472: Julio
+  AM472: Agosto
+  AN472: Septiembre
+  AO472: Octubre
+  AP472: Noviembre
+  AQ472: Diciembre
+  AT472: Enero
+  AU472: Febrero
+  AV472: Marzo
+  AW472: Abril
+  AX472: Mayo
+  AY472: Junio
+  AZ472: Julio
+  BA472: Agosto
+  BB472: Septiembre
+  BC472: Octubre
+  BD472: Noviembre
+  BE472: Diciembre
+  BV472: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE472: Enero
+  GF472: Febrero
+  GG472: Marzo
+  GH472: Abril
+  GI472: Mayo
+  GJ472: Junio
+  GK472: Julio
+  GL472: Agosto
+  GM472: Septiembre
+  GN472: Octubre
+  GO472: Noviembre
+  GP472: Diciembre
+  AE473: 0
+  AS473: 0
+  BV473: 0
+  AE474: 1
+  AS474: 1
+  BV474: 1
+  AE475: 2
+  AS475: 2
+  BV475: 2
+  AE476: 3
+  AS476: 3
+  BG476: Orientación
+  BV476: 3
+  AE477: 4
+  AS477: 4
+  BG477: Visión i
+  BV477: 4
+  AE478: 5
+  AS478: 5
+  BG478: Visión f
+  BV478: 5
+  AE479: 6
+  AS479: 6
+  BG479: Centro izq
+  BV479: 6
+  AE480: 7
+  AS480: 7
+  BG480: Centro der
+  BV480: 7
+  AE481: 8
+  AS481: 8
+  BG481: Orientacion real
+  BV481: 8
+  AE482: 9
+  AS482: 9
+  BV482: 9
+  AE483: 10
+  AS483: 10
+  BG483: '% visibilidad difusa (β) por FAV'
+  BV483: 10
+  AE484: 11
+  AS484: 11
+  BG484: '% visibilidad difusa (β) por FAR'
+  BV484: 11
+  AE485: 12
+  AS485: 12
+  BG485: '% visibilidad difusa (β) total'
+  BV485: 12
+  AE486: 13
+  AS486: 13
+  BG486: Área Traslucida [m2]
+  BV486: 13
+  AE487: 14
+  AS487: 14
+  BG487: Vidrio
+  BV487: 14
+  AE488: 15
+  AS488: 15
+  BG488: Factor Solar
+  BV488: 15
+  AE489: 16
+  AS489: 16
+  BG489: FSM
+  BV489: 16
+  AE490: 17
+  AS490: 17
+  BV490: 17
+  AE491: 18
+  AS491: 18
+  BV491: 18
+  AE492: 19
+  AS492: 19
+  BV492: 19
+  AE493: 20
+  AS493: 20
+  BV493: 20
+  AE494: 21
+  AS494: 21
+  BV494: 21
+  AE495: 22
+  AS495: 22
+  BV495: 22
+  AE496: 23
+  AS496: 23
+  BV496: 23
+  GE497: 1
+  AF498: Radiación directa horizontal [W/m2]
+  AT498: Radiación Difusa horizontal [W/m2]
+  GE498: Rad máx
+  AF499: Enero
+  AG499: Febrero
+  AH499: Marzo
+  AI499: Abril
+  AJ499: Mayo
+  AK499: Junio
+  AL499: Julio
+  AM499: Agosto
+  AN499: Septiembre
+  AO499: Octubre
+  AP499: Noviembre
+  AQ499: Diciembre
+  AT499: Enero
+  AU499: Febrero
+  AV499: Marzo
+  AW499: Abril
+  AX499: Mayo
+  AY499: Junio
+  AZ499: Julio
+  BA499: Agosto
+  BB499: Septiembre
+  BC499: Octubre
+  BD499: Noviembre
+  BE499: Diciembre
+  BV499: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE499: Enero
+  GF499: Febrero
+  GG499: Marzo
+  GH499: Abril
+  GI499: Mayo
+  GJ499: Junio
+  GK499: Julio
+  GL499: Agosto
+  GM499: Septiembre
+  GN499: Octubre
+  GO499: Noviembre
+  GP499: Diciembre
+  AE500: 0
+  AS500: 0
+  BV500: 0
+  AE501: 1
+  AS501: 1
+  BV501: 1
+  AE502: 2
+  AS502: 2
+  BV502: 2
+  AE503: 3
+  AS503: 3
+  BG503: Orientación
+  BV503: 3
+  AE504: 4
+  AS504: 4
+  BG504: Visión i
+  BV504: 4
+  AE505: 5
+  AS505: 5
+  BG505: Visión f
+  BV505: 5
+  AE506: 6
+  AS506: 6
+  BG506: Centro izq
+  BV506: 6
+  AE507: 7
+  AS507: 7
+  BG507: Centro der
+  BV507: 7
+  AE508: 8
+  AS508: 8
+  BG508: Orientacion real
+  BV508: 8
+  AE509: 9
+  AS509: 9
+  BV509: 9
+  AE510: 10
+  AS510: 10
+  BG510: '% visibilidad difusa (β) por FAV'
+  BV510: 10
+  AE511: 11
+  AS511: 11
+  BG511: '% visibilidad difusa (β) por FAR'
+  BV511: 11
+  AE512: 12
+  AS512: 12
+  BG512: '% visibilidad difusa (β) total'
+  BV512: 12
+  AE513: 13
+  AS513: 13
+  BG513: Área Traslucida [m2]
+  BV513: 13
+  AE514: 14
+  AS514: 14
+  BG514: Vidrio
+  BV514: 14
+  AE515: 15
+  AS515: 15
+  BG515: Factor Solar
+  BV515: 15
+  AE516: 16
+  AS516: 16
+  BG516: FSM
+  BV516: 16
+  AE517: 17
+  AS517: 17
+  BV517: 17
+  AE518: 18
+  AS518: 18
+  BV518: 18
+  AE519: 19
+  AS519: 19
+  BV519: 19
+  AE520: 20
+  AS520: 20
+  BV520: 20
+  AE521: 21
+  AS521: 21
+  BV521: 21
+  AE522: 22
+  AS522: 22
+  BV522: 22
+  AE523: 23
+  AS523: 23
+  BV523: 23
+  GE524: 1
+  AF525: Radiación directa horizontal [W/m2]
+  AT525: Radiación Difusa horizontal [W/m2]
+  GE525: Rad máx
+  AF526: Enero
+  AG526: Febrero
+  AH526: Marzo
+  AI526: Abril
+  AJ526: Mayo
+  AK526: Junio
+  AL526: Julio
+  AM526: Agosto
+  AN526: Septiembre
+  AO526: Octubre
+  AP526: Noviembre
+  AQ526: Diciembre
+  AT526: Enero
+  AU526: Febrero
+  AV526: Marzo
+  AW526: Abril
+  AX526: Mayo
+  AY526: Junio
+  AZ526: Julio
+  BA526: Agosto
+  BB526: Septiembre
+  BC526: Octubre
+  BD526: Noviembre
+  BE526: Diciembre
+  BV526: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE526: Enero
+  GF526: Febrero
+  GG526: Marzo
+  GH526: Abril
+  GI526: Mayo
+  GJ526: Junio
+  GK526: Julio
+  GL526: Agosto
+  GM526: Septiembre
+  GN526: Octubre
+  GO526: Noviembre
+  GP526: Diciembre
+  AE527: 0
+  AS527: 0
+  BV527: 0
+  AE528: 1
+  AS528: 1
+  BV528: 1
+  AE529: 2
+  AS529: 2
+  BV529: 2
+  AE530: 3
+  AS530: 3
+  BG530: Orientación
+  BV530: 3
+  AE531: 4
+  AS531: 4
+  BG531: Visión i
+  BV531: 4
+  AE532: 5
+  AS532: 5
+  BG532: Visión f
+  BV532: 5
+  AE533: 6
+  AS533: 6
+  BG533: Centro izq
+  BV533: 6
+  AE534: 7
+  AS534: 7
+  BG534: Centro der
+  BV534: 7
+  AE535: 8
+  AS535: 8
+  BG535: Orientacion real
+  BV535: 8
+  AE536: 9
+  AS536: 9
+  BV536: 9
+  AE537: 10
+  AS537: 10
+  BG537: '% visibilidad difusa (β) por FAV'
+  BV537: 10
+  AE538: 11
+  AS538: 11
+  BG538: '% visibilidad difusa (β) por FAR'
+  BV538: 11
+  AE539: 12
+  AS539: 12
+  BG539: '% visibilidad difusa (β) total'
+  BV539: 12
+  AE540: 13
+  AS540: 13
+  BG540: Área Traslucida [m2]
+  BV540: 13
+  AE541: 14
+  AS541: 14
+  BG541: Vidrio
+  BV541: 14
+  AE542: 15
+  AS542: 15
+  BG542: Factor Solar
+  BV542: 15
+  AE543: 16
+  AS543: 16
+  BG543: FSM
+  BV543: 16
+  AE544: 17
+  AS544: 17
+  BV544: 17
+  AE545: 18
+  AS545: 18
+  BV545: 18
+  AE546: 19
+  AS546: 19
+  BV546: 19
+  AE547: 20
+  AS547: 20
+  BV547: 20
+  AE548: 21
+  AS548: 21
+  BV548: 21
+  AE549: 22
+  AS549: 22
+  BV549: 22
+  AE550: 23
+  AS550: 23
+  BV550: 23
+  GE551: 1
+  AF552: Radiación directa horizontal [W/m2]
+  AT552: Radiación Difusa horizontal [W/m2]
+  GE552: Rad máx
+  AF553: Enero
+  AG553: Febrero
+  AH553: Marzo
+  AI553: Abril
+  AJ553: Mayo
+  AK553: Junio
+  AL553: Julio
+  AM553: Agosto
+  AN553: Septiembre
+  AO553: Octubre
+  AP553: Noviembre
+  AQ553: Diciembre
+  AT553: Enero
+  AU553: Febrero
+  AV553: Marzo
+  AW553: Abril
+  AX553: Mayo
+  AY553: Junio
+  AZ553: Julio
+  BA553: Agosto
+  BB553: Septiembre
+  BC553: Octubre
+  BD553: Noviembre
+  BE553: Diciembre
+  BV553: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE553: Enero
+  GF553: Febrero
+  GG553: Marzo
+  GH553: Abril
+  GI553: Mayo
+  GJ553: Junio
+  GK553: Julio
+  GL553: Agosto
+  GM553: Septiembre
+  GN553: Octubre
+  GO553: Noviembre
+  GP553: Diciembre
+  AE554: 0
+  AS554: 0
+  BV554: 0
+  AE555: 1
+  AS555: 1
+  BV555: 1
+  AE556: 2
+  AS556: 2
+  BV556: 2
+  AE557: 3
+  AS557: 3
+  BG557: Orientación
+  BV557: 3
+  AE558: 4
+  AS558: 4
+  BG558: Visión i
+  BV558: 4
+  AE559: 5
+  AS559: 5
+  BG559: Visión f
+  BV559: 5
+  AE560: 6
+  AS560: 6
+  BG560: Centro izq
+  BV560: 6
+  AE561: 7
+  AS561: 7
+  BG561: Centro der
+  BV561: 7
+  AE562: 8
+  AS562: 8
+  BG562: Orientacion real
+  BV562: 8
+  AE563: 9
+  AS563: 9
+  BV563: 9
+  AE564: 10
+  AS564: 10
+  BG564: '% visibilidad difusa (β) por FAV'
+  BV564: 10
+  AE565: 11
+  AS565: 11
+  BG565: '% visibilidad difusa (β) por FAR'
+  BV565: 11
+  AE566: 12
+  AS566: 12
+  BG566: '% visibilidad difusa (β) total'
+  BV566: 12
+  AE567: 13
+  AS567: 13
+  BG567: Área Traslucida [m2]
+  BV567: 13
+  AE568: 14
+  AS568: 14
+  BG568: Vidrio
+  BV568: 14
+  AE569: 15
+  AS569: 15
+  BG569: Factor Solar
+  BV569: 15
+  AE570: 16
+  AS570: 16
+  BG570: FSM
+  BV570: 16
+  AE571: 17
+  AS571: 17
+  BV571: 17
+  AE572: 18
+  AS572: 18
+  BV572: 18
+  AE573: 19
+  AS573: 19
+  BV573: 19
+  AE574: 20
+  AS574: 20
+  BV574: 20
+  AE575: 21
+  AS575: 21
+  BV575: 21
+  AE576: 22
+  AS576: 22
+  BV576: 22
+  AE577: 23
+  AS577: 23
+  BV577: 23
+  GE578: 1
+  AF579: Radiación directa horizontal [W/m2]
+  AT579: Radiación Difusa horizontal [W/m2]
+  GE579: Rad máx
+  AF580: Enero
+  AG580: Febrero
+  AH580: Marzo
+  AI580: Abril
+  AJ580: Mayo
+  AK580: Junio
+  AL580: Julio
+  AM580: Agosto
+  AN580: Septiembre
+  AO580: Octubre
+  AP580: Noviembre
+  AQ580: Diciembre
+  AT580: Enero
+  AU580: Febrero
+  AV580: Marzo
+  AW580: Abril
+  AX580: Mayo
+  AY580: Junio
+  AZ580: Julio
+  BA580: Agosto
+  BB580: Septiembre
+  BC580: Octubre
+  BD580: Noviembre
+  BE580: Diciembre
+  BV580: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE580: Enero
+  GF580: Febrero
+  GG580: Marzo
+  GH580: Abril
+  GI580: Mayo
+  GJ580: Junio
+  GK580: Julio
+  GL580: Agosto
+  GM580: Septiembre
+  GN580: Octubre
+  GO580: Noviembre
+  GP580: Diciembre
+  AE581: 0
+  AS581: 0
+  BV581: 0
+  AE582: 1
+  AS582: 1
+  BV582: 1
+  AE583: 2
+  AS583: 2
+  BV583: 2
+  AE584: 3
+  AS584: 3
+  BG584: Orientación
+  BV584: 3
+  AE585: 4
+  AS585: 4
+  BG585: Visión i
+  BV585: 4
+  AE586: 5
+  AS586: 5
+  BG586: Visión f
+  BV586: 5
+  AE587: 6
+  AS587: 6
+  BG587: Centro izq
+  BV587: 6
+  AE588: 7
+  AS588: 7
+  BG588: Centro der
+  BV588: 7
+  AE589: 8
+  AS589: 8
+  BG589: Orientacion real
+  BV589: 8
+  AE590: 9
+  AS590: 9
+  BV590: 9
+  AE591: 10
+  AS591: 10
+  BG591: '% visibilidad difusa (β) por FAV'
+  BV591: 10
+  AE592: 11
+  AS592: 11
+  BG592: '% visibilidad difusa (β) por FAR'
+  BV592: 11
+  AE593: 12
+  AS593: 12
+  BG593: '% visibilidad difusa (β) total'
+  BV593: 12
+  AE594: 13
+  AS594: 13
+  BG594: Área Traslucida [m2]
+  BV594: 13
+  AE595: 14
+  AS595: 14
+  BG595: Vidrio
+  BV595: 14
+  AE596: 15
+  AS596: 15
+  BG596: Factor Solar
+  BV596: 15
+  AE597: 16
+  AS597: 16
+  BG597: FSM
+  BV597: 16
+  AE598: 17
+  AS598: 17
+  BV598: 17
+  AE599: 18
+  AS599: 18
+  BV599: 18
+  AE600: 19
+  AS600: 19
+  BV600: 19
+  AE601: 20
+  AS601: 20
+  BV601: 20
+  AE602: 21
+  AS602: 21
+  BV602: 21
+  AE603: 22
+  AS603: 22
+  BV603: 22
+  AE604: 23
+  AS604: 23
+  BV604: 23
+  GE605: 1
+  AF606: Radiación directa horizontal [W/m2]
+  AT606: Radiación Difusa horizontal [W/m2]
+  GE606: Rad máx
+  AF607: Enero
+  AG607: Febrero
+  AH607: Marzo
+  AI607: Abril
+  AJ607: Mayo
+  AK607: Junio
+  AL607: Julio
+  AM607: Agosto
+  AN607: Septiembre
+  AO607: Octubre
+  AP607: Noviembre
+  AQ607: Diciembre
+  AT607: Enero
+  AU607: Febrero
+  AV607: Marzo
+  AW607: Abril
+  AX607: Mayo
+  AY607: Junio
+  AZ607: Julio
+  BA607: Agosto
+  BB607: Septiembre
+  BC607: Octubre
+  BD607: Noviembre
+  BE607: Diciembre
+  BV607: XX!$R$29*XX!$R$27*(XX!$R$26*C96)
+  GE607: Enero
+  GF607: Febrero
+  GG607: Marzo
+  GH607: Abril
+  GI607: Mayo
+  GJ607: Junio
+  GK607: Julio
+  GL607: Agosto
+  GM607: Septiembre
+  GN607: Octubre
+  GO607: Noviembre
+  GP607: Diciembre
+  AE608: 0
+  AS608: 0
+  BV608: 0
+  AE609: 1
+  AS609: 1
+  BV609: 1
+  AE610: 2
+  AS610: 2
+  BV610: 2
+  AE611: 3
+  AS611: 3
+  BG611: Orientación
+  BV611: 3
+  AE612: 4
+  AS612: 4
+  BG612: Visión i
+  BV612: 4
+  AE613: 5
+  AS613: 5
+  BG613: Visión f
+  BV613: 5
+  AE614: 6
+  AS614: 6
+  BG614: Centro izq
+  BV614: 6
+  AE615: 7
+  AS615: 7
+  BG615: Centro der
+  BV615: 7
+  AE616: 8
+  AS616: 8
+  BG616: Orientacion real
+  BV616: 8
+  AE617: 9
+  AS617: 9
+  BV617: 9
+  AE618: 10
+  AS618: 10
+  BG618: '% visibilidad difusa (β) por FAV'
+  BV618: 10
+  AE619: 11
+  AS619: 11
+  BG619: '% visibilidad difusa (β) por FAR'
+  BV619: 11
+  AE620: 12
+  AS620: 12
+  BG620: '% visibilidad difusa (β) total'
+  BV620: 12
+  AE621: 13
+  AS621: 13
+  BG621: Área Traslucida [m2]
+  BV621: 13
+  AE622: 14
+  AS622: 14
+  BG622: Vidrio
+  BV622: 14
+  AE623: 15
+  AS623: 15
+  BG623: Factor Solar
+  BV623: 15
+  AE624: 16
+  AS624: 16
+  BG624: FSM
+  BV624: 16
+  AE625: 17
+  AS625: 17
+  BV625: 17
+  AE626: 18
+  AS626: 18
+  BV626: 18
+  AE627: 19
+  AS627: 19
+  BV627: 19
+  AE628: 20
+  AS628: 20
+  BV628: 20
+  AE629: 21
+  AS629: 21
+  BV629: 21
+  AE630: 22
+  AS630: 22
+  BV630: 22
+  AE631: 23
+  AS631: 23
+  BV631: 23
+  '''0. FAR''!L148': N
+  '''0. FAR''!L149': E
+  '''0. FAR''!L150': S
+  '''0. FAR''!L151': O
+  '''0. FAR''!L152': NE
+  '''0. FAR''!L153': SE
+  '''0. FAR''!L154': SO
+  '''0. FAR''!L155': 'NO'

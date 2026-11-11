@@ -1,0 +1,105 @@
+# ---------------------------------------------------------------------------
+# Etiqueta de calificacion CEV: escala A+..G + datos de demanda y ahorro.
+# Funciona como una hoja de estilo: etiqueta_cev.py no tiene colores, medidas
+# ni textos propios. Medidas en px del SVG (el PNG se escala con png.escala).
+# La letra destacada es la que entrega la planilla 03 (no se calcula aca).
+# El editor de unidad cambia algunas claves solo para el (unidad/config/
+# editor.yaml, calculo.etiqueta): por ejemplo, disposicion vertical.
+# Los cambios se ven al recargar la pagina del editor (F5) o al recalcular.
+# ---------------------------------------------------------------------------
+letras: ["A+", "A", "B", "C", "D", "E", "F", "G"]   # de mas a menos eficiente
+colores:                         # tomados del mockup de Lucas (aprox.)
+  "A+": "#2E5B3B"
+  "A": "#4C8A3F"
+  "B": "#8EA93C"
+  "C": "#C3C62C"
+  "D": "#ECD32C"
+  "E": "#E2B22E"
+  "F": "#C28738"
+  "G": "#A2282D"
+texto_flecha: "#FFFFFF"
+fondo: "#FFFFFF"
+fuente: "Arial, Helvetica, sans-serif"    # en el navegador (el PNG usa png.fuente)
+margen: 10
+texto_ahorro: "ahorro"
+
+# horizontal: la escala y a su derecha la tabla (tabla:)
+# vertical: la escala arriba y debajo los datos (vertical:), como las etiquetas de eficiencia
+disposicion: horizontal
+
+escala:
+  rotulos: false                 # true: agrega "Mas eficiente" arriba y "Menos eficiente" abajo
+  ancho_inicial: 140             # largo de la flecha A+
+  incremento: 6                  # cada letra siguiente es mas larga
+  alto: 26
+  separacion: 5
+  punta: 13
+  tamano_letra: 17
+  margen_letra: 8
+  destacada:                     # la letra obtenida
+    alto: 72
+    ancho_extra: 50
+    punta: 20
+    tamano_letra: 56             # (distingue la flecha destacada)
+    letra_negrita: false
+    margen_letra: 12
+    tamano_valor: 32             # "35%"
+    tamano_ahorro: 16            # "ahorro"
+    margen_valor: 8
+  encabezado: {texto: "Más eficiente", tamano: 14, color_texto: "#333333", borde: "#555555"}
+  pie: {texto: "Menos eficiente", tamano: 14, color_texto: "#8E2229", borde: "#8E2229"}
+
+tabla:                           # disposicion horizontal (color_texto tambien en la vertical)
+  separacion: 30                 # entre la escala y la tabla
+  ancho_rotulo: 160
+  ancho_columna: 125
+  alto_encabezado: 62
+  alto_fila: 72
+  relleno: 12
+  alineacion: centro             # datos de la tabla: centro | derecha
+  columnas: ["Calefacción", "Refrigeración", "Total"]
+  filas: {demanda: "Demanda", unidad: "[kWh/m²año]", ahorro: "Ahorro"}
+  tamano: 21
+  tamano_encabezado: 15
+  tamano_unidad: 14
+  color_texto: "#222222"
+  color_linea: "#D0D0D0"
+  grosor_linea: 1.5
+
+vertical:                        # disposicion vertical
+  ancho_min: 260                 # ancho minimo de la etiqueta (la escala puede ser mas angosta)
+  separacion: 12
+  linea: {color: "#D6DCE2", grosor: 1.2}
+  color_suave: "#7B8692"         # rotulos, unidades, ahorros y demandas del caso base
+  # demanda total en grande; debajo, en gris, la del caso base ("Caso base 39,1 kWh/m2año")
+  total: {rotulo: "Demanda total", tamano_rotulo: 12, tamano: 34, unidad: "kWh/m²año",
+          tamano_unidad: 13, separacion: 6, base: "Caso base", tamano_base: 11}
+  columnas:
+    titulos: ["Calefacción", "Refrigeración"]
+    # orden de los datos bajo cada titulo: valor (demanda obtenida), base (demanda del
+    # caso base) y ahorro. Se puede quitar uno de la lista para no mostrarlo.
+    orden: [valor, base, ahorro]
+    separacion: 6                # entre un dato y el siguiente
+    tamano_titulo: 11
+    tamano_valor: 20
+    unidad: "kWh/m²"
+    tamano_unidad: 10
+    ahorro: "ahorro"             # "ahorro 76 %"
+    tamano_ahorro: 12
+    base: "base"                 # "base 35,0 kWh/m2"
+    tamano_base: 10
+
+formato:
+  decimales_demanda: 1
+  decimales_ahorro: 0
+  separador_decimal: ","
+  signo_menos: "-"               # el ahorro negativo se muestra negativo
+  sufijo_flecha: "%"             # "35%" en la flecha
+  sufijo_tabla: " %"             # "35 %" en la tabla
+  sin_dato: "—"
+  refrigeracion_positiva: true   # muestra la demanda de refrigeracion en valor absoluto
+
+png:                             # se guarda en la carpeta de cada iteracion
+  nombre: "etiqueta_cev"         # -> etiqueta_cev.png y etiqueta_cev.svg
+  escala: 3                      # 3 = unos 2300 px de ancho
+  fuente: "sans-serif"           # PyMuPDF la dibuja con Helvetica

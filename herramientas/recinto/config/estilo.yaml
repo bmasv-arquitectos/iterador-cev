@@ -1,0 +1,79 @@
+# ---------------------------------------------------------------------------
+# Estetica de las vistas (como un CSS). El motor no cambia.
+# Colores en hex; grosores en px; medidas de modelo en metros.
+# ---------------------------------------------------------------------------
+
+# --- Modelo 3D interactivo (vista principal de la app) ----------------------
+modelo3d:
+  fondo: "#f2f2f2"
+  grilla: true
+  usar_espesor_real: true        # muros y losas con el espesor de la solucion (zona)
+  espesores:                     # m, si no hay solucion o usar_espesor_real: false
+    muro_exterior: 0.24
+    muro_adiabatico: 0.20
+    losa: 0.15
+  vidrio_espesor: 0.02
+  marco_ancho: 0.05
+  marco_profundidad: 0.07
+  proteccion_espesor: 0.08
+  alero_sobrepaso: 0.0           # m que el alero sobresale a cada lado del vano
+  celosia_lama_espesor: 0.01
+  celosia_separacion_muro: 0.05
+  celosia_max_lamas: 80
+  etiquetas: true
+  separacion_etiqueta_m: 0.6
+  texto_css: "font-size: 12px; color: #333; background: rgba(255,255,255,0.75); padding: 0 4px; border-radius: 3px"
+  norte: {largo_m: 1.0, separacion_m: 1.0}
+  seleccion: {color: "#f2a33a"}
+  manijas: {radio: 0.12, color: "#e4572e", separacion_m: 0.35, altura_muro: 0.15}
+  camara: {distancia: 2.6, elevacion: 35, desde: 225, duracion: 0.6}
+  clases:
+    muro_exterior:    {color: "#e9e6df", opacidad: 1.0}
+    muro_adiabatico:  {color: "#b9b9b9", opacidad: 1.0}
+    vidrio:           {color: "#7fb8e6", opacidad: 0.45}
+    marco:            {color: "#ffffff", opacidad: 1.0}
+    proteccion:       {color: "#c98b3c", opacidad: 1.0}
+    celosia:          {color: "#8a5a1c", opacidad: 1.0}
+    losa_exterior:    {color: "#d7d2c8", opacidad: 1.0}
+    losa_adiabatica:  {color: "#a9a9a9", opacidad: 1.0}
+    techo_exterior:   {color: "#d7d2c8", opacidad: 0.9}
+    techo_adiabatico: {color: "#a9a9a9", opacidad: 0.35}
+    norte:            {color: "#b03a2e", opacidad: 1.0}
+
+# --- Vistas 2D en SVG (para informes/exportacion) ---------------------------
+planta:
+  ancho_px: 440
+  margen_px: 40
+  separacion_etiqueta_m: 0.6
+  mostrar_area: true
+  fuente: "sans-serif"
+  tamano_texto: 12
+  color_texto: "#333333"
+  color_texto_adiabatico: "#999999"
+  piso: {relleno: "#f4f1ea"}
+  norte: {color: "#b03a2e", largo_px: 28}
+  clases:
+    muro_exterior:   {color: "#222222", grosor: 6, trazo: null}
+    muro_adiabatico: {color: "#9a9a9a", grosor: 6, trazo: "6 4"}
+    ventana:         {color: "#2f80c8", grosor: 8, trazo: null}
+    alero:           {color: "#c77d22", grosor: 2, trazo: "4 3"}
+    aleta:           {color: "#c77d22", grosor: 3, trazo: null}
+
+axonometria:
+  ancho_px: 440
+  margen_px: 30
+  vista_desde: 225
+  elevacion: 30
+  mostrar_etiquetas: true
+  separacion_etiqueta_m: 0.5
+  fuente: "sans-serif"
+  tamano_texto: 12
+  color_texto: "#333333"
+  clases:
+    cara_exterior:       {relleno: "#eeeeee", borde: "#333333", grosor: 1, opacidad: 1}
+    cara_adiabatica:     {relleno: "#c8c8c8", borde: "#666666", grosor: 1, opacidad: 1}
+    cubierta_exterior:   {relleno: "#dddddd", borde: "#333333", grosor: 1, opacidad: 1}
+    cubierta_adiabatica: {relleno: "#bdbdbd", borde: "#666666", grosor: 1, opacidad: 1}
+    vidrio:              {relleno: "#9cc7ea", borde: "#2f80c8", grosor: 1, opacidad: 0.9}
+    proteccion:          {relleno: "#e8c79a", borde: "#8a5a1c", grosor: 1, opacidad: 0.95}
+    celosia:             {relleno: "none",    borde: "#8a5a1c", grosor: 1, opacidad: 1}
