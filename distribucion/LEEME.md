@@ -1,4 +1,4 @@
-# Ejecutable e instalador de Windows del Iterador CEV
+# Ejecutable e instalador del Iterador CEV
 
 Una carpeta con `IteradorCEV.exe` y `_internal/`, y un instalador que la copia. Lleva solo el
 motor Python (sin Excel ni pywin32) y abre su propia ventana (pywebview sobre WebView2, que ya
@@ -69,4 +69,4 @@ $env:ITERADOR_VENTANA = "nativa"; python -m herramientas.app_unidad
 ## Opciones
 
 `herramientas/comun/distribucion.yaml`: `ventana:` (tamano, maximizada, textos; `depurar: true`
-para las herramientas de desarrollador), `icono:`, `aviso:` y `creditos:`.
+para las herramientas de desarrollador), `icono:` y `aviso:` y `creditos:`.

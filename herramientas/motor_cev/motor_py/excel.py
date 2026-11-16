@@ -47,6 +47,11 @@ def es_error(v) -> bool:
 
 
 def es_numero(v) -> bool:
+    t = type(v)
+    if t is float or t is int:          # lo comun, sin pasar por numbers.Real (lento)
+        return True
+    if t is bool or t is str or v is None:
+        return False
     return isinstance(v, numbers.Real) and not isinstance(v, bool)
 
 

@@ -14,6 +14,9 @@ calcular). El editor de unidad calcula con el motor Python por su cuenta
 agregan como modulos de esta carpeta cuyo nombre empieza con "motores_": al importar este
 modulo se importan solos (cargar_extensiones) y registran los suyos en BACKENDS. Sin
 ninguno, el unico motor que calcula es el Python.
+
+carpeta_nueva es segura con varios calculos a la vez (web): si otro tomo el numero, usa el
+siguiente.
 """
 from __future__ import annotations
 
@@ -28,6 +31,7 @@ from typing import Callable
 NOTA_PYTHON = ("Motor Python – solo para iteración, no válido para entrega. La calificación "
                "oficial se calcula con las planillas oficiales y la emite un evaluador acreditado.")
 PREFIJO_EXTENSION = "motores_"
+INTENTOS_CARPETA = 1000
 
 
 class Cancelado(Exception):
@@ -79,12 +83,20 @@ def resultado_python(r: dict, minutos: float | None = None) -> dict:
 
 
 def carpeta_nueva(base: Path) -> Path:
-    """base/NNN (siguiente numero)."""
+    """base/NNN (siguiente numero), creada. Si otro calculo tomo ese numero al mismo tiempo,
+    prueba el siguiente."""
     from herramientas.motor_cev import rutas
 
-    carpeta = Path(base) / rutas.siguiente_numero(Path(base))
-    carpeta.mkdir(parents=True, exist_ok=True)
-    return carpeta
+    base = Path(base)
+    base.mkdir(parents=True, exist_ok=True)
+    for _ in range(INTENTOS_CARPETA):
+        carpeta = base / rutas.siguiente_numero(base)
+        try:
+            carpeta.mkdir()
+            return carpeta
+        except FileExistsError:
+            continue
+    raise RuntimeError(f"no se pudo crear una carpeta de calculo nueva en {base}")
 
 
 def _demo(objeto, avanzar, cancelar, pasos: int = 20, pausa: float = 0.1, **_):

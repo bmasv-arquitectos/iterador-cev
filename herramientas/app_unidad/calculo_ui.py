@@ -3,10 +3,21 @@
 Calculo en el panel Resultados (a la derecha), en el orden de una etiqueta de
 eficiencia energetica: arriba la etiqueta (escala y datos de consumo) y, si cfg trae
 aviso_legal (distribucion_ui.preparar), el aviso de uso referencial; debajo
-Calcular / Cancelar con la barra de progreso, el motor de calculo y las
+Calcular / Cancelar con la barra de progreso, el motor de calculo, sus opciones y las
 descargas (resultados .zip, etiqueta .png y las acciones extra que entregue la
 interfaz, como el reporte PDF), y al final el detalle (avisos, tiempo, carpeta
 y nota).
+
+Opciones por motor (config/editor.yaml, calculo.opciones_motor): al elegir un motor
+aparecen, bajo el selector, los campos numericos que declare, p. ej.
+
+    opciones_motor:
+      oficial:
+        workers: {texto: "Procesos Excel en paralelo", min: 1, max: 8, paso: 1, ayuda: "..."}
+
+El valor de partida es la clave del mismo nombre de la seccion calculo (workers: 4) o
+defecto; lo elegido se pasa a la calculadora en cfg (cfg["workers"]) y se mantiene
+mientras la pagina este abierta. Sin opciones_motor no aparece nada.
 
 Es generico: no sabe de CEV. Usa una "calculadora", un modulo con
 calcular / vista / detalle / paquete y, si los ofrece, motores e imagen (ver
@@ -44,12 +55,43 @@ class PanelCalculo:
         f = getattr(self.calc, "motores", None)
         self.motores = f(cfg) if f is not None else {}
         self.motor = next(iter(self.motores), None)
+        self.valores: dict = {}                       # opciones elegidas {clave: valor}
         self.tarea = Tarea()
         self.res = self.error = self.objeto = self.calculado = None
         self.barra = self.texto = self.aviso = None
         self.timer = ui.timer(cfg.get("sondeo_s", 0.25), self._sondear, active=False)
         self.cuerpo = ui.refreshable(self._cuerpo)
         self.cuerpo()
+
+    # ------------------------------------------------------------ opciones del motor
+    def opciones(self) -> dict:
+        """{clave: definicion} de las opciones del motor elegido (calculo.opciones_motor)."""
+        return dict(((self.cfg.get("opciones_motor") or {}).get(self.motor) or {}))
+
+    def valor(self, clave: str, op: dict):
+        if clave in self.valores:
+            return self.valores[clave]
+        return self.cfg.get(clave, op.get("defecto"))
+
+    def poner(self, clave: str, op: dict, v) -> None:
+        if v is None:
+            return
+        if float(op.get("paso", 1)).is_integer():
+            v = int(round(float(v)))
+        if op.get("min") is not None:
+            v = max(v, op["min"])
+        if op.get("max") is not None:
+            v = min(v, op["max"])
+        self.valores[clave] = v
+
+    def cfg_calculo(self) -> dict:
+        """cfg con las opciones elegidas del motor actual."""
+        out = dict(self.cfg)
+        for clave, op in self.opciones().items():
+            v = self.valor(clave, op)
+            if v is not None:
+                out[clave] = v
+        return out
 
     # ------------------------------------------------------------ acciones
     def calcular(self):
@@ -60,7 +102,7 @@ class PanelCalculo:
             ui.notify(msg, type="warning")
             return
         self.objeto, self.error = self.obtener(), None
-        kw = {"cfg": self.cfg}
+        kw = {"cfg": self.cfg_calculo()}
         if self.motor is not None:
             kw["motor"] = self.motor
         self.tarea.iniciar(self.calc.calcular, self.objeto, **kw)
@@ -73,6 +115,7 @@ class PanelCalculo:
     def elegir_motor(self, v):
         if v and v != self.motor:
             self.motor = v
+            self.cuerpo.refresh()                     # muestra las opciones de ese motor
 
     def _bajar(self, funcion):
         try:
@@ -110,6 +153,20 @@ class PanelCalculo:
             self.aviso.set_visibility(self.res is not None and actual != self.calculado)
 
     # ------------------------------------------------------------ interfaz
+    def _opciones_ui(self, corriendo: bool) -> None:
+        for clave, op in self.opciones().items():
+            op = op if isinstance(op, dict) else {}
+            entero = float(op.get("paso", 1)).is_integer()
+            n = (ui.number(op.get("texto") or clave, value=self.valor(clave, op), min=op.get("min"),
+                           max=op.get("max"), step=op.get("paso", 1), format=op.get("formato") or ("%d" if entero else None),
+                           on_change=lambda e, c=clave, o=op: self.poner(c, o, e.value))
+                 .props("dense").classes("w-full motor"))
+            if op.get("ayuda"):
+                with n:
+                    self.P.ayuda_explicativa(op["ayuda"])
+            if corriendo:
+                n.disable()
+
     def _cuerpo(self):
         corriendo = self.tarea.estado == "corriendo"
         svg = self.calc.vista(self.res, self.cfg)
@@ -132,6 +189,7 @@ class PanelCalculo:
                 s.disable()
         elif self.motores:
             ui.label(next(iter(self.motores.values()))).classes("texto-suave motor")
+        self._opciones_ui(corriendo)
         self.barra = self.texto = None
         if corriendo:
             self.barra = ui.linear_progress(value=self.tarea.progreso, show_value=False).classes("progreso")

@@ -12,6 +12,10 @@ aparecen si estan registrados y se pueden usar en este computador. La copia publ
 trae solo el motor Python. En la version distribuida (app_unidad/__main__.py y
 comun/distribucion.yaml) solo se ofrece python, y entonces no se consulta nada mas.
 
+En la web (cfg en_procesos, distribucion_ui.preparar) el motor python corre en procesos
+aparte con fila de espera (cola_calculo.py), para que varios calculos a la vez no dejen
+lenta la interfaz.
+
 Es una "calculadora" del editor (app_unidad): el editor no sabe de CEV, solo
 usa estas funciones del modulo que indique config/editor.yaml (calculo.modulo).
 Otra herramienta de la caja puede entregar las mismas y reutilizar la interfaz:
@@ -57,7 +61,7 @@ from pathlib import Path
 from herramientas.comun.rutas_app import salida as ruta_salida
 from herramientas.comun.tarea import Cancelado, revisar
 
-from . import cev, modelo
+from . import cev, cola_calculo, modelo
 
 SALIDA = "salidas/iterador_unidad"
 TEXTO_FAR = "Obstrucciones remotas (FAR): {detalle}"
@@ -144,10 +148,10 @@ def escribir_csv(res: dict, ruta: Path) -> Path:
 
 
 def _python(t, avanzar, cancelar, cfg) -> dict:
-    """Traduccion -> ficha 01 virtual -> clon Python (10 casos + planilla 03)."""
+    """Traduccion -> ficha 01 virtual -> clon Python (10 casos + planilla 03). Con
+    cfg["en_procesos"] (web) el motor corre en otro proceso, con fila de espera."""
     from herramientas.app_cev.ejecucion import carpeta_nueva, resultado_python
     from herramientas.motor_cev.motor_py import ficha_virtual
-    from herramientas.motor_cev.motor_py.calcular import calcular as motor
 
     carpeta = carpeta_nueva(_salida(cfg))
     avanzar(0.04, "Escribiendo las entradas del motor (en memoria, sin Excel)")
@@ -155,21 +159,23 @@ def _python(t, avanzar, cancelar, cfg) -> dict:
     fv.guardar(carpeta / "entradas.json")
     revisar(cancelar)
 
-    def antes_de_caso(k, total, caso):
-        revisar(cancelar)
-        extra = " (la primera vez carga datos y compila)" if k == 0 else ""
-        avanzar(0.08 + 0.84 * k / max(total, 1), f"Calculando: caso {k + 1} de {total}{extra}")
+    if cfg.get("en_procesos"):
+        out = cola_calculo.en_proceso(fv.ficha, avanzar, cancelar, cfg)
+    else:
+        def antes_de_caso(k, total, caso):
+            revisar(cancelar)
+            extra = " (la primera vez carga datos y compila)" if k == 0 else ""
+            avanzar(0.08 + 0.84 * k / max(total, 1), f"Calculando: caso {k + 1} de {total}{extra}")
 
-    cal = motor(fv.ficha, antes_de_caso=antes_de_caso)
-    if not cal.resumen:
+        out = cola_calculo.motor_resumen(fv.ficha, antes_de_caso)
+    if not out["resumen"]:
         raise RuntimeError("el motor no entregó el resumen de la planilla 03")
-    r = dict(cal.resumen)
+    r = dict(out["resumen"])
     r["carpeta"] = str(carpeta)
     res = resultado_python(r)
-    res["tiempos"] = cal.tiempos
-    if cal.planilla is not None:
-        res["demanda_base_cal"] = _numero(cal.planilla.valor("Resumen", "E7"))
-        res["demanda_base_ref"] = _numero(cal.planilla.valor("Resumen", "F7"))
+    res["tiempos"] = out["tiempos"]
+    res["demanda_base_cal"] = _numero(out["base_cal"])
+    res["demanda_base_ref"] = _numero(out["base_ref"])
     return res
 
 

@@ -4,9 +4,12 @@ Piezas de interfaz de la distribucion (comun/app_config.py y comun/distribucion.
 
   preparar(cfg)   ajusta la configuracion del editor antes de armar la pagina: rotulo con la
                   version, solo los motores del modo (sin Excel), el aviso bajo el resultado y,
-                  en la web, sin la carpeta del servidor en el detalle del calculo;
+                  en la web, sin la carpeta del servidor en el detalle del calculo y con el
+                  motor en procesos aparte con fila de espera (unidad/cola_calculo.py:
+                  web.calculo_en_procesos, calculos_simultaneos, cola_max y textos);
   aviso_inicial() el aviso legal al abrir (una vez en escritorio, cada vez en la web);
-  boton_acerca()  boton fijo "Acerca de" (version, creditos, licencia y nota de la plantilla).
+  boton_acerca()  boton fijo "Acerca de" (version, creditos, codigo fuente, licencia y nota
+                  de la plantilla).
 Estilo: estilo.css (.aviso-legal, .acerca-de, .boton-acerca).
 """
 from __future__ import annotations
@@ -24,7 +27,12 @@ def preparar(cfg: dict) -> dict:
     if ac.aviso().get("en_resultados", True):
         cal["aviso_legal"] = ac.texto_aviso()
     if ac.es_web():
-        cal["mostrar_carpeta"] = bool(ac.opciones_web().get("mostrar_carpeta", False))
+        w = ac.opciones_web()
+        cal["mostrar_carpeta"] = bool(w.get("mostrar_carpeta", False))
+        cal["en_procesos"] = bool(w.get("calculo_en_procesos", True))
+        cal["simultaneos"] = int(w.get("calculos_simultaneos", 2))
+        cal["cola_max"] = int(w.get("cola_max", 20))
+        cal["textos_cola"] = dict(w.get("textos") or {})
     return cfg
 
 
@@ -56,6 +64,10 @@ def acerca_de() -> None:
             ui.link(c["url"], c["url"], new_tab=True)
         if c.get("licencia"):
             ui.label(c["licencia"])
+        if c.get("codigo"):
+            with ui.row().classes("items-center gap-1"):
+                ui.label(c.get("codigo_texto") or "Código fuente:")
+                ui.link(c["codigo"], c["codigo"], new_tab=True)
         if c.get("plantilla"):
             ui.label(" ".join(str(c["plantilla"]).split())).classes("acerca-de-nota")
         ui.separator()

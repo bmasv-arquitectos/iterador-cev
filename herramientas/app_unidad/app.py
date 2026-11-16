@@ -54,6 +54,7 @@ from herramientas.unidad import (edicion_obstaculos, edicion_tabiques, editor, e
                                  modelo, reporte, resumen, vista_alzado, vista_contexto, vista_planta)
 
 from . import calculo_ui, contexto_ui, obstaculos_ui, paneles, vista3d_ui
+from .historial_dibujo import DibujoEnCurso
 from .piezas import ICONOS, Piezas, descargar_bytes, num
 from .scripts import CLIC_SIN_ARRASTRE, SIN_AUTOSCROLL, VENTANA_JS, superficie_losa  # noqa: F401
 
@@ -84,6 +85,7 @@ async def pagina(cfg: dict) -> None:
           "techos": bool(e3.get("techos_visibles", True)), "ultima": None, "tablas": {}, "css": None,
           "asa_obs": None, "far_o": None, "balcon": None, "snap": None}
     pila = {"atras": [], "adelante": []}
+    dibujo = DibujoEnCurso()                       # perimetro que se esta dibujando (Esc y Ctrl+Z)
     v3 = None                                      # vista3d_ui.Vista3D (se crea con el layout)
     calc = {"panel": None}
     cajas = {}
@@ -168,7 +170,7 @@ async def pagina(cfg: dict) -> None:
     def hay_eleccion():
         return any(x is not None for x in (st["sel"], st["sel_vano"], st["sel_hz"], st["sel_ctx"]))
 
-    def confirmar(nueva=None, abiertos=None, paneles_=True):
+    def confirmar(nueva=None, abiertos=None, paneles_=True, antes_dibujo=None):
         antes = doc()
         if nueva is not None:
             st["u"] = nueva
@@ -178,7 +180,7 @@ async def pagina(cfg: dict) -> None:
         if doc() == antes:
             refrescar_lienzo()
             return
-        pila["atras"].append(antes)
+        pila["atras"].append(antes if antes_dibujo is None else antes_dibujo)
         del pila["atras"][:-cfg["deshacer_max"]]
         pila["adelante"].clear()
         st["k"] = min(st["k"], n_vista() - 1)
@@ -207,6 +209,7 @@ async def pagina(cfg: dict) -> None:
             return
         pila[hacia].append(doc())
         restaurar(pila[desde].pop())
+        dibujo.revisar(pila)
         st["k"] = min(st["k"], n_vista() - 1)
         st.update(cursor=None, tabique=None, arrastre=None, arr_alz=None, previa=None, esq=None, balcon=None,
                   snap=None)
@@ -614,7 +617,7 @@ async def pagina(cfg: dict) -> None:
         ab = dict(st["ab"])
         ab.pop(k, None)
         st["cursor"], st["sel"], st["camara"] = None, None, True
-        confirmar(nueva, ab)
+        confirmar(nueva, ab, antes_dibujo=dibujo.cerrar(pila, st["u"]))
         poner_herramienta("seleccionar")
 
     def descartar_abierto():
@@ -622,6 +625,20 @@ async def pagina(cfg: dict) -> None:
         ab.pop(st["k"], None)
         st["sel"] = None
         confirmar(abiertos=ab)
+
+    def cancelar_dibujo():
+        """Esc dibujando un perimetro: se borra todo lo dibujado, como si no se hubiera empezado
+        (historial_dibujo.py). Si entre medio se edito otra cosa, solo se descarta el perimetro."""
+        estado = dibujo.cancelar(pila, st["u"])
+        if estado is None:
+            descartar_abierto()
+            return
+        pila["adelante"].clear()
+        restaurar(estado)
+        st.update(cursor=None, sel=None)
+        st["k"] = min(st["k"], n_vista() - 1)
+        contexto()
+        refrescar()
 
     def borrar(t):
         if t is None:
@@ -665,6 +682,9 @@ async def pagina(cfg: dict) -> None:
 
     def escape():
         if st["modo"] == "contexto" and contexto_ui.escape(E):
+            return
+        if st["modo"] == "planta" and st["herr"] == "dibujar" and abierto():
+            cancelar_dibujo()
             return
         if any(st[c] is not None for c in ("esq", "tabique", "arrastre", "arr_alz", "balcon")):
             cancelar()
@@ -771,6 +791,7 @@ async def pagina(cfg: dict) -> None:
         if k > len(st["u"].niveles):
             ui.notify(tx["nivel_abajo"], type="warning")
             return
+        dibujo.empezar(pila, b)
         confirmar(abiertos={**st["ab"], k: b + [q]})
 
     def raton_tabique(tipo, p, libre):

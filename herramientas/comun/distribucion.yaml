@@ -3,11 +3,11 @@
 # opciones: el codigo no cambia. La variable de entorno ITERADOR_MODO reemplaza el
 # modo (en el servidor web: ITERADOR_MODO=web).
 # ---------------------------------------------------------------------------
-version: 3
+version: 4
 app:
   nombre: Iterador CEV
-  version: "0.1 beta"
-  version_numero: "0.1.0"     # la misma, solo numeros (propiedades del .exe y del instalador)
+  version: "0.1.1 beta"
+  version_numero: "0.1.1"     # la misma, solo numeros (propiedades del .exe y del instalador)
   modo: escritorio            # escritorio | web
   motores:                    # motores que ofrece la interfaz en cada modo (los de Excel quedan fuera)
     escritorio: [python]
@@ -33,6 +33,9 @@ app:
     editor: "B+V Arquitectos"  # editor del programa (Windows: Agregar o quitar programas)
     url: ""                   # pagina de la oficina (vacio: no se muestra)
     licencia: "Licencia AGPL-3.0"
+    # codigo fuente (la AGPL pide ofrecerlo a quien usa el programa por la red)
+    codigo: "https://github.com/bmasv-arquitectos/iterador-cev"
+    codigo_texto: "Código fuente:"
     plantilla: >-
       La plantilla PBTD (ficha 01) pertenece al MINVU y no está cubierta por la
       licencia AGPL-3.0.
@@ -64,5 +67,19 @@ app:
       error_dialogo: "No se pudo abrir «Guardar como»: {error}"
       error_guardar: "No se pudo guardar: {error}"
       todos: "Todos los archivos (*.*)"
+  # Servidor web (ITERADOR_MODO=web; app_unidad/__main__.py). Escucha solo en este PC: un tunel
+  # (Cloudflare Tunnel) lo publica en internet sin abrir puertos del router.
   web:
-    mostrar_carpeta: false    # en la web no se muestra la carpeta del servidor donde quedo el calculo
+    host: 127.0.0.1
+    puerto: 8090
+    reconectar_s: 30          # segundos que la pagina espera si se corta la conexion
+    mostrar_carpeta: false    # no se muestra la carpeta del servidor donde quedo el calculo
+    # el motor corre en procesos aparte (la interfaz no se pone lenta con varios calculos)
+    calculo_en_procesos: true
+    calculos_simultaneos: 2   # cuantos a la vez (cada uno usa un nucleo y ~1 GB de RAM)
+    cola_max: 20              # cuantos pueden esperar turno; con mas se avisa y no se calcula
+    conservar_horas: 6        # las carpetas de calculo se borran despues de esto
+    limpiar_cada_min: 30
+    textos:
+      espera: "En espera: {n} cálculo(s) en la fila"
+      lleno: "Hay muchos cálculos en espera. Intenta de nuevo en unos minutos."

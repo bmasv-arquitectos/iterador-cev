@@ -16,11 +16,23 @@ y devuelve el resultado (cualquier objeto).
 
 Un ValueError se muestra como mensaje para el usuario (sin el tipo); cualquier
 otro error, con su tipo y el detalle en la consola.
+
+En el navegador (Pyodide) no hay hilos: la funcion corre en el bucle de eventos, un momento
+despues de iniciar (asi la interfaz alcanza a mostrar que empezo). Si es async (devuelve algo
+que se espera), se espera sin bloquear: la interfaz sigue viva y el progreso se ve. Una funcion
+normal, en cambio, deja la pagina quieta mientras corre.
+Fuera del navegador una funcion async corre con asyncio.run dentro del hilo.
 """
 from __future__ import annotations
 
+import asyncio
+import inspect
+import sys
 import threading
 import traceback
+
+EN_NAVEGADOR = sys.platform == "emscripten"
+ESPERA_NAVEGADOR_S = 0.15
 
 
 class Cancelado(Exception):
@@ -33,9 +45,43 @@ def revisar(cancelar) -> None:
         raise Cancelado
 
 
+class _HiloNavegador:
+    """Lo que Tarea usa de threading.Thread, sin hilos: corre fn en el bucle de eventos; si fn
+    devuelve algo que se espera, sigue "vivo" hasta que termine."""
+
+    def __init__(self, fn, espera: float = ESPERA_NAVEGADOR_S):
+        self._fn, self._espera, self._vivo = fn, espera, False
+        self._tarea = None
+
+    def start(self) -> None:
+        self._vivo = True
+        asyncio.get_event_loop().call_later(self._espera, self._correr)
+
+    def _terminar(self, *_):
+        self._vivo = False
+
+    def _correr(self) -> None:
+        try:
+            r = self._fn()
+        except BaseException:
+            self._vivo = False
+            raise
+        if inspect.isawaitable(r):
+            self._tarea = asyncio.ensure_future(r)
+            self._tarea.add_done_callback(self._terminar)
+        else:
+            self._vivo = False
+
+    def is_alive(self) -> bool:
+        return self._vivo
+
+    def join(self, timeout=None) -> None:
+        pass
+
+
 class Tarea:
     def __init__(self):
-        self._hilo: threading.Thread | None = None
+        self._hilo = None
         self._cancelar = threading.Event()
         self._final = "inactiva"
         self.progreso = 0.0
@@ -51,6 +97,22 @@ class Tarea:
             return "corriendo"
         return self._final
 
+    def _fallo(self, ex: Exception) -> None:
+        if isinstance(ex, Cancelado):
+            self.mensaje, self._final = "cancelado", "cancelada"
+        elif isinstance(ex, ValueError):
+            self.error, self._final = str(ex), "error"
+        else:                                            # se muestra en la interfaz
+            traceback.print_exception(ex)
+            self.error, self._final = f"{type(ex).__name__}: {ex}", "error"
+
+    async def _esperar(self, aw) -> None:
+        try:
+            self.resultado = await aw
+            self._final = "terminada"
+        except Exception as ex:
+            self._fallo(ex)
+
     def iniciar(self, fn, *args, **kw) -> None:
         if self.estado == "corriendo":
             raise RuntimeError("ya hay una tarea en curso")
@@ -61,17 +123,22 @@ class Tarea:
 
         def correr():
             try:
-                self.resultado = fn(*args, avanzar=self.avanzar, cancelar=cancelar, **kw)
-                self._final = "terminada"
-            except Cancelado:
-                self.mensaje, self._final = "cancelado", "cancelada"
-            except ValueError as ex:
-                self.error, self._final = str(ex), "error"
-            except Exception as ex:                      # se muestra en la interfaz
-                traceback.print_exc()
-                self.error, self._final = f"{type(ex).__name__}: {ex}", "error"
+                r = fn(*args, avanzar=self.avanzar, cancelar=cancelar, **kw)
+            except Exception as ex:
+                self._fallo(ex)
+                return None
+            if inspect.isawaitable(r):
+                if EN_NAVEGADOR:
+                    return self._esperar(r)          # _HiloNavegador la espera
+                asyncio.run(self._esperar(r))
+                return None
+            self.resultado, self._final = r, "terminada"
+            return None
 
-        self._hilo = threading.Thread(target=correr, daemon=True)
+        if EN_NAVEGADOR:
+            self._hilo = _HiloNavegador(correr)
+        else:
+            self._hilo = threading.Thread(target=correr, daemon=True)
         self._hilo.start()
 
     def avanzar(self, fraccion: float, mensaje: str = "") -> None:
