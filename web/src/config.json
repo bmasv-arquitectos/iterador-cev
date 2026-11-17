@@ -1,0 +1,14 @@
+{
+  "pyodide": {
+    "url": "https://cdn.jsdelivr.net/pyodide/v0.27.2/full/",
+    "paquetes": ["numpy", "pyyaml", "shapely", "micropip"],
+    "pip": ["openpyxl"],
+    "opcionales": ["pymupdf"]
+  },
+  "python": {
+    "zip": "py/herramientas.zip",
+    "inicio": [{ "modulo": "herramientas.web.motor_web", "funcion": "usar_nucleo_js", "args": [true] }]
+  },
+  "trabajadores": 4,
+  "app": { "calculo": 3 }
+}

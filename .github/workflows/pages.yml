@@ -1,0 +1,56 @@
+# Version web del Iterador CEV en GitHub Pages: se arma con cada release publicado (o a mano en
+# Actions > "Version web" > Run workflow). Settings > Pages > Source: GitHub Actions.
+# Queda en https://bmasv-arquitectos.github.io/iterador-cev/ (y en bmasv.cl/iterador, que la
+# muestra desde esa direccion).
+name: Version web
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  armar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: NiceGUI para el navegador
+        run: pip install -r web/requirements-web.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Armar el sitio
+        working-directory: web
+        run: |
+          npm ci
+          npm run python
+          npm run nicegui
+          npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  publicar:
+    needs: armar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - id: despliegue
+        uses: actions/deploy-pages@v4

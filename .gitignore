@@ -34,8 +34,9 @@ Thumbs.db
 
 salidas/
 
-# cliente web (web/): lo que arman npm run python y npm run nicegui
+# cliente web (web/): lo que arman npm run python y npm run nicegui, y la cache de Vite
 node_modules/
+web/.vite/
 web/public/py/
 web/public/nc/
 web/public/ng/

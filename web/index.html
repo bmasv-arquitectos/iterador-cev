@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iterador CEV</title>
+    <script>
+      // la pagina usa rutas relativas: sin la barra final (/iterador) no encontraria sus archivos
+      if (!location.pathname.endsWith("/") && !/\.[a-z0-9]+$/i.test(location.pathname)) {
+        location.replace(location.pathname + "/" + location.search + location.hash);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="carga" class="carga">
+      <div class="caja">
+        <div class="titulo">Iterador CEV</div>
+        <progress id="barra" max="1" value="0"></progress>
+        <div id="mensaje" class="mensaje">Cargando…</div>
+        <div class="nota">Todo corre en este navegador: la unidad no se envía a ningún servidor. La primera visita descarga Python (puede tardar un minuto).</div>
+        <pre id="error" hidden></pre>
+      </div>
+    </div>
+    <script type="module" src="./src/apps/iterador-nicegui/main.ts"></script>
+  </body>
+</html>

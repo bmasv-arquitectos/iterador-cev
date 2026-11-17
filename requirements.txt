@@ -4,7 +4,8 @@ openpyxl>=3.1
 pymupdf>=1.24.2
 reportlab>=4.0
 pypdf>=4.0
-nicegui>=3.0
+# NiceGUI 4 cambia cosas que la interfaz usa: se queda en la 3
+nicegui>=3.18,<4
 numba>=0.59
 shapely>=2.0
 # ventana propia en Windows (opcional desde el codigo; la usa el instalador)

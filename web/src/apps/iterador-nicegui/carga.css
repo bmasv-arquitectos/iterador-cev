@@ -1,0 +1,13 @@
+/* Pantalla de carga del Iterador CEV web y el iframe con la interfaz (NiceGUI). */
+html, body { margin: 0; height: 100%; overflow: hidden; background: #ffffff; }
+.carga { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 2;
+         font-family: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", Arial, sans-serif; color: #2b3440; }
+.carga[hidden] { display: none; }
+.carga .caja { width: min(440px, 90vw); display: flex; flex-direction: column; gap: 10px; }
+.carga .titulo { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.carga progress { width: 100%; height: 6px; accent-color: #4a9fd8; }
+.carga .mensaje { font-size: 12px; color: #7b8692; }
+.carga .nota { font-size: 11px; color: #7b8692; }
+.carga pre { font-size: 11px; color: #b42318; background: #fdf1f0; padding: 8px 10px; border-radius: 4px;
+             white-space: pre-wrap; max-height: 50vh; overflow: auto; }
+iframe.app { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; z-index: 1; }

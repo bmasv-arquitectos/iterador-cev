@@ -1,0 +1,4 @@
+# Para armar el sitio (npm run nicegui toma NiceGUI y sus dependencias de este entorno).
+# La version de NiceGUI es la que se probo en el navegador: cambiarla obliga a volver a probar.
+nicegui==3.18.0
+pyyaml>=6.0

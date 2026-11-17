@@ -9,6 +9,13 @@ PBTD v2.2, sin Excel.
 > **Uso referencial.** No tiene validez legal ni reemplaza la calificación oficial, que solo
 > puede emitir un evaluador acreditado con las herramientas del MINVU.
 
+## Usar en el navegador
+
+[**bmasv.cl/iterador**](https://www.bmasv.cl/iterador/): la misma herramienta, sin instalar
+nada. Corre completa en el navegador de quien la usa: la unidad no se envía a ningún
+servidor. La primera visita descarga Python (puede tardar un minuto); el reporte se guarda
+como PDF desde la ventana de impresión del navegador.
+
 ## Descargar (Windows 10 y 11)
 
 En [Releases](../../releases) está el instalador. No necesita permisos de administrador ni
@@ -39,7 +46,8 @@ python -m herramientas.app_unidad
 ```
 
 Se abre en el navegador (http://127.0.0.1:8082). El instalador de Windows se arma como se
-explica en [`distribucion/LEEME.md`](distribucion/LEEME.md).
+explica en [`distribucion/LEEME.md`](distribucion/LEEME.md) y la versión web, en
+[`web/LEEME.md`](web/LEEME.md).
 
 Este repositorio trae solo lo necesario para usar la herramienta.
 
@@ -52,6 +60,8 @@ Este repositorio trae solo lo necesario para usar la herramienta.
 | `herramientas/recinto` | soluciones constructivas, vidrios y zonas térmicas |
 | `herramientas/comun` | rutas, tareas y configuración de la distribución |
 | `herramientas/fichas_cev` | escritura de la ficha 01 y plantilla oficial |
+| `herramientas/web` | lo que la misma interfaz necesita para correr en el navegador |
+| `web` | la versión web (sitio estático) |
 | `distribucion` | ejecutable e instalador de Windows |
 
 Casi todo lo modificable (textos, colores, medidas y opciones) está en archivos `.yaml` y en

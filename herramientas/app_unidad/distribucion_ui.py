@@ -8,8 +8,8 @@ Piezas de interfaz de la distribucion (comun/app_config.py y comun/distribucion.
                   motor en procesos aparte con fila de espera (unidad/cola_calculo.py:
                   web.calculo_en_procesos, calculos_simultaneos, cola_max y textos);
   aviso_inicial() el aviso legal al abrir (una vez en escritorio, cada vez en la web);
-  boton_acerca()  boton fijo "Acerca de" (version, creditos, codigo fuente, licencia y nota
-                  de la plantilla).
+  boton_acerca()  boton fijo "Acerca de" (version, creditos, codigo fuente, licencia, nota
+                  de la plantilla y, en la web, creditos.web).
 Estilo: estilo.css (.aviso-legal, .acerca-de, .boton-acerca).
 """
 from __future__ import annotations
@@ -68,6 +68,8 @@ def acerca_de() -> None:
             with ui.row().classes("items-center gap-1"):
                 ui.label(c.get("codigo_texto") or "Código fuente:")
                 ui.link(c["codigo"], c["codigo"], new_tab=True)
+        if ac.es_web() and c.get("web"):
+            ui.label(" ".join(str(c["web"]).split())).classes("acerca-de-nota")
         if c.get("plantilla"):
             ui.label(" ".join(str(c["plantilla"]).split())).classes("acerca-de-nota")
         ui.separator()
